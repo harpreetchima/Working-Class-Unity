@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: wculight --default, wcudark --prefersdark;
+}
+
+@plugin "daisyui/theme" {
+  name: "wculight";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: #f7f9fc;
+  --color-base-200: oklch(97% 0.001 106.424);
+  --color-base-300: oklch(92% 0.003 48.717);
+  --color-base-content: oklch(21% 0.006 56.043);
+  --color-primary: #ff9f48;
+  --color-primary-content: oklch(26% 0.079 36.259);
+  --color-secondary: #04334f;
+  --color-secondary-content: oklch(26% 0.065 152.934);
+  --color-accent: #ef2525;
+  --color-accent-content: oklch(27% 0.077 45.635);
+  --color-neutral: #232323;
+  --color-neutral-content: oklch(98% 0.001 106.423);
+  --color-info: #38bdf8;
+  --color-info-content: oklch(98% 0.019 200.873);
+  --color-success: #22c55e;
+  --color-success-content: oklch(98% 0.031 120.757);
+  --color-warning: #facc15;
+  --color-warning-content: oklch(98% 0.026 102.212);
+  --color-error: #ef2525;
+  --color-error-content: oklch(96% 0.015 12.422);
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 1;
+}
+
+@plugin "daisyui/theme" {
+  name: "wcudark";
+  default: false;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-100: #090909;
+  --color-base-200: #151515;
+  --color-base-300: #232323;
+  --color-base-content: #e4e4e7;
+  --color-primary: #ff9f48;
+  --color-primary-content: oklch(97% 0.014 343.198);
+  --color-secondary: #38bdf8;
+  --color-secondary-content: oklch(97% 0.014 308.299);
+  --color-accent: #ff6b6b;
+  --color-accent-content: oklch(96% 0.015 12.422);
+  --color-neutral: oklch(20% 0 0);
+  --color-neutral-content: oklch(98% 0 0);
+  --color-info: #7dd3fc;
+  --color-info-content: oklch(97% 0.013 236.62);
+  --color-success: #4ade80;
+  --color-success-content: oklch(98% 0.031 120.757);
+  --color-warning: #facc15;
+  --color-warning-content: oklch(98% 0.026 102.212);
+  --color-error: #f87171;
+  --color-error-content: oklch(97% 0.013 17.38);
+  --radius-selector: 1rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 1;
+}
+
+@plugin "@tailwindcss/typography";

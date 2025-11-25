@@ -1,0 +1,35 @@
+# Nuxt dev/build outputs (from wcu-website)
+wcu-website/.output
+wcu-website/.data
+wcu-website/.nuxt
+wcu-website/.nitro
+wcu-website/.cache
+wcu-website/dist
+
+# Node dependencies
+node_modules
+wcu-website/node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Editor specific
+.vscode/settings.json
+.vscode/launch.json
+*.swp
+*.swo
+*~
+
+# OS specific
+Thumbs.db
