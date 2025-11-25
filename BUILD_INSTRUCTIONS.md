@@ -163,9 +163,9 @@ Our organization's brand colors are defined in the theme and should **NOT** be m
 
 ### Logo Switching Based on Theme
 
-Our organization has separate logos for light and dark modes located in [`wcu-information/`](wcu-information):
-- [`logo_light.svg`](wcu-information/logo_light.svg:1) - For use on dark backgrounds
-- [`logo_dark.svg`](wcu-information/logo_dark.svg:1) - For use on light backgrounds
+Our organization has separate logos for light and dark modes located in [`wcu-website/public/`](wcu-website/public):
+- [`logo_light.svg`](wcu-website/public/logo_light.svg:1) - For use on dark backgrounds
+- [`logo_dark.svg`](wcu-website/public/logo_dark.svg:1) - For use on light backgrounds
 
 #### Implementation Example
 
@@ -183,7 +183,7 @@ To display the correct logo based on the active theme in a Vue component:
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const logoSrc = ref('/wcu-information/logo_dark.svg')
+const logoSrc = ref('/logo_dark.svg')
 
 onMounted(() => {
   // Function to update logo based on theme
@@ -191,9 +191,9 @@ onMounted(() => {
     const theme = document.documentElement.getAttribute('data-theme') || 
                   (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'wcudark' : 'wculight')
     
-    logoSrc.value = theme === 'wcudark' 
-      ? '/wcu-information/logo_light.svg'  // Light logo on dark background
-      : '/wcu-information/logo_dark.svg'   // Dark logo on light background
+    logoSrc.value = theme === 'wcudark'
+      ? '/logo_light.svg'  // Light logo on dark background
+      : '/logo_dark.svg'   // Dark logo on light background
   }
   
   updateLogo()
