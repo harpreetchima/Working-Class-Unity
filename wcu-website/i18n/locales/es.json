@@ -6,6 +6,33 @@
     "coverage": "Cobertura de Check-In",
     "join": "ÚNETE A WCU"
   },
+  "kyr": {
+    "otherResources": "Otros recursos de Conozca sus derechos",
+    "overview": {
+      "title": "Control de inmigración: Conozca sus derechos",
+      "description": "Conozca sus derechos al interactuar con ICE."
+    },
+    "public": {
+      "title": "Si ICE lo detiene en público",
+      "description": "Qué hacer si ICE lo detiene en un espacio público."
+    },
+    "car": {
+      "title": "Si ICE lo detiene en su auto",
+      "description": "Sus derechos durante una parada de tráfico por ICE."
+    },
+    "home": {
+      "title": "Si ICE llega a su casa",
+      "description": "Cómo manejar a los agentes de ICE en su puerta."
+    },
+    "work": {
+      "title": "Si ICE llega a su trabajo",
+      "description": "Sus derechos si ICE realiza una redada o visita su lugar de trabajo."
+    },
+    "documents": {
+      "title": "Documentos para llevar consigo",
+      "description": "Documentos esenciales para llevar en todo momento."
+    }
+  },
   "logo_alt": "Logotipo de WCU",
   "about_page": {
     "title": "They Have Their Parties. We Need Our Own Organization",

@@ -1,5 +1,52 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url('/fonts/Acumin-RPro.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url('/fonts/Acumin-ItPro.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url('/fonts/Acumin-BdPro.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url('/fonts/Acumin-BdItPro.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Akira Jimbo';
+  src: url('/fonts/Akira Jimbo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-sans: "Acumin Pro", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-heading: "Akira Jimbo", sans-serif;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: normal;
+  }
+}
+
 @plugin "daisyui" {
   themes: wculight --default, wcudark --prefersdark;
 }

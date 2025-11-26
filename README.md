@@ -112,6 +112,20 @@ The `Navbar.vue` component handles responsive navigation and automatic logo swit
 *   **Logo Logic**: The logo dynamically switches between `/logo_dark.svg` (for light backgrounds) and `/logo_light.svg` (for dark backgrounds).
 *   **Implementation**: A `MutationObserver` in `Navbar.vue` watches for changes to the `data-theme` attribute or system preference to update the `logoSrc`.
 
+### Know Your Rights Navigation
+
+We use a centralized architecture for the "Know Your Rights" pages to ensure navigation links are automatically updated across all pages when a new resource is added.
+
+**How it works:**
+1.  **Registry**: `app/data/know-your-rights.ts` acts as the single source of truth. It exports an array of resources with their slugs, i18n keys, and icons.
+2.  **Component**: `app/components/KnowYourRightsNav.vue` imports this registry. It uses the current route to intelligently filter out the *active* page from the list of links, so users only see links to *other* resources.
+3.  **Pages**: Each page in `app/pages/know-your-rights/` simply includes `<KnowYourRightsNav />` at the bottom.
+
+**Adding a new resource:**
+1.  Add the new resource entry to `app/data/know-your-rights.ts`.
+2.  Create the new Vue page file.
+3.  Add the corresponding title and description keys to the localization files (`i18n/locales/*.json`).
+
 ### Icons
 
 We currently use inline SVGs for icons. When adding new icons, ensure they are accessible and scale correctly with Tailwind classes (e.g., `h-5 w-5`).

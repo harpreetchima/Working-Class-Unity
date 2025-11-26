@@ -6,6 +6,33 @@
     "coverage": "Check-In Coverage",
     "join": "JOIN WCU"
   },
+  "kyr": {
+    "otherResources": "Other Know Your Rights Resources",
+    "overview": {
+      "title": "Immigration Enforcement: Know Your Rights",
+      "description": "Learn about your rights when interacting with ICE."
+    },
+    "public": {
+      "title": "If ICE Stops You in Public",
+      "description": "What to do if stopped by ICE in a public space."
+    },
+    "car": {
+      "title": "If ICE Pulls You Over",
+      "description": "Your rights during a traffic stop by ICE."
+    },
+    "home": {
+      "title": "If ICE Comes to Your Home",
+      "description": "How to handle ICE agents at your door."
+    },
+    "work": {
+      "title": "If ICE Comes to Your Work",
+      "description": "Your rights if ICE raids or visits your workplace."
+    },
+    "documents": {
+      "title": "Documents to Keep on You",
+      "description": "Essential documents to carry at all times."
+    }
+  },
   "logo_alt": "WCU Logo",
   "about_page": {
     "title": "They Have Their Parties. We Need Our Own Organization",
