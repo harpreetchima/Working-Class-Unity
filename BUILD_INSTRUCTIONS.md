@@ -59,6 +59,32 @@ We have integrated the [Tailwind CSS Typography](https://github.com/tailwindlabs
 
 Utilize [DaisyUI components](https://daisyui.com/components/) whenever possible to maintain design consistency and speed up development.
 
+### Navbar Dropdown Best Practices
+
+When creating navbars with dropdowns, follow these guidelines to ensure accessibility and better user experience on touch devices:
+
+1.  **Parent as Toggle Only:** The top-most item in the navbar should **not** be a clickable link to a page. Instead, it should only serve as a toggle to open/close the dropdown menu.
+2.  **Include Parent Page in Dropdown:** If the parent category needs a landing page (e.g., "Services"), include it as the first item inside the dropdown menu (e.g., "All Services" or "Services Overview").
+
+#### Implementation Pattern
+
+Use the standard DaisyUI structure with HTML `<details>` and `<summary>` tags.
+
+```html
+<li>
+  <details>
+    <summary>Parent Category</summary> <!-- Toggle Only -->
+    <ul class="p-2">
+      <!-- Navigate to Parent Page here -->
+      <li><NuxtLinkLocale to="/parent-page">Overview</NuxtLinkLocale></li>
+      <!-- Child Items -->
+      <li><NuxtLinkLocale to="/child-1">Child Item 1</NuxtLinkLocale></li>
+      <li><NuxtLinkLocale to="/child-2">Child Item 2</NuxtLinkLocale></li>
+    </ul>
+  </details>
+</li>
+```
+
 ## Internationalization (i18n)
 
 This project uses `@nuxtjs/i18n` for internationalization.
