@@ -7,6 +7,77 @@
     "join": "JOIN WCU"
   },
   "logo_alt": "WCU Logo",
+  "join": {
+    "hero": {
+      "title": "collective, class-conscious power",
+      "description": "If you believe in mass organizing over fighting alone, in democracy over monied interests, and in building class-consciousness over supporting the status quo, you are already one of us. There is a war being waged against the working class. Join us and fight back."
+    },
+    "membership": {
+      "rank_and_file": {
+        "title": "Membership",
+        "description": "Become a rank and file member.",
+        "price": "$10 per month",
+        "button": "Join"
+      },
+      "solidarity": {
+        "title": "Solidarity",
+        "description": "Become a rank and file member. Paying more does not get you additional benefits, but it does let us print more flyers.",
+        "price": "$27 per month",
+        "button": "Join"
+      },
+      "donate": {
+        "title": "Donate - One Time",
+        "description": "If you cannot become a member but still want to support WCU, you can make a one time donation.",
+        "price": "$27 or custom amount",
+        "button": "Donate"
+      }
+    },
+    "benefits": {
+      "title": "Rank and File Membership",
+      "description": "Joining Working Class Unity means actively shaping the organization's direction, taking responsibility for actions, and engaging in our campaigns.",
+      "items": {
+        "voting": {
+          "title": "Voting Rights",
+          "description": "Members participate in all decision-making processes and determine the direction of our organization."
+        },
+        "leadership": {
+          "title": "Leadership",
+          "description": "All members are eligible to hold any office or serve on any committee within our organization."
+        },
+        "campaigns": {
+          "title": "Campaigns",
+          "description": "Our campaigns primarily aim to advance socialism and build power for the working class."
+        },
+        "education": {
+          "title": "Education",
+          "description": "Members work together to produce political educational material & organizing skill trainings."
+        }
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Frequently Asked Questions About Membership and Participation",
+      "items": {
+        "eligibility": {
+          "question": "What are the eligibility requirements to become a member of Working Class Unity?",
+          "answer": "To be eligible for membership in WCU, individuals must be in good standing and either reside, work, or attend school or church in San Joaquin County, California."
+        },
+        "good_standing": {
+          "question": "What does it mean to be a member in good standing?",
+          "answer": "Members in good standing have paid their dues (with a 30-day grace period), attended at least one regular meeting per year, adhered to WCU’s values and mission, and have not engaged in behavior that violates WCU’s Code of Conduct."
+        },
+        "dues": {
+          "question": "Why do you have membership dues?",
+          "answer": "WCU is fully funded by Member dues and donations. By not taking large donor or government grants, we are able to focus solely on our mission and the interests of the working class without external influence."
+        },
+        "contact": {
+          "question": "Can I talk to someone before joining?",
+          "answer": "Yes, of course! You can schedule a quick call with a member of the Steering Committee by using this link ({link}).",
+          "link_text": "https://cal.com/workingclassunity/15min"
+        }
+      }
+    }
+  },
   "check_in_coverage": {
     "page_title": "ICE Check-In Coverage",
     "hero": {
