@@ -1,6 +1,9 @@
 {
   "nav": {
     "about": "About",
+    "kyr": "Know Your Rights",
+    "resources": "Resources",
+    "coverage": "Check-In Coverage",
     "join": "JOIN WCU"
   },
   "logo_alt": "WCU Logo"

@@ -50,6 +50,15 @@ onUnmounted(() => {
           </svg>
         </div>
         <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base-content">
+          <li>
+            <details>
+              <summary>{{ $t('nav.kyr') }}</summary>
+              <ul class="p-2">
+                <li><NuxtLinkLocale to="resources">{{ $t('nav.resources') }}</NuxtLinkLocale></li>
+                <li><NuxtLinkLocale to="check-in-coverage">{{ $t('nav.coverage') }}</NuxtLinkLocale></li>
+              </ul>
+            </details>
+          </li>
           <li><NuxtLinkLocale to="about">{{ $t('nav.about') }}</NuxtLinkLocale></li>
         </ul>
       </div>
@@ -62,6 +71,15 @@ onUnmounted(() => {
     <!-- Desktop Menu -->
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
+        <li>
+          <details>
+            <summary>{{ $t('nav.kyr') }}</summary>
+            <ul class="p-2 bg-base-100 rounded-t-none text-base-content w-52 shadow-md">
+              <li><NuxtLinkLocale to="resources">{{ $t('nav.resources') }}</NuxtLinkLocale></li>
+              <li><NuxtLinkLocale to="check-in-coverage">{{ $t('nav.coverage') }}</NuxtLinkLocale></li>
+            </ul>
+          </details>
+        </li>
         <li><NuxtLinkLocale to="about">{{ $t('nav.about') }}</NuxtLinkLocale></li>
       </ul>
     </div>
