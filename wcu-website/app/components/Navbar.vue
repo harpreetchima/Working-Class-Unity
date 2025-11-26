@@ -49,7 +49,7 @@ onUnmounted(() => {
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </div>
-        <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base-content">
+        <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow bg-base-100 rounded-box w-52 text-base-content">
           <li>
             <details>
               <summary>{{ $t('nav.kyr') }}</summary>
@@ -72,13 +72,13 @@ onUnmounted(() => {
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <li>
-          <details>
-            <summary>{{ $t('nav.kyr') }}</summary>
-            <ul class="p-2 bg-base-100 rounded-t-none text-base-content w-52 shadow-md">
+          <div class="dropdown dropdown-bottom">
+            <div tabindex="0" role="button">{{ $t('nav.kyr') }}</div>
+            <ul tabindex="-1" class="dropdown-content menu bg-base-100 text-base-content rounded-box z-50 w-52 p-2 shadow">
               <li><NuxtLinkLocale to="resources">{{ $t('nav.resources') }}</NuxtLinkLocale></li>
               <li><NuxtLinkLocale to="check-in-coverage">{{ $t('nav.coverage') }}</NuxtLinkLocale></li>
             </ul>
-          </details>
+          </div>
         </li>
         <li><NuxtLinkLocale to="about">{{ $t('nav.about') }}</NuxtLinkLocale></li>
       </ul>
@@ -92,7 +92,7 @@ onUnmounted(() => {
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
           </svg>
         </div>
-        <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base-content">
+        <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow bg-base-100 rounded-box w-52 text-base-content">
           <li v-for="l in locales" :key="l.code">
             <NuxtLink :to="switchLocalePath(l.code)" :class="{ 'active': locale === l.code }">
               {{ l.name }}
