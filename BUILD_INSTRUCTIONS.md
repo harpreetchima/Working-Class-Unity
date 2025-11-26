@@ -59,6 +59,92 @@ We have integrated the [Tailwind CSS Typography](https://github.com/tailwindlabs
 
 Utilize [DaisyUI components](https://daisyui.com/components/) whenever possible to maintain design consistency and speed up development.
 
+## Internationalization (i18n)
+
+This project uses `@nuxtjs/i18n` for internationalization.
+
+### Locale Files
+
+Locale files are stored in the `i18n/locales/` directory:
+- `en.json` (English)
+- `es.json` (Spanish)
+- `pa.json` (Punjabi)
+
+### Adding a New Language
+
+1.  **Create the Locale File:**
+    Create a new JSON file in `i18n/locales/` (e.g., `fr.json` for French).
+
+2.  **Register the Locale:**
+    Update `nuxt.config.ts` to include the new locale in the `i18n.locales` array:
+
+    ```typescript
+    i18n: {
+      // ...
+      locales: [
+        { code: 'en', file: 'en.json', name: 'English' },
+        { code: 'es', file: 'es.json', name: 'Español' },
+        { code: 'pa', file: 'pa.json', name: 'ਪੰਜਾਬੀ' },
+        { code: 'fr', file: 'fr.json', name: 'Français' }, // Add this line
+      ],
+      // ...
+    },
+    ```
+
+### Usage
+
+-   **In Templates:** Use `$t('key')` to display translated strings.
+-   **Link to Localized Pages:** Use `<NuxtLinkLocale to="page-name">...</NuxtLinkLocale>`.
+-   **Switching Locales:** Use `switchLocalePath('code')` to get the path for switching the language.
+
+### Workflow: Adding a New Page & Content
+
+When adding a new page (e.g., "Check-In Coverage"), follow these steps to ensure full localization support:
+
+1.  **Create the Page Component:**
+    Create `app/pages/check-in-coverage.vue`. Use the `prose` class for content text.
+
+    ```vue
+    <template>
+      <div class="container mx-auto px-4 py-8">
+        <article class="prose lg:prose-xl mx-auto">
+          <h1>{{ $t('checkIn.title') }}</h1>
+          <p>{{ $t('checkIn.description') }}</p>
+        </article>
+      </div>
+    </template>
+    ```
+
+2.  **Add Translations:**
+    Add the corresponding keys to **ALL** locale files in `i18n/locales/`.
+
+    **`i18n/locales/en.json`:**
+    ```json
+    {
+      "checkIn": {
+        "title": "Check-In Coverage",
+        "description": "Lorem ipsum dolor sit amet..."
+      }
+    }
+    ```
+
+    **`i18n/locales/es.json`:**
+    ```json
+    {
+      "checkIn": {
+        "title": "Cobertura de Check-In",
+        "description": "Lorem ipsum dolor sit amet..."
+      }
+    }
+    ```
+
+3.  **Link to the Page:**
+    Add a link in the navigation or other pages using `<NuxtLinkLocale>`:
+
+    ```html
+    <NuxtLinkLocale to="check-in-coverage">Check-In Coverage</NuxtLinkLocale>
+    ```
+
 ## Production Build
 
 Build the application for production:
