@@ -1,26 +1,37 @@
 <script setup lang="ts">
 import { knowYourRightsResources } from '~/data/know-your-rights'
 
+const props = withDefaults(defineProps<{
+  seamless?: boolean
+  showTitle?: boolean
+}>(), {
+  seamless: false,
+  showTitle: true
+})
+
 const route = useRoute()
 
 // Filter out the current page
-const otherResources = computed(() => 
-  knowYourRightsResources.filter(r => 
+const otherResources = computed(() =>
+  knowYourRightsResources.filter(r =>
     !route.path.endsWith(r.slug)
   )
 )
 </script>
 
 <template>
-  <div class="card bg-base-200 mt-8">
-    <div class="card-body">
-      <h3 class="card-title">{{ $t('kyr.otherResources') }}</h3>
+  <div :class="[seamless ? 'mt-8' : 'card bg-base-200 mt-8']">
+    <div :class="[seamless ? '' : 'card-body']">
+      <h3 v-if="showTitle" class="card-title mb-4">{{ $t('kyr.otherResources') }}</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <NuxtLinkLocale 
+        <NuxtLinkLocale
           v-for="resource in otherResources"
           :key="resource.slug"
           :to="`/know-your-rights/${resource.slug}`"
-          class="btn btn-outline h-auto py-3 justify-start"
+          :class="[
+            'btn h-auto py-3 justify-start',
+            seamless ? 'btn-neutral btn-outline bg-base-100 hover:bg-neutral hover:text-neutral-content' : 'btn-outline'
+          ]"
         >
           <span class="text-2xl mr-2">{{ resource.icon }}</span>
           <span class="text-left">

@@ -54,7 +54,7 @@ onUnmounted(() => {
             <details>
               <summary>{{ $t('nav.kyr') }}</summary>
               <ul class="p-2">
-                <li><NuxtLinkLocale to="resources">{{ $t('nav.resources') }}</NuxtLinkLocale></li>
+                <li><NuxtLinkLocale to="kyr">{{ $t('nav.resources') }}</NuxtLinkLocale></li>
                 <li><NuxtLinkLocale to="check-in-coverage">{{ $t('nav.coverage') }}</NuxtLinkLocale></li>
               </ul>
             </details>
@@ -75,7 +75,7 @@ onUnmounted(() => {
           <div class="dropdown dropdown-bottom">
             <div tabindex="0" role="button">{{ $t('nav.kyr') }}</div>
             <ul tabindex="-1" class="dropdown-content menu bg-base-100 text-base-content rounded-box z-50 w-52 p-2 shadow">
-              <li><NuxtLinkLocale to="resources">{{ $t('nav.resources') }}</NuxtLinkLocale></li>
+              <li><NuxtLinkLocale to="kyr">{{ $t('nav.resources') }}</NuxtLinkLocale></li>
               <li><NuxtLinkLocale to="check-in-coverage">{{ $t('nav.coverage') }}</NuxtLinkLocale></li>
             </ul>
           </div>

@@ -33,6 +33,104 @@
       "description": "ਹਮੇਸ਼ਾ ਆਪਣੇ ਕੋਲ ਰੱਖਣ ਲਈ ਜ਼ਰੂਰੀ ਦਸਤਾਵੇਜ਼।"
     }
   },
+  "kyr_home": {
+    "hero": {
+      "title": "[PUNJABI] Know Your Rights. Protect Your Community.",
+      "description": "[PUNJABI] Immigration enforcement and police are used to divide and intimidate the working class. Know your rights, prepare your family, and stand together so no one faces ICE or the courts alone. This is how we fight back."
+    },
+    "buttons": {
+      "emergency": {
+        "title": "[PUNJABI] Emergency & Preparation",
+        "subtitle": "[PUNJABI] I need to know my rights or prepare my family."
+      },
+      "support": {
+        "title": "[PUNJABI] Request Support",
+        "subtitle": "[PUNJABI] I have an ICE check-in or court date."
+      },
+      "involved": {
+        "title": "[PUNJABI] Get Involved",
+        "subtitle": "[PUNJABI] I want to volunteer or stand with immigrants."
+      }
+    },
+    "disclaimer": "[PUNJABI] Disclaimer: These materials are for information only, not legal advice. Always consult a trusted attorney or legal worker about your specific situation.",
+    "sections": {
+      "rights_prep": "[PUNJABI] Know Your Rights & Preparation",
+      "get_involved": "[PUNJABI] Get Involved",
+      "rights_prep_title": "[PUNJABI] Know Your Rights & Prepare Your Family",
+      "rights_prep_intro": "[PUNJABI] The most important tools you have are the right to remain silent and the right to not consent to searches. Memorize them. Teach them to your family. The guides below provide step-by-step instructions for what to do in common situations.",
+      "emergency_box": {
+        "text": "[PUNJABI] If someone has already been detained or is being detained right now, call the VWN hotline immediately at {phone} and read our {link}.",
+        "link_text": "[PUNJABI] Detention Guide",
+        "phone": "(559) 206-0151"
+      }
+    },
+    "get_involved_section": {
+      "title": "[PUNJABI] From Knowledge to Action: Stand with the Working Class",
+      "intro": "[PUNJABI] Knowing your rights is the first step. The next is acting collectively. The bosses and landlords use immigration status to keep wages low and crush organizing for everyone. When we stand together, we make it harder for them to operate in silence and fear. This is how we build power.",
+      "subsection_a": {
+        "title": "[PUNJABI] Direct Support & Community Defense",
+        "h3": "[PUNJABI] ICE Check-In Coverage, Accompaniment & Volunteer",
+        "copy": "[PUNJABI] We organize volunteer teams to observe ICE check-ins and accompany people to high-risk appointments. Our presence provides community protection, documents state activity, and ensures no one disappears alone. This is not charity; it is disciplined, working-class solidarity.",
+        "button_1": {
+          "text": "[PUNJABI] Sign up for an ICE Check-In Coverage shift",
+          "subtext": "[PUNJABI] Observe and log activity outside the Stockton ICE facility."
+        },
+        "button_2": {
+          "text": "[PUNJABI] Provide Accompaniment Support",
+          "subtext": "[PUNJABI] Support people at check-ins, court dates, and other appointments."
+        },
+        "button_3": {
+          "text": "[PUNJABI] Volunteer in other ways",
+          "subtext": "[PUNJABI] Spread information by canvassing, tabling, and giving presentations to your family or congregation."
+        }
+      },
+      "subsection_b": {
+        "title": "[PUNJABI] Political Commitment",
+        "h3": "[PUNJABI] Build a United Front of the Working Class",
+        "copy": "[PUNJABI] We are building a united front of workers in San Joaquin County—farmworkers, tenants, congregations, and union members—independent of both major parties. We will not be divided by papers, race, or language. We will organize where we live and work until no employer can threaten a worker into silence and no family faces these crises alone.",
+        "button_1": {
+          "text": "[PUNJABI] Read & Sign the United Front Letter",
+          "subtext": "[PUNJABI] Show that San Joaquin's working class stands with our immigrant neighbors."
+        },
+        "button_2": {
+          "text": "[PUNJABI] Join Working Class Unity",
+          "subtext": "[PUNJABI] Become a member of a democratic, fighting organization."
+        }
+      }
+    }
+  },
+  "request_support": {
+    "title": "[PUNJABI] Support for Your ICE Check-In or Appointment",
+    "intro": "[PUNJABI] You do not have to face this alone. If you have an upcoming ICE check-in or other high-risk appointment, you can securely share your information with us. We will do our best to support you.",
+    "section1": {
+      "title": "[PUNJABI] How We Can Help",
+      "p1": "[PUNJABI] We are volunteers, not lawyers. We keep your information confidential and only share it with trusted members of our team who are directly involved in your support. We will never share your details with ICE, police, or your employer.",
+      "p2": "[PUNJABI] Based on your request and our volunteer availability, we can try to:",
+      "list": [
+        "[PUNJABI] Organize volunteers outside the building during your appointment time.",
+        "[PUNJABI] Call or text you before your appointment to check in.",
+        "[PUNJABI] Call or text you after your appointment to confirm you are safe.",
+        "[PUNJABI] Contact your emergency person and community hotlines if we believe you may have been detained."
+      ]
+    },
+    "form": {
+      "title": "[PUNJABI] Confidential Support Request",
+      "intro": "[PUNJABI] Please fill out the form below. The more information you provide, the better we can prepare to support you."
+    },
+    "next_steps": {
+      "title": "[PUNJABI] What Happens Next",
+      "steps": [
+        "[PUNJABI] A trusted WCU coordinator will review your request.",
+        "[PUNJABI] We will contact you via your safe phone number to confirm we received your information and let you know what support we can realistically provide.",
+        "[PUNJABI] We prioritize higher-risk cases and will always be honest about our volunteer capacity. We cannot guarantee someone will be present in person, but we will always do our best."
+      ]
+    },
+    "emergency": {
+      "text": "[PUNJABI] If someone has already been detained or is being detained right now, do not use this form. Go to our {link} or call the VWN hotline immediately at {phone}.",
+      "link_text": "[PUNJABI] Detention Guide",
+      "phone": "(559) 206-0151"
+    }
+  },
   "logo_alt": "WCU ਲੋਗੋ",
   "about_page": {
     "title": "They Have Their Parties. We Need Our Own Organization",
@@ -170,6 +268,223 @@
       "copy": "If you are unsure about the role or need to speak to an organizer before signing up:",
       "phone": "Text: 209-842-3232",
       "call_link": "Schedule a 15-min Intro Call"
+    }
+  },
+  "kyr_ice_at_work": {
+    "where_ice_can_go": {
+      "title": "[PUNJABI] Where ICE can go",
+      "public_areas": {
+        "title": "[PUNJABI] Public areas (no permission needed):",
+        "description": "[PUNJABI] Lobbies, dining rooms, and retail spaces. Entry alone does not grant authority to stop, question, or arrest anyone."
+      },
+      "private_areas": {
+        "title": "[PUNJABI] Private areas (permission required):",
+        "description": "[PUNJABI] ICE needs a judicial warrant signed by a judge—not a DHS order. If an employee or employer consents, ICE can enter without a warrant."
+      }
+    },
+    "rights_at_work": {
+      "title": "[PUNJABI] Your rights at work",
+      "intro": "[PUNJABI] All workers can:",
+      "list": [
+        "[PUNJABI] Remain silent.",
+        "[PUNJABI] Refuse searches.",
+        "[PUNJABI] Refuse to show documentation or ID.",
+        "[PUNJABI] Stand together in the center of the room. Refuse to separate by immigration status. ICE uses this tactic to isolate individuals—protect each other."
+      ]
+    }
+  },
+  "kyr_ice_at_home": {
+    "do_not_consent": {
+      "title": "[PUNJABI] Do not consent to a search",
+      "say": "[PUNJABI] SAY: “I do not consent to entry.”",
+      "do_not": "[PUNJABI] DO NOT: Open the door or step outside.",
+      "do": "[PUNJABI] DO: Record from inside your home."
+    },
+    "ask_id": {
+      "title": "[PUNJABI] Ask for identification",
+      "list": [
+        "[PUNJABI] Request badge numbers and names.",
+        "[PUNJABI] Record or write down this information."
+      ]
+    },
+    "warrant": {
+      "title": "[PUNJABI] Demand to see a warrant",
+      "no_warrant": {
+        "title": "[PUNJABI] If they claim to have no warrant or you see it lacks a judge’s signature:",
+        "list": [
+          "[PUNJABI] Say: “I exercise my right to remain silent.”",
+          "[PUNJABI] Say: “You cannot enter without my consent.”",
+          "[PUNJABI] Keep the door closed."
+        ]
+      },
+      "has_warrant": {
+        "title": "[PUNJABI] If they claim to have a warrant:",
+        "list": [
+          "[PUNJABI] Request they slide it under the door or display it at a window.",
+          "[PUNJABI] Photograph the warrant."
+        ]
+      },
+      "check_items": {
+        "title": "[PUNJABI] Check these four items:",
+        "list": [
+          "[PUNJABI] Issuing authority: Must be from a COURT, not Homeland Security or ICE.",
+          "[PUNJABI] Subject identity: Your correct name and address must appear, not someone else’s.",
+          "[PUNJABI] Expiration date: The “execute by” date must be within 14 days.",
+          "[PUNJABI] Signature: A judge or magistrate must sign it, not an immigration officer."
+        ]
+      }
+    },
+    "if_enters": {
+      "title": "[PUNJABI] If ICE enters your home",
+      "list": [
+        "[PUNJABI] Record these violations: force, violence, intimidation, lies, or excessive searching.",
+        "[PUNJABI] If you cannot film during the incident, record yourself describing what happened as soon as possible afterward."
+      ]
+    }
+  },
+  "kyr_ice_pulls_you_over": {
+    "always_pull_over": {
+      "title": "[PUNJABI] Always pull over",
+      "content": "[PUNJABI] Pull over when any law enforcement signals you to stop, even if you do not think you did anything wrong.",
+      "recording_tip": "[PUNJABI] Start recording. If alone, place the phone in a cup holder or pocket while recording continues."
+    },
+    "identify_officers": {
+      "title": "[PUNJABI] Identify the officers",
+      "questions": [
+        "[PUNJABI] Are you police?",
+        "[PUNJABI] Are you highway patrol?",
+        "[PUNJABI] Are you immigration?",
+        "[PUNJABI] Why did you stop me?"
+      ],
+      "warning": {
+        "title": "[PUNJABI] Warning",
+        "content": "[PUNJABI] ICE uses unmarked vehicles and may wear plain clothes or vests labeled “POLICE” without identifying themselves as immigration."
+      }
+    },
+    "during_stop": {
+      "title": "[PUNJABI] During the stop",
+      "window": {
+        "title": "[PUNJABI] Your window",
+        "content": "[PUNJABI] Roll down your window slightly when asked.",
+        "questions_title": "[PUNJABI] Before anything else, ask:",
+        "questions": [
+          "[PUNJABI] Am I free to go?",
+          "[PUNJABI] Who are you?",
+          "[PUNJABI] Why did you stop me?",
+          "[PUNJABI] Do you have a warrant?"
+        ]
+      },
+      "providing_info": {
+        "title": "[PUNJABI] Providing information",
+        "drivers": {
+          "title": "[PUNJABI] Drivers must provide:",
+          "list": [
+            "[PUNJABI] Driver’s license.",
+            "[PUNJABI] Registration and proof of insurance."
+          ]
+        },
+        "passengers": {
+          "title": "[PUNJABI] Passengers",
+          "list": [
+            "[PUNJABI] Cannot be forced to show ID.",
+            "[PUNJABI] Cannot be forced to give name, address, legal status or place of birth."
+          ]
+        },
+        "advice": [
+          "[PUNJABI] Request officer identification before presenting any documents.",
+          "[PUNJABI] Do not lie or give false documents."
+        ],
+        "all_occupants": {
+          "title": "[PUNJABI] For all occupants:",
+          "list": [
+            "[PUNJABI] Decline to discuss immigration status or criminal history."
+          ],
+          "say": "[PUNJABI] Am I free to go? I do not consent to provide ID or answer questions."
+        }
+      }
+    },
+    "compliance_searches": {
+      "title": "[PUNJABI] Physical compliance and searches",
+      "exiting": {
+        "title": "[PUNJABI] Exiting the vehicle",
+        "content": "[PUNJABI] Officer may order you to get out for “officer safety.” This order often precedes arrest.",
+        "ask_title": "[PUNJABI] Before moving, ask:",
+        "questions": [
+          "[PUNJABI] Am I free to go?",
+          "[PUNJABI] Who are you?",
+          "[PUNJABI] Why did you stop me?"
+        ],
+        "warning": "[PUNJABI] Officers may force removal if you delay."
+      },
+      "search_limitations": {
+        "title": "[PUNJABI] Search limitations",
+        "content": "[PUNJABI] ICE needs a judicial warrant or your consent to search:",
+        "list": [
+          "[PUNJABI] Your body (beyond a pat-down).",
+          "[PUNJABI] The inside of your vehicle.",
+          "[PUNJABI] Glove compartment or trunk."
+        ],
+        "say": "[PUNJABI] I do not consent to any searches.",
+        "repeat": "[PUNJABI] Repeat this even if officers proceed anyway."
+      },
+      "fingerprints": {
+        "title": "[PUNJABI] Fingerprint collection",
+        "when": {
+          "title": "[PUNJABI] ICE can take fingerprints only when:",
+          "list": [
+            "[PUNJABI] Officers suspect immigration violations.",
+            "[PUNJABI] You are under arrest."
+          ]
+        },
+        "if_requested": {
+          "title": "[PUNJABI] If requested without a clear cause:",
+          "list": [
+            "[PUNJABI] Ask: “Why am I being fingerprinted?”",
+            "[PUNJABI] Say: “I do not consent to fingerprinting.”"
+          ]
+        },
+        "resistance": "[PUNJABI] Do not physically resist. Verbal objection may protect your legal rights."
+      }
+    }
+  },
+  "kyr_ice_in_public": {
+    "tactics": {
+      "title": "[PUNJABI] ICE Tactics",
+      "list": [
+        "[PUNJABI] Follow you near your home or in public spaces.",
+        "[PUNJABI] Wear plain clothes without identifying themselves.",
+        "[PUNJABI] Call out your name to confirm your identity."
+      ]
+    },
+    "stopped": {
+      "title": "[PUNJABI] If stopped by ICE",
+      "silent": "[PUNJABI] Stay silent. Do not state your name or answer questions.",
+      "ask_free": {
+        "question": "[PUNJABI] Ask: “Am I free to go?”",
+        "if_yes": {
+          "title": "[PUNJABI] If they say YES:",
+          "steps": [
+            "[PUNJABI] SAY: “I will not answer questions.”",
+            "[PUNJABI] Walk away calmly if they let you."
+          ]
+        },
+        "if_no": {
+          "title": "[PUNJABI] If they say NO:",
+          "steps": [
+            "[PUNJABI] SAY: “I will not answer questions. I want a lawyer.”",
+            "[PUNJABI] Do not lie, show false documents, or run."
+          ]
+        }
+      }
+    },
+    "protect": {
+      "title": "[PUNJABI] Protect Yourself",
+      "list": [
+        "[PUNJABI] Record the encounter or ask someone to record. Remember that anything you say in that recording can be used against you, so stick to repeating your rights.",
+        "[PUNJABI] When requesting help, avoid saying your name. Give them a contact's name to send the video.",
+        "[PUNJABI] Carry an emergency card with your lawyer's and family’s contact information.",
+        "[PUNJABI] If searched without consent: Say, “I do not consent to this search. I want a lawyer.”"
+      ]
     }
   }
 }

@@ -33,6 +33,104 @@
       "description": "Essential documents to carry at all times."
     }
   },
+  "kyr_home": {
+    "hero": {
+      "title": "Know Your Rights. Protect Your Community.",
+      "description": "Immigration enforcement and police are used to divide and intimidate the working class. Know your rights, prepare your family, and stand together so no one faces ICE or the courts alone. This is how we fight back."
+    },
+    "buttons": {
+      "emergency": {
+        "title": "Emergency & Preparation",
+        "subtitle": "I need to know my rights or prepare my family."
+      },
+      "support": {
+        "title": "Request Support",
+        "subtitle": "I have an ICE check-in or court date."
+      },
+      "involved": {
+        "title": "Get Involved",
+        "subtitle": "I want to volunteer or stand with immigrants."
+      }
+    },
+    "disclaimer": "Disclaimer: These materials are for information only, not legal advice. Always consult a trusted attorney or legal worker about your specific situation.",
+    "sections": {
+      "rights_prep": "Know Your Rights & Preparation",
+      "get_involved": "Get Involved",
+      "rights_prep_title": "Know Your Rights & Prepare Your Family",
+      "rights_prep_intro": "The most important tools you have are the right to remain silent and the right to not consent to searches. Memorize them. Teach them to your family. The guides below provide step-by-step instructions for what to do in common situations.",
+      "emergency_box": {
+        "text": "If someone has already been detained or is being detained right now, call the VWN hotline immediately at {phone} and read our {link}.",
+        "link_text": "Detention Guide",
+        "phone": "(559) 206-0151"
+      }
+    },
+    "get_involved_section": {
+      "title": "From Knowledge to Action: Stand with the Working Class",
+      "intro": "Knowing your rights is the first step. The next is acting collectively. The bosses and landlords use immigration status to keep wages low and crush organizing for everyone. When we stand together, we make it harder for them to operate in silence and fear. This is how we build power.",
+      "subsection_a": {
+        "title": "Direct Support & Community Defense",
+        "h3": "ICE Check-In Coverage, Accompaniment & Volunteer",
+        "copy": "We organize volunteer teams to observe ICE check-ins and accompany people to high-risk appointments. Our presence provides community protection, documents state activity, and ensures no one disappears alone. This is not charity; it is disciplined, working-class solidarity.",
+        "button_1": {
+          "text": "Sign up for an ICE Check-In Coverage shift",
+          "subtext": "Observe and log activity outside the Stockton ICE facility."
+        },
+        "button_2": {
+          "text": "Provide Accompaniment Support",
+          "subtext": "Support people at check-ins, court dates, and other appointments."
+        },
+        "button_3": {
+          "text": "Volunteer In Other Ways",
+          "subtext": "Spread information by canvassing, tabling, and giving presentations to your family or congregation."
+        }
+      },
+      "subsection_b": {
+        "title": "Political Commitment",
+        "h3": "Build a United Front of the Working Class",
+        "copy": "We are building a united front of workers in San Joaquin County—farmworkers, tenants, congregations, and union members—independent of both major parties. We will not be divided by papers, race, or language. We will organize where we live and work until no employer can threaten a worker into silence and no family faces these crises alone.",
+        "button_1": {
+          "text": "Read & Sign the United Front Letter",
+          "subtext": "Show that San Joaquin's working class stands with our immigrant neighbors."
+        },
+        "button_2": {
+          "text": "Join Working Class Unity",
+          "subtext": "Become a member of a democratic, fighting organization."
+        }
+      }
+    }
+  },
+  "request_support": {
+    "title": "Support for Your ICE Check-In or Appointment",
+    "intro": "You do not have to face this alone. If you have an upcoming ICE check-in or other high-risk appointment, you can securely share your information with us. We will do our best to support you.",
+    "section1": {
+      "title": "How We Can Help",
+      "p1": "We are volunteers, not lawyers. We keep your information confidential and only share it with trusted members of our team who are directly involved in your support. We will never share your details with ICE, police, or your employer.",
+      "p2": "Based on your request and our volunteer availability, we can try to:",
+      "list": [
+        "Organize volunteers outside the building during your appointment time.",
+        "Call or text you before your appointment to check in.",
+        "Call or text you after your appointment to confirm you are safe.",
+        "Contact your emergency person and community hotlines if we believe you may have been detained."
+      ]
+    },
+    "form": {
+      "title": "Confidential Support Request",
+      "intro": "Please fill out the form below. The more information you provide, the better we can prepare to support you."
+    },
+    "next_steps": {
+      "title": "What Happens Next",
+      "steps": [
+        "A trusted WCU coordinator will review your request.",
+        "We will contact you via your safe phone number to confirm we received your information and let you know what support we can realistically provide.",
+        "We prioritize higher-risk cases and will always be honest about our volunteer capacity. We cannot guarantee someone will be present in person, but we will always do our best."
+      ]
+    },
+    "emergency": {
+      "text": "If someone has already been detained or is being detained right now, do not use this form. Go to our {link} or call the VWN hotline immediately at {phone}.",
+      "link_text": "Detention Guide",
+      "phone": "(559) 206-0151"
+    }
+  },
   "logo_alt": "WCU Logo",
   "about_page": {
     "title": "They Have Their Parties. We Need Our Own Organization",
@@ -170,6 +268,223 @@
       "copy": "If you are unsure about the role or need to speak to an organizer before signing up:",
       "phone": "Text: 209-842-3232",
       "call_link": "Schedule a 15-min Intro Call"
+    }
+  },
+  "kyr_ice_at_work": {
+    "where_ice_can_go": {
+      "title": "Where ICE can go",
+      "public_areas": {
+        "title": "Public areas (no permission needed):",
+        "description": "Lobbies, dining rooms, and retail spaces. Entry alone does not grant authority to stop, question, or arrest anyone."
+      },
+      "private_areas": {
+        "title": "Private areas (permission required):",
+        "description": "ICE needs a judicial warrant signed by a judge—not a DHS order. If an employee or employer consents, ICE can enter without a warrant."
+      }
+    },
+    "rights_at_work": {
+      "title": "Your rights at work",
+      "intro": "All workers can:",
+      "list": [
+        "Remain silent.",
+        "Refuse searches.",
+        "Refuse to show documentation or ID.",
+        "Stand together in the center of the room. Refuse to separate by immigration status. ICE uses this tactic to isolate individuals—protect each other."
+      ]
+    }
+  },
+  "kyr_ice_at_home": {
+    "do_not_consent": {
+      "title": "Do not consent to a search",
+      "say": "SAY: “I do not consent to entry.”",
+      "do_not": "DO NOT: Open the door or step outside.",
+      "do": "DO: Record from inside your home."
+    },
+    "ask_id": {
+      "title": "Ask for identification",
+      "list": [
+        "Request badge numbers and names.",
+        "Record or write down this information."
+      ]
+    },
+    "warrant": {
+      "title": "Demand to see a warrant",
+      "no_warrant": {
+        "title": "If they claim to have no warrant or you see it lacks a judge’s signature:",
+        "list": [
+          "Say: “I exercise my right to remain silent.”",
+          "Say: “You cannot enter without my consent.”",
+          "Keep the door closed."
+        ]
+      },
+      "has_warrant": {
+        "title": "If they claim to have a warrant:",
+        "list": [
+          "Request they slide it under the door or display it at a window.",
+          "Photograph the warrant."
+        ]
+      },
+      "check_items": {
+        "title": "Check these four items:",
+        "list": [
+          "Issuing authority: Must be from a COURT, not Homeland Security or ICE.",
+          "Subject identity: Your correct name and address must appear, not someone else’s.",
+          "Expiration date: The “execute by” date must be within 14 days.",
+          "Signature: A judge or magistrate must sign it, not an immigration officer."
+        ]
+      }
+    },
+    "if_enters": {
+      "title": "If ICE enters your home",
+      "list": [
+        "Record these violations: force, violence, intimidation, lies, or excessive searching.",
+        "If you cannot film during the incident, record yourself describing what happened as soon as possible afterward."
+      ]
+    }
+  },
+  "kyr_ice_pulls_you_over": {
+    "always_pull_over": {
+      "title": "Always pull over",
+      "content": "Pull over when any law enforcement signals you to stop, even if you do not think you did anything wrong.",
+      "recording_tip": "Start recording. If alone, place the phone in a cup holder or pocket while recording continues."
+    },
+    "identify_officers": {
+      "title": "Identify the officers",
+      "questions": [
+        "Are you police?",
+        "Are you highway patrol?",
+        "Are you immigration?",
+        "Why did you stop me?"
+      ],
+      "warning": {
+        "title": "Warning",
+        "content": "ICE uses unmarked vehicles and may wear plain clothes or vests labeled “POLICE” without identifying themselves as immigration."
+      }
+    },
+    "during_stop": {
+      "title": "During the stop",
+      "window": {
+        "title": "Your window",
+        "content": "Roll down your window slightly when asked.",
+        "questions_title": "Before anything else, ask:",
+        "questions": [
+          "Am I free to go?",
+          "Who are you?",
+          "Why did you stop me?",
+          "Do you have a warrant?"
+        ]
+      },
+      "providing_info": {
+        "title": "Providing information",
+        "drivers": {
+          "title": "Drivers must provide:",
+          "list": [
+            "Driver’s license.",
+            "Registration and proof of insurance."
+          ]
+        },
+        "passengers": {
+          "title": "Passengers",
+          "list": [
+            "Cannot be forced to show ID.",
+            "Cannot be forced to give name, address, legal status or place of birth."
+          ]
+        },
+        "advice": [
+          "Request officer identification before presenting any documents.",
+          "Do not lie or give false documents."
+        ],
+        "all_occupants": {
+          "title": "For all occupants:",
+          "list": [
+            "Decline to discuss immigration status or criminal history."
+          ],
+          "say": "Am I free to go? I do not consent to provide ID or answer questions."
+        }
+      }
+    },
+    "compliance_searches": {
+      "title": "Physical compliance and searches",
+      "exiting": {
+        "title": "Exiting the vehicle",
+        "content": "Officer may order you to get out for “officer safety.” This order often precedes arrest.",
+        "ask_title": "Before moving, ask:",
+        "questions": [
+          "Am I free to go?",
+          "Who are you?",
+          "Why did you stop me?"
+        ],
+        "warning": "Officers may force removal if you delay."
+      },
+      "search_limitations": {
+        "title": "Search limitations",
+        "content": "ICE needs a judicial warrant or your consent to search:",
+        "list": [
+          "Your body (beyond a pat-down).",
+          "The inside of your vehicle.",
+          "Glove compartment or trunk."
+        ],
+        "say": "I do not consent to any searches.",
+        "repeat": "Repeat this even if officers proceed anyway."
+      },
+      "fingerprints": {
+        "title": "Fingerprint collection",
+        "when": {
+          "title": "ICE can take fingerprints only when:",
+          "list": [
+            "Officers suspect immigration violations.",
+            "You are under arrest."
+          ]
+        },
+        "if_requested": {
+          "title": "If requested without a clear cause:",
+          "list": [
+            "Ask: “Why am I being fingerprinted?”",
+            "Say: “I do not consent to fingerprinting.”"
+          ]
+        },
+        "resistance": "Do not physically resist. Verbal objection may protect your legal rights."
+      }
+    }
+  },
+  "kyr_ice_in_public": {
+    "tactics": {
+      "title": "ICE Tactics",
+      "list": [
+        "Follow you near your home or in public spaces.",
+        "Wear plain clothes without identifying themselves.",
+        "Call out your name to confirm your identity."
+      ]
+    },
+    "stopped": {
+      "title": "If stopped by ICE",
+      "silent": "Stay silent. Do not state your name or answer questions.",
+      "ask_free": {
+        "question": "Ask: “Am I free to go?”",
+        "if_yes": {
+          "title": "If they say YES:",
+          "steps": [
+            "SAY: “I will not answer questions.”",
+            "Walk away calmly if they let you."
+          ]
+        },
+        "if_no": {
+          "title": "If they say NO:",
+          "steps": [
+            "SAY: “I will not answer questions. I want a lawyer.”",
+            "Do not lie, show false documents, or run."
+          ]
+        }
+      }
+    },
+    "protect": {
+      "title": "Protect Yourself",
+      "list": [
+        "Record the encounter or ask someone to record. Remember that anything you say in that recording can be used against you, so stick to repeating your rights.",
+        "When requesting help, avoid saying your name. Give them a contact's name to send the video.",
+        "Carry an emergency card with your lawyer's and family’s contact information.",
+        "If searched without consent: Say, “I do not consent to this search. I want a lawyer.”"
+      ]
     }
   }
 }

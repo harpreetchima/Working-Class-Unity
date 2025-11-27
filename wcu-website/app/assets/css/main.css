@@ -37,13 +37,12 @@
 
 @theme {
   --font-sans: "Acumin Pro", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-heading: "Akira Jimbo", sans-serif;
+  --font-heading: "Acumin Pro", sans-serif;
 }
 
 @layer base {
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: normal;
   }
 }
 
