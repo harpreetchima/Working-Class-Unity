@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <div class="container mx-auto px-4 flex flex-col gap-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-16">
       <!-- Membership/Pricing Cards -->
       <section>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">

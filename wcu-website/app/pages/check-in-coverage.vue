@@ -5,6 +5,41 @@ useHead({
   title: t('check_in_coverage.page_title'),
 });
 
+// Shift Materials data structure for Section D
+const shiftMaterials = [
+  {
+    key: 'check_in_sheet',
+    icon: 'document',
+    pdfOnly: true,
+    pdfUrl: '#',
+    description: 'check_in_coverage.resources.descriptions.check_in_sheet'
+  },
+  {
+    key: 'tracker_log',
+    icon: 'clipboard',
+    pdfOnly: true,
+    pdfUrl: '#',
+    description: 'check_in_coverage.resources.descriptions.tracker_log'
+  },
+  {
+    key: 'quick_guide',
+    icon: 'book',
+    pdfOnly: false,
+    pdfUrl: '#',
+    pageUrl: '/know-your-rights/volunteer-quick-guide',
+    description: 'check_in_coverage.resources.descriptions.quick_guide'
+  },
+  {
+    key: 'if_detained',
+    titleOverride: 'If Detained: Emergency Resource Guide',
+    icon: 'exclamation',
+    pdfOnly: false,
+    pdfUrl: '#',
+    pageUrl: '/know-your-rights/if-detained-guide',
+    description: 'check_in_coverage.resources.descriptions.if_detained'
+  }
+]
+
 onMounted(() => {
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", "checkincoverage", {origin:"https://app.cal.com"});
@@ -22,7 +57,7 @@ onMounted(() => {
 <template>
   <!-- Section A: Mission Status -->
   <section class="bg-base-100 py-8 md:py-12">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         <!-- Left: Context -->
         <div class="space-y-3">
@@ -54,7 +89,7 @@ onMounted(() => {
 
   <!-- Section B: Progress Tracker -->
   <section class="bg-base-100 py-6">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="card card-border bg-base-200 flex flex-col sm:flex-row items-center p-4 gap-4">
         <!-- Left: Status + Info -->
         <div class="flex items-center gap-3 flex-1">
@@ -90,7 +125,7 @@ onMounted(() => {
 
   <!-- Section C: The Briefing -->
   <section id="schedule" class="bg-base-100 py-8">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Calendar - Full Width -->
       <h2 class="text-2xl font-bold mb-4">{{ $t('check_in_coverage.schedule.heading') }}</h2>
       <div class="card card-border bg-base-200 overflow-hidden mb-6">
@@ -135,37 +170,95 @@ onMounted(() => {
 
   <!-- Section D: Resource Repository -->
   <section class="bg-base-100 py-8">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold mb-6">{{ $t('check_in_coverage.resources.heading') }}</h2>
       
-      <!-- Detained Alert - Hazard Style -->
-      <div class="alert alert-vertical md:alert-horizontal border-2 border-error bg-error/5 mb-6">
-        <div class="flex items-start gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-error w-5 h-5 shrink-0">
+      <!-- Detained Alert - Refined Style -->
+      <div role="alert" class="alert alert-soft alert-error border border-error/30 rounded-xl mb-6 flex flex-col md:flex-row md:items-center gap-4">
+        <!-- Content wrapper that takes up available space -->
+        <div class="flex items-start gap-3 flex-1">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-error w-5 h-5 shrink-0 mt-0.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
           </svg>
           <div class="text-left">
             <h3 class="font-bold text-error">Important Notice</h3>
-            <p class="text-sm">{{ $t('check_in_coverage.resources.notice.text') }}</p>
+            <p class="text-sm text-base-content/80">{{ $t('check_in_coverage.resources.notice.text') }}</p>
           </div>
         </div>
-        <button class="btn btn-sm btn-error btn-outline w-full md:w-auto whitespace-nowrap">{{ $t('check_in_coverage.resources.notice.button') }}</button>
+        <!-- Button: full width on mobile, auto on desktop, always at bottom on mobile -->
+        <NuxtLinkLocale to="/know-your-rights/if-detained-guide" class="btn btn-error gap-2 whitespace-nowrap w-full md:w-auto shrink-0">
+          {{ $t('check_in_coverage.resources.notice.button') }}
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
+        </NuxtLinkLocale>
       </div>
       
-      <!-- 2x2 File Grid -->
+      <!-- 2x2 File Grid with new card design -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div v-for="item in ['check_in_sheet', 'tracker_log', 'quick_guide', 'if_detained']" :key="item" 
-             class="card card-border bg-transparent border-base-300 p-4">
-          <div class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-base-content/50 shrink-0 mt-0.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-            </svg>
-            <div class="flex-1 min-w-0">
-              <h4 class="font-bold text-base truncate">{{ $t(`check_in_coverage.resources.downloads.${item}`) }}</h4>
+        <div
+          v-for="material in shiftMaterials"
+          :key="material.key"
+          class="group card bg-base-100 border border-base-300 shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-300"
+        >
+          <div class="card-body p-4">
+            <div class="flex items-start gap-4">
+              <!-- Icon container -->
+              <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+                <!-- Document icon for check_in_sheet -->
+                <svg v-if="material.icon === 'document'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                </svg>
+                <!-- Clipboard icon for tracker_log -->
+                <svg v-else-if="material.icon === 'clipboard'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                </svg>
+                <!-- Book icon for quick_guide -->
+                <svg v-else-if="material.icon === 'book'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                </svg>
+                <!-- Exclamation icon for if_detained -->
+                <svg v-else-if="material.icon === 'exclamation'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z" />
+                </svg>
+              </div>
+              <!-- Content -->
+              <div class="flex-1">
+                <h4 class="font-semibold text-base-content">
+                  {{ material.titleOverride || $t(`check_in_coverage.resources.downloads.${material.key}`) }}
+                </h4>
+                <p class="text-sm text-base-content/60 mt-1">
+                  {{ $t(material.description) }}
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="mt-3 text-right">
-            <a href="#" class="text-sm text-primary link link-hover">Download PDF</a>
+            
+            <!-- Actions row -->
+            <div class="flex gap-2 mt-4 pt-3 border-t border-base-300">
+              <!-- Single PDF button for pdfOnly items -->
+              <a v-if="material.pdfOnly" :href="material.pdfUrl" class="btn btn-sm btn-primary gap-2 flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+                Download PDF
+              </a>
+              
+              <!-- Dual buttons for items with page + PDF -->
+              <template v-else>
+                <NuxtLinkLocale :to="material.pageUrl" class="btn btn-sm btn-outline gap-2 flex-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                  </svg>
+                  View Page
+                </NuxtLinkLocale>
+                <a :href="material.pdfUrl" class="btn btn-sm btn-primary gap-2 flex-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                  PDF
+                </a>
+              </template>
+            </div>
           </div>
         </div>
       </div>
@@ -174,7 +267,7 @@ onMounted(() => {
 
   <!-- Section E: Workflow Timeline -->
   <section class="bg-base-100 py-8">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold mb-2">{{ $t('check_in_coverage.end_of_shift.heading') }}</h2>
       <p class="text-base-content/70 mb-6">{{ $t('check_in_coverage.end_of_shift.copy') }}</p>
       
@@ -235,7 +328,7 @@ onMounted(() => {
 
   <!-- Section F: Contact Footer -->
   <section class="bg-base-100 py-8">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="card border border-base-300 bg-base-200 p-5 max-w-2xl">
         <h3 class="font-bold text-sm uppercase tracking-wide text-base-content/70 mb-2">{{ $t('check_in_coverage.contact.heading') }}</h3>
         <p class="text-base-content mb-4">{{ $t('check_in_coverage.contact.description') }}</p>
