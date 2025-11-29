@@ -1,6 +1,8 @@
 # Development Guide & Build Instructions
 
-Welcome to the WCU Website project! This application is built with a modern stack featuring **Nuxt 4**, **Tailwind CSS 4**, and **DaisyUI 5**.
+Welcome to the WCU Website project! 
+
+This application is built with a modern stack featuring **Nuxt 4**, **Tailwind CSS 4**, and **DaisyUI 5**.
 
 ## 🛠️ Tech Stack
 
