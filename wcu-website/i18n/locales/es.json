@@ -207,9 +207,9 @@
           "answer": "WCU is fully funded by Member dues and donations. By not taking large donor or government grants, we are able to focus solely on our mission and the interests of the working class without external influence."
         },
         "contact": {
-          "question": "Can I talk to someone before joining?",
-          "answer": "Yes, of course! You can schedule a quick call with a member of the Steering Committee by using this link ({link}).",
-          "link_text": "https://cal.com/workingclassunity/15min"
+          "question": "¿Puedo hablar con alguien antes de unirme?",
+          "answer": "¡Sí, por supuesto! Puedes programar una llamada rápida con un miembro del Comité Directivo {link}.",
+          "link_text": "usando este enlace"
         }
       }
     }
@@ -264,10 +264,10 @@
       }
     },
     "contact": {
-      "heading": "NEED HELP?",
-      "copy": "If you are unsure about the role or need to speak to an organizer before signing up:",
-      "phone": "Text: 209-842-3232",
-      "call_link": "Schedule a 15-min Intro Call"
+      "heading": "APOYO DEL ORGANIZADOR",
+      "description": "¿No está seguro del protocolo? Hable con un organizador.",
+      "phone": "209-842-3232",
+      "book_button": "Reservar 15 min de orientación"
     }
   },
   "kyr_ice_at_work": {
@@ -294,6 +294,10 @@
     }
   },
   "kyr_ice_at_home": {
+    "header": {
+      "title": "Protocolo: Interacción con ICE.",
+      "subtitle": "Siga estos pasos inmediatamente si lo abordan en su casa."
+    },
     "do_not_consent": {
       "title": "[SPANISH] Do not consent to a search",
       "say": "[SPANISH] SAY: “I do not consent to entry.”",
@@ -536,6 +540,52 @@
     "solidarity": {
       "heading": "Agregue su nombre en solidaridad",
       "formPlaceholder": "El formulario de FormBuilder aparecerá aquí"
+    }
+  },
+  "campaigns": {
+    "pageTitle": "Campañas y Misiones Secundarias",
+    "pageSubtitle": "Mira en qué estamos trabajando y cómo puedes participar",
+    "focusCampaigns": "Campañas Principales",
+    "sideQuests": "Proyectos Secundarios",
+    "noResults": "Ninguna campaña coincide con tu filtro actual",
+    "upcomingEvents": "Próximos Eventos",
+    "status": {
+      "active": "Activo",
+      "paused": "Pausado",
+      "completed": "Completado"
+    },
+    "committee": {
+      "membership": "Membresía",
+      "education": "Educación",
+      "treasurer": "Tesorería"
+    },
+    "type": {
+      "focus": "Campaña Principal",
+      "side-quest": "Proyecto Secundario"
+    },
+    "tenetUnion": {
+      "title": "Trabajo Sindical de Tenet",
+      "description": "Apoyando a los trabajadores de la salud en su lucha por salarios justos y mejores condiciones laborales en los hospitales Tenet en todo el Valle Central."
+    },
+    "ceasefirePalestine": {
+      "title": "Alto al Fuego en Palestina",
+      "description": "Abogando por un cese al fuego inmediato y acceso a ayuda humanitaria en Gaza. En solidaridad con los civiles palestinos."
+    },
+    "medicareForAll": {
+      "title": "Medicare para Todos",
+      "description": "Construyendo apoyo popular para un sistema de salud universal de pagador único. Todos merecen atención médica de calidad sin importar sus ingresos."
+    },
+    "knowYourRightsWorkshops": {
+      "title": "Talleres Conozca Sus Derechos",
+      "description": "Talleres educativos que ayudan a los miembros de la comunidad a entender sus derechos constitucionales al interactuar con la policía e ICE."
+    },
+    "communityCanvassing": {
+      "title": "Difusión Comunitaria",
+      "description": "Alcance puerta a puerta para conectar con los vecinos, compartir recursos y construir poder de la clase trabajadora en nuestras comunidades."
+    },
+    "fundraiserDrive": {
+      "title": "Campaña de Recaudación",
+      "description": "Nuestra campaña anual de recaudación de fondos para apoyar los esfuerzos de organización y programas comunitarios durante todo el año."
     }
   }
 }

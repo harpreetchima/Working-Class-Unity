@@ -208,8 +208,8 @@
         },
         "contact": {
           "question": "Can I talk to someone before joining?",
-          "answer": "Yes, of course! You can schedule a quick call with a member of the Steering Committee by using this link ({link}).",
-          "link_text": "https://cal.com/workingclassunity/15min"
+          "answer": "Yes, of course! You can schedule a quick call with a member of the Steering Committee by {link}.",
+          "link_text": "using this link"
         }
       }
     }
@@ -264,10 +264,10 @@
       }
     },
     "contact": {
-      "heading": "NEED HELP?",
-      "copy": "If you are unsure about the role or need to speak to an organizer before signing up:",
-      "phone": "Text: 209-842-3232",
-      "call_link": "Schedule a 15-min Intro Call"
+      "heading": "ORGANIZER SUPPORT",
+      "description": "Unsure about protocol? Speak to an organizer.",
+      "phone": "209-842-3232",
+      "book_button": "Book 15-min Briefing"
     }
   },
   "kyr_ice_at_work": {
@@ -294,6 +294,10 @@
     }
   },
   "kyr_ice_at_home": {
+    "header": {
+      "title": "Protocol: ICE Interaction.",
+      "subtitle": "Follow these steps immediately if approached at your home."
+    },
     "do_not_consent": {
       "title": "Do not consent to a search",
       "say": "SAY: “I do not consent to entry.”",
@@ -536,6 +540,56 @@
     "solidarity": {
       "heading": "Add Your Name In Solidarity",
       "formPlaceholder": "Form from FormBuilder will appear here"
+    }
+  },
+  "campaigns": {
+    "pageTitle": "Campaigns and Side-Quests",
+    "pageSubtitle": "See what we're working on and how you can get involved",
+    "focusCampaigns": "Focus Campaigns",
+    "sideQuests": "Side Quests",
+    "noResults": "No campaigns match your current filter",
+    "upcomingEvents": "Upcoming Events",
+    "status": {
+      "active": "Active",
+      "paused": "Paused",
+      "completed": "Completed"
+    },
+    "committee": {
+      "membership": "Membership",
+      "education": "Education",
+      "treasurer": "Treasurer"
+    },
+    "type": {
+      "focus": "Focus Campaign",
+      "side-quest": "Side Quest"
+    },
+    "tenetUnion": {
+      "title": "Tenet Union Work",
+      "description": "Supporting healthcare workers in their fight for fair wages and better working conditions at Tenet hospitals across the Central Valley."
+    },
+    "tenantUnion": {
+      "title": "Tenant Union",
+      "description": "Organizing tenants to fight for housing justice, fair rents, and protection against unjust evictions in our communities."
+    },
+    "ceasefirePalestine": {
+      "title": "Cease Fire in Palestine",
+      "description": "Advocating for an immediate ceasefire and humanitarian aid access in Gaza. Standing in solidarity with Palestinian civilians."
+    },
+    "medicareForAll": {
+      "title": "Medicare for All",
+      "description": "Building grassroots support for universal single-payer healthcare. Everyone deserves quality healthcare regardless of income."
+    },
+    "knowYourRightsWorkshops": {
+      "title": "Know Your Rights Workshops",
+      "description": "Educational workshops helping community members understand their constitutional rights when interacting with law enforcement and ICE."
+    },
+    "communityCanvassing": {
+      "title": "Community Canvassing",
+      "description": "Door-to-door outreach to connect with neighbors, share resources, and build working class power in our communities."
+    },
+    "fundraiserDrive": {
+      "title": "Fundraiser Drive",
+      "description": "Our annual fundraising campaign to support organizing efforts and community programs throughout the year."
     }
   }
 }

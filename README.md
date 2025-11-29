@@ -126,6 +126,21 @@ We use a centralized architecture for the "Know Your Rights" pages to ensure nav
 2.  Create the new Vue page file.
 3.  Add the corresponding title and description keys to the localization files (`i18n/locales/*.json`).
 
+### Campaign Data Architecture
+
+The campaign system follows a **centralized data registry pattern** where data is separated from the UI components.
+
+**Data Flow:**
+1.  **Registry**: `app/data/campaigns.ts` is the single source of truth. It exports an array of campaign objects containing metadata (ID, type, status, events) and references to i18n keys.
+2.  **Display**: `app/pages/campaigns/index.vue` fetches this data to render the list, and `app/components/CampaignCard.vue` handles the display logic for each card.
+
+**Managing Campaigns:**
+*   **Editing Text**: Update the corresponding keys in the locale files (`i18n/locales/*.json`) under the `campaigns` object.
+*   **Adding a Campaign**:
+    1.  Add a new campaign object to `app/data/campaigns.ts`.
+    2.  Add the new title and description keys to all locale files.
+    3.  Add the campaign image to `public/images/campaigns/`.
+
 ### Icons
 
 We currently use inline SVGs for icons. When adding new icons, ensure they are accessible and scale correctly with Tailwind classes (e.g., `h-5 w-5`).

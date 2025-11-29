@@ -1,11 +1,38 @@
 <template>
   <div class="flex flex-col gap-12 pb-12">
     <!-- Hero Section -->
-    <div class="hero min-h-[60vh] bg-base-200">
-      <div class="hero-content text-center">
+    <div class="hero min-h-[60vh] bg-base-200 relative overflow-hidden">
+      <!-- Subtle dot grid background pattern -->
+      <div
+        class="absolute inset-0 opacity-[0.04]"
+        style="background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 20px 20px;"
+      ></div>
+      <div class="hero-content text-center relative z-10">
         <div class="max-w-2xl">
-          <h1 class="text-5xl font-bold mb-6 capitalize">{{ $t('join.hero.title') }}</h1>
+          <h1 class="text-5xl font-bold mb-6 capitalize tracking-tight">{{ $t('join.hero.title') }}</h1>
           <p class="py-6 text-xl">{{ $t('join.hero.description') }}</p>
+          
+          <!-- Social Proof -->
+          <div class="flex items-center justify-center gap-3 mt-4">
+            <div class="avatar-group -space-x-4">
+              <div class="avatar placeholder">
+                <div class="bg-primary text-primary-content w-10 rounded-full">
+                  <span class="text-sm">W</span>
+                </div>
+              </div>
+              <div class="avatar placeholder">
+                <div class="bg-secondary text-secondary-content w-10 rounded-full">
+                  <span class="text-sm">C</span>
+                </div>
+              </div>
+              <div class="avatar placeholder">
+                <div class="bg-accent text-accent-content w-10 rounded-full">
+                  <span class="text-sm">U</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-base-content/70 text-sm">Join <span class="font-semibold text-base-content">18+ members</span> in San Joaquin County</p>
+          </div>
         </div>
       </div>
     </div>
@@ -13,42 +40,50 @@
     <div class="container mx-auto px-4 flex flex-col gap-16">
       <!-- Membership/Pricing Cards -->
       <section>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Rank and File Member ($10 - Orange) -->
-          <div class="card bg-primary text-primary-content shadow-xl">
-            <div class="card-body items-center text-center">
-              <h2 class="card-title text-2xl mb-2 uppercase font-black">{{ $t('join.membership.rank_and_file.title') }}</h2>
-              <p class="mb-4 font-medium">{{ $t('join.membership.rank_and_file.description') }}</p>
-              <div class="text-4xl font-bold mb-6">{{ $t('join.membership.rank_and_file.price') }}</div>
-              <div class="card-actions">
-                <a href="https://pay.workingclassunity.com/b/7sI4hF1hc9IIepq4gh" target="_blank" class="btn btn-neutral px-8">{{ $t('join.membership.rank_and_file.button') }}</a>
+          <div class="card h-full bg-base-100 border border-base-300 border-t-4 border-t-primary shadow-md">
+            <div class="card-body">
+              <span class="badge badge-primary badge-soft rounded-full self-start">{{ $t('join.membership.rank_and_file.title') }}</span>
+              <div class="mt-4 mb-2">
+                <span class="text-5xl font-bold text-primary">{{ $t('join.membership.rank_and_file.price') }}</span>
+                <span class="text-sm text-base-content/50">/month</span>
+              </div>
+              <p class="text-base-content/70 mb-6 flex-grow">{{ $t('join.membership.rank_and_file.description') }}</p>
+              <div class="card-actions mt-auto">
+                <a href="https://pay.workingclassunity.com/b/7sI4hF1hc9IIepq4gh" target="_blank" class="btn btn-outline btn-primary w-full">{{ $t('join.membership.rank_and_file.button') }}</a>
               </div>
             </div>
           </div>
 
-          <!-- Solidarity Member ($27 - Red) -->
-          <div class="indicator w-full">
-            <span class="indicator-item indicator-top indicator-center badge badge-warning badge-lg">Recommended</span>
-            <div class="card bg-error text-error-content shadow-xl w-full transform hover:-translate-y-2 transition-transform duration-300">
-              <div class="card-body items-center text-center">
-                <h2 class="card-title text-2xl mb-2 uppercase font-black">{{ $t('join.membership.solidarity.title') }}</h2>
-              <p class="mb-4 font-medium">{{ $t('join.membership.solidarity.description') }}</p>
-                <div class="text-4xl font-bold mb-6">{{ $t('join.membership.solidarity.price') }}</div>
-                <div class="card-actions">
-                  <a href="https://pay.workingclassunity.com/b/bIY4hF4tof325SUaEE" target="_blank" class="btn btn-neutral px-8">{{ $t('join.membership.solidarity.button') }}</a>
-                </div>
+          <!-- Solidarity Member ($27 - Red/Accent) - Recommended -->
+          <div class="card h-full bg-base-100 border border-base-300 border-t-4 border-t-accent shadow-lg shadow-accent/20 md:scale-105">
+            <div class="card-body">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="badge badge-accent badge-soft rounded-full">{{ $t('join.membership.solidarity.title') }}</span>
+                <span class="badge badge-warning badge-sm">Recommended</span>
+              </div>
+              <div class="mt-4 mb-2">
+                <span class="text-5xl font-bold text-accent">{{ $t('join.membership.solidarity.price') }}</span>
+                <span class="text-sm text-base-content/50">/month</span>
+              </div>
+              <p class="text-base-content/70 mb-6 flex-grow">{{ $t('join.membership.solidarity.description') }}</p>
+              <div class="card-actions mt-auto">
+                <a href="https://pay.workingclassunity.com/b/bIY4hF4tof325SUaEE" target="_blank" class="btn btn-accent w-full">{{ $t('join.membership.solidarity.button') }}</a>
               </div>
             </div>
           </div>
 
           <!-- One Time Donation (Donate - Blue) -->
-          <div class="card bg-secondary text-secondary-content shadow-xl">
-            <div class="card-body items-center text-center">
-              <h2 class="card-title text-2xl mb-2 uppercase font-black">{{ $t('join.membership.donate.title') }}</h2>
-              <p class="mb-4 font-medium">{{ $t('join.membership.donate.description') }}</p>
-              <div class="text-4xl font-bold mb-6">{{ $t('join.membership.donate.price') }}</div>
-              <div class="card-actions">
-                <a href="https://pay.workingclassunity.com/b/aEU5lJbVQ2gg1CE002" target="_blank" class="btn btn-outline btn-neutral px-8">{{ $t('join.membership.donate.button') }}</a>
+          <div class="card h-full bg-base-100 border border-base-300 border-t-4 border-t-secondary shadow-md">
+            <div class="card-body">
+              <span class="badge badge-secondary badge-soft rounded-full self-start">{{ $t('join.membership.donate.title') }}</span>
+              <div class="mt-4 mb-2">
+                <span class="text-5xl font-bold text-secondary">{{ $t('join.membership.donate.price') }}</span>
+              </div>
+              <p class="text-base-content/70 mb-6 flex-grow">{{ $t('join.membership.donate.description') }}</p>
+              <div class="card-actions mt-auto">
+                <a href="https://pay.workingclassunity.com/b/aEU5lJbVQ2gg1CE002" target="_blank" class="btn btn-outline btn-secondary w-full">{{ $t('join.membership.donate.button') }}</a>
               </div>
             </div>
           </div>
@@ -64,45 +99,53 @@
           <p class="text-xl max-w-3xl mx-auto">{{ $t('join.benefits.description') }}</p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="card bg-base-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-            <div class="card-body items-center text-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-primary mb-2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <!-- Bento Grid: uses gap-px with bg-base-300 to create 1px border lines between cells -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-base-300 gap-px rounded-box overflow-hidden border border-base-300">
+          <!-- Voting Rights -->
+          <div class="bg-base-100 p-6 flex flex-col items-start text-left">
+            <div class="bg-primary/15 p-2.5 rounded-lg mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
+                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
               </svg>
-              <h3 class="card-title capitalize">{{ $t('join.benefits.items.voting.title') }}</h3>
-              <p>{{ $t('join.benefits.items.voting.description') }}</p>
             </div>
+            <h3 class="font-bold text-lg mb-2 capitalize">{{ $t('join.benefits.items.voting.title') }}</h3>
+            <p class="text-base-content/70">{{ $t('join.benefits.items.voting.description') }}</p>
           </div>
           
-          <div class="card bg-base-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-            <div class="card-body items-center text-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-primary mb-2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+          <!-- Leadership Opportunities -->
+          <div class="bg-base-100 p-6 flex flex-col items-start text-left">
+            <div class="bg-primary/15 p-2.5 rounded-lg mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
+                <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clip-rule="evenodd" />
+                <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
               </svg>
-              <h3 class="card-title capitalize">{{ $t('join.benefits.items.leadership.title') }}</h3>
-              <p>{{ $t('join.benefits.items.leadership.description') }}</p>
             </div>
+            <h3 class="font-bold text-lg mb-2 capitalize">{{ $t('join.benefits.items.leadership.title') }}</h3>
+            <p class="text-base-content/70">{{ $t('join.benefits.items.leadership.description') }}</p>
           </div>
           
-          <div class="card bg-base-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-            <div class="card-body items-center text-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-primary mb-2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 018.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.43.816 1.035.816 1.73 0 .695-.32 1.3-.816 1.73m0-3.46a24.347 24.347 0 010 3.46" />
+          <!-- Campaign Involvement -->
+          <div class="bg-base-100 p-6 flex flex-col items-start text-left">
+            <div class="bg-primary/15 p-2.5 rounded-lg mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
+                <path d="M16.881 4.346A23.112 23.112 0 018.25 6H7.5a5.25 5.25 0 00-.88 10.427 21.593 21.593 0 001.378 3.94c.464 1.004 1.674 1.32 2.582.796l.657-.379c.88-.508 1.165-1.592.772-2.468a17.116 17.116 0 01-.628-1.607c1.918.258 3.76.75 5.5 1.446A21.727 21.727 0 0018 11.25c0-2.413-.393-4.735-1.119-6.904zM18.26 3.74a23.22 23.22 0 011.24 7.51 23.22 23.22 0 01-1.24 7.51c-.055.161-.111.322-.17.482a.75.75 0 101.409.516 24.555 24.555 0 001.415-6.43 2.992 2.992 0 00.836-2.078c0-.806-.319-1.54-.836-2.078a24.65 24.65 0 00-1.415-6.43.75.75 0 10-1.409.516c.059.16.116.321.17.483z" />
               </svg>
-              <h3 class="card-title capitalize">{{ $t('join.benefits.items.campaigns.title') }}</h3>
-              <p>{{ $t('join.benefits.items.campaigns.description') }}</p>
             </div>
+            <h3 class="font-bold text-lg mb-2 capitalize">{{ $t('join.benefits.items.campaigns.title') }}</h3>
+            <p class="text-base-content/70">{{ $t('join.benefits.items.campaigns.description') }}</p>
           </div>
           
-          <div class="card bg-base-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-            <div class="card-body items-center text-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-primary mb-2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+          <!-- Political Education -->
+          <div class="bg-base-100 p-6 flex flex-col items-start text-left">
+            <div class="bg-primary/15 p-2.5 rounded-lg mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
+                <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
+                <path d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" />
+                <path d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
               </svg>
-              <h3 class="card-title capitalize">{{ $t('join.benefits.items.education.title') }}</h3>
-              <p>{{ $t('join.benefits.items.education.description') }}</p>
             </div>
+            <h3 class="font-bold text-lg mb-2 capitalize">{{ $t('join.benefits.items.education.title') }}</h3>
+            <p class="text-base-content/70">{{ $t('join.benefits.items.education.description') }}</p>
           </div>
         </div>
       </section>
@@ -110,47 +153,47 @@
       <div class="divider"></div>
 
       <!-- FAQ Section -->
-      <section class="max-w-3xl mx-auto w-full">
+      <section class="max-w-2xl mx-auto w-full">
         <h2 class="text-3xl font-bold text-center mb-2">{{ $t('join.faq.title') }}</h2>
-        <p class="text-center mb-8 text-gray-500">{{ $t('join.faq.subtitle') }}</p>
+        <p class="text-center mb-8 text-base-content/60">{{ $t('join.faq.subtitle') }}</p>
         
-        <div class="flex flex-col gap-4">
-          <div class="collapse collapse-arrow bg-base-100 border border-base-300">
-            <input type="radio" name="faq-accordion" checked="checked" /> 
-            <div class="collapse-title text-xl font-medium">
+        <div class="divide-y divide-base-300">
+          <div class="collapse collapse-plus">
+            <input type="radio" name="faq-accordion" checked="checked" />
+            <div class="collapse-title font-medium py-4">
               {{ $t('join.faq.items.eligibility.question') }}
             </div>
-            <div class="collapse-content"> 
+            <div class="collapse-content text-base-content/70">
               <p>{{ $t('join.faq.items.eligibility.answer') }}</p>
             </div>
           </div>
 
-          <div class="collapse collapse-arrow bg-base-100 border border-base-300">
-            <input type="radio" name="faq-accordion" /> 
-            <div class="collapse-title text-xl font-medium">
+          <div class="collapse collapse-plus">
+            <input type="radio" name="faq-accordion" />
+            <div class="collapse-title font-medium py-4">
               {{ $t('join.faq.items.good_standing.question') }}
             </div>
-            <div class="collapse-content"> 
+            <div class="collapse-content text-base-content/70">
               <p>{{ $t('join.faq.items.good_standing.answer') }}</p>
             </div>
           </div>
 
-          <div class="collapse collapse-arrow bg-base-100 border border-base-300">
-            <input type="radio" name="faq-accordion" /> 
-            <div class="collapse-title text-xl font-medium">
+          <div class="collapse collapse-plus">
+            <input type="radio" name="faq-accordion" />
+            <div class="collapse-title font-medium py-4">
               {{ $t('join.faq.items.dues.question') }}
             </div>
-            <div class="collapse-content"> 
+            <div class="collapse-content text-base-content/70">
               <p>{{ $t('join.faq.items.dues.answer') }}</p>
             </div>
           </div>
 
-          <div class="collapse collapse-arrow bg-base-100 border border-base-300">
-            <input type="radio" name="faq-accordion" /> 
-            <div class="collapse-title text-xl font-medium">
+          <div class="collapse collapse-plus">
+            <input type="radio" name="faq-accordion" />
+            <div class="collapse-title font-medium py-4">
               {{ $t('join.faq.items.contact.question') }}
             </div>
-            <div class="collapse-content"> 
+            <div class="collapse-content text-base-content/70">
               <i18n-t keypath="join.faq.items.contact.answer" tag="p">
                 <template #link>
                   <a href="https://cal.com/workingclassunity/15min" target="_blank" class="link link-primary">{{ $t('join.faq.items.contact.link_text') }}</a>

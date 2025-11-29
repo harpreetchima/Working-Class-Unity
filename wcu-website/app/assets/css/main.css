@@ -5,6 +5,9 @@
   src: url('/fonts/Acumin-RPro.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -12,6 +15,9 @@
   src: url('/fonts/Acumin-ItPro.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -19,6 +25,9 @@
   src: url('/fonts/Acumin-BdPro.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -26,6 +35,9 @@
   src: url('/fonts/Acumin-BdItPro.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
 @font-face {

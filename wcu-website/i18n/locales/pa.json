@@ -207,9 +207,9 @@
           "answer": "WCU is fully funded by Member dues and donations. By not taking large donor or government grants, we are able to focus solely on our mission and the interests of the working class without external influence."
         },
         "contact": {
-          "question": "Can I talk to someone before joining?",
-          "answer": "Yes, of course! You can schedule a quick call with a member of the Steering Committee by using this link ({link}).",
-          "link_text": "https://cal.com/workingclassunity/15min"
+          "question": "ਕੀ ਮੈਂ ਸ਼ਾਮਲ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਕਿਸੇ ਨਾਲ ਗੱਲ ਕਰ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?",
+          "answer": "ਹਾਂ, ਬਿਲਕੁਲ! ਤੁਸੀਂ {link} ਸਟੀਅਰਿੰਗ ਕਮੇਟੀ ਦੇ ਕਿਸੇ ਮੈਂਬਰ ਨਾਲ ਇੱਕ ਛੋਟੀ ਕਾਲ ਸ਼ਡਿਊਲ ਕਰ ਸਕਦੇ ਹੋ।",
+          "link_text": "ਇਸ ਲਿੰਕ ਦੀ ਵਰਤੋਂ ਕਰਕੇ"
         }
       }
     }
@@ -264,10 +264,10 @@
       }
     },
     "contact": {
-      "heading": "NEED HELP?",
-      "copy": "If you are unsure about the role or need to speak to an organizer before signing up:",
-      "phone": "Text: 209-842-3232",
-      "call_link": "Schedule a 15-min Intro Call"
+      "heading": "ਆਰਗੇਨਾਈਜ਼ਰ ਸਹਾਇਤਾ",
+      "description": "ਪ੍ਰੋਟੋਕੋਲ ਬਾਰੇ ਯਕੀਨੀ ਨਹੀਂ? ਕਿਸੇ ਆਰਗੇਨਾਈਜ਼ਰ ਨਾਲ ਗੱਲ ਕਰੋ।",
+      "phone": "209-842-3232",
+      "book_button": "15 ਮਿੰਟ ਦੀ ਬ੍ਰੀਫਿੰਗ ਬੁੱਕ ਕਰੋ"
     }
   },
   "kyr_ice_at_work": {
@@ -294,6 +294,10 @@
     }
   },
   "kyr_ice_at_home": {
+    "header": {
+      "title": "ਪ੍ਰੋਟੋਕੋਲ: ICE ਨਾਲ ਗੱਲਬਾਤ।",
+      "subtitle": "ਜੇ ਤੁਹਾਡੇ ਘਰ ਆਉਣ 'ਤੇ ਤੁਰੰਤ ਇਹ ਕਦਮ ਚੁੱਕੋ।"
+    },
     "do_not_consent": {
       "title": "[PUNJABI] Do not consent to a search",
       "say": "[PUNJABI] SAY: “I do not consent to entry.”",
@@ -536,6 +540,52 @@
     "solidarity": {
       "heading": "Add Your Name In Solidarity",
       "formPlaceholder": "Form from FormBuilder will appear here"
+    }
+  },
+  "campaigns": {
+    "pageTitle": "ਮੁਹਿੰਮਾਂ ਅਤੇ ਸਾਈਡ-ਕੁਐਸਟਸ",
+    "pageSubtitle": "ਦੇਖੋ ਅਸੀਂ ਕੀ ਕੰਮ ਕਰ ਰਹੇ ਹਾਂ ਅਤੇ ਤੁਸੀਂ ਕਿਵੇਂ ਸ਼ਾਮਲ ਹੋ ਸਕਦੇ ਹੋ",
+    "focusCampaigns": "ਮੁੱਖ ਮੁਹਿੰਮਾਂ",
+    "sideQuests": "ਸਹਾਇਕ ਪ੍ਰੋਜੈਕਟ",
+    "noResults": "ਕੋਈ ਮੁਹਿੰਮ ਤੁਹਾਡੇ ਮੌਜੂਦਾ ਫਿਲਟਰ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦੀ",
+    "upcomingEvents": "ਆਉਣ ਵਾਲੇ ਸਮਾਗਮ",
+    "status": {
+      "active": "ਸਰਗਰਮ",
+      "paused": "ਰੁਕਿਆ ਹੋਇਆ",
+      "completed": "ਪੂਰਾ ਹੋਇਆ"
+    },
+    "committee": {
+      "membership": "ਮੈਂਬਰਸ਼ਿਪ",
+      "education": "ਸਿੱਖਿਆ",
+      "treasurer": "ਖਜ਼ਾਨਚੀ"
+    },
+    "type": {
+      "focus": "ਮੁੱਖ ਮੁਹਿੰਮ",
+      "side-quest": "ਸਹਾਇਕ ਪ੍ਰੋਜੈਕਟ"
+    },
+    "tenetUnion": {
+      "title": "ਟੈਨੇਟ ਯੂਨੀਅਨ ਦਾ ਕੰਮ",
+      "description": "ਸੈਂਟਰਲ ਵੈਲੀ ਦੇ ਟੈਨੇਟ ਹਸਪਤਾਲਾਂ ਵਿੱਚ ਸਿਹਤ ਸੇਵਾ ਕਰਮਚਾਰੀਆਂ ਦੀ ਉਚਿਤ ਤਨਖਾਹ ਅਤੇ ਬਿਹਤਰ ਕੰਮ ਦੀਆਂ ਸਥਿਤੀਆਂ ਲਈ ਲੜਾਈ ਵਿੱਚ ਸਹਾਇਤਾ ਕਰਨਾ।"
+    },
+    "ceasefirePalestine": {
+      "title": "ਫਲਸਤੀਨ ਵਿੱਚ ਜੰਗਬੰਦੀ",
+      "description": "ਗਾਜ਼ਾ ਵਿੱਚ ਤੁਰੰਤ ਜੰਗਬੰਦੀ ਅਤੇ ਮਾਨਵਤਾਵਾਦੀ ਸਹਾਇਤਾ ਦੀ ਪਹੁੰਚ ਲਈ ਵਕਾਲਤ ਕਰਨਾ। ਫਲਸਤੀਨੀ ਨਾਗਰਿਕਾਂ ਨਾਲ ਏਕਤਾ ਵਿੱਚ ਖੜ੍ਹੇ ਹਾਂ।"
+    },
+    "medicareForAll": {
+      "title": "ਸਭ ਲਈ ਮੈਡੀਕੇਅਰ",
+      "description": "ਯੂਨੀਵਰਸਲ ਸਿੰਗਲ-ਪੇਅਰ ਸਿਹਤ ਸੇਵਾ ਲਈ ਜ਼ਮੀਨੀ ਪੱਧਰ ਦਾ ਸਮਰਥਨ ਬਣਾਉਣਾ। ਹਰ ਕੋਈ ਆਮਦਨ ਦੀ ਪਰਵਾਹ ਕੀਤੇ ਬਿਨਾਂ ਗੁਣਵੱਤਾ ਵਾਲੀ ਸਿਹਤ ਸੇਵਾ ਦਾ ਹੱਕਦਾਰ ਹੈ।"
+    },
+    "knowYourRightsWorkshops": {
+      "title": "ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ ਵਰਕਸ਼ਾਪਾਂ",
+      "description": "ਸਿੱਖਿਆ ਵਰਕਸ਼ਾਪਾਂ ਜੋ ਭਾਈਚਾਰੇ ਦੇ ਮੈਂਬਰਾਂ ਨੂੰ ਪੁਲਿਸ ਅਤੇ ICE ਨਾਲ ਗੱਲਬਾਤ ਕਰਦੇ ਸਮੇਂ ਆਪਣੇ ਸੰਵਿਧਾਨਕ ਅਧਿਕਾਰਾਂ ਨੂੰ ਸਮਝਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀਆਂ ਹਨ।"
+    },
+    "communityCanvassing": {
+      "title": "ਭਾਈਚਾਰਕ ਪ੍ਰਚਾਰ",
+      "description": "ਗੁਆਂਢੀਆਂ ਨਾਲ ਜੁੜਨ, ਸਰੋਤ ਸਾਂਝੇ ਕਰਨ ਅਤੇ ਸਾਡੇ ਭਾਈਚਾਰਿਆਂ ਵਿੱਚ ਮਜ਼ਦੂਰ ਜਮਾਤ ਦੀ ਸ਼ਕਤੀ ਬਣਾਉਣ ਲਈ ਘਰ-ਘਰ ਜਾ ਕੇ ਸੰਪਰਕ ਕਰਨਾ।"
+    },
+    "fundraiserDrive": {
+      "title": "ਫੰਡਰੇਜ਼ਰ ਮੁਹਿੰਮ",
+      "description": "ਸਾਲ ਭਰ ਸੰਗਠਨ ਦੇ ਯਤਨਾਂ ਅਤੇ ਭਾਈਚਾਰਕ ਪ੍ਰੋਗਰਾਮਾਂ ਦਾ ਸਮਰਥਨ ਕਰਨ ਲਈ ਸਾਡੀ ਸਾਲਾਨਾ ਫੰਡਰੇਜ਼ਿੰਗ ਮੁਹਿੰਮ।"
     }
   }
 }
