@@ -1,47 +1,82 @@
 <template>
-  <div class="flex flex-col gap-8 pb-12">
-    <!-- Hero Section -->
-    <div class="hero bg-base-200 py-12">
-      <div class="hero-content text-center">
-        <div class="max-w-3xl">
-          <h1 class="text-4xl font-bold">{{ $t('about_page.title') }}</h1>
+  <div class="bg-base-100 min-h-screen">
+    <div class="max-w-[700px] mx-auto px-4 sm:px-6">
+      
+      <!-- Hero Section -->
+      <section class="pt-12 pb-16">
+        <span class="text-xs uppercase tracking-[0.15em] text-base-content/50 block mb-3">Our Story</span>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-base-content mb-6">
+          {{ $t('about_page.title') }}
+        </h1>
+      </section>
+
+      <!-- The Problem Section -->
+      <section class="py-16 border-t border-base-content/10">
+        <h2 class="text-xs uppercase tracking-[0.2em] font-medium text-base-content/60 mb-8">
+          The Problem
+        </h2>
+        <div class="space-y-6">
+          <p class="text-lg text-base-content/80 leading-relaxed font-medium">
+            {{ $t('about_page.p1') }}
+          </p>
+          <p class="text-lg text-base-content/80 leading-relaxed">
+            {{ $t('about_page.p2') }}
+          </p>
+          <p class="text-lg text-base-content/80 leading-relaxed">
+            {{ $t('about_page.p3') }}
+          </p>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Main Content -->
-    <div class="container mx-auto px-4 flex justify-center">
-      <article class="prose lg:prose-xl">
-        <!-- The Problem -->
-        <p class="text-xl font-semibold leading-relaxed">{{ $t('about_page.p1') }}</p>
-        <p>{{ $t('about_page.p2') }}</p>
-        <p>{{ $t('about_page.p3') }}</p>
+      <!-- Our Solution Section -->
+      <section class="py-16 border-t border-base-content/10">
+        <h2 class="text-xs uppercase tracking-[0.2em] font-medium text-base-content/60 mb-8">
+          Our Solution
+        </h2>
+        <div class="space-y-6">
+          <p class="text-lg text-base-content/80 leading-relaxed">
+            {{ $t('about_page.p4') }}
+          </p>
+          <div class="border-l-4 border-primary pl-6">
+            <p class="text-lg text-base-content/80 leading-relaxed italic">
+              {{ $t('about_page.p5') }}
+            </p>
+          </div>
+          <p class="text-lg text-base-content/80 leading-relaxed">
+            {{ $t('about_page.p6') }}
+          </p>
+        </div>
+      </section>
 
-        <div class="divider my-8"></div>
-
-        <!-- The Solution -->
-        <p>{{ $t('about_page.p4') }}</p>
-        
-        <blockquote class="bg-base-200 p-4 border-l-4 border-primary italic">
-          <p class="mb-0 mt-0">{{ $t('about_page.p5') }}</p>
-        </blockquote>
-        
-        <p>{{ $t('about_page.p6') }}</p>
-      </article>
-    </div>
-
-    <!-- CTA Section -->
-    <div class="container mx-auto px-4 flex justify-center mt-4">
-      <div class="card bg-secondary text-secondary-content w-full max-w-3xl shadow-xl">
-        <div class="card-body items-center text-center">
-          <p class="text-lg">{{ $t('about_page.p7') }}</p>
-          <div class="card-actions justify-end mt-4">
-            <NuxtLinkLocale to="join" class="btn btn-accent btn-lg">
-              {{ $t('about_page.cta_button') }}
-            </NuxtLinkLocale>
+      <!-- CTA Section -->
+      <section class="py-20 border-t border-base-content/10">
+        <div class="card bg-secondary text-secondary-content border border-base-content/10">
+          <div class="card-body items-center text-center p-8">
+            <p class="text-lg">{{ $t('about_page.p7') }}</p>
+            <div class="card-actions mt-4">
+              <NuxtLinkLocale to="join" class="btn btn-primary btn-lg">
+                {{ $t('about_page.cta_button') }}
+              </NuxtLinkLocale>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Footer Navigation -->
+      <footer class="py-12 border-t border-base-content/10 flex flex-wrap gap-4 justify-between items-center">
+        <NuxtLinkLocale to="/" class="text-sm text-base-content/50 hover:text-base-content">
+          ← Return Home
+        </NuxtLinkLocale>
+        <div class="flex gap-4">
+          <NuxtLinkLocale to="/join" class="btn btn-primary btn-sm">Join Us</NuxtLinkLocale>
+        </div>
+      </footer>
     </div>
   </div>
 </template>
+
+<script setup>
+definePageMeta({
+  title: 'About'
+})
+</script>

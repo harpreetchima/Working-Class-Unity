@@ -94,72 +94,81 @@ const noResults = computed(() => {
 </script>
 
 <template>
-  <div class="max-w-4xl mx-auto px-4 py-8">
-    <!-- Page Header -->
-    <header class="mb-8 text-center">
-      <h1 class="text-4xl font-bold text-base-content mb-4">
-        {{ $t('campaigns.pageTitle') }}
-      </h1>
-      <p class="text-base-content/70 max-w-2xl mx-auto">
-        {{ $t('campaigns.pageSubtitle') }}
-      </p>
-    </header>
+  <div class="min-h-screen bg-base-100">
+    <!-- Hero Section -->
+    <section class="py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-base-content mb-4">
+          {{ $t('campaigns.pageTitle') }}
+        </h1>
+        <p class="text-lg text-base-content/70 max-w-3xl mx-auto mb-10">
+          {{ $t('campaigns.pageSubtitle') }}
+        </p>
 
-    <!-- Filter Bar -->
-    <div class="mb-8">
-      <CampaignFilter v-model="activeFilter" />
-    </div>
-
-    <!-- Focus Campaigns Section -->
-    <section v-if="focusCampaigns.length > 0" class="mb-12">
-      <div class="divider divider-primary text-xl font-bold text-primary">
-        {{ $t('campaigns.focusCampaigns') }}
-      </div>
-      <div class="flex flex-col gap-6 mt-6">
-        <CampaignCard
-          v-for="campaign in focusCampaigns"
-          :key="campaign.id"
-          :campaign="campaign"
-        />
+        <!-- Filter Bar Card -->
+        <div class="card bg-base-100 border border-base-300 shadow-sm max-w-2xl mx-auto">
+          <div class="card-body p-4">
+            <CampaignFilter v-model="activeFilter" />
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Side Quests Section -->
-    <section v-if="sideQuests.length > 0" class="mb-12">
-      <div class="divider divider-primary text-xl font-bold text-primary">
-        {{ $t('campaigns.sideQuests') }}
-      </div>
-      <div class="flex flex-col gap-6 mt-6">
-        <CampaignCard
-          v-for="campaign in sideQuests"
-          :key="campaign.id"
-          :campaign="campaign"
-        />
+    <!-- Campaigns Content Section -->
+    <section class="py-8 md:py-12 bg-base-200/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Focus Campaigns Section -->
+        <div v-if="focusCampaigns.length > 0" class="mb-12">
+          <div class="divider divider-primary text-xl font-bold text-primary">
+            {{ $t('campaigns.focusCampaigns') }}
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <CampaignCard
+              v-for="campaign in focusCampaigns"
+              :key="campaign.id"
+              :campaign="campaign"
+            />
+          </div>
+        </div>
+
+        <!-- Side Quests Section -->
+        <div v-if="sideQuests.length > 0" class="mb-12">
+          <div class="divider divider-primary text-xl font-bold text-primary">
+            {{ $t('campaigns.sideQuests') }}
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <CampaignCard
+              v-for="campaign in sideQuests"
+              :key="campaign.id"
+              :campaign="campaign"
+            />
+          </div>
+        </div>
+
+        <!-- Empty State -->
+        <div v-if="noResults" class="text-center py-16">
+          <div class="text-base-content/50 mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-16 w-16 mx-auto"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <p class="text-base-content/70 text-lg">
+            {{ $t('campaigns.noResults') }}
+          </p>
+        </div>
       </div>
     </section>
-
-    <!-- Empty State -->
-    <div v-if="noResults" class="text-center py-16">
-      <div class="text-base-content/50 mb-4">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-16 w-16 mx-auto"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="1"
-          aria-hidden="true"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      </div>
-      <p class="text-base-content/70 text-lg">
-        {{ $t('campaigns.noResults') }}
-      </p>
-    </div>
   </div>
 </template>

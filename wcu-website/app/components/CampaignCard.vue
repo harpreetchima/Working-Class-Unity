@@ -322,10 +322,10 @@ const formatEventDate = (dateString: string) => {
                     {{ event.time }}
                   </span>
                   <!-- Location -->
-                  <span class="flex items-center gap-1">
+                  <span class="flex items-start gap-1 min-w-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-4 w-4"
+                      class="h-4 w-4 shrink-0 mt-0.5"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -342,7 +342,7 @@ const formatEventDate = (dateString: string) => {
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
-                    <span class="truncate">{{ event.location }}</span>
+                    <span class="break-words">{{ event.location }}</span>
                   </span>
                 </div>
               </div>
