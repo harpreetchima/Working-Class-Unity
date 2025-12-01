@@ -123,10 +123,11 @@ const noResults = computed(() => {
             {{ $t('campaigns.focusCampaigns') }}
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <CampaignCard
+            <LazyCampaignCard
               v-for="campaign in focusCampaigns"
               :key="campaign.id"
               :campaign="campaign"
+              hydrate-on-visible
             />
           </div>
         </div>
@@ -137,10 +138,11 @@ const noResults = computed(() => {
             {{ $t('campaigns.sideQuests') }}
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <CampaignCard
+            <LazyCampaignCard
               v-for="campaign in sideQuests"
               :key="campaign.id"
               :campaign="campaign"
+              hydrate-on-visible
             />
           </div>
         </div>

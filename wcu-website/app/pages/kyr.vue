@@ -139,7 +139,7 @@ definePageMeta({
         </div>
 
         <!-- KnowYourRightsNav component -->
-        <KnowYourRightsNav :seamless="true" :show-title="false" />
+        <LazyKnowYourRightsNav :seamless="true" :show-title="false" />
       </div>
     </section>
 

@@ -280,7 +280,7 @@
       
       <!-- F. Navigation -->
       <div class="mt-12">
-        <KnowYourRightsNav />
+        <LazyKnowYourRightsNav hydrate-on-visible />
       </div>
       
     </div>

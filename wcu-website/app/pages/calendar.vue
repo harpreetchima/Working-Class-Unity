@@ -194,9 +194,14 @@ function getBadgeClass(eventType: EventType): string {
                     </span>
                   </div>
 
-                  <!-- Date/Time -->
+                  <!-- Date/Time - wrapped in ClientOnly to prevent hydration mismatch from locale-dependent formatting -->
                   <p class="text-sm text-base-content/60 mt-2">
-                    {{ formatDateRange(event.startDateTime, event.endDateTime, event.allDay) }}
+                    <ClientOnly>
+                      {{ formatDateRange(event.startDateTime, event.endDateTime, event.allDay) }}
+                      <template #fallback>
+                        <span class="opacity-70">{{ event.startDateTime.split('T')[0] }}</span>
+                      </template>
+                    </ClientOnly>
                   </p>
 
                   <!-- Location -->

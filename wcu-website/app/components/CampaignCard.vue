@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import type { Campaign } from '~/data/campaigns'
 import { getEventsByCampaign, type Event } from '~/data/events'
 
@@ -10,6 +10,15 @@ interface Props {
 const props = defineProps<Props>()
 
 const { t, locale } = useI18n()
+
+// Use useState for SSR-safe timestamp to prevent hydration mismatch
+// The timestamp is computed once on server and hydrated to client
+const now = useState('campaignNow', () => new Date().toISOString())
+
+// Update timestamp after hydration for accurate real-time filtering
+onMounted(() => {
+  now.value = new Date().toISOString()
+})
 
 // Computed properties for type badge (ribbon)
 const typeBadgeText = computed(() => {
@@ -88,12 +97,12 @@ const committeeBadgeClass = computed(() => {
 
 // Fetch upcoming events for this campaign from the events registry
 const upcomingCampaignEvents = computed(() => {
-  const now = new Date().toISOString()
   const campaignEvents = getEventsByCampaign(props.campaign.id)
   
   // Filter to only upcoming, active events and sort by startDateTime
+  // Uses now.value from useState for SSR-safe timestamp comparison
   return campaignEvents
-    .filter((event) => event.isActive && event.startDateTime >= now)
+    .filter((event) => event.isActive && event.startDateTime >= now.value)
     .sort((a, b) => a.startDateTime.localeCompare(b.startDateTime))
     .slice(0, 3) // Limit to 3 upcoming events
 })
@@ -300,14 +309,20 @@ function formatTimeRange(startDateTime: string, endDateTime: string, allDay: boo
               :key="event.id"
               class="flex items-start gap-4 py-3 first:pt-0 last:pb-0"
             >
-              <!-- Date Box -->
+              <!-- Date Box - wrapped in ClientOnly to prevent hydration mismatch from locale-dependent formatting -->
               <div class="flex flex-col items-center justify-center bg-base-200 rounded-lg px-3 py-2 min-w-[60px]">
-                <span class="text-xs font-semibold text-base-content/70">
-                  {{ formatEventDateBox(event.startDateTime).month }}
-                </span>
-                <span class="text-2xl font-bold text-base-content leading-none">
-                  {{ formatEventDateBox(event.startDateTime).day }}
-                </span>
+                <ClientOnly>
+                  <span class="text-xs font-semibold text-base-content/70">
+                    {{ formatEventDateBox(event.startDateTime).month }}
+                  </span>
+                  <span class="text-2xl font-bold text-base-content leading-none">
+                    {{ formatEventDateBox(event.startDateTime).day }}
+                  </span>
+                  <template #fallback>
+                    <span class="text-xs font-semibold text-base-content/70 opacity-70">---</span>
+                    <span class="text-2xl font-bold text-base-content leading-none opacity-70">--</span>
+                  </template>
+                </ClientOnly>
               </div>
 
               <!-- Event Details -->
@@ -345,7 +360,7 @@ function formatTimeRange(startDateTime: string, endDateTime: string, allDay: boo
 
                 <!-- Time and Location -->
                 <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 text-sm text-base-content/60">
-                  <!-- Time -->
+                  <!-- Time - wrapped in ClientOnly to prevent hydration mismatch from locale-dependent formatting -->
                   <span class="flex items-center gap-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -361,7 +376,12 @@ function formatTimeRange(startDateTime: string, endDateTime: string, allDay: boo
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    {{ formatTimeRange(event.startDateTime, event.endDateTime, event.allDay) }}
+                    <ClientOnly>
+                      {{ formatTimeRange(event.startDateTime, event.endDateTime, event.allDay) }}
+                      <template #fallback>
+                        <span class="opacity-70">--:-- - --:--</span>
+                      </template>
+                    </ClientOnly>
                   </span>
                   <!-- Location -->
                   <span class="flex items-start gap-1 min-w-0">

@@ -9,6 +9,6 @@
       <p>Content coming soon...</p>
     </div>
     
-    <KnowYourRightsNav />
+    <LazyKnowYourRightsNav hydrate-on-idle />
   </div>
 </template>

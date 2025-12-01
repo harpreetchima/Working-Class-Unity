@@ -252,7 +252,7 @@ const getList = (key: string) => {
       
       <!-- D. Navigation -->
       <div class="mt-12">
-        <KnowYourRightsNav />
+        <LazyKnowYourRightsNav hydrate-on-visible />
       </div>
       
     </div>
