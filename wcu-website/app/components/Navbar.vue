@@ -62,6 +62,7 @@ onUnmounted(() => {
               </details>
             </li>
             <li><NuxtLinkLocale to="campaigns" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.campaigns') }}</NuxtLinkLocale></li>
+            <li><a href="https://chat.workingclassunity.com/" target="_blank" rel="noopener noreferrer" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">Forum</a></li>
             <li><NuxtLinkLocale to="about" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.about') }}</NuxtLinkLocale></li>
           </ul>
         </div>
@@ -85,6 +86,7 @@ onUnmounted(() => {
             </div>
           </li>
           <li><NuxtLinkLocale to="campaigns" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.campaigns') }}</NuxtLinkLocale></li>
+          <li><a href="https://chat.workingclassunity.com/" target="_blank" rel="noopener noreferrer" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">Forum</a></li>
           <li><NuxtLinkLocale to="about" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.about') }}</NuxtLinkLocale></li>
         </ul>
       </div>
