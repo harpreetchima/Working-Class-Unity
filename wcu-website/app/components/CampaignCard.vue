@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { Campaign } from '~/data/campaigns'
+import { getEventsByCampaign, type Event } from '~/data/events'
 
 interface Props {
   campaign: Campaign
 }
 
 const props = defineProps<Props>()
+
+const { t, locale } = useI18n()
 
 // Computed properties for type badge (ribbon)
 const typeBadgeText = computed(() => {
@@ -83,18 +86,57 @@ const committeeBadgeClass = computed(() => {
   }
 })
 
-// Check if campaign has events
-const hasEvents = computed(() => {
-  return props.campaign.events && props.campaign.events.length > 0
+// Fetch upcoming events for this campaign from the events registry
+const upcomingCampaignEvents = computed(() => {
+  const now = new Date().toISOString()
+  const campaignEvents = getEventsByCampaign(props.campaign.id)
+  
+  // Filter to only upcoming, active events and sort by startDateTime
+  return campaignEvents
+    .filter((event) => event.isActive && event.startDateTime >= now)
+    .sort((a, b) => a.startDateTime.localeCompare(b.startDateTime))
+    .slice(0, 3) // Limit to 3 upcoming events
 })
 
-// Format date for display
-const formatEventDate = (dateString: string) => {
+// Check if campaign has upcoming events
+const hasEvents = computed(() => {
+  return upcomingCampaignEvents.value.length > 0
+})
+
+// Date formatting helpers (following calendar.vue pattern)
+function formatDate(dateString: string): string {
+  const date = new Date(dateString)
+  return new Intl.DateTimeFormat(locale.value, {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric'
+  }).format(date)
+}
+
+function formatTime(dateString: string): string {
+  const date = new Date(dateString)
+  return new Intl.DateTimeFormat(locale.value, {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  }).format(date)
+}
+
+// Format date for the date box display
+function formatEventDateBox(dateString: string) {
   const date = new Date(dateString)
   return {
-    month: date.toLocaleDateString('en-US', { month: 'short' }).toUpperCase(),
+    month: date.toLocaleDateString(locale.value, { month: 'short' }).toUpperCase(),
     day: date.getDate().toString()
   }
+}
+
+// Format time range for display
+function formatTimeRange(startDateTime: string, endDateTime: string, allDay: boolean): string {
+  if (allDay) {
+    return t('calendar.badges.all_day')
+  }
+  return `${formatTime(startDateTime)} - ${formatTime(endDateTime)}`
 }
 </script>
 
@@ -254,17 +296,17 @@ const formatEventDate = (dateString: string) => {
           <!-- Events List -->
           <div class="flex flex-col divide-y divide-base-200">
             <div
-              v-for="event in campaign.events"
+              v-for="event in upcomingCampaignEvents"
               :key="event.id"
               class="flex items-start gap-4 py-3 first:pt-0 last:pb-0"
             >
               <!-- Date Box -->
               <div class="flex flex-col items-center justify-center bg-base-200 rounded-lg px-3 py-2 min-w-[60px]">
                 <span class="text-xs font-semibold text-base-content/70">
-                  {{ formatEventDate(event.date).month }}
+                  {{ formatEventDateBox(event.startDateTime).month }}
                 </span>
                 <span class="text-2xl font-bold text-base-content leading-none">
-                  {{ formatEventDate(event.date).day }}
+                  {{ formatEventDateBox(event.startDateTime).day }}
                 </span>
               </div>
 
@@ -273,16 +315,16 @@ const formatEventDate = (dateString: string) => {
                 <!-- Title Row with Link -->
                 <div class="flex items-start justify-between gap-2">
                   <h4 class="font-semibold text-base-content leading-snug">
-                    {{ event.title }}
+                    {{ $t(event.titleKey) }}
                   </h4>
-                  <!-- External Link Icon -->
+                  <!-- External Link Icon (for virtual events) -->
                   <a
-                    v-if="event.link"
-                    :href="event.link"
+                    v-if="event.virtualLink"
+                    :href="event.virtualLink"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex-shrink-0 text-primary hover:text-primary-focus transition-colors"
-                    :aria-label="`Open ${event.title} link`"
+                    :aria-label="`Open ${$t(event.titleKey)} link`"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -319,7 +361,7 @@ const formatEventDate = (dateString: string) => {
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    {{ event.time }}
+                    {{ formatTimeRange(event.startDateTime, event.endDateTime, event.allDay) }}
                   </span>
                   <!-- Location -->
                   <span class="flex items-start gap-1 min-w-0">

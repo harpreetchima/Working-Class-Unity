@@ -3,16 +3,10 @@
  *
  * This file serves as the single source of truth for all campaign data.
  * It follows the same pattern as know-your-rights.ts for consistency.
+ *
+ * Events are now stored in events.ts and linked via campaignId.
+ * Use getEventsByCampaign() from events.ts to fetch events for a campaign.
  */
-
-export interface Event {
-  id: string
-  title: string
-  date: string // ISO string
-  time: string
-  location: string
-  link?: string
-}
 
 export interface Campaign {
   id: string
@@ -23,7 +17,6 @@ export interface Campaign {
   status: 'active' | 'paused' | 'completed'
   committee: 'membership' | 'education' | 'treasurer' | null // null for focus campaigns (org-wide)
   image: string
-  events: Event[]
   createdAt: string // ISO date
 }
 
@@ -38,23 +31,6 @@ export const campaigns: Campaign[] = [
     status: 'active',
     committee: null,
     image: '/images/campaigns/tenet-union.jpg',
-    events: [
-      {
-        id: 'event-1-1',
-        title: 'Tenant Rights Workshop',
-        date: '2025-12-14T00:00:00.000Z',
-        time: '2:00 PM - 4:00 PM',
-        location: 'Community Center, 123 Main St, Fresno, CA',
-        link: 'https://example.com/tenant-workshop'
-      },
-      {
-        id: 'event-1-2',
-        title: 'Know Your Tenant Rights Town Hall',
-        date: '2025-12-21T00:00:00.000Z',
-        time: '6:00 PM - 8:00 PM',
-        location: 'Central Library Meeting Room, Fresno, CA'
-      }
-    ],
     createdAt: '2025-06-15T00:00:00.000Z'
   },
   {
@@ -66,23 +42,6 @@ export const campaigns: Campaign[] = [
     status: 'active',
     committee: null,
     image: '/images/campaigns/ceasefire-palestine.jpg',
-    events: [
-      {
-        id: 'event-2-1',
-        title: 'Solidarity Vigil for Peace',
-        date: '2025-12-07T00:00:00.000Z',
-        time: '5:00 PM - 7:00 PM',
-        location: 'Courthouse Park, Downtown Fresno, CA'
-      },
-      {
-        id: 'event-2-2',
-        title: 'Community Forum: Understanding the Crisis',
-        date: '2026-01-11T00:00:00.000Z',
-        time: '3:00 PM - 5:00 PM',
-        location: 'Unitarian Universalist Church, Fresno, CA',
-        link: 'https://example.com/forum-registration'
-      }
-    ],
     createdAt: '2025-10-01T00:00:00.000Z'
   },
   {
@@ -94,7 +53,6 @@ export const campaigns: Campaign[] = [
     status: 'paused',
     committee: null,
     image: '/images/campaigns/medicare-for-all.jpg',
-    events: [],
     createdAt: '2024-09-01T00:00:00.000Z'
   },
 
@@ -108,15 +66,6 @@ export const campaigns: Campaign[] = [
     status: 'active',
     committee: 'education',
     image: '/images/campaigns/know-your-rights.jpg',
-    events: [
-      {
-        id: 'event-4-1',
-        title: 'Workers Rights 101 Workshop',
-        date: '2025-12-08T00:00:00.000Z',
-        time: '10:00 AM - 12:00 PM',
-        location: 'Labor Temple, 710 E Olive Ave, Fresno, CA'
-      }
-    ],
     createdAt: '2025-03-01T00:00:00.000Z'
   },
   {
@@ -128,23 +77,6 @@ export const campaigns: Campaign[] = [
     status: 'active',
     committee: 'membership',
     image: '/images/campaigns/community-canvassing.jpg',
-    events: [
-      {
-        id: 'event-5-1',
-        title: 'Weekend Door Knocking - Tower District',
-        date: '2025-12-15T00:00:00.000Z',
-        time: '9:00 AM - 12:00 PM',
-        location: 'Meet at Tower District Coffee, Fresno, CA'
-      },
-      {
-        id: 'event-5-2',
-        title: 'Canvass Training for New Volunteers',
-        date: '2025-12-22T00:00:00.000Z',
-        time: '1:00 PM - 3:00 PM',
-        location: 'WCU Office, Fresno, CA',
-        link: 'https://example.com/canvass-training'
-      }
-    ],
     createdAt: '2025-05-15T00:00:00.000Z'
   },
   {
@@ -156,7 +88,6 @@ export const campaigns: Campaign[] = [
     status: 'completed',
     committee: 'treasurer',
     image: '/images/campaigns/fundraiser-drive.jpg',
-    events: [],
     createdAt: '2025-01-10T00:00:00.000Z'
   }
 ]
