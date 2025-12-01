@@ -4,7 +4,9 @@
     "kyr": "Conozca Sus Derechos",
     "resources": "Recursos",
     "coverage": "Cobertura de Check-In",
-    "join": "ÚNETE A WCU"
+    "join": "ÚNETE A WCU",
+    "calendar": "Calendario",
+    "campaigns": "Campañas"
   },
   "kyr": {
     "otherResources": "Otros recursos de Conozca sus derechos",
@@ -586,6 +588,67 @@
     "fundraiserDrive": {
       "title": "Campaña de Recaudación",
       "description": "Nuestra campaña anual de recaudación de fondos para apoyar los esfuerzos de organización y programas comunitarios durante todo el año."
+    }
+  },
+  "calendar": {
+    "page_title": "Calendario",
+    "hero": {
+      "title": "Próximos Eventos",
+      "description": "Únete a nuestros eventos comunitarios, talleres y acciones. Filtra por tipo para encontrar eventos que te interesen."
+    },
+    "filters": {
+      "all": "Todos los Eventos",
+      "meeting": "Reuniones",
+      "action": "Acciones",
+      "training": "Capacitaciones",
+      "social": "Sociales",
+      "canvass": "Difusión",
+      "forum": "Foros",
+      "other": "Otros"
+    },
+    "event_types": {
+      "meeting": "Reunión",
+      "action": "Acción",
+      "training": "Capacitación",
+      "social": "Social",
+      "canvass": "Difusión",
+      "forum": "Foro",
+      "other": "Otro"
+    },
+    "badges": {
+      "virtual": "Virtual",
+      "hybrid": "Híbrido",
+      "all_day": "Todo el Día"
+    },
+    "upcoming_events": "Próximos Eventos",
+    "no_events": "No se encontraron eventos que coincidan con tu filtro.",
+    "virtual_event": "Evento Virtual",
+    "join_virtual": "Unirse al Evento Virtual",
+    "events": {
+      "event1": {
+        "title": "Reunión General de Miembros",
+        "description": "Reunión mensual de miembros generales para discutir campañas en curso y actualizaciones organizacionales."
+      },
+      "event2": {
+        "title": "Taller de Derechos de Inquilinos",
+        "description": "Aprende sobre tus derechos como inquilino y cómo protegerte de desalojos ilegales."
+      },
+      "event3": {
+        "title": "Día de Acción por Palestina",
+        "description": "Únete a nosotros para un día de acciones de solidaridad pidiendo un alto al fuego inmediato."
+      },
+      "event4": {
+        "title": "Difusión Comunitaria - Tower District",
+        "description": "Alcance puerta a puerta en el Tower District para conectar con miembros de la comunidad."
+      },
+      "event5": {
+        "title": "Orientación para Nuevos Miembros",
+        "description": "Orientación virtual para nuevos miembros para aprender sobre la misión, estructura y cómo involucrarse con WCU."
+      },
+      "event6": {
+        "title": "Foro de Derechos de Salud",
+        "description": "Foro comunitario discutiendo Medicare para Todos y acceso a la salud en el Valle Central."
+      }
     }
   }
 }

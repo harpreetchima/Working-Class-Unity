@@ -4,7 +4,9 @@
     "kyr": "Know Your Rights",
     "resources": "Resources",
     "coverage": "Check-In Coverage",
-    "join": "JOIN WCU"
+    "join": "JOIN WCU",
+    "calendar": "Calendar",
+    "campaigns": "Campaigns"
   },
   "kyr": {
     "otherResources": "Other Know Your Rights Resources",
@@ -590,6 +592,67 @@
     "fundraiserDrive": {
       "title": "Fundraiser Drive",
       "description": "Our annual fundraising campaign to support organizing efforts and community programs throughout the year."
+    }
+  },
+  "calendar": {
+    "page_title": "Calendar",
+    "hero": {
+      "title": "Upcoming Events",
+      "description": "Join us at our community events, workshops, and actions. Filter by type to find events that interest you."
+    },
+    "filters": {
+      "all": "All Events",
+      "meeting": "Meetings",
+      "action": "Actions",
+      "training": "Training",
+      "social": "Social",
+      "canvass": "Canvassing",
+      "forum": "Forums",
+      "other": "Other"
+    },
+    "event_types": {
+      "meeting": "Meeting",
+      "action": "Action",
+      "training": "Training",
+      "social": "Social",
+      "canvass": "Canvass",
+      "forum": "Forum",
+      "other": "Other"
+    },
+    "badges": {
+      "virtual": "Virtual",
+      "hybrid": "Hybrid",
+      "all_day": "All Day"
+    },
+    "upcoming_events": "Upcoming Events",
+    "no_events": "No events found matching your filter.",
+    "virtual_event": "Virtual Event",
+    "join_virtual": "Join Virtual Event",
+    "events": {
+      "event1": {
+        "title": "General Membership Meeting",
+        "description": "Monthly general membership meeting to discuss ongoing campaigns and organizational updates."
+      },
+      "event2": {
+        "title": "Tenant Rights Workshop",
+        "description": "Learn about your rights as a tenant and how to protect yourself from unlawful evictions."
+      },
+      "event3": {
+        "title": "Day of Action for Palestine",
+        "description": "Join us for a day of solidarity actions calling for an immediate ceasefire."
+      },
+      "event4": {
+        "title": "Community Canvassing - Tower District",
+        "description": "Door-to-door outreach in the Tower District to connect with community members."
+      },
+      "event5": {
+        "title": "New Member Orientation",
+        "description": "Virtual orientation for new members to learn about WCU's mission, structure, and how to get involved."
+      },
+      "event6": {
+        "title": "Healthcare Rights Forum",
+        "description": "Community forum discussing Medicare for All and healthcare access in the Central Valley."
+      }
     }
   }
 }

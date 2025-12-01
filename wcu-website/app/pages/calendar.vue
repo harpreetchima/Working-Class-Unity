@@ -1,12 +1,28 @@
 <script setup lang="ts">
-import { getUpcomingEvents, type Event, type EventType } from '~/data/events'
+import { events, getUpcomingEvents, type Event, type EventType } from '~/data/events'
+
+definePageMeta({
+  title: 'calendar.page_title'
+})
 
 const { t, locale } = useI18n()
 
-// Get 3 upcoming events
-const upcomingEvents = computed(() => getUpcomingEvents(3))
+// Filter state
+const selectedType = ref<EventType | 'all'>('all')
 
-// Badge color mapping for event types (from calendar.vue)
+// Event type options for filter
+const eventTypes: { value: EventType | 'all'; labelKey: string }[] = [
+  { value: 'all', labelKey: 'calendar.filters.all' },
+  { value: 'meeting', labelKey: 'calendar.filters.meeting' },
+  { value: 'action', labelKey: 'calendar.filters.action' },
+  { value: 'training', labelKey: 'calendar.filters.training' },
+  { value: 'social', labelKey: 'calendar.filters.social' },
+  { value: 'canvass', labelKey: 'calendar.filters.canvass' },
+  { value: 'forum', labelKey: 'calendar.filters.forum' },
+  { value: 'other', labelKey: 'calendar.filters.other' }
+]
+
+// Badge color mapping for event types
 const badgeClasses: Record<EventType, string> = {
   meeting: 'badge-soft badge-primary',
   action: 'badge-soft badge-error',
@@ -17,7 +33,16 @@ const badgeClasses: Record<EventType, string> = {
   other: 'badge-soft'
 }
 
-// Date formatting helpers (from calendar.vue)
+// Computed filtered events
+const filteredEvents = computed(() => {
+  const upcoming = getUpcomingEvents()
+  if (selectedType.value === 'all') {
+    return upcoming
+  }
+  return upcoming.filter((event) => event.eventType === selectedType.value)
+})
+
+// Date formatting helpers
 function formatDate(dateString: string): string {
   const date = new Date(dateString)
   return new Intl.DateTimeFormat(locale.value, {
@@ -53,41 +78,62 @@ function getBadgeClass(eventType: EventType): string {
 <template>
   <div class="min-h-screen bg-base-100">
     <!-- Hero Section -->
-    <section class="py-16 md:py-24 bg-base-200">
+    <section class="py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-base-content mb-4">
+          {{ $t('calendar.hero.title') }}
+        </h1>
+        <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+          {{ $t('calendar.hero.description') }}
+        </p>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="pb-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-base-content mb-6">
-            They Have Their Parties. We Need Our Own Organization.
-          </h1>
-          <p class="text-lg md:text-xl text-base-content/70 mb-8 max-w-3xl mx-auto">
-            The bosses and landlords have two political parties. The working class needs a fighting organization of its own. Join us to build a member-run movement in San Joaquin County that wins concrete victories, without the compromises and betrayals of politicians and their wealthy donors.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <NuxtLinkLocale to="/join" class="btn btn-primary btn-lg">
-              Join WCU
-            </NuxtLinkLocale>
-            <NuxtLinkLocale to="/calendar" class="btn btn-outline btn-lg">
-              See Upcoming Events
-            </NuxtLinkLocale>
-          </div>
+        <div class="flex flex-wrap gap-2 justify-center">
+          <button
+            v-for="type in eventTypes"
+            :key="type.value"
+            @click="selectedType = type.value"
+            class="btn btn-sm"
+            :class="selectedType === type.value ? 'btn-primary' : 'btn-ghost bg-base-200'"
+          >
+            {{ $t(type.labelKey) }}
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- Upcoming Events Section -->
-    <section class="py-12 md:py-16">
+    <!-- Events Grid Section -->
+    <section class="py-8 md:py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section label -->
         <p class="text-xs uppercase tracking-wide text-base-content/60 mb-6">
-          {{ $t('calendar.upcoming_events') }}
+          {{ $t('calendar.upcoming_events') }} ({{ filteredEvents.length }})
         </p>
+
+        <!-- Empty state -->
+        <div
+          v-if="filteredEvents.length === 0"
+          class="text-center py-16"
+        >
+          <div class="w-16 h-16 rounded-full bg-base-200 flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-base-content/40">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+            </svg>
+          </div>
+          <p class="text-base-content/60">{{ $t('calendar.no_events') }}</p>
+        </div>
 
         <!-- Events Grid -->
         <div
-          v-if="upcomingEvents.length > 0"
+          v-else
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           <div
-            v-for="event in upcomingEvents"
+            v-for="event in filteredEvents"
             :key="event.id"
             class="group card bg-base-100 border border-base-300 shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-300"
           >
@@ -176,41 +222,6 @@ function getBadgeClass(eventType: EventType): string {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- View all events link -->
-        <div class="text-center mt-8">
-          <NuxtLinkLocale to="/calendar" class="btn btn-ghost btn-sm gap-2">
-            View All Events
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-            </svg>
-          </NuxtLinkLocale>
-        </div>
-      </div>
-    </section>
-
-    <!-- The Problem Section -->
-    <section class="py-12 md:py-16 bg-base-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto">
-          <p class="text-xs uppercase tracking-wide text-base-content/60 mb-4">
-            The Problem
-          </p>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-base-content mb-6">
-            The Dictatorship of the Wealthy
-          </h2>
-          <div class="prose prose-lg text-base-content/80">
-            <p>
-              Across San Joaquin, rents rise while our wages stall. Bosses demand more while giving less. Both the Democratic and Republican parties answer to their donors, not to us.
-            </p>
-            <p>
-              Our political and economic system is not broken; it is working exactly as designed to protect the profits of the wealthy by keeping the rest of us divided and powerless.
-            </p>
-            <p>
-              We refuse to accept this. We are organizing a mass working-class movement to build the genuine democracy we deserve – one where working people have real control over our lives, our communities, and our economy.
-            </p>
           </div>
         </div>
       </div>

@@ -51,6 +51,7 @@ onUnmounted(() => {
             </svg>
           </div>
           <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow-lg bg-base-100 rounded-box w-52 text-base-content">
+            <li><NuxtLinkLocale to="calendar" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.calendar') }}</NuxtLinkLocale></li>
             <li>
               <details>
                 <summary class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.kyr') }}</summary>
@@ -60,6 +61,7 @@ onUnmounted(() => {
                 </ul>
               </details>
             </li>
+            <li><NuxtLinkLocale to="campaigns" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.campaigns') }}</NuxtLinkLocale></li>
             <li><NuxtLinkLocale to="about" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.about') }}</NuxtLinkLocale></li>
           </ul>
         </div>
@@ -72,6 +74,7 @@ onUnmounted(() => {
       <!-- Desktop Menu -->
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal gap-1 items-center">
+          <li><NuxtLinkLocale to="calendar" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.calendar') }}</NuxtLinkLocale></li>
           <li>
             <div class="dropdown dropdown-bottom bg-transparent! hover:bg-transparent!">
               <div tabindex="0" role="button" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.kyr') }}</div>
@@ -81,6 +84,7 @@ onUnmounted(() => {
               </ul>
             </div>
           </li>
+          <li><NuxtLinkLocale to="campaigns" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.campaigns') }}</NuxtLinkLocale></li>
           <li><NuxtLinkLocale to="about" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.about') }}</NuxtLinkLocale></li>
         </ul>
       </div>
