@@ -30,7 +30,3 @@ npm-debug.log*
 *.test.js
 *.spec.js
 __tests__
-
-# Lock file - we intentionally skip this to allow npm to resolve
-# platform-specific native bindings for Linux
-package-lock.json
