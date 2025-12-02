@@ -673,6 +673,144 @@ Nuxt auto-generates lazy variants of all components. Prefix any component with `
 *   Components are code-split into separate chunks
 *   Loaded via dynamic import when first rendered
 
+
+## ♿ Accessibility Guidelines
+
+This project follows WCAG (Web Content Accessibility Guidelines) standards to ensure our content is accessible to all users, including those using assistive technologies.
+
+### Color Contrast Audit
+
+**What to check:**
+- Search for opacity modifiers on text: `/70`, `/80`, `/60`, etc.
+- Focus especially on small text (`text-xs`, `text-sm`) with reduced opacity
+
+**WCAG AA Requirements:**
+
+| Text Size | Minimum Contrast Ratio |
+| :--- | :--- |
+| Normal text (< 18px) | 4.5:1 |
+| Large text (≥ 18px bold or ≥ 24px) | 3:1 |
+
+**Fix pattern:**
+
+```html
+<!-- ❌ Before: Low contrast on small text -->
+<span class="text-xs text-base-content/70">Step 01</span>
+
+<!-- ✅ After: Full contrast -->
+<span class="text-xs text-base-content">Step 01</span>
+```
+
+**Rule of thumb:**
+*   Small text (`text-xs`, `text-sm`): Use full `text-base-content`
+*   Large/body text: Can use `/80` minimum
+*   Decorative/supplementary text only: `/70` is acceptable if not critical
+
+### Keyboard Navigation
+
+**What to check:**
+*   Can users Tab through all interactive content?
+*   Are there visible focus indicators?
+*   Is the tab order logical?
+
+**Fix pattern for content cards:**
+
+```html
+<!-- ❌ Before: Not keyboard accessible -->
+<div class="card hover:border-primary/50">
+
+<!-- ✅ After: Keyboard accessible with focus states -->
+<div class="card hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" 
+     tabindex="0" 
+     role="article">
+```
+
+**Key attributes:**
+*   `tabindex="0"` - Makes element focusable in normal tab order
+*   `focus-within:` - Tailwind classes for when element or children have focus
+*   `focus-visible:` - For focus only when keyboard navigating (not mouse click)
+
+### ARIA Labels and Screen Reader Support
+
+**What to check:**
+*   Do decorative elements convey meaning visually but not to screen readers?
+*   Are step numbers, badges, and status indicators announced properly?
+
+**Fix patterns:**
+
+```html
+<!-- Step indicators -->
+<span class="text-xs" aria-label="Step 1 of 4">Step 01</span>
+
+<!-- Status badges that convey meaning -->
+<span class="badge badge-error" role="img" aria-label="Do not">DO NOT</span>
+<span class="badge badge-success" role="img" aria-label="Do">DO</span>
+
+<!-- Hide decorative elements from screen readers -->
+<svg aria-hidden="true">...</svg>
+<div class="decorative-dot" aria-hidden="true"></div>
+<hr aria-hidden="true" role="presentation" />
+```
+
+### Semantic HTML Structure
+
+**Checklist:**
+*   Heading hierarchy is correct: `h1` → `h2` → `h3` (no skipping levels)
+*   Lists use `<ul>` or `<ol>` with proper `role="list"` if styled
+*   Alerts use `role="alert"` for announcements
+*   Navigation landmarks are present
+
+**Fix pattern for timeline/list structures:**
+
+```html
+<!-- Timeline with proper semantics -->
+<ul role="list" aria-label="Steps to follow if ICE comes to your home">
+  <li>
+    <div role="article">
+      <!-- Card content -->
+    </div>
+  </li>
+</ul>
+```
+
+### Missing Alt Text
+
+**What to check:**
+*   All `<img>` tags must have an `alt` attribute
+*   Use empty `alt=""` only for purely decorative images
+*   `<NuxtImg>` and `<NuxtPicture>` also need `alt`
+
+**Fix patterns:**
+
+```html
+<!-- Informative image -->
+<img src="/icon.png" alt="Warning icon indicating important information" />
+<NuxtImg src="/hero.jpg" alt="Community members gathered at a rally" />
+
+<!-- Decorative image -->
+<img src="/decorative-border.png" alt="" role="presentation" />
+```
+
+### Quick Accessibility Audit Workflow
+
+When reviewing a page for accessibility, follow this checklist:
+
+```
+1. Search for /70, /80 opacity classes → Fix low-contrast text
+2. Tab through page manually → Add tabindex="0" and focus states where needed
+3. Check with screen reader → Add ARIA labels to badges, steps, icons
+4. Verify heading hierarchy → Ensure h1 → h2 → h3 order
+5. Search for hardcoded strings → Move to i18n locale files
+6. Check all images for alt text → Add descriptive or empty alt
+```
+
+**Tools for testing:**
+*   **Browser DevTools**: Accessibility panel shows contrast issues and ARIA tree
+*   **axe DevTools**: Browser extension for automated accessibility audits
+*   **WAVE**: Web accessibility evaluation tool
+*   **Screen readers**: VoiceOver (Mac), NVDA (Windows), or browser built-in readers
+
+
 ## 🌍 Internationalization (i18n)
 
 We support multiple languages using `@nuxtjs/i18n`.
