@@ -1044,11 +1044,11 @@
       "number_header": "Number",
       "when_header": "When to Call",
       "wcu": {
-        "who": "WCU Hotline",
+        "who": "WCU",
         "when": "Any questions, running late, safety concerns, no-show volunteer"
       },
       "vwn": {
-        "who": "VWN Detention Hotline",
+        "who": "VWN Hotline",
         "when": "Someone is detained"
       },
       "emergency": {

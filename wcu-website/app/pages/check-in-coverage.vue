@@ -26,7 +26,7 @@ const shiftMaterials = [
     icon: 'book',
     pdfOnly: false,
     pdfUrl: '#',
-    pageUrl: '/know-your-rights/volunteer-quick-guide',
+    pageUrl: '/check-in-coverage-volunteer-guide',
     description: 'check_in_coverage.resources.descriptions.quick_guide'
   },
   {
@@ -194,7 +194,7 @@ const { calKey } = useCalEmbed({
           </div>
         </div>
         <!-- Button: full width on mobile, auto on desktop, always at bottom on mobile -->
-        <NuxtLinkLocale to="/know-your-rights/if-detained-guide" class="btn btn-error gap-2 whitespace-nowrap w-full md:w-auto shrink-0">
+        <NuxtLinkLocale to="/check-in-coverage-volunteer-guide#detained-heading" class="btn btn-error gap-2 whitespace-nowrap w-full md:w-auto shrink-0">
           {{ $t('check_in_coverage.resources.notice.button') }}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -290,7 +290,6 @@ const { calKey } = useCalEmbed({
           <div class="timeline-end py-3">
             <h3 class="font-bold text-base">{{ $t('check_in_coverage.end_of_shift.debrief.title') }}</h3>
             <p class="text-sm text-base-content mt-1">{{ $t('check_in_coverage.end_of_shift.debrief.description') }}</p>
-            <a href="#" class="link link-primary text-sm mt-2 inline-block">{{ $t('check_in_coverage.end_of_shift.debrief.open_form') }}</a>
           </div>
           <hr class="bg-base-300" aria-hidden="true"/>
         </li>
@@ -322,7 +321,8 @@ const { calKey } = useCalEmbed({
           <div class="timeline-end py-3">
             <h3 class="font-bold text-base">{{ $t('check_in_coverage.end_of_shift.handover.title') }}</h3>
             <p class="text-sm text-base-content mt-1">{{ $t('check_in_coverage.end_of_shift.handover.description') }}</p>
-            <a href="#" class="link link-primary text-sm mt-2 inline-flex items-center gap-1">
+            <p class="text-sm text-base-content mt-2">Look for a WCU flyer on the door.</p>
+            <a href="https://maps.app.goo.gl/feHLNz6zeRdEzhau5" target="_blank" rel="noopener noreferrer" class="link link-primary text-sm mt-2 inline-flex items-center gap-1">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />

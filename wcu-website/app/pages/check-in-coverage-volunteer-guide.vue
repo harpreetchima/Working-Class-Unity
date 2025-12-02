@@ -36,7 +36,7 @@ const dontActions = [
 // Key contacts
 const contacts = [
   { whoKey: 'volunteer_guide.contacts.wcu.who', number: '209-842-3232', whenKey: 'volunteer_guide.contacts.wcu.when' },
-  { whoKey: 'volunteer_guide.contacts.vwn.who', number: '(559) 206-0151', whenKey: 'volunteer_guide.contacts.vwn.when' },
+  { whoKey: 'volunteer_guide.contacts.vwn.who', number: '559-206-0151', whenKey: 'volunteer_guide.contacts.vwn.when' },
   { whoKey: 'volunteer_guide.contacts.emergency.who', number: '911', whenKey: 'volunteer_guide.contacts.emergency.when' }
 ]
 </script>
@@ -52,7 +52,7 @@ const contacts = [
     <section class="py-8 md:py-12 bg-gradient-to-b from-base-200 to-base-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header class="text-center mb-8">
-          <span class="text-xs uppercase tracking-wide text-base-content/80 block mb-3">{{ $t('kyr_nav.section_label') }}</span>
+          <span class="text-xs uppercase tracking-wide text-base-content block mb-3">{{ $t('kyr_nav.section_label') }}</span>
           <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-base-content mb-4">
             {{ $t('volunteer_guide.hero.title') }}
           </h1>
@@ -86,7 +86,7 @@ const contacts = [
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <!-- What to Bring Card -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm">
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-lg text-base-content mb-4">{{ $t('volunteer_guide.before.bring.title') }}</h3>
               <ul class="space-y-3" role="list">
@@ -103,18 +103,9 @@ const contacts = [
           </div>
 
           <!-- Printed Materials Card -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm">
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
-              <h3 class="font-semibold text-lg text-base-content mb-2">{{ $t('volunteer_guide.before.materials.title') }}</h3>
-              <p class="text-sm text-base-content/80 mb-4">
-                <i18n-t keypath="volunteer_guide.before.materials.intro" tag="span">
-                  <template #link>
-                    <NuxtLinkLocale to="/check-in-coverage#resources" class="link link-primary">
-                      {{ $t('volunteer_guide.before.materials.link_text') }}
-                    </NuxtLinkLocale>
-                  </template>
-                </i18n-t>
-              </p>
+              <h3 class="font-semibold text-lg text-base-content mb-4">{{ $t('volunteer_guide.before.materials.title') }}</h3>
               
               <!-- Materials Table -->
               <div class="overflow-x-auto">
@@ -128,7 +119,16 @@ const contacts = [
                   </thead>
                   <tbody>
                     <tr v-for="material in materials" :key="material.key">
-                      <td class="font-medium">{{ $t(`check_in_coverage.resources.downloads.${material.key}`) }}</td>
+                      <td class="font-medium">
+                        <a 
+                          :href="material.key === 'tracker_log' ? 'https://files.workingclassunity.com/kyr/Check-In_Tracker_Print.pdf' : 'https://files.workingclassunity.com/kyr/Check-In_Coverage_Print.pdf'"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="link link-primary"
+                        >
+                          {{ $t(`check_in_coverage.resources.downloads.${material.key}`) }}
+                        </a>
+                      </td>
                       <td>{{ material.copies }}</td>
                       <td class="text-base-content/80">{{ $t(material.purposeKey) }}</td>
                     </tr>
@@ -136,7 +136,7 @@ const contacts = [
                 </table>
               </div>
 
-              <p class="text-sm text-base-content/70 mt-4 italic">
+              <p class="text-sm text-base-content mt-4 italic">
                 {{ $t('volunteer_guide.before.materials.note') }}
               </p>
             </div>
@@ -158,7 +158,7 @@ const contacts = [
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <!-- Address Card -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm">
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-lg text-base-content mb-3">{{ $t('volunteer_guide.location.address.title') }}</h3>
               <p class="text-base-content font-mono text-sm mb-4">
@@ -180,7 +180,7 @@ const contacts = [
           </div>
 
           <!-- Parking Card -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm">
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-lg text-base-content mb-3">{{ $t('volunteer_guide.location.parking.title') }}</h3>
               <p class="text-base-content/80">
@@ -190,7 +190,7 @@ const contacts = [
           </div>
 
           <!-- Where to Stand Card -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm">
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-lg text-base-content mb-3">{{ $t('volunteer_guide.location.position.title') }}</h3>
               <ul class="space-y-2 text-sm" role="list">
@@ -205,7 +205,7 @@ const contacts = [
 
         <!-- Look For + Can't Find Anyone -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          <div class="card bg-base-200 border border-base-300">
+          <div class="card bg-base-200 border border-base-300 hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body p-4">
               <h4 class="font-semibold text-base-content mb-2">{{ $t('volunteer_guide.location.look_for.title') }}</h4>
               <ul class="space-y-1 text-sm" role="list">
@@ -225,8 +225,8 @@ const contacts = [
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
             </svg>
             <div>
-              <h4 class="font-semibold">{{ $t('volunteer_guide.location.cant_find.title') }}</h4>
-              <p class="text-sm">{{ $t('volunteer_guide.location.cant_find.text') }}</p>
+              <h4 class="font-semibold text-base-content">{{ $t('volunteer_guide.location.cant_find.title') }}</h4>
+              <p class="text-sm text-base-content">{{ $t('volunteer_guide.location.cant_find.text') }}</p>
             </div>
           </div>
         </div>
@@ -241,10 +241,10 @@ const contacts = [
             </svg>
           </div>
           <h2 id="arrival-heading" class="text-2xl font-bold text-base-content">{{ $t('volunteer_guide.arrival.title') }}</h2>
-          <span class="badge badge-soft badge-primary text-xs">{{ $t('volunteer_guide.arrival.badge') }}</span>
+          <span class="badge badge-soft badge-primary text-xs" role="status"><span class="sr-only">Duration:</span> {{ $t('volunteer_guide.arrival.badge') }}</span>
         </div>
 
-        <div class="card bg-base-100 border border-base-300 shadow-sm max-w-3xl">
+        <div class="card bg-base-100 border border-base-300 shadow-sm max-w-3xl hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
           <div class="card-body">
             <p class="text-base-content/80 mb-4">{{ $t('volunteer_guide.arrival.intro') }}</p>
             
@@ -259,7 +259,7 @@ const contacts = [
                 <span class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-sm font-semibold text-primary shrink-0">2</span>
                 <div>
                   <p class="font-medium text-base-content">{{ $t('volunteer_guide.arrival.steps.briefed') }}</p>
-                  <ul class="mt-2 space-y-1 text-sm text-base-content/80 ml-4">
+                  <ul class="mt-2 space-y-1 text-sm text-base-content ml-4">
                     <li v-for="(item, index) in getList('volunteer_guide.arrival.briefing_items')" :key="index">• {{ rt(item) }}</li>
                   </ul>
                 </div>
@@ -305,10 +305,10 @@ const contacts = [
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <!-- What You DO -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm border-l-4 border-l-success">
+          <div class="card bg-base-100 border border-base-300 shadow-sm border-l-4 border-l-success hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-lg text-base-content flex items-center gap-2 mb-4">
-                <span class="badge badge-soft badge-success" aria-label="Do">{{ $t('volunteer_guide.during.do_label') }}</span>
+                <span class="badge badge-soft badge-success" role="img" aria-label="Do">{{ $t('volunteer_guide.during.do_label') }}</span>
               </h3>
               <div class="overflow-x-auto">
                 <table class="table table-sm">
@@ -330,10 +330,10 @@ const contacts = [
           </div>
 
           <!-- What You DON'T Do -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm border-l-4 border-l-error">
+          <div class="card bg-base-100 border border-base-300 shadow-sm border-l-4 border-l-error hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-lg text-base-content flex items-center gap-2 mb-4">
-                <span class="badge badge-soft badge-error" aria-label="Do not">{{ $t('volunteer_guide.during.dont_label') }}</span>
+                <span class="badge badge-soft badge-error" role="img" aria-label="Do not">{{ $t('volunteer_guide.during.dont_label') }}</span>
               </h3>
               <div class="overflow-x-auto">
                 <table class="table table-sm">
@@ -365,10 +365,10 @@ const contacts = [
             </svg>
           </div>
           <h2 id="detained-heading" class="text-2xl font-bold text-base-content">{{ $t('volunteer_guide.detained.title') }}</h2>
-          <span class="badge badge-soft badge-error text-xs">{{ $t('volunteer_guide.detained.badge') }}</span>
+          <span class="badge badge-soft badge-error text-xs" role="status"><span class="sr-only">Priority:</span> {{ $t('volunteer_guide.detained.badge') }}</span>
         </div>
 
-        <div class="card bg-error/5 border-2 border-error/30 shadow-sm max-w-4xl">
+        <div class="card bg-error/5 border-2 border-error/30 shadow-sm max-w-4xl focus-within:ring-2 focus-within:ring-error/20 transition-colors" tabindex="0" role="article">
           <div class="card-body">
             <p class="text-base-content font-medium mb-6">{{ $t('volunteer_guide.detained.intro') }}</p>
 
@@ -419,7 +419,7 @@ const contacts = [
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <!-- If ICE/Security Approaches -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm">
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-lg text-base-content mb-4">{{ $t('volunteer_guide.safety.approached.title') }}</h3>
               <ul class="space-y-2 text-sm" role="list">
@@ -432,7 +432,7 @@ const contacts = [
           </div>
 
           <!-- If You Feel Unsafe -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm">
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-lg text-base-content mb-4">{{ $t('volunteer_guide.safety.unsafe.title') }}</h3>
               <ul class="space-y-2 text-sm" role="list">
@@ -441,17 +441,17 @@ const contacts = [
                   <span class="text-base-content">{{ rt(item) }}</span>
                 </li>
               </ul>
-              <p class="text-sm text-base-content/80 mt-4 font-medium italic">
+              <p class="text-sm text-base-content mt-4 font-medium italic">
                 {{ $t('volunteer_guide.safety.unsafe.priority') }}
               </p>
             </div>
           </div>
 
           <!-- Recording Video -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm">
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-lg text-base-content mb-4">{{ $t('volunteer_guide.safety.recording.title') }}</h3>
-              <p class="text-sm text-base-content/80 mb-3">{{ $t('volunteer_guide.safety.recording.intro') }}</p>
+              <p class="text-sm text-base-content mb-3">{{ $t('volunteer_guide.safety.recording.intro') }}</p>
               <ul class="space-y-2 text-sm" role="list">
                 <li v-for="(item, index) in getList('volunteer_guide.safety.recording.items')" :key="index" class="flex items-start gap-2">
                   <span class="text-primary mt-0.5" aria-hidden="true">•</span>
@@ -476,10 +476,10 @@ const contacts = [
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <!-- Standard Handoff -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm">
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-lg text-base-content mb-4">{{ $t('volunteer_guide.end_shift.handoff.title') }}</h3>
-              <p class="text-sm text-base-content/80 mb-4">{{ $t('volunteer_guide.end_shift.handoff.intro') }}</p>
+              <p class="text-sm text-base-content mb-4">{{ $t('volunteer_guide.end_shift.handoff.intro') }}</p>
               
               <ol class="space-y-3" role="list">
                 <li v-for="(step, index) in getList('volunteer_guide.end_shift.handoff.steps')" :key="index" class="flex items-start gap-3">
@@ -498,16 +498,16 @@ const contacts = [
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
               </svg>
               <div>
-                <h4 class="font-semibold">{{ $t('volunteer_guide.end_shift.no_show.title') }}</h4>
-                <p class="text-sm">{{ $t('volunteer_guide.end_shift.no_show.text') }}</p>
+                <h4 class="font-semibold text-base-content">{{ $t('volunteer_guide.end_shift.no_show.title') }}</h4>
+                <p class="text-sm text-base-content">{{ $t('volunteer_guide.end_shift.no_show.text') }}</p>
               </div>
             </div>
 
             <!-- Last Shift Card -->
-            <div class="card bg-base-200 border border-base-300">
+            <div class="card bg-base-200 border border-base-300 hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
               <div class="card-body">
                 <h4 class="font-semibold text-base-content mb-2">{{ $t('volunteer_guide.end_shift.last_shift.title') }}</h4>
-                <p class="text-sm text-base-content/80 mb-4">{{ $t('volunteer_guide.end_shift.last_shift.text') }}</p>
+                <p class="text-sm text-base-content mb-4">{{ $t('volunteer_guide.end_shift.last_shift.text') }}</p>
                 <a 
                   href="https://maps.app.goo.gl/feHLNz6zeRdEzhau5" 
                   target="_blank" 
@@ -581,7 +581,7 @@ const contacts = [
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
           <!-- If asked about ICE -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm">
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-base-content mb-2">{{ $t('volunteer_guide.responses.ice_question.q') }}</h3>
               <div role="alert" class="alert alert-soft alert-info">
@@ -591,7 +591,7 @@ const contacts = [
           </div>
 
           <!-- If asked to leave -->
-          <div class="card bg-base-100 border border-base-300 shadow-sm">
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
             <div class="card-body">
               <h3 class="font-semibold text-base-content mb-2">{{ $t('volunteer_guide.responses.leave_question.q') }}</h3>
               <div role="alert" class="alert alert-soft alert-info">
@@ -604,7 +604,7 @@ const contacts = [
 
       <!-- Final Reminders -->
       <section aria-labelledby="reminders-heading" class="pb-8">
-        <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 max-w-3xl">
+        <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 max-w-3xl hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
           <div class="card-body">
             <h2 id="reminders-heading" class="text-xl font-bold text-base-content mb-4">{{ $t('volunteer_guide.reminders.title') }}</h2>
             
