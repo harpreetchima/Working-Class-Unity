@@ -14,7 +14,7 @@
           
           <!-- Social Proof -->
           <div class="flex items-center justify-center gap-3 mt-4">
-            <div class="avatar-group -space-x-4">
+            <div class="avatar-group -space-x-4" aria-hidden="true">
               <div class="avatar placeholder">
                 <div class="bg-primary text-primary-content w-10 rounded-full">
                   <span class="text-sm">W</span>
@@ -39,7 +39,8 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-16">
       <!-- Membership/Pricing Cards -->
-      <section>
+      <section aria-labelledby="membership-heading">
+        <h2 id="membership-heading" class="sr-only">{{ $t('join.membership.title') }}</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Rank and File Member ($10 - Orange) -->
           <div class="card h-full bg-base-100 border border-base-300 border-t-4 border-t-primary shadow-md">
@@ -47,11 +48,11 @@
               <span class="badge badge-primary badge-soft rounded-full self-start">{{ $t('join.membership.rank_and_file.title') }}</span>
               <div class="mt-4 mb-2">
                 <span class="text-5xl font-bold text-primary">{{ $t('join.membership.rank_and_file.price') }}</span>
-                <span class="text-sm text-base-content/50">/month</span>
+                <span class="text-sm text-base-content/80">/month</span>
               </div>
-              <p class="text-base-content/70 mb-6 flex-grow">{{ $t('join.membership.rank_and_file.description') }}</p>
+              <p class="text-base-content/80 mb-6 flex-grow">{{ $t('join.membership.rank_and_file.description') }}</p>
               <div class="card-actions mt-auto">
-                <a href="https://pay.workingclassunity.com/b/7sI4hF1hc9IIepq4gh" target="_blank" class="btn btn-outline btn-primary w-full">{{ $t('join.membership.rank_and_file.button') }}</a>
+                <a href="https://pay.workingclassunity.com/b/7sI4hF1hc9IIepq4gh" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-primary w-full">{{ $t('join.membership.rank_and_file.button') }}<span class="sr-only">(opens in new tab)</span></a>
               </div>
             </div>
           </div>
@@ -65,11 +66,11 @@
               </div>
               <div class="mt-4 mb-2">
                 <span class="text-5xl font-bold text-accent">{{ $t('join.membership.solidarity.price') }}</span>
-                <span class="text-sm text-base-content/50">/month</span>
+                <span class="text-sm text-base-content/80">/month</span>
               </div>
-              <p class="text-base-content/70 mb-6 flex-grow">{{ $t('join.membership.solidarity.description') }}</p>
+              <p class="text-base-content/80 mb-6 flex-grow">{{ $t('join.membership.solidarity.description') }}</p>
               <div class="card-actions mt-auto">
-                <a href="https://pay.workingclassunity.com/b/bIY4hF4tof325SUaEE" target="_blank" class="btn btn-accent w-full">{{ $t('join.membership.solidarity.button') }}</a>
+                <a href="https://pay.workingclassunity.com/b/bIY4hF4tof325SUaEE" target="_blank" rel="noopener noreferrer" class="btn btn-accent w-full">{{ $t('join.membership.solidarity.button') }}<span class="sr-only">(opens in new tab)</span></a>
               </div>
             </div>
           </div>
@@ -81,9 +82,9 @@
               <div class="mt-4 mb-2">
                 <span class="text-5xl font-bold text-secondary">{{ $t('join.membership.donate.price') }}</span>
               </div>
-              <p class="text-base-content/70 mb-6 flex-grow">{{ $t('join.membership.donate.description') }}</p>
+              <p class="text-base-content/80 mb-6 flex-grow">{{ $t('join.membership.donate.description') }}</p>
               <div class="card-actions mt-auto">
-                <a href="https://pay.workingclassunity.com/b/aEU5lJbVQ2gg1CE002" target="_blank" class="btn btn-outline btn-secondary w-full">{{ $t('join.membership.donate.button') }}</a>
+                <a href="https://pay.workingclassunity.com/b/aEU5lJbVQ2gg1CE002" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-secondary w-full">{{ $t('join.membership.donate.button') }}<span class="sr-only">(opens in new tab)</span></a>
               </div>
             </div>
           </div>
@@ -93,9 +94,9 @@
       <div class="divider"></div>
 
       <!-- Membership Benefits -->
-      <section>
+      <section aria-labelledby="benefits-heading">
         <div class="text-center mb-10">
-          <h2 class="text-4xl font-bold mb-4 capitalize">{{ $t('join.benefits.title') }}</h2>
+          <h2 id="benefits-heading" class="text-4xl font-bold mb-4 capitalize">{{ $t('join.benefits.title') }}</h2>
           <p class="text-xl max-w-3xl mx-auto">{{ $t('join.benefits.description') }}</p>
         </div>
         
@@ -104,24 +105,24 @@
           <!-- Voting Rights -->
           <div class="bg-base-100 p-6 flex flex-col items-start text-left">
             <div class="bg-primary/15 p-2.5 rounded-lg mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
               </svg>
             </div>
             <h3 class="font-bold text-lg mb-2 capitalize">{{ $t('join.benefits.items.voting.title') }}</h3>
-            <p class="text-base-content/70">{{ $t('join.benefits.items.voting.description') }}</p>
+            <p class="text-base-content/80">{{ $t('join.benefits.items.voting.description') }}</p>
           </div>
           
           <!-- Leadership Opportunities -->
           <div class="bg-base-100 p-6 flex flex-col items-start text-left">
             <div class="bg-primary/15 p-2.5 rounded-lg mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clip-rule="evenodd" />
                 <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
               </svg>
             </div>
             <h3 class="font-bold text-lg mb-2 capitalize">{{ $t('join.benefits.items.leadership.title') }}</h3>
-            <p class="text-base-content/70">{{ $t('join.benefits.items.leadership.description') }}</p>
+            <p class="text-base-content/80">{{ $t('join.benefits.items.leadership.description') }}</p>
           </div>
           
           <!-- Campaign Involvement -->

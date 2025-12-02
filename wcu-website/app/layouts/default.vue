@@ -6,11 +6,17 @@ const year = useState('footerYear', () => new Date().getFullYear())
 
 <template>
   <div class="flex flex-col min-h-screen">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-content focus:rounded-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-focus"
+    >
+      Skip to main content
+    </a>
     <header>
       <Navbar />
     </header>
 
-    <main class="flex-grow container mx-auto p-4">
+    <main id="main-content" class="flex-grow container mx-auto p-4">
       <slot />
     </main>
 

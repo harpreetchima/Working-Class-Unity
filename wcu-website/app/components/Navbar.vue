@@ -45,25 +45,25 @@ onUnmounted(() => {
       <div class="navbar-start">
         <!-- Mobile Dropdown -->
         <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-base-content/60 hover:text-base-content hover:bg-base-content/5">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div tabindex="0" role="button" aria-label="Open navigation menu" aria-haspopup="true" class="btn btn-ghost lg:hidden text-base-content/70 hover:text-base-content hover:bg-base-content/5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
           <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow-lg bg-base-100 rounded-box w-52 text-base-content">
-            <li><NuxtLinkLocale to="calendar" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.calendar') }}</NuxtLinkLocale></li>
+            <li><NuxtLinkLocale to="calendar" class="text-base-content/70 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.calendar') }}</NuxtLinkLocale></li>
             <li>
               <details>
-                <summary class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.kyr') }}</summary>
+                <summary class="text-base-content/70 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.kyr') }}</summary>
                 <ul class="p-2">
-                  <li><NuxtLinkLocale to="kyr" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.resources') }}</NuxtLinkLocale></li>
-                  <li><NuxtLinkLocale to="check-in-coverage" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.coverage') }}</NuxtLinkLocale></li>
+                  <li><NuxtLinkLocale to="kyr" class="text-base-content/70 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.resources') }}</NuxtLinkLocale></li>
+                  <li><NuxtLinkLocale to="check-in-coverage" class="text-base-content/70 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.coverage') }}</NuxtLinkLocale></li>
                 </ul>
               </details>
             </li>
-            <li><NuxtLinkLocale to="campaigns" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.campaigns') }}</NuxtLinkLocale></li>
-            <li><a href="https://chat.workingclassunity.com/" target="_blank" rel="noopener noreferrer" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">Forum</a></li>
-            <li><NuxtLinkLocale to="about" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.about') }}</NuxtLinkLocale></li>
+            <li><NuxtLinkLocale to="campaigns" class="text-base-content/70 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.campaigns') }}</NuxtLinkLocale></li>
+            <li><a href="https://chat.workingclassunity.com/" target="_blank" rel="noopener noreferrer" class="text-base-content/70 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.forum') }}</a></li>
+            <li><NuxtLinkLocale to="about" class="text-base-content/70 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.about') }}</NuxtLinkLocale></li>
           </ul>
         </div>
         <!-- Logo -->
@@ -81,19 +81,19 @@ onUnmounted(() => {
       <!-- Desktop Menu -->
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal gap-1 items-center">
-          <li><NuxtLinkLocale to="calendar" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.calendar') }}</NuxtLinkLocale></li>
+          <li><NuxtLinkLocale to="calendar" class="text-base-content/70 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.calendar') }}</NuxtLinkLocale></li>
           <li>
             <div class="dropdown dropdown-bottom bg-transparent! hover:bg-transparent!">
-              <div tabindex="0" role="button" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.kyr') }}</div>
+              <div tabindex="0" role="button" aria-label="Know Your Rights menu" aria-haspopup="true" class="text-base-content/70 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.kyr') }}</div>
               <ul tabindex="-1" class="dropdown-content menu bg-base-100 text-base-content rounded-box z-50 w-52 p-2 shadow-lg border border-base-content/10">
-                <li><NuxtLinkLocale to="kyr" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.resources') }}</NuxtLinkLocale></li>
-                <li><NuxtLinkLocale to="check-in-coverage" class="text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.coverage') }}</NuxtLinkLocale></li>
+                <li><NuxtLinkLocale to="kyr" class="text-base-content/70 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.resources') }}</NuxtLinkLocale></li>
+                <li><NuxtLinkLocale to="check-in-coverage" class="text-base-content/70 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.coverage') }}</NuxtLinkLocale></li>
               </ul>
             </div>
           </li>
-          <li><NuxtLinkLocale to="campaigns" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.campaigns') }}</NuxtLinkLocale></li>
-          <li><a href="https://chat.workingclassunity.com/" target="_blank" rel="noopener noreferrer" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">Forum</a></li>
-          <li><NuxtLinkLocale to="about" class="text-base-content/60 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.about') }}</NuxtLinkLocale></li>
+          <li><NuxtLinkLocale to="campaigns" class="text-base-content/70 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.campaigns') }}</NuxtLinkLocale></li>
+          <li><a href="https://chat.workingclassunity.com/" target="_blank" rel="noopener noreferrer" class="text-base-content/70 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.forum') }}</a></li>
+          <li><NuxtLinkLocale to="about" class="text-base-content/70 font-medium px-3 py-2 rounded-lg hover:text-base-content hover:bg-base-content/5 transition-all duration-300">{{ $t('nav.about') }}</NuxtLinkLocale></li>
         </ul>
       </div>
       
@@ -103,14 +103,14 @@ onUnmounted(() => {
         
         <!-- Language Switcher -->
         <div class="dropdown dropdown-end">
-          <div tabindex="0" role="button" class="btn btn-ghost btn-circle text-base-content/60 hover:text-base-content hover:bg-base-content/5 transition-all duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div tabindex="0" role="button" aria-label="Select language" aria-haspopup="true" class="btn btn-ghost btn-circle text-base-content/70 hover:text-base-content hover:bg-base-content/5 transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
             </svg>
           </div>
           <ul tabindex="-1" class="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow-lg bg-base-100 rounded-box w-52 text-base-content border border-base-content/10">
             <li v-for="l in locales" :key="l.code">
-              <NuxtLink :to="switchLocalePath(l.code)" :class="['text-base-content/60 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300', { 'text-base-content bg-base-content/5': locale === l.code }]">
+              <NuxtLink :to="switchLocalePath(l.code)" :class="['text-base-content/70 font-medium hover:text-base-content hover:bg-base-content/5 transition-all duration-300', { 'text-base-content bg-base-content/5': locale === l.code }]">
                 {{ l.name }}
               </NuxtLink>
             </li>
