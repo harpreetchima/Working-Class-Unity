@@ -16,11 +16,11 @@ const handleSupportButtonClick = async () => {
 <template>
   <div class="bg-base-100 min-h-screen">
     <!-- Hero/Header Section -->
-    <section class="py-20">
+    <section class="py-20" aria-labelledby="page-title">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-base-content mb-6">{{ $t('request_support.title') }}</h2>
+        <h1 id="page-title" class="text-4xl md:text-5xl font-bold text-base-content mb-6">{{ $t('request_support.title') }}</h1>
         <div class="max-w-3xl mx-auto">
-          <p class="text-lg md:text-xl text-base-content/70 border-l-4 border-primary pl-6 text-left italic">
+          <p class="text-lg md:text-xl text-base-content/80 border-l-4 border-primary pl-6 text-left italic">
             {{ $t('request_support.intro') }}
           </p>
         </div>
@@ -33,25 +33,26 @@ const handleSupportButtonClick = async () => {
         <h2 class="text-2xl font-bold mb-6 text-base-content">{{ $t('request_support.section1.title') }}</h2>
         
         <div class="max-w-3xl">
-          <p class="text-base-content/70 mb-4">{{ $t('request_support.section1.p1') }}</p>
-          <p class="text-base-content/70 mb-8">{{ $t('request_support.section1.p2') }}</p>
+          <p class="text-base-content mb-4">{{ $t('request_support.section1.p1') }}</p>
+          <p class="text-base-content mb-8">{{ $t('request_support.section1.p2') }}</p>
           
           <!-- Modern list with cards -->
-          <div class="space-y-3">
-            <div 
-              v-for="(item, index) in tm('request_support.section1.list')" 
+          <div class="space-y-3" role="list" aria-label="How we can help">
+            <div
+              v-for="(item, index) in tm('request_support.section1.list')"
               :key="index"
-              class="group card bg-base-100 border border-base-300 shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-300"
+              class="group card bg-base-100 border border-base-300 shadow-sm hover:shadow-md hover:border-primary/50 focus-within:shadow-md focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-all duration-300"
+              role="listitem"
             >
               <div class="card-body py-4">
                 <div class="flex items-start gap-4">
                   <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div class="text-left">
-                    <p class="text-base text-base-content/80 pt-2">{{ rt(item) }}</p>
+                    <p class="text-base text-base-content pt-2">{{ rt(item) }}</p>
                   </div>
                 </div>
               </div>
@@ -67,7 +68,7 @@ const handleSupportButtonClick = async () => {
         <div class="max-w-3xl mx-auto">
           <div class="card border border-base-300 bg-base-200 p-6 md:p-8">
             <h3 class="font-bold text-xl text-base-content mb-3">{{ $t('request_support.form.title') }}</h3>
-            <p class="text-base-content/70 mb-6">{{ $t('request_support.form.intro') }}</p>
+            <p class="text-base-content mb-6">{{ $t('request_support.form.intro') }}</p>
             <button class="btn btn-primary btn-block text-lg h-auto py-4 md:h-14 md:py-0" @click="handleSupportButtonClick">
               {{ $t('request_support.title') }}
             </button>
@@ -82,16 +83,17 @@ const handleSupportButtonClick = async () => {
         <h2 class="text-2xl font-bold mb-8 text-base-content">{{ $t('request_support.next_steps.title') }}</h2>
         
         <div class="max-w-3xl">
-          <ul class="divide-y divide-base-content/10">
-            <li 
-              v-for="(step, index) in tm('request_support.next_steps.steps')" 
+          <ul class="divide-y divide-base-content/10" role="list" aria-label="Next steps after requesting support">
+            <li
+              v-for="(step, index) in tm('request_support.next_steps.steps')"
               :key="index"
-              class="py-4 flex items-start gap-4 hover:bg-base-content/5 -mx-4 px-4 transition-colors"
+              class="py-4 flex items-start gap-4 hover:bg-base-content/5 focus-within:bg-base-content/5 focus-within:outline-none -mx-4 px-4 rounded-lg transition-colors"
             >
-              <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary font-bold">
+              <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary font-bold" aria-hidden="true">
                 {{ index + 1 }}
               </div>
-              <span class="text-base text-base-content/80 pt-1">{{ rt(step) }}</span>
+              <span class="sr-only">Step {{ index + 1 }}:</span>
+              <span class="text-base text-base-content pt-1">{{ rt(step) }}</span>
             </li>
           </ul>
         </div>
@@ -103,7 +105,7 @@ const handleSupportButtonClick = async () => {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div role="alert" class="alert alert-soft alert-error max-w-3xl mx-auto rounded-xl border border-error/30">
           <div class="flex items-center gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-error animate-pulse shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-error animate-pulse shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
             </svg>
             <div>

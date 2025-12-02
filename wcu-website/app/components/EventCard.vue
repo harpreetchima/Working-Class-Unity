@@ -38,7 +38,8 @@ const wrapperProps = computed(() => {
     to: props.link,
     external: isExternalLink.value,
     target: isExternalLink.value ? '_blank' : undefined,
-    rel: isExternalLink.value ? 'noopener noreferrer' : undefined
+    rel: isExternalLink.value ? 'noopener noreferrer' : undefined,
+    'aria-label': isExternalLink.value ? `${props.title} (opens in new tab)` : undefined
   }
 })
 
@@ -57,9 +58,13 @@ const cardClasses = computed(() => {
     :is="WrapperComponent"
     v-bind="wrapperProps"
     :class="cardClasses"
+    role="article"
   >
     <!-- Date and Time Row -->
-    <div class="flex items-center gap-2 text-sm text-base-content/70 mb-1">
+    <div
+      class="flex items-center gap-2 text-sm text-base-content mb-1"
+      :aria-label="`Event on ${formattedDate} at ${time}`"
+    >
       <!-- Calendar icon -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +92,7 @@ const cardClasses = computed(() => {
     </h4>
 
     <!-- Location -->
-    <div class="flex items-start gap-1.5 text-sm text-base-content/60">
+    <div class="flex items-start gap-1.5 text-sm text-base-content/80">
       <!-- Location pin icon -->
       <svg
         xmlns="http://www.w3.org/2000/svg"

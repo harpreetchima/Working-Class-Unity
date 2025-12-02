@@ -6,12 +6,12 @@ FROM node:22-alpine AS builder
 WORKDIR /app
 
 # Copy package files first for better caching
-COPY package.json ./
+COPY package.json package-lock.json ./
 
-# Install dependencies WITHOUT using package-lock.json
-# This ensures platform-specific native binaries (oxc-parser) are resolved for Linux
+# Upgrade npm to fix oxc-parser native binary issue (fixed in npm 11.6.2+)
+# Then install dependencies using package-lock.json for reproducible builds
 # See: https://github.com/npm/cli/issues/4828
-RUN npm install
+RUN npm install -g npm@latest && npm ci
 
 # Copy the rest of the application
 COPY . .

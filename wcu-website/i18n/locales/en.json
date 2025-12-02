@@ -9,6 +9,9 @@
     "campaigns": "Campaigns",
     "forum": "Forum"
   },
+  "kyr_nav": {
+    "section_label": "Know Your Rights"
+  },
   "kyr": {
     "otherResources": "Other Know Your Rights Resources",
     "overview": {
@@ -134,6 +137,9 @@
       "phone": "(559) 206-0151"
     }
   },
+  "common": {
+    "close": "close"
+  },
   "logo_alt": "WCU Logo",
   "about_page": {
     "title": "They Have Their Parties. We Need Our Own Organization",
@@ -229,21 +235,30 @@
     },
     "orientation": {
       "heading": "Onboarding Video",
-      "caption": "Watch: How we monitor, how we log, and how we stay safe."
+      "caption": "Watch: How we monitor, how we log, and how we stay safe.",
+      "duration": "5 min • Security & Logging Protocol",
+      "watch_button": "Watch",
+      "video_placeholder": "Video Player"
     },
     "schedule": {
       "heading": "Claim Your Shift",
       "intro": "We need disciplined, reliable observers.",
       "arrival": "Arrival: You must arrive 15 minutes early to to get a clipboard and get a briefing from the previous volunteer.",
       "role": "Role: You are an observer. You log arrivals/departures and provide resources.",
-      "calendar_refresh_note": "Please refresh the page if you do not see the calendar below."
+      "calendar_refresh_note": "Please refresh the page if you do not see the calendar below.",
+      "arrival_label": "Arrival Time",
+      "role_label": "Your Role"
     },
     "resources": {
       "heading": "Shift Materials",
       "notice": {
+        "title": "Important Notice",
         "text": "Emergency detention tactics change. Before every shift, open this page to see the current instructions for what to do if someone is detained.",
         "button": "View Detention Protocol"
       },
+      "download_pdf": "Download PDF",
+      "view_page": "View Page",
+      "pdf": "PDF",
       "downloads": {
         "check_in_sheet": "Check-In Sheet",
         "tracker_log": "Tracker Log",
@@ -264,13 +279,21 @@
       "copy": "Your shift isn't over until the data is safe.",
       "debrief": {
         "title": "1. The Debrief",
-        "description": "Tell us how it went. How many safe check-ins? Did you see ICE agents? How did you feel? You'll receive a link via email/SMS."
+        "description": "Tell us how it went. How many safe check-ins? Did you see ICE agents? How did you feel? You'll receive a link via email/SMS.",
+        "open_form": "Open Form →"
       },
       "logs": {
         "title": "2. The Logs (Security Protocol)",
         "do_not_photo": "DO NOT photograph the logs.",
         "do_not_text": "DO NOT text the logs.",
-        "drop_off": "DROP OFF the physical sheets at the WCU Office Mail Slot:"
+        "drop_off": "DROP OFF the physical sheets at the WCU Office Mail Slot:",
+        "description": "Securely handle all documentation.",
+        "warning": "WARNING: DO NOT DIGITIZE PHYSICAL LOGS"
+      },
+      "handover": {
+        "title": "Drop off at WCU Mail Slot",
+        "description": "Deliver completed logs",
+        "directions": "Get Directions"
       }
     },
     "contact": {
@@ -290,7 +313,10 @@
       "private_areas": {
         "title": "Private areas (permission required):",
         "description": "ICE needs a judicial warrant signed by a judge—not a DHS order. If an employee or employer consents, ICE can enter without a warrant."
-      }
+      },
+      "public_areas_examples": "Lobbies, parking lots, customer areas",
+      "private_areas_examples": "Offices, warehouses, employee-only areas",
+      "warrant_note": "ICE needs a warrant signed by a judge to enter private/non-public areas without consent."
     },
     "rights_at_work": {
       "title": "Your rights at work",
@@ -301,6 +327,135 @@
         "Refuse to show documentation or ID.",
         "Stand together in the center of the room. Refuse to separate by immigration status. ICE uses this tactic to isolate individuals—protect each other."
       ]
+    },
+    "hero": {
+      "subtitle": "Caution",
+      "description": "Understand your rights when ICE appears at your workplace. Know where they can and cannot go."
+    },
+    "approaches": {
+      "title": "If ICE Approaches You",
+      "critical": "Critical",
+      "do_not_list": [
+        "Run, resist, or lie about your identity",
+        "Sign any documents without an attorney"
+      ],
+      "do_list": [
+        "Stay calm and remember your rights",
+        "Ask if you are free to leave"
+      ],
+      "say_this_title": "Say This",
+      "say_this_text": "\"I wish to remain silent. I do not consent to a search. Am I free to go?\""
+    },
+    "employer": {
+      "title": "Employer Responsibilities",
+      "intro": "Your employer has rights and responsibilities during an ICE visit:",
+      "cards": {
+        "warrant": {
+          "title": "Ask for Warrant",
+          "desc": "Can request to see a valid judicial warrant"
+        },
+        "deny": {
+          "title": "Deny Access",
+          "desc": "Can refuse entry to non-public areas without warrant"
+        },
+        "attorney": {
+          "title": "Call Attorney",
+          "desc": "Can contact company lawyer before cooperating"
+        },
+        "notify": {
+          "title": "Notify Workers",
+          "desc": "Can inform employees of their rights"
+        }
+      }
+    }
+  },
+  "kyr_documents_to_keep": {
+    "header": {
+      "title": "Documents to Keep",
+      "description": "Know which documents to carry, when to show them, and how to protect your rights based on your immigration status."
+    },
+    "safety": {
+      "title": "Document Safety",
+      "list": [
+        "Make copies of everything. Store originals with trusted family or friends.",
+        "Never show foreign documents (passports, birth certificates) that reveal birthplace outside the U.S. These can trigger deportation."
+      ]
+    },
+    "legal_status": {
+      "title": "If You Have Legal Status",
+      "badge": "Legal",
+      "includes_label": "Includes",
+      "includes_text": "Green card, asylum, refugee status, valid student visa, or TPS.",
+      "carry_label": "Carry",
+      "carry_list": [
+        "Your lawful resident card or immigration papers"
+      ],
+      "show_label": "Show",
+      "show_list": [
+        "Present these documents if law enforcement requests them"
+      ]
+    },
+    "pending_status": {
+      "title": "If You Have Pending Status",
+      "badge": "Pending",
+      "includes_label": "Includes",
+      "includes_text": "Pending asylum application, open immigration court case, or immigration appeal.",
+      "carry_label": "Carry",
+      "carry_list": [
+        "Copies of papers proving you applied for status or filed an appeal"
+      ],
+      "show_label": "Show",
+      "show_list": [
+        "Present these documents only if arrested"
+      ],
+      "otherwise_label": "Otherwise",
+      "otherwise_list": [
+        "Remain silent"
+      ]
+    },
+    "undocumented": {
+      "title": "If Undocumented or Expired",
+      "badge": "Critical",
+      "carry_label": "Carry proof of U.S. residence for 2+ years",
+      "carry_list": [
+        "Rental agreements",
+        "School records with address",
+        "Mail addressed to you",
+        "Documents showing your name, U.S. address, and date"
+      ],
+      "callout_title": "Why this matters",
+      "callout_text": "These documents can prevent expedited removal without a hearing. Without proof of 2+ years residence, you can face deportation without seeing a judge."
+    },
+    "quick_ref": {
+      "title": "Quick Reference",
+      "table": {
+        "headers": {
+          "status": "Status",
+          "carry": "What to Carry",
+          "show": "When to Show"
+        },
+        "rows": {
+          "legal": {
+            "status": "Legal Status",
+            "carry": "Lawful resident card or immigration papers",
+            "show": "If law enforcement requests"
+          },
+          "pending": {
+            "status": "Pending Status",
+            "carry": "Copies of application/appeal papers",
+            "show": "Only if arrested"
+          },
+          "undocumented": {
+            "status": "Undocumented",
+            "carry": "Proof of 2+ years U.S. residence",
+            "show": "To prevent expedited removal"
+          }
+        }
+      }
+    },
+    "remember": {
+      "title": "Remember",
+      "text": "\"I wish to remain silent. I do not consent to any searches.\""
     }
   },
   "kyr_ice_at_home": {
@@ -357,6 +512,13 @@
     }
   },
   "kyr_ice_pulls_you_over": {
+    "hero": {
+      "description": "Stay calm, know your rights, and protect yourself during a traffic stop."
+    },
+    "warnings": {
+      "caution": "Caution",
+      "critical": "Critical"
+    },
     "always_pull_over": {
       "title": "Always pull over",
       "content": "Pull over when any law enforcement signals you to stop, even if you do not think you did anything wrong.",

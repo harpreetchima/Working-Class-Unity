@@ -9,6 +9,9 @@
     "campaigns": "Campañas",
     "forum": "Foro"
   },
+  "kyr_nav": {
+    "section_label": "Conozca Sus Derechos"
+  },
   "kyr": {
     "otherResources": "Otros recursos de Conozca sus derechos",
     "overview": {
@@ -301,6 +304,135 @@
         "[SPANISH] Refuse to show documentation or ID.",
         "[SPANISH] Stand together in the center of the room. Refuse to separate by immigration status. ICE uses this tactic to isolate individuals—protect each other."
       ]
+    },
+    "hero": {
+      "subtitle": "[SPANISH] Caution",
+      "description": "[SPANISH] Understand your rights when ICE appears at your workplace. Know where they can and cannot go."
+    },
+    "approaches": {
+      "title": "[SPANISH] If ICE Approaches You",
+      "critical": "[SPANISH] Critical",
+      "do_not_list": [
+        "[SPANISH] Run, resist, or lie about your identity",
+        "[SPANISH] Sign any documents without an attorney"
+      ],
+      "do_list": [
+        "[SPANISH] Stay calm and remember your rights",
+        "[SPANISH] Ask if you are free to leave"
+      ],
+      "say_this_title": "[SPANISH] Say This",
+      "say_this_text": "[SPANISH] \"I wish to remain silent. I do not consent to a search. Am I free to go?\""
+    },
+    "employer": {
+      "title": "[SPANISH] Employer Responsibilities",
+      "intro": "[SPANISH] Your employer has rights and responsibilities during an ICE visit:",
+      "cards": {
+        "warrant": {
+          "title": "[SPANISH] Ask for Warrant",
+          "desc": "[SPANISH] Can request to see a valid judicial warrant"
+        },
+        "deny": {
+          "title": "[SPANISH] Deny Access",
+          "desc": "[SPANISH] Can refuse entry to non-public areas without warrant"
+        },
+        "attorney": {
+          "title": "[SPANISH] Call Attorney",
+          "desc": "[SPANISH] Can contact company lawyer before cooperating"
+        },
+        "notify": {
+          "title": "[SPANISH] Notify Workers",
+          "desc": "[SPANISH] Can inform employees of their rights"
+        }
+      }
+    }
+  },
+  "kyr_documents_to_keep": {
+    "header": {
+      "title": "[SPANISH] Documents to Keep",
+      "description": "[SPANISH] Know which documents to carry, when to show them, and how to protect your rights based on your immigration status."
+    },
+    "safety": {
+      "title": "[SPANISH] Document Safety",
+      "list": [
+        "[SPANISH] Make copies of everything. Store originals with trusted family or friends.",
+        "[SPANISH] Never show foreign documents (passports, birth certificates) that reveal birthplace outside the U.S. These can trigger deportation."
+      ]
+    },
+    "legal_status": {
+      "title": "[SPANISH] If You Have Legal Status",
+      "badge": "[SPANISH] Legal",
+      "includes_label": "[SPANISH] Includes",
+      "includes_text": "[SPANISH] Green card, asylum, refugee status, valid student visa, or TPS.",
+      "carry_label": "[SPANISH] Carry",
+      "carry_list": [
+        "[SPANISH] Your lawful resident card or immigration papers"
+      ],
+      "show_label": "[SPANISH] Show",
+      "show_list": [
+        "[SPANISH] Present these documents if law enforcement requests them"
+      ]
+    },
+    "pending_status": {
+      "title": "[SPANISH] If You Have Pending Status",
+      "badge": "[SPANISH] Pending",
+      "includes_label": "[SPANISH] Includes",
+      "includes_text": "[SPANISH] Pending asylum application, open immigration court case, or immigration appeal.",
+      "carry_label": "[SPANISH] Carry",
+      "carry_list": [
+        "[SPANISH] Copies of papers proving you applied for status or filed an appeal"
+      ],
+      "show_label": "[SPANISH] Show",
+      "show_list": [
+        "[SPANISH] Present these documents only if arrested"
+      ],
+      "otherwise_label": "[SPANISH] Otherwise",
+      "otherwise_list": [
+        "[SPANISH] Remain silent"
+      ]
+    },
+    "undocumented": {
+      "title": "[SPANISH] If Undocumented or Expired",
+      "badge": "[SPANISH] Critical",
+      "carry_label": "[SPANISH] Carry proof of U.S. residence for 2+ years",
+      "carry_list": [
+        "[SPANISH] Rental agreements",
+        "[SPANISH] School records with address",
+        "[SPANISH] Mail addressed to you",
+        "[SPANISH] Documents showing your name, U.S. address, and date"
+      ],
+      "callout_title": "[SPANISH] Why this matters",
+      "callout_text": "[SPANISH] These documents can prevent expedited removal without a hearing. Without proof of 2+ years residence, you can face deportation without seeing a judge."
+    },
+    "quick_ref": {
+      "title": "[SPANISH] Quick Reference",
+      "table": {
+        "headers": {
+          "status": "[SPANISH] Status",
+          "carry": "[SPANISH] What to Carry",
+          "show": "[SPANISH] When to Show"
+        },
+        "rows": {
+          "legal": {
+            "status": "[SPANISH] Legal Status",
+            "carry": "[SPANISH] Lawful resident card or immigration papers",
+            "show": "[SPANISH] If law enforcement requests"
+          },
+          "pending": {
+            "status": "[SPANISH] Pending Status",
+            "carry": "[SPANISH] Copies of application/appeal papers",
+            "show": "[SPANISH] Only if arrested"
+          },
+          "undocumented": {
+            "status": "[SPANISH] Undocumented",
+            "carry": "[SPANISH] Proof of 2+ years U.S. residence",
+            "show": "[SPANISH] To prevent expedited removal"
+          }
+        }
+      }
+    },
+    "remember": {
+      "title": "[SPANISH] Remember",
+      "text": "[SPANISH] \"I wish to remain silent. I do not consent to any searches.\""
     }
   },
   "kyr_ice_at_home": {
@@ -365,6 +497,13 @@
     }
   },
   "kyr_ice_pulls_you_over": {
+    "hero": {
+      "description": "[SPANISH] Stay calm, know your rights, and protect yourself during a traffic stop."
+    },
+    "warnings": {
+      "caution": "[SPANISH] Caution",
+      "critical": "[SPANISH] Critical"
+    },
     "always_pull_over": {
       "title": "[SPANISH] Always pull over",
       "content": "[SPANISH] Pull over when any law enforcement signals you to stop, even if you do not think you did anything wrong.",

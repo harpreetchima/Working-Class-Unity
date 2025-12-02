@@ -9,6 +9,9 @@
     "campaigns": "ਮੁਹਿੰਮਾਂ",
     "forum": "ਫੋਰਮ"
   },
+  "kyr_nav": {
+    "section_label": "ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ"
+  },
   "kyr": {
     "otherResources": "ਹੋਰ ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ ਸਰੋਤ",
     "overview": {
@@ -301,6 +304,135 @@
         "[PUNJABI] Refuse to show documentation or ID.",
         "[PUNJABI] Stand together in the center of the room. Refuse to separate by immigration status. ICE uses this tactic to isolate individuals—protect each other."
       ]
+    },
+    "hero": {
+      "subtitle": "[PUNJABI] Caution",
+      "description": "[PUNJABI] Understand your rights when ICE appears at your workplace. Know where they can and cannot go."
+    },
+    "approaches": {
+      "title": "[PUNJABI] If ICE Approaches You",
+      "critical": "[PUNJABI] Critical",
+      "do_not_list": [
+        "[PUNJABI] Run, resist, or lie about your identity",
+        "[PUNJABI] Sign any documents without an attorney"
+      ],
+      "do_list": [
+        "[PUNJABI] Stay calm and remember your rights",
+        "[PUNJABI] Ask if you are free to leave"
+      ],
+      "say_this_title": "[PUNJABI] Say This",
+      "say_this_text": "[PUNJABI] \"I wish to remain silent. I do not consent to a search. Am I free to go?\""
+    },
+    "employer": {
+      "title": "[PUNJABI] Employer Responsibilities",
+      "intro": "[PUNJABI] Your employer has rights and responsibilities during an ICE visit:",
+      "cards": {
+        "warrant": {
+          "title": "[PUNJABI] Ask for Warrant",
+          "desc": "[PUNJABI] Can request to see a valid judicial warrant"
+        },
+        "deny": {
+          "title": "[PUNJABI] Deny Access",
+          "desc": "[PUNJABI] Can refuse entry to non-public areas without warrant"
+        },
+        "attorney": {
+          "title": "[PUNJABI] Call Attorney",
+          "desc": "[PUNJABI] Can contact company lawyer before cooperating"
+        },
+        "notify": {
+          "title": "[PUNJABI] Notify Workers",
+          "desc": "[PUNJABI] Can inform employees of their rights"
+        }
+      }
+    }
+  },
+  "kyr_documents_to_keep": {
+    "header": {
+      "title": "[PUNJABI] Documents to Keep",
+      "description": "[PUNJABI] Know which documents to carry, when to show them, and how to protect your rights based on your immigration status."
+    },
+    "safety": {
+      "title": "[PUNJABI] Document Safety",
+      "list": [
+        "[PUNJABI] Make copies of everything. Store originals with trusted family or friends.",
+        "[PUNJABI] Never show foreign documents (passports, birth certificates) that reveal birthplace outside the U.S. These can trigger deportation."
+      ]
+    },
+    "legal_status": {
+      "title": "[PUNJABI] If You Have Legal Status",
+      "badge": "[PUNJABI] Legal",
+      "includes_label": "[PUNJABI] Includes",
+      "includes_text": "[PUNJABI] Green card, asylum, refugee status, valid student visa, or TPS.",
+      "carry_label": "[PUNJABI] Carry",
+      "carry_list": [
+        "[PUNJABI] Your lawful resident card or immigration papers"
+      ],
+      "show_label": "[PUNJABI] Show",
+      "show_list": [
+        "[PUNJABI] Present these documents if law enforcement requests them"
+      ]
+    },
+    "pending_status": {
+      "title": "[PUNJABI] If You Have Pending Status",
+      "badge": "[PUNJABI] Pending",
+      "includes_label": "[PUNJABI] Includes",
+      "includes_text": "[PUNJABI] Pending asylum application, open immigration court case, or immigration appeal.",
+      "carry_label": "[PUNJABI] Carry",
+      "carry_list": [
+        "[PUNJABI] Copies of papers proving you applied for status or filed an appeal"
+      ],
+      "show_label": "[PUNJABI] Show",
+      "show_list": [
+        "[PUNJABI] Present these documents only if arrested"
+      ],
+      "otherwise_label": "[PUNJABI] Otherwise",
+      "otherwise_list": [
+        "[PUNJABI] Remain silent"
+      ]
+    },
+    "undocumented": {
+      "title": "[PUNJABI] If Undocumented or Expired",
+      "badge": "[PUNJABI] Critical",
+      "carry_label": "[PUNJABI] Carry proof of U.S. residence for 2+ years",
+      "carry_list": [
+        "[PUNJABI] Rental agreements",
+        "[PUNJABI] School records with address",
+        "[PUNJABI] Mail addressed to you",
+        "[PUNJABI] Documents showing your name, U.S. address, and date"
+      ],
+      "callout_title": "[PUNJABI] Why this matters",
+      "callout_text": "[PUNJABI] These documents can prevent expedited removal without a hearing. Without proof of 2+ years residence, you can face deportation without seeing a judge."
+    },
+    "quick_ref": {
+      "title": "[PUNJABI] Quick Reference",
+      "table": {
+        "headers": {
+          "status": "[PUNJABI] Status",
+          "carry": "[PUNJABI] What to Carry",
+          "show": "[PUNJABI] When to Show"
+        },
+        "rows": {
+          "legal": {
+            "status": "[PUNJABI] Legal Status",
+            "carry": "[PUNJABI] Lawful resident card or immigration papers",
+            "show": "[PUNJABI] If law enforcement requests"
+          },
+          "pending": {
+            "status": "[PUNJABI] Pending Status",
+            "carry": "[PUNJABI] Copies of application/appeal papers",
+            "show": "[PUNJABI] Only if arrested"
+          },
+          "undocumented": {
+            "status": "[PUNJABI] Undocumented",
+            "carry": "[PUNJABI] Proof of 2+ years U.S. residence",
+            "show": "[PUNJABI] To prevent expedited removal"
+          }
+        }
+      }
+    },
+    "remember": {
+      "title": "[PUNJABI] Remember",
+      "text": "[PUNJABI] \"I wish to remain silent. I do not consent to any searches.\""
     }
   },
   "kyr_ice_at_home": {
@@ -357,6 +489,13 @@
     }
   },
   "kyr_ice_pulls_you_over": {
+    "hero": {
+      "description": "[PUNJABI] Stay calm, know your rights, and protect yourself during a traffic stop."
+    },
+    "warnings": {
+      "caution": "[PUNJABI] Caution",
+      "critical": "[PUNJABI] Critical"
+    },
     "always_pull_over": {
       "title": "[PUNJABI] Always pull over",
       "content": "[PUNJABI] Pull over when any law enforcement signals you to stop, even if you do not think you did anything wrong.",
