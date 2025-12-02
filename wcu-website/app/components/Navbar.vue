@@ -69,7 +69,7 @@ onUnmounted(() => {
         <!-- Logo -->
         <NuxtLinkLocale to="/" class="h-auto py-2">
           <ClientOnly>
-            <NuxtImg :src="logoSrc" :alt="$t('logo_alt')" class="h-16 w-auto" />
+            <img :src="logoSrc" :alt="$t('logo_alt')" class="h-16 w-auto" />
             <template #fallback>
               <!-- Placeholder during SSR to prevent hydration mismatch -->
               <div class="h-16 w-32 bg-base-content/10 rounded animate-pulse"></div>

@@ -11,12 +11,15 @@ This application is built with a modern stack featuring **Nuxt 4**, **Tailwind C
 - **UI Component Library**: [DaisyUI 5](https://daisyui.com/docs/v5/)
 - **Internationalization**: [@nuxtjs/i18n](https://i18n.nuxtjs.org/)
 - **Icons**: Inline SVGs / Heroicons (via Tailwind)
+- **Scheduling**: [Cal.com](https://cal.com) embed integration
+- **Surveys**: [Formbricks](https://formbricks.com) client SDK
+- **Deployment**: Docker / Nixpacks / Coolify
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- **Node.js**: Latest LTS version recommended (v18+).
+- **Node.js**: v20.19.0+ or v22.12.0+ (required for Nuxt 4.2.1)
 - **Package Manager**: `npm` (bundled with Node.js).
 
 ### Installation
@@ -46,15 +49,21 @@ This project follows the **Nuxt 4** directory structure, where the application s
 wcu-website/
 ├── app/
 │   ├── assets/          # Static assets (CSS, images)
-│   ├── components/      # Vue components (Navbar, etc.)
-│   ├── layouts/         # Layout wrappers (default.vue)
+│   ├── components/      # Vue components
+│   ├── composables/     # Reusable composables
+│   ├── data/            # Data registries (campaigns, events, etc.)
+│   ├── layouts/         # Layout wrappers
 │   ├── pages/           # Application routes/views
+│   ├── plugins/         # Nuxt plugins
 │   └── app.vue          # Root component
+├── docs/                # Project documentation
 ├── i18n/
 │   └── locales/         # Translation JSON files
-├── public/              # Public static files (favicon, logos)
+├── public/              # Public static files
+├── Dockerfile           # Docker deployment config
+├── nixpacks.toml        # Nixpacks deployment config
 ├── nuxt.config.ts       # Nuxt configuration
-└── package.json         # Project dependencies and scripts
+└── package.json         # Project dependencies
 ```
 
 ## 🎨 Styling & Theming
@@ -174,7 +183,7 @@ The registry defines an `Event` interface with comprehensive metadata:
 | `startDateTime` / `endDateTime` | `string` | ISO 8601 date strings |
 | `allDay` | `boolean` | Whether the event spans the full day |
 | `location` | `string` | Physical location or venue |
-| `virtualLink` | `string \| null` | URL for virtual attendance (Zoom, etc.) |
+| `rsvpLink` | `string \| null` | URL for event RSVP |
 | `isVirtual` / `isHybrid` | `boolean` | Event format flags |
 | `isActive` | `boolean` | Whether the event is currently active |
 | `campaignId` | `string \| null` | Links to a campaign's `id` in [`campaigns.ts`](wcu-website/app/data/campaigns.ts) |
@@ -183,11 +192,11 @@ The registry defines an `Event` interface with comprehensive metadata:
 **Helper Functions:**
 
 The registry exports utility functions for querying events:
-*   [`getEventById(id)`](wcu-website/app/data/events.ts:153) - Retrieve a single event
-*   [`getEventsByCampaign(campaignId)`](wcu-website/app/data/events.ts:162) - Get all events linked to a campaign
-*   [`getEventsByCommittee(committee)`](wcu-website/app/data/events.ts:171) - Filter by committee
-*   [`getUpcomingEvents(limit?)`](wcu-website/app/data/events.ts:180) - Get active future events, sorted chronologically
-*   [`getEventsByType(eventType)`](wcu-website/app/data/events.ts:198) - Filter by event type
+*   [`getEventById(id)`](wcu-website/app/data/events.ts:111) - Retrieve a single event
+*   [`getEventsByCampaign(campaignId)`](wcu-website/app/data/events.ts:120) - Get all events linked to a campaign
+*   [`getEventsByCommittee(committee)`](wcu-website/app/data/events.ts:129) - Filter by committee
+*   [`getUpcomingEvents(limit?)`](wcu-website/app/data/events.ts:138) - Get active future events, sorted chronologically
+*   [`getEventsByType(eventType)`](wcu-website/app/data/events.ts:156) - Filter by event type
 
 **Calendar Page ([`app/pages/calendar.vue`](wcu-website/app/pages/calendar.vue)):**
 
@@ -261,6 +270,62 @@ The [`CampaignCard`](wcu-website/app/components/CampaignCard.vue) component auto
 
 We currently use inline SVGs for icons. When adding new icons, ensure they are accessible and scale correctly with Tailwind classes (e.g., `h-5 w-5`).
 
+### Cal.com Embed Integration
+
+The project includes a reusable composable for Cal.com calendar embeds that properly handles SPA navigation and cleanup.
+
+**Composable: [`useCalEmbed()`](wcu-website/app/composables/useCalEmbed.ts)**
+
+| Option | Type | Description |
+| :--- | :--- | :--- |
+| `namespace` | `string` | Unique identifier for the embed instance |
+| `calLink` | `string` | Cal.com link (e.g., `'username/event-type'`) |
+| `elementId` | `string` | DOM element ID (without `#`) |
+| `config` | `CalEmbedConfig` | Layout and theme options |
+| `cssVarsPerTheme` | `object` | Custom CSS variables for light/dark themes |
+
+**Returns:**
+*   `calKey` - Reactive key for forcing re-renders on navigation
+*   `isInitialized` - Whether Cal.com embed is loaded
+*   `reinitialize()` - Manual re-initialization function
+
+**Example Usage:**
+
+```vue
+<script setup>
+const { calKey } = useCalEmbed({
+  namespace: 'check-in-coverage',
+  calLink: 'workingclassunity/check-in-coverage',
+  elementId: 'cal-inline',
+  config: { layout: 'month_view', theme: 'auto' }
+})
+</script>
+
+<template>
+  <ClientOnly>
+    <div :key="calKey" id="cal-inline" class="min-h-[500px]"></div>
+    <template #fallback>
+      <div class="min-h-[500px] skeleton"></div>
+    </template>
+  </ClientOnly>
+</template>
+```
+
+### Formbricks Survey Integration
+
+Formbricks surveys are integrated via a Nuxt client plugin at [`app/plugins/formbricks.client.ts`](wcu-website/app/plugins/formbricks.client.ts).
+
+**Configuration:**
+- **App URL**: `https://form.workingclassunity.com`
+- **Environment ID**: Configured in the plugin
+
+**How it works:**
+1. Plugin initializes on client-side only (`typeof window !== "undefined"`)
+2. Registers route changes via `router.afterEach()` hook for page-specific survey targeting
+3. Automatically tracks navigation for survey triggering
+
+**Note:** The Formbricks SDK is imported from `@formbricks/js` and is listed in `package.json` dependencies.
+
 ## ⚠️ SSR & Hydration Best Practices
 
 **Hydration** is the process where Vue takes over the static HTML rendered by the server and makes it interactive on the client. A **hydration mismatch** occurs when the HTML generated on the server differs from what Vue expects to render on the client, causing console warnings and potential UI glitches.
@@ -317,49 +382,41 @@ Third-party embed scripts (Cal.com, Calendly, Intercom, analytics, etc.) should 
 
 **Recommended Approaches:**
 
-1.  **`<ClientOnly>` wrapper + `onMounted`** (Preferred for embeds): Wrap the embed container in `<ClientOnly>` and initialize the script in `onMounted()`.
+1.  **`useCalEmbed` composable** (Preferred for Cal.com): Use the project's dedicated composable that handles SPA navigation and cleanup automatically.
 
-2.  **Nuxt's `useHead` composable**: For script injection that needs to be SSR-safe, use the `script` option in `useHead()`.
+2.  **`<ClientOnly>` wrapper + `onMounted`**: For other embeds, wrap the container and initialize in `onMounted()`.
 
-3.  **`@nuxt/scripts` module**: For advanced script loading with performance optimizations (lazy loading, consent management), consider the official Nuxt Scripts module.
+3.  **Nuxt's `useHead` composable**: For script injection that needs to be SSR-safe.
 
-**Example - Cal.com Embed (from check-in-coverage.vue):**
+4.  **`@nuxt/scripts` module**: For advanced script loading with performance optimizations.
+
+**Example - Cal.com Embed (using useCalEmbed composable):**
 
 ```vue
-<template>
-  <div class="card">
-    <ClientOnly>
-      <!-- Embed container only renders on client -->
-      <div id="my-cal-inline" class="min-h-[400px]"></div>
-      <template #fallback>
-        <!-- Loading placeholder during SSR -->
-        <div class="min-h-[400px] flex items-center justify-center">
-          <span class="loading loading-spinner loading-lg"></span>
-        </div>
-      </template>
-    </ClientOnly>
-  </div>
-</template>
-
 <script setup>
-onMounted(() => {
-  // Safe: This only runs on the client
-  (function (C, A, L) {
-    // Cal.com embed initialization script...
-  })(window, "https://app.cal.com/embed/embed.js", "init");
-  
-  Cal("init", "my-calendar", { origin: "https://app.cal.com" });
-  Cal.ns["my-calendar"]("inline", {
-    elementOrSelector: "#my-cal-inline",
-    calLink: "your-username/event-type",
-  });
+const { calKey } = useCalEmbed({
+  namespace: 'my-calendar',
+  calLink: 'myorg/myevent',
+  elementId: 'my-cal-inline',
+  config: { layout: 'month_view', theme: 'auto' }
 })
 </script>
+
+<template>
+  <ClientOnly>
+    <div :key="calKey" id="my-cal-inline" class="min-h-[500px]"></div>
+    <template #fallback>
+      <div class="min-h-[500px] flex items-center justify-center">
+        <span class="loading loading-spinner loading-lg"></span>
+      </div>
+    </template>
+  </ClientOnly>
+</template>
 ```
 
 **Key Points:**
-*   The embed container (`#my-cal-inline`) is wrapped in `<ClientOnly>` so it doesn't render during SSR.
-*   The script initialization happens inside `onMounted()`, which only executes on the client.
+*   The `useCalEmbed` composable handles script loading, initialization, and cleanup automatically.
+*   The `:key="calKey"` binding ensures proper re-rendering on SPA navigation.
 *   The `#fallback` slot provides a loading state while the embed loads.
 
 ### Date & Time Values
@@ -633,6 +690,50 @@ We support multiple languages using `@nuxtjs/i18n`.
 *   **Template**: `{{ $t('nav.about') }}`
 *   **Links**: Use `<NuxtLinkLocale to="about">` instead of `<NuxtLink to="/about">` to preserve the active language prefix.
 *   **Switching**: Use `switchLocalePath('es')` to generate the URL for a language switch.
+
+## 🐳 Deployment Options
+
+### Docker Deployment
+
+The project includes Docker support for containerized deployments.
+
+**Files:**
+- [`Dockerfile`](wcu-website/Dockerfile) - Multi-stage build for SSR deployment
+- [`.dockerignore`](wcu-website/.dockerignore) - Excludes unnecessary files from build context
+
+**Build and Run:**
+
+```bash
+cd wcu-website
+docker build -t wcu-website .
+docker run -p 3000:3000 wcu-website
+```
+
+**Important Notes:**
+- Uses Node.js 22 Alpine base image
+- Deliberately does NOT copy `package-lock.json` to ensure platform-specific native dependencies (like `oxc-parser`) resolve correctly for Linux during the build
+
+### Nixpacks Deployment (Coolify)
+
+For platforms like Coolify that use Nixpacks, configuration is in [`nixpacks.toml`](wcu-website/nixpacks.toml).
+
+**Configuration:**
+```toml
+[phases.setup]
+nixPkgs = ["nodejs_22"]
+
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+cmds = ["npm run build"]
+```
+
+**Key Points:**
+- Uses Node.js 22 to meet Nuxt 4.2.1 requirements
+- Fresh `npm install` ensures correct platform-specific binaries
+
+See the full [Coolify Deployment Guide](wcu-website/docs/coolify-deployment.md) for detailed instructions including environment variables, health checks, and troubleshooting.
 
 ## 📦 Production Build
 
