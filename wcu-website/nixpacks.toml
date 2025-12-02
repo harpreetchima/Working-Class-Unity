@@ -7,7 +7,10 @@
 nixPkgs = ["nodejs_20"]
 
 [phases.install]
-cmds = ["npm ci"]
+# Use npm install instead of npm ci to properly resolve platform-specific
+# native dependencies (oxc-parser, etc.) for Linux when package-lock.json
+# was generated on Windows. See: https://github.com/npm/cli/issues/4828
+cmds = ["npm install --prefer-offline"]
 
 [phases.build]
 cmds = ["npm run build"]
