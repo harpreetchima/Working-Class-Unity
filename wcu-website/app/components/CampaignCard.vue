@@ -334,8 +334,8 @@ function formatTimeRange(startDateTime: string, endDateTime: string, allDay: boo
                   </h4>
                   <!-- External Link Icon (for virtual events) -->
                   <a
-                    v-if="event.virtualLink"
-                    :href="event.virtualLink"
+                    v-if="event.rsvpLink"
+                    :href="event.rsvpLink"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex-shrink-0 text-primary hover:text-primary-focus transition-colors"

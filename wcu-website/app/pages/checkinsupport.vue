@@ -4,6 +4,13 @@ definePageMeta({
 })
 
 const { tm, rt } = useI18n()
+
+// Track button click for Formbricks survey trigger
+// Using dynamic import to avoid SSR issues - Formbricks requires browser APIs
+const handleSupportButtonClick = async () => {
+  const formbricks = (await import("@formbricks/js")).default;
+  formbricks.track("ice_checkin_support_clicked");
+};
 </script>
 
 <template>
@@ -11,7 +18,7 @@ const { tm, rt } = useI18n()
     <!-- Hero/Header Section -->
     <section class="py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-base-content mb-6">{{ $t('request_support.title') }}</h1>
+        <h2 class="text-4xl md:text-5xl font-bold text-base-content mb-6">{{ $t('request_support.title') }}</h2>
         <div class="max-w-3xl mx-auto">
           <p class="text-lg md:text-xl text-base-content/70 border-l-4 border-primary pl-6 text-left italic">
             {{ $t('request_support.intro') }}
@@ -61,7 +68,7 @@ const { tm, rt } = useI18n()
           <div class="card border border-base-300 bg-base-200 p-6 md:p-8">
             <h3 class="font-bold text-xl text-base-content mb-3">{{ $t('request_support.form.title') }}</h3>
             <p class="text-base-content/70 mb-6">{{ $t('request_support.form.intro') }}</p>
-            <button class="btn btn-primary btn-block text-lg h-14">
+            <button class="btn btn-primary btn-block text-lg h-auto py-4 md:h-14 md:py-0" @click="handleSupportButtonClick">
               {{ $t('request_support.title') }}
             </button>
           </div>

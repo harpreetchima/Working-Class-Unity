@@ -11,14 +11,14 @@ const shiftMaterials = [
     key: 'check_in_sheet',
     icon: 'document',
     pdfOnly: true,
-    pdfUrl: '#',
+    pdfUrl: 'https://files.workingclassunity.com/kyr/Check-In_Coverage_Print.pdf',
     description: 'check_in_coverage.resources.descriptions.check_in_sheet'
   },
   {
     key: 'tracker_log',
     icon: 'clipboard',
     pdfOnly: true,
-    pdfUrl: '#',
+    pdfUrl: 'https://files.workingclassunity.com/kyr/Check-In_Tracker_Print.pdf',
     description: 'check_in_coverage.resources.descriptions.tracker_log'
   },
   {
@@ -40,31 +40,18 @@ const shiftMaterials = [
   }
 ]
 
-// Use @nuxt/scripts for optimized Cal.com embed loading
-const { onLoaded } = useScript('https://app.cal.com/embed/embed.js', {
-  trigger: 'onNuxtReady',
-})
-
-onLoaded(() => {
-  // Initialize Cal.com with namespace
-  Cal("init", "checkincoverage", { origin: "https://app.cal.com" });
-
-  // Configure inline embed
-  Cal.ns.checkincoverage("inline", {
-    elementOrSelector: "#my-cal-inline-checkincoverage",
-    config: { layout: "month_view", theme: "auto" },
-    calLink: "workingclassunity/checkincoverage",
-  });
-
-  // Apply custom UI theming
-  Cal.ns.checkincoverage("ui", {
-    cssVarsPerTheme: {
-      light: { "cal-brand": "#f7f9fc" },
-      dark: { "cal-brand": "#ff9f48" }
-    },
-    hideEventTypeDetails: false,
-    layout: "month_view"
-  });
+// Cal.com embed with proper SPA navigation handling
+// The composable returns calKey which forces a fresh DOM element on each mount
+const { calKey } = useCalEmbed({
+  namespace: 'checkincoverage',
+  calLink: 'workingclassunity/checkincoverage',
+  elementId: 'my-cal-inline-checkincoverage',
+  config: { layout: 'month_view', theme: 'auto' },
+  cssVarsPerTheme: {
+    light: { 'cal-brand': '#f7f9fc' },
+    dark: { 'cal-brand': '#ff9f48' }
+  },
+  hideEventTypeDetails: false
 })
 </script>
 
@@ -90,12 +77,12 @@ onLoaded(() => {
             </svg>
             {{ $t('check_in_coverage.hero.schedule_button') }}
           </a>
-          <button class="btn btn-outline">
+          <NuxtLinkLocale to="/checkinsupport" class="btn btn-outline">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg>
             {{ $t('check_in_coverage.hero.appointment_button') }}
-          </button>
+          </NuxtLinkLocale>
         </div>
       </div>
     </div>
@@ -141,10 +128,11 @@ onLoaded(() => {
   <section id="schedule" class="bg-base-100 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Calendar - Full Width -->
-      <h2 class="text-2xl font-bold mb-4">{{ $t('check_in_coverage.schedule.heading') }}</h2>
+      <h2 class="text-2xl font-bold mb-2">{{ $t('check_in_coverage.schedule.heading') }}</h2>
+      <p class="text-sm text-base-content/70 mb-4">{{ $t('check_in_coverage.schedule.calendar_refresh_note') }}</p>
       <div class="card card-border bg-base-200 overflow-hidden mb-6">
         <ClientOnly>
-          <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-checkincoverage" class="min-h-[350px] md:min-h-[500px]"></div>
+          <div :key="calKey" id="my-cal-inline-checkincoverage" class="min-h-[350px] md:min-h-[500px]" style="width:100%;height:100%;overflow:scroll"></div>
           <template #fallback>
             <div class="min-h-[350px] md:min-h-[500px] flex items-center justify-center">
               <span class="loading loading-spinner loading-lg text-primary"></span>

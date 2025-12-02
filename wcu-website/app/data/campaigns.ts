@@ -24,71 +24,60 @@ export const campaigns: Campaign[] = [
   // Focus Campaigns (org-wide, committee: null)
   {
     id: 'campaign-1',
-    slug: 'tenet-union-work',
+    slug: 'tenant-union',
     titleKey: 'campaigns.tenantUnion.title',
     descriptionKey: 'campaigns.tenantUnion.description',
     type: 'focus',
     status: 'active',
     committee: null,
-    image: '/images/campaigns/tenet-union.jpg',
-    createdAt: '2025-06-15T00:00:00.000Z'
+    image: '/images/campaigns/tenant-union.jpg',
+    createdAt: '2025-01-01T00:00:00.000Z'
   },
   {
     id: 'campaign-2',
-    slug: 'ceasefire-palestine',
-    titleKey: 'campaigns.ceasefirePalestine.title',
-    descriptionKey: 'campaigns.ceasefirePalestine.description',
+    slug: 'no-votes-for-genocide',
+    titleKey: 'campaigns.noVotesForGenocide.title',
+    descriptionKey: 'campaigns.noVotesForGenocide.description',
     type: 'focus',
-    status: 'active',
+    status: 'completed',
     committee: null,
-    image: '/images/campaigns/ceasefire-palestine.jpg',
-    createdAt: '2025-10-01T00:00:00.000Z'
-  },
-  {
-    id: 'campaign-3',
-    slug: 'medicare-for-all',
-    titleKey: 'campaigns.medicareForAll.title',
-    descriptionKey: 'campaigns.medicareForAll.description',
-    type: 'focus',
-    status: 'paused',
-    committee: null,
-    image: '/images/campaigns/medicare-for-all.jpg',
-    createdAt: '2024-09-01T00:00:00.000Z'
+    image: '/images/campaigns/no-votes-for-genocide.jpg',
+    createdAt: '2024-06-01T00:00:00.000Z'
   },
 
-  // Side Quest Campaigns (committee-specific)
+  // Side Quest Campaigns (committee: null)
   {
-    id: 'campaign-4',
-    slug: 'know-your-rights-workshops',
-    titleKey: 'campaigns.knowYourRightsWorkshops.title',
-    descriptionKey: 'campaigns.knowYourRightsWorkshops.description',
+    id: 'campaign-3',
+    slug: 'know-your-rights',
+    titleKey: 'campaigns.knowYourRights.title',
+    descriptionKey: 'campaigns.knowYourRights.description',
     type: 'side-quest',
     status: 'active',
-    committee: 'education',
+    committee: null,
     image: '/images/campaigns/know-your-rights.jpg',
-    createdAt: '2025-03-01T00:00:00.000Z'
+    createdAt: '2024-09-01T00:00:00.000Z'
+  },
+  {
+    id: 'campaign-4',
+    slug: 'bds-central-valley',
+    titleKey: 'campaigns.bdsCentralValley.title',
+    descriptionKey: 'campaigns.bdsCentralValley.description',
+    type: 'side-quest',
+    status: 'active',
+    committee: null,
+    image: '/images/campaigns/bds-central-valley.jpg',
+    createdAt: '2025-02-01T00:00:00.000Z'
   },
   {
     id: 'campaign-5',
-    slug: 'community-canvassing',
-    titleKey: 'campaigns.communityCanvassing.title',
-    descriptionKey: 'campaigns.communityCanvassing.description',
-    type: 'side-quest',
-    status: 'active',
-    committee: 'membership',
-    image: '/images/campaigns/community-canvassing.jpg',
-    createdAt: '2025-05-15T00:00:00.000Z'
-  },
-  {
-    id: 'campaign-6',
-    slug: 'fundraiser-drive',
-    titleKey: 'campaigns.fundraiserDrive.title',
-    descriptionKey: 'campaigns.fundraiserDrive.description',
+    slug: 'republic-services-fair-contract',
+    titleKey: 'campaigns.republicServicesFairContract.title',
+    descriptionKey: 'campaigns.republicServicesFairContract.description',
     type: 'side-quest',
     status: 'completed',
-    committee: 'treasurer',
-    image: '/images/campaigns/fundraiser-drive.jpg',
-    createdAt: '2025-01-10T00:00:00.000Z'
+    committee: null,
+    image: '/images/campaigns/republic-services-fair-contract.jpg',
+    createdAt: '2024-10-01T00:00:00.000Z'
   }
 ]
 

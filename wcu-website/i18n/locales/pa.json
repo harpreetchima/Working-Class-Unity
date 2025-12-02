@@ -234,21 +234,28 @@
       "heading": "Claim Your Shift",
       "intro": "We need disciplined, reliable observers.",
       "arrival": "Arrival: You must arrive 15 minutes early to to get a clipboard and get a briefing from the previous volunteer.",
-      "role": "Role: You are an observer. You log arrivals/departures and provide resources."
+      "role": "Role: You are an observer. You log arrivals/departures and provide resources.",
+      "calendar_refresh_note": "ਜੇਕਰ ਤੁਸੀਂ ਹੇਠਾਂ ਕੈਲੰਡਰ ਨਹੀਂ ਦੇਖਦੇ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਪੰਨੇ ਨੂੰ ਰਿਫ੍ਰੈਸ਼ ਕਰੋ।"
     },
     "resources": {
-      "heading": "Shift Materials",
+      "heading": "ਸ਼ਿਫਟ ਸਮੱਗਰੀ",
       "notice": {
-        "text": "Emergency detention tactics change. Before every shift, open this page to see the current instructions for what to do if someone is detained.",
-        "button": "View Detention Protocol"
+        "text": "ਐਮਰਜੈਂਸੀ ਹਿਰਾਸਤ ਦੀਆਂ ਰਣਨੀਤੀਆਂ ਬਦਲਦੀਆਂ ਰਹਿੰਦੀਆਂ ਹਨ। ਹਰ ਸ਼ਿਫਟ ਤੋਂ ਪਹਿਲਾਂ, ਇਹ ਦੇਖਣ ਲਈ ਇਸ ਪੰਨੇ ਨੂੰ ਖੋਲ੍ਹੋ ਕਿ ਜੇ ਕਿਸੇ ਨੂੰ ਹਿਰਾਸਤ ਵਿੱਚ ਲਿਆ ਜਾਂਦਾ ਹੈ ਤਾਂ ਕੀ ਕਰਨਾ ਹੈ।",
+        "button": "ਹਿਰਾਸਤ ਪ੍ਰੋਟੋਕੋਲ ਦੇਖੋ"
       },
       "downloads": {
-        "check_in_sheet": "Check-In Sheet",
-        "tracker_log": "The Tracker Log",
-        "quick_guide": "Volunteer Quick Guide",
-        "if_detained": "\"If Detained\" Packet",
-        "kyr_flyers": "KYR Flyers (English/Spanish)",
-        "button": "Download PDF"
+        "check_in_sheet": "ਚੈਕ-ਇਨ ਸ਼ੀਟ",
+        "tracker_log": "ਟ੍ਰੈਕਰ ਲੌਗ",
+        "quick_guide": "ਵਲੰਟੀਅਰ ਕਵਿੱਕ ਗਾਈਡ",
+        "if_detained": "\"ਜੇ ਹਿਰਾਸਤ ਵਿੱਚ ਲਿਆ ਜਾਵੇ\" ਪੈਕੇਟ",
+        "kyr_flyers": "KYR ਫਲਾਇਰ (ਅੰਗਰੇਜ਼ੀ/ਸਪੈਨਿਸ਼)",
+        "button": "PDF ਡਾਊਨਲੋਡ ਕਰੋ"
+      },
+      "descriptions": {
+        "check_in_sheet": "ਆਪਣੀ ਚੈਕ-ਇਨ ਮੁਲਾਕਾਤ 'ਤੇ ਪਹੁੰਚਣ ਵਾਲੇ ਲੋਕਾਂ ਲਈ ਇੱਕ ਫਾਰਮ।",
+        "tracker_log": "ਵਲੰਟੀਅਰਾਂ ਲਈ ਆਉਣ ਅਤੇ ਜਾਣ ਦਾ ਰਿਕਾਰਡ ਰੱਖਣ ਲਈ ਇੱਕ ਫਾਰਮ।",
+        "quick_guide": "ਸ਼ਿਫਟ 'ਤੇ ਵਲੰਟੀਅਰਾਂ ਲਈ ਇੱਕ ਤੁਰੰਤ ਸੰਦਰਭ ਗਾਈਡ।",
+        "if_detained": "ਜੇ ਕਿਸੇ ਨੂੰ ਹਿਰਾਸਤ ਵਿੱਚ ਲਿਆ ਜਾਂਦਾ ਹੈ ਤਾਂ ਐਮਰਜੈਂਸੀ ਸਰੋਤ ਗਾਈਡ।"
       }
     },
     "end_of_shift": {
@@ -624,6 +631,7 @@
     "no_events": "ਤੁਹਾਡੇ ਫਿਲਟਰ ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਕੋਈ ਸਮਾਗਮ ਨਹੀਂ ਮਿਲਿਆ।",
     "virtual_event": "ਵਰਚੁਅਲ ਸਮਾਗਮ",
     "join_virtual": "ਵਰਚੁਅਲ ਸਮਾਗਮ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
+    "rsvp_here": "ਹਾਜ਼ਰੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
     "events": {
       "event1": {
         "title": "ਆਮ ਮੈਂਬਰਸ਼ਿਪ ਮੀਟਿੰਗ",

@@ -234,7 +234,8 @@
       "heading": "Claim Your Shift",
       "intro": "We need disciplined, reliable observers.",
       "arrival": "Arrival: You must arrive 15 minutes early to to get a clipboard and get a briefing from the previous volunteer.",
-      "role": "Role: You are an observer. You log arrivals/departures and provide resources."
+      "role": "Role: You are an observer. You log arrivals/departures and provide resources.",
+      "calendar_refresh_note": "Please refresh the page if you do not see the calendar below."
     },
     "resources": {
       "heading": "Shift Materials",
@@ -244,11 +245,17 @@
       },
       "downloads": {
         "check_in_sheet": "Check-In Sheet",
-        "tracker_log": "The Tracker Log",
+        "tracker_log": "Tracker Log",
         "quick_guide": "Volunteer Quick Guide",
         "if_detained": "\"If Detained\" Packet",
         "kyr_flyers": "KYR Flyers (English/Spanish)",
         "button": "Download PDF"
+      },
+      "descriptions": {
+        "check_in_sheet": "A form for people arriving at their check-in visit.",
+        "tracker_log": "A form for volunteers to log arrivals and departures.",
+        "quick_guide": "A quick reference guide for volunteers on shift.",
+        "if_detained": "Emergency resource guide if someone is detained."
       }
     },
     "end_of_shift": {
@@ -565,33 +572,25 @@
       "focus": "Focus Campaign",
       "side-quest": "Side Quest"
     },
-    "tenetUnion": {
-      "title": "Tenet Union Work",
-      "description": "Supporting healthcare workers in their fight for fair wages and better working conditions at Tenet hospitals across the Central Valley."
-    },
     "tenantUnion": {
       "title": "Tenant Union",
-      "description": "Organizing tenants to fight for housing justice, fair rents, and protection against unjust evictions in our communities."
+      "description": "Organize tenants to build independent working-class power that can challenge landlord dominance and transform housing from a vehicle for profit into a guaranteed human right."
     },
-    "ceasefirePalestine": {
-      "title": "Cease Fire in Palestine",
-      "description": "Advocating for an immediate ceasefire and humanitarian aid access in Gaza. Standing in solidarity with Palestinian civilians."
+    "noVotesForGenocide": {
+      "title": "No Votes for Genocide",
+      "description": "Mobilize voters to withhold support from candidates enabling the genocide in Palestine, leveraging our collective power to demand an immediate ceasefire."
     },
-    "medicareForAll": {
-      "title": "Medicare for All",
-      "description": "Building grassroots support for universal single-payer healthcare. Everyone deserves quality healthcare regardless of income."
+    "knowYourRights": {
+      "title": "Know Your Rights",
+      "description": "Educate community members about their constitutional rights during encounters with law enforcement and immigration officials."
     },
-    "knowYourRightsWorkshops": {
-      "title": "Know Your Rights Workshops",
-      "description": "Educational workshops helping community members understand their constitutional rights when interacting with law enforcement and ICE."
+    "bdsCentralValley": {
+      "title": "BDS in the Central Valley",
+      "description": "Investigate and target local municipal investments to support the BDS movement, demanding our cities and ports divest from the genocide in Gaza."
     },
-    "communityCanvassing": {
-      "title": "Community Canvassing",
-      "description": "Door-to-door outreach to connect with neighbors, share resources, and build working class power in our communities."
-    },
-    "fundraiserDrive": {
-      "title": "Fundraiser Drive",
-      "description": "Our annual fundraising campaign to support organizing efforts and community programs throughout the year."
+    "republicServicesFairContract": {
+      "title": "Demand Republic Services Negotiate a Fair Contract",
+      "description": "Solidarity with striking Teamsters 439 workers by launching a targeted pressure campaign against Republic Services, demanding a fair contract."
     }
   },
   "calendar": {
@@ -628,7 +627,20 @@
     "no_events": "No events found matching your filter.",
     "virtual_event": "Virtual Event",
     "join_virtual": "Join Virtual Event",
+    "rsvp_here": "RSVP Here",
     "events": {
+      "generalMeeting": {
+        "title": "General Meeting",
+        "description": "December's WCU General Meeting."
+      },
+      "fightTheFearCanvassing": {
+        "title": "Fight the Fear Canvassing",
+        "description": "Join us for a community canvassing effort to support our immigrant neighbors and coworkers and share \"Know Your Rights\" resources. We'll gather at the above location to prepare, provide materials and scripts, then carpool together to local neighborhoods. After canvassing, we'll return to debrief and discuss our experiences."
+      },
+      "kyrCommunityForum": {
+        "title": "KYR Community Forum",
+        "description": "Learn the basics about Know Your Rights. Catch up with organizers and volunteers engaged in canvassing, tabling, and outreach."
+      },
       "event1": {
         "title": "General Membership Meeting",
         "description": "Monthly general membership meeting to discuss ongoing campaigns and organizational updates."

@@ -18,7 +18,7 @@ export interface Event {
   endDateTime: string // ISO date string
   allDay: boolean
   location: string
-  virtualLink: string | null
+  rsvpLink: string | null
   isVirtual: boolean
   isHybrid: boolean
   isActive: boolean
@@ -29,119 +29,77 @@ export interface Event {
 }
 
 export const events: Event[] = [
-  // General Membership Meeting - monthly recurring type event
   {
     id: 'event-1',
-    titleKey: 'calendar.events.event1.title',
-    descriptionKey: 'calendar.events.event1.description',
+    titleKey: 'calendar.events.generalMeeting.title',
+    descriptionKey: 'calendar.events.generalMeeting.description',
     eventType: 'meeting',
-    startDateTime: '2025-12-10T18:30:00.000Z',
-    endDateTime: '2025-12-10T20:30:00.000Z',
+    startDateTime: '2025-12-05T02:00:00.000Z',
+    endDateTime: '2025-12-05T03:30:00.000Z',
     allDay: false,
-    location: 'Fresno Labor Temple, 710 E Olive Ave, Fresno, CA',
-    virtualLink: 'https://zoom.us/j/example123',
+    location: '2522 Grand Canal Boulevard Suite # 6, Stockton, CA 95207, USA',
+    rsvpLink: null,
     isVirtual: false,
     isHybrid: true,
     isActive: true,
-    createdAt: '2025-11-01T00:00:00.000Z',
-    updatedAt: '2025-11-15T00:00:00.000Z',
+    createdAt: '2025-12-01T00:00:00.000Z',
+    updatedAt: '2025-12-01T00:00:00.000Z',
     campaignId: null,
     committee: null
   },
-  // Tenant Rights Workshop - linked to tenant union campaign
   {
     id: 'event-2',
-    titleKey: 'calendar.events.event2.title',
-    descriptionKey: 'calendar.events.event2.description',
-    eventType: 'training',
-    startDateTime: '2025-12-14T22:00:00.000Z',
-    endDateTime: '2025-12-15T00:00:00.000Z',
+    titleKey: 'calendar.events.fightTheFearCanvassing.title',
+    descriptionKey: 'calendar.events.fightTheFearCanvassing.description',
+    eventType: 'canvass',
+    startDateTime: '2025-12-06T20:00:00.000Z',
+    endDateTime: '2025-12-06T22:30:00.000Z',
     allDay: false,
-    location: 'Community Center, 123 Main St, Fresno, CA',
-    virtualLink: null,
+    location: '2522 Grand Canal Boulevard Suite # 6, Stockton, CA 95207, USA',
+    rsvpLink: null,
     isVirtual: false,
     isHybrid: false,
     isActive: true,
-    createdAt: '2025-11-10T00:00:00.000Z',
-    updatedAt: '2025-11-10T00:00:00.000Z',
-    campaignId: 'campaign-1',
-    committee: 'education'
-  },
-  // Day of Action - Ceasefire solidarity event
-  {
-    id: 'event-3',
-    titleKey: 'calendar.events.event3.title',
-    descriptionKey: 'calendar.events.event3.description',
-    eventType: 'action',
-    startDateTime: '2025-12-20T00:00:00.000Z',
-    endDateTime: '2025-12-20T23:59:59.000Z',
-    allDay: true,
-    location: 'Downtown Fresno, Various Locations',
-    virtualLink: null,
-    isVirtual: false,
-    isHybrid: false,
-    isActive: true,
-    createdAt: '2025-11-05T00:00:00.000Z',
-    updatedAt: '2025-11-20T00:00:00.000Z',
-    campaignId: 'campaign-2',
+    createdAt: '2025-12-01T00:00:00.000Z',
+    updatedAt: '2025-12-01T00:00:00.000Z',
+    campaignId: 'campaign-3',
     committee: null
   },
-  // Community Canvassing Event
+  {
+    id: 'event-3',
+    titleKey: 'calendar.events.fightTheFearCanvassing.title',
+    descriptionKey: 'calendar.events.fightTheFearCanvassing.description',
+    eventType: 'canvass',
+    startDateTime: '2025-12-07T23:00:00.000Z',
+    endDateTime: '2025-12-08T01:30:00.000Z',
+    allDay: false,
+    location: '2522 Grand Canal Boulevard Suite # 6, Stockton, CA 95207, USA',
+    rsvpLink: null,
+    isVirtual: false,
+    isHybrid: false,
+    isActive: true,
+    createdAt: '2025-12-01T00:00:00.000Z',
+    updatedAt: '2025-12-01T00:00:00.000Z',
+    campaignId: 'campaign-3',
+    committee: null
+  },
   {
     id: 'event-4',
-    titleKey: 'calendar.events.event4.title',
-    descriptionKey: 'calendar.events.event4.description',
-    eventType: 'canvass',
-    startDateTime: '2025-12-28T17:00:00.000Z',
-    endDateTime: '2025-12-28T20:00:00.000Z',
-    allDay: false,
-    location: 'Meet at Tower District Coffee, Fresno, CA',
-    virtualLink: null,
-    isVirtual: false,
-    isHybrid: false,
-    isActive: true,
-    createdAt: '2025-11-12T00:00:00.000Z',
-    updatedAt: '2025-11-12T00:00:00.000Z',
-    campaignId: 'campaign-5',
-    committee: 'membership'
-  },
-  // Virtual New Member Orientation
-  {
-    id: 'event-5',
-    titleKey: 'calendar.events.event5.title',
-    descriptionKey: 'calendar.events.event5.description',
-    eventType: 'training',
-    startDateTime: '2026-01-08T02:00:00.000Z',
-    endDateTime: '2026-01-08T03:30:00.000Z',
-    allDay: false,
-    location: 'Online via Zoom',
-    virtualLink: 'https://zoom.us/j/orientation456',
-    isVirtual: true,
-    isHybrid: false,
-    isActive: true,
-    createdAt: '2025-11-20T00:00:00.000Z',
-    updatedAt: '2025-11-25T00:00:00.000Z',
-    campaignId: null,
-    committee: 'membership'
-  },
-  // Community Forum - Understanding Healthcare Rights
-  {
-    id: 'event-6',
-    titleKey: 'calendar.events.event6.title',
-    descriptionKey: 'calendar.events.event6.description',
+    titleKey: 'calendar.events.kyrCommunityForum.title',
+    descriptionKey: 'calendar.events.kyrCommunityForum.description',
     eventType: 'forum',
-    startDateTime: '2026-01-18T23:00:00.000Z',
-    endDateTime: '2026-01-19T01:00:00.000Z',
+    startDateTime: '2025-12-20T23:00:00.000Z',
+    endDateTime: '2025-12-21T01:30:00.000Z',
     allDay: false,
-    location: 'Unitarian Universalist Church, Fresno, CA',
-    virtualLink: 'https://zoom.us/j/forum789',
+    location: '2522 Grand Canal Boulevard Suite # 6, Stockton, CA 95207, USA',
+    rsvpLink: null,
     isVirtual: false,
-    isHybrid: true,
+    isHybrid: false,
     isActive: true,
-    createdAt: '2025-11-25T00:00:00.000Z',
-    updatedAt: '2025-11-30T00:00:00.000Z',
+    createdAt: '2025-12-01T00:00:00.000Z',
+    updatedAt: '2025-12-01T00:00:00.000Z',
     campaignId: 'campaign-3',
-    committee: 'education'
+    committee: null
   }
 ]
 

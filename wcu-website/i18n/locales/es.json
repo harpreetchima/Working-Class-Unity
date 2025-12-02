@@ -234,21 +234,28 @@
       "heading": "Claim Your Shift",
       "intro": "We need disciplined, reliable observers.",
       "arrival": "Arrival: You must arrive 15 minutes early to to get a clipboard and get a briefing from the previous volunteer.",
-      "role": "Role: You are an observer. You log arrivals/departures and provide resources."
+      "role": "Role: You are an observer. You log arrivals/departures and provide resources.",
+      "calendar_refresh_note": "Por favor actualice la página si no ve el calendario a continuación."
     },
     "resources": {
-      "heading": "Shift Materials",
+      "heading": "Materiales del Turno",
       "notice": {
-        "text": "Emergency detention tactics change. Before every shift, open this page to see the current instructions for what to do if someone is detained.",
-        "button": "View Detention Protocol"
+        "text": "Las tácticas de detención de emergencia cambian. Antes de cada turno, abra esta página para ver las instrucciones actuales sobre qué hacer si alguien es detenido.",
+        "button": "Ver Protocolo de Detención"
       },
       "downloads": {
-        "check_in_sheet": "Check-In Sheet",
-        "tracker_log": "The Tracker Log",
-        "quick_guide": "Volunteer Quick Guide",
-        "if_detained": "\"If Detained\" Packet",
-        "kyr_flyers": "KYR Flyers (English/Spanish)",
-        "button": "Download PDF"
+        "check_in_sheet": "Hoja de Registro",
+        "tracker_log": "Registro de Seguimiento",
+        "quick_guide": "Guía Rápida del Voluntario",
+        "if_detained": "Paquete \"Si Es Detenido\"",
+        "kyr_flyers": "Volantes KYR (Inglés/Español)",
+        "button": "Descargar PDF"
+      },
+      "descriptions": {
+        "check_in_sheet": "Un formulario para las personas que llegan a su cita de presentación.",
+        "tracker_log": "Un formulario para que los voluntarios registren las llegadas y salidas.",
+        "quick_guide": "Una guía de referencia rápida para los voluntarios en turno.",
+        "if_detained": "Guía de recursos de emergencia si alguien es detenido."
       }
     },
     "end_of_shift": {
@@ -624,6 +631,7 @@
     "no_events": "No se encontraron eventos que coincidan con tu filtro.",
     "virtual_event": "Evento Virtual",
     "join_virtual": "Unirse al Evento Virtual",
+    "rsvp_here": "Confirmar Asistencia",
     "events": {
       "event1": {
         "title": "Reunión General de Miembros",
