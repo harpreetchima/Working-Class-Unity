@@ -807,5 +807,254 @@
         "description": "Foro comunitario discutiendo Medicare para Todos y acceso a la salud en el Valle Central."
       }
     }
+  },
+  "volunteer_guide": {
+    "page_title": "Guía Rápida para Voluntarios",
+    "hero": {
+      "title": "Cobertura de Citas de ICE: Guía Rápida para Voluntarios",
+      "subtitle": "Todo lo que necesitas saber para tu turno en las instalaciones de ICE.",
+      "save_guide": "Guarda esta guía en tu teléfono. Tráela a cada turno."
+    },
+    "before": {
+      "title": "Antes de Salir de Casa",
+      "bring": {
+        "title": "Qué Traer",
+        "items": [
+          "Teléfono cargado",
+          "Agua y bocadillo",
+          "Zapatos cómodos (estarás de pie)",
+          "Protección solar: gorra, lentes de sol, protector solar",
+          "Protección contra la lluvia: paraguas, chaqueta",
+          "Esta guía rápida",
+          "Materiales impresos (si los tienes — si no, el voluntario anterior te los entregará)"
+        ]
+      },
+      "materials": {
+        "title": "Materiales Impresos",
+        "intro": "Por favor trae estos si puedes. Descarga en {link}",
+        "link_text": "workingclassunity.com/check-in-coverage",
+        "document": "Documento",
+        "copies": "Copias",
+        "purpose": "Propósito",
+        "tracker_purpose": "Registrar llegadas y salidas",
+        "checkin_purpose": "Recopilar información de familias (opcional)",
+        "note": "Si no puedes imprimir, no te preocupes. El voluntario anterior tendrá los materiales."
+      }
+    },
+    "location": {
+      "title": "Cómo Llegar",
+      "address": {
+        "title": "Dirección",
+        "directions": "Abrir en Mapas"
+      },
+      "parking": {
+        "title": "Estacionamiento",
+        "text": "Estaciona en cualquier lugar fuera del círculo frente a las instalaciones. Dejamos ese espacio libre para las familias que esperan que sus seres queridos salgan."
+      },
+      "position": {
+        "title": "Dónde Pararte",
+        "rules": [
+          "Párate en la acera pública frente a la entrada de las instalaciones",
+          "Mantente a 20-30 pies de distancia de las puertas de entrada",
+          "NO te pares en el estacionamiento, entrada de autos, o propiedad de las instalaciones",
+          "Si hay una cerca o barrera, quédate del lado público"
+        ]
+      },
+      "look_for": {
+        "title": "Busca",
+        "items": [
+          "Voluntario anterior con un portapapeles",
+          "Otros miembros de la comunidad con volantes"
+        ]
+      },
+      "cant_find": {
+        "title": "Si No Encuentras a Nadie",
+        "text": "Envía un mensaje de texto a WCU inmediatamente: 209-842-3232"
+      }
+    },
+    "arrival": {
+      "title": "Llegada y Entrega",
+      "badge": "15 Minutos Antes",
+      "intro": "Cuando llegues 15 minutos antes de tu turno:",
+      "steps": {
+        "find": "Encuentra al voluntario anterior (busca el portapapeles)",
+        "briefed": "Recibe información:",
+        "receive": "Recibe materiales: Portapapeles con registro de seguimiento",
+        "begin": "Confirma tu posición y comienza a observar"
+      },
+      "briefing_items": [
+        "¿Hubo incidentes o actividad inusual?",
+        "¿Hay alguien actualmente adentro?",
+        "¿Hay actualizaciones de WCU?"
+      ]
+    },
+    "during": {
+      "title": "Durante Tu Turno",
+      "role_statement": "Eres un OBSERVADOR y APOYO. No eres seguridad, no eres asesor legal, no eres ICE.",
+      "do_label": "Lo Que SÍ Haces",
+      "dont_label": "Lo Que NO Haces",
+      "do_table": {
+        "action_header": "Acción",
+        "how_header": "Cómo",
+        "log_arrivals": {
+          "action": "Registrar llegadas",
+          "how": "Anota la hora, descripción (sin nombres a menos que los ofrezcan), con quién están"
+        },
+        "log_departures": {
+          "action": "Registrar salidas",
+          "how": "Anota la hora, ¿la misma persona? ¿Cuánto tiempo estuvieron adentro?"
+        },
+        "be_calm": {
+          "action": "Ser una presencia tranquila",
+          "how": "Sonríe, asiente, no presiones a nadie"
+        },
+        "call_help": {
+          "action": "Llamar por ayuda si es necesario",
+          "how": "Ver Protocolo de Emergencia abajo"
+        }
+      },
+      "dont_table": {
+        "dont_header": "No",
+        "why_header": "Por qué",
+        "interfere": {
+          "dont": "Interferir con ICE",
+          "why": "Podrías ser arrestado; no ayuda"
+        },
+        "legal_advice": {
+          "dont": "Dar consejos legales",
+          "why": "No eres abogado; di \"No soy abogado, pero aquí hay un recurso\""
+        },
+        "block": {
+          "dont": "Bloquear puertas, entradas de autos, vehículos",
+          "why": "Quédate en la acera pública"
+        },
+        "photograph": {
+          "dont": "Fotografiar familias o placas de autos",
+          "why": "Protege su privacidad y seguridad"
+        },
+        "share_logs": {
+          "dont": "Compartir registros en redes sociales",
+          "why": "Los registros son confidenciales"
+        },
+        "answer_status": {
+          "dont": "Responder preguntas sobre el estatus migratorio de alguien",
+          "why": "No tienes que hacerlo; no pueden obligarte"
+        }
+      }
+    },
+    "detained": {
+      "title": "Si Alguien Es Detenido",
+      "badge": "Crítico",
+      "intro": "No entres en pánico. Sigue estos pasos:",
+      "steps": [
+        "Anota la hora en tu registro de seguimiento",
+        "Anota la descripción de la persona (ropa, edad aproximada, con quién estaban)",
+        "Pregunta a familiares/amigos (si están presentes): ¿Tienen abogado? ¿Tienen un contacto de emergencia? ¿Quieren que llamemos a alguien?",
+        "Llama a la Línea de VWN: (559) 206-0151",
+        "Envía mensaje de texto a WCU: 209-842-3232 con detalles",
+        "Mantén la calma y continúa observando",
+        "Ofrece la Guía de Recursos de Emergencia a los familiares"
+      ],
+      "call_vwn": "Llamar a VWN: (559) 206-0151",
+      "text_wcu": "Mensaje a WCU: 209-842-3232",
+      "warning": "NO intentes intervenir, discutir con ICE, o seguir vehículos."
+    },
+    "safety": {
+      "title": "Recordatorios de Seguridad",
+      "approached": {
+        "title": "Si ICE o Seguridad Se Te Acerca",
+        "items": [
+          "Mantén la calma y sé cortés",
+          "Tienes permiso para observar desde propiedad pública",
+          "NO tienes que responder preguntas sobre tu estatus migratorio o el de otros",
+          "Si te piden que te muevas, retrocede a la acera pública",
+          "Si te amenazan, no discutas — retrocede"
+        ]
+      },
+      "unsafe": {
+        "title": "Si Te Sientes Inseguro/a",
+        "items": [
+          "Confía en tus instintos",
+          "Aléjate del área",
+          "Llama a WCU inmediatamente: 209-842-3232",
+          "Puedes irte si lo necesitas"
+        ],
+        "priority": "Tu seguridad es lo primero."
+      },
+      "recording": {
+        "title": "Grabar Video",
+        "intro": "Si decides grabar:",
+        "items": [
+          "Enfócate en los agentes de ICE y el edificio",
+          "NO grabes caras de familias o placas de autos",
+          "Mantén tu teléfono seguro",
+          "No hagas transmisión en vivo"
+        ]
+      }
+    },
+    "end_shift": {
+      "title": "Fin de Turno y Entrega",
+      "handoff": {
+        "title": "Entrega Estándar",
+        "intro": "15 minutos antes de que termine tu turno:",
+        "steps": [
+          "Busca al siguiente voluntario",
+          "Infórmale: ¿Hubo incidentes? ¿Alguien está adentro actualmente? ¿Hay actualizaciones?",
+          "Entrega: Portapapeles con registro de seguimiento",
+          "Agradécele y retírate"
+        ]
+      },
+      "no_show": {
+        "title": "Si Nadie Aparece",
+        "text": "Envía mensaje de texto a WCU inmediatamente: 209-842-3232. NO dejes el lugar desatendido si es posible. Encontraremos cobertura."
+      },
+      "last_shift": {
+        "title": "Si Tienes el Último Turno del Día (termina a las 5pm)",
+        "text": "Lleva todos los registros completados al buzón de WCU. Busca un volante de WCU pegado en la puerta.",
+        "directions": "Obtener Direcciones al Buzón de WCU",
+        "warning": "NO fotografíes, escanees, o guardes los registros digitalmente. Solo entrega física."
+      }
+    },
+    "contacts": {
+      "title": "Contactos Clave",
+      "who_header": "Quién",
+      "number_header": "Número",
+      "when_header": "Cuándo Llamar",
+      "wcu": {
+        "who": "Línea de WCU",
+        "when": "Cualquier pregunta, si vas tarde, preocupaciones de seguridad, voluntario que no apareció"
+      },
+      "vwn": {
+        "who": "Línea de Detención VWN",
+        "when": "Alguien es detenido"
+      },
+      "emergency": {
+        "who": "Emergencia",
+        "when": "Emergencia médica, peligro físico inmediato"
+      }
+    },
+    "responses": {
+      "title": "Respuestas Rápidas",
+      "ice_question": {
+        "q": "Si Te Preguntan \"¿Eres de ICE?\"",
+        "a": "No, somos voluntarios de la comunidad. Estamos aquí para apoyar a las familias."
+      },
+      "leave_question": {
+        "q": "Si Seguridad Te Pide Que Te Vayas",
+        "a": "Entiendo. Estoy parado en la acera pública, pero me retiraré."
+      }
+    },
+    "reminders": {
+      "title": "Recordatorios",
+      "items": [
+        "Llega 15 minutos antes",
+        "Eres un observador, no un abogado o seguridad",
+        "Quédate en propiedad pública",
+        "Registra todo",
+        "Llama a WCU si algo no se siente bien: 209-842-3232",
+        "Tu presencia importa"
+      ],
+      "thanks": "Gracias por estar con los trabajadores inmigrantes en el Condado de San Joaquín."
+    }
   }
 }

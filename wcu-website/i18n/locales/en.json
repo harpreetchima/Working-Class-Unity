@@ -830,5 +830,254 @@
         "description": "Community forum discussing Medicare for All and healthcare access in the Central Valley."
       }
     }
+  },
+  "volunteer_guide": {
+    "page_title": "Volunteer Quick Guide",
+    "hero": {
+      "title": "ICE Check-In Coverage: Volunteer Quick Guide",
+      "subtitle": "Everything you need to know for your shift at the ICE facility.",
+      "save_guide": "Save this guide on your phone. Bring it to every shift."
+    },
+    "before": {
+      "title": "Before You Leave Home",
+      "bring": {
+        "title": "What to Bring",
+        "items": [
+          "Charged phone",
+          "Water and snack",
+          "Comfortable shoes (you'll be standing)",
+          "Sun protection: hat, sunglasses, sunscreen",
+          "Rain protection: umbrella, jacket",
+          "This quick guide",
+          "Printed materials (if you have them — if not, the previous volunteer will hand them off)"
+        ]
+      },
+      "materials": {
+        "title": "Printed Materials",
+        "intro": "Please bring these if you can. Download at {link}",
+        "link_text": "workingclassunity.com/check-in-coverage",
+        "document": "Document",
+        "copies": "Copies",
+        "purpose": "Purpose",
+        "tracker_purpose": "Log arrivals and departures",
+        "checkin_purpose": "Collect info from families (optional)",
+        "note": "If you can't print, don't stress. The previous volunteer will have materials."
+      }
+    },
+    "location": {
+      "title": "Getting There",
+      "address": {
+        "title": "Address",
+        "directions": "Open in Maps"
+      },
+      "parking": {
+        "title": "Parking",
+        "text": "Park anywhere outside of the circle in front of the facility. We leave that space open for families who are waiting for their loved ones to come back out."
+      },
+      "position": {
+        "title": "Where to Stand",
+        "rules": [
+          "Stand on the public sidewalk across from the facility entrance",
+          "Stay 20-30 feet away from the entrance doors",
+          "Do NOT stand in the parking lot, driveway, or on facility property",
+          "If there's a fence or barrier, stay on the public side"
+        ]
+      },
+      "look_for": {
+        "title": "Look For",
+        "items": [
+          "Previous volunteer holding a clipboard",
+          "Other community members with flyers"
+        ]
+      },
+      "cant_find": {
+        "title": "If You Can't Find Anyone",
+        "text": "Text WCU immediately: 209-842-3232"
+      }
+    },
+    "arrival": {
+      "title": "Arrival & Handoff",
+      "badge": "15 Minutes Early",
+      "intro": "When you arrive 15 minutes before your shift:",
+      "steps": {
+        "find": "Find the previous volunteer (look for clipboard)",
+        "briefed": "Get briefed:",
+        "receive": "Receive materials: Clipboard with tracker log",
+        "begin": "Confirm your position and begin observing"
+      },
+      "briefing_items": [
+        "Any incidents or unusual activity?",
+        "Anyone currently inside?",
+        "Any updates from WCU?"
+      ]
+    },
+    "during": {
+      "title": "During Your Shift",
+      "role_statement": "You are an OBSERVER and SUPPORTER. You are not security, not legal counsel, not ICE.",
+      "do_label": "What You DO",
+      "dont_label": "What You DON'T Do",
+      "do_table": {
+        "action_header": "Action",
+        "how_header": "How",
+        "log_arrivals": {
+          "action": "Log arrivals",
+          "how": "Note time, description (no names unless offered), who they're with"
+        },
+        "log_departures": {
+          "action": "Log departures",
+          "how": "Note time, same person? How long were they inside?"
+        },
+        "be_calm": {
+          "action": "Be a calm presence",
+          "how": "Smile, nod, don't pressure anyone"
+        },
+        "call_help": {
+          "action": "Call for help if needed",
+          "how": "See Emergency Protocol below"
+        }
+      },
+      "dont_table": {
+        "dont_header": "Don't",
+        "why_header": "Why",
+        "interfere": {
+          "dont": "Interfere with ICE",
+          "why": "You could be arrested; it doesn't help"
+        },
+        "legal_advice": {
+          "dont": "Give legal advice",
+          "why": "You're not a lawyer; say \"I'm not a lawyer, but here's a resource\""
+        },
+        "block": {
+          "dont": "Block doors, driveways, vehicles",
+          "why": "Stay on public sidewalk"
+        },
+        "photograph": {
+          "dont": "Photograph families or license plates",
+          "why": "Protects their privacy and safety"
+        },
+        "share_logs": {
+          "dont": "Share logs on social media",
+          "why": "Logs are confidential"
+        },
+        "answer_status": {
+          "dont": "Answer questions about anyone's immigration status",
+          "why": "You don't have to; they can't make you"
+        }
+      }
+    },
+    "detained": {
+      "title": "If Someone Is Detained",
+      "badge": "Critical",
+      "intro": "Don't panic. Follow these steps:",
+      "steps": [
+        "Note the time on your tracker log",
+        "Note description of the person (clothing, approximate age, who they were with)",
+        "Ask family/friends (if present): Do they have a lawyer? Do they have an emergency contact? Do they want us to call someone?",
+        "Call the VWN Hotline: (559) 206-0151",
+        "Text WCU: 209-842-3232 with details",
+        "Stay calm and continue observing",
+        "Offer the Emergency Resource Guide to family members"
+      ],
+      "call_vwn": "Call VWN: (559) 206-0151",
+      "text_wcu": "Text WCU: 209-842-3232",
+      "warning": "Do NOT attempt to intervene, argue with ICE, or follow vehicles."
+    },
+    "safety": {
+      "title": "Safety Reminders",
+      "approached": {
+        "title": "If ICE or Security Approaches You",
+        "items": [
+          "Stay calm and polite",
+          "You are allowed to observe from public property",
+          "You do NOT have to answer questions about your own or anyone else's immigration status",
+          "If asked to move, step back to the public sidewalk",
+          "If threatened, do not argue — step back"
+        ]
+      },
+      "unsafe": {
+        "title": "If You Feel Unsafe",
+        "items": [
+          "Trust your instincts",
+          "Step back from the area",
+          "Call WCU immediately: 209-842-3232",
+          "You can leave if you need to"
+        ],
+        "priority": "Your safety comes first."
+      },
+      "recording": {
+        "title": "Recording Video",
+        "intro": "If you choose to record:",
+        "items": [
+          "Focus on ICE agents and the building",
+          "Do NOT record families' faces or license plates",
+          "Keep your phone secure",
+          "Do not livestream"
+        ]
+      }
+    },
+    "end_shift": {
+      "title": "End of Shift & Handoff",
+      "handoff": {
+        "title": "Standard Handoff",
+        "intro": "15 minutes before your shift ends:",
+        "steps": [
+          "Look for the next volunteer",
+          "Brief them: Any incidents? Anyone currently inside? Any updates?",
+          "Hand off: Clipboard with tracker log",
+          "Thank them and head out"
+        ]
+      },
+      "no_show": {
+        "title": "If No One Shows Up",
+        "text": "Text WCU immediately: 209-842-3232. Do NOT leave the location unattended if possible. We will find coverage."
+      },
+      "last_shift": {
+        "title": "If You Have the Last Shift of the Day (ends at 5pm)",
+        "text": "Take all completed logs to the WCU mail slot. Look for a WCU flyer taped to the door.",
+        "directions": "Get Directions to WCU Mail Slot",
+        "warning": "Do NOT photograph, scan, or store logs digitally. Physical handoff only."
+      }
+    },
+    "contacts": {
+      "title": "Key Contacts",
+      "who_header": "Who",
+      "number_header": "Number",
+      "when_header": "When to Call",
+      "wcu": {
+        "who": "WCU Hotline",
+        "when": "Any questions, running late, safety concerns, no-show volunteer"
+      },
+      "vwn": {
+        "who": "VWN Detention Hotline",
+        "when": "Someone is detained"
+      },
+      "emergency": {
+        "who": "Emergency",
+        "when": "Medical emergency, immediate physical danger"
+      }
+    },
+    "responses": {
+      "title": "Quick Responses",
+      "ice_question": {
+        "q": "If Asked \"Are You With ICE?\"",
+        "a": "No, we are community volunteers. We're here to support families."
+      },
+      "leave_question": {
+        "q": "If Asked to Leave by Security",
+        "a": "I understand. I'm standing on the public sidewalk, but I'll step back."
+      }
+    },
+    "reminders": {
+      "title": "Reminders",
+      "items": [
+        "Arrive 15 minutes early",
+        "You are an observer, not a lawyer or security",
+        "Stay on public property",
+        "Log everything",
+        "Call WCU if anything feels wrong: 209-842-3232",
+        "Your presence matters"
+      ],
+      "thanks": "Thank you for standing with immigrant workers in San Joaquin County."
+    }
   }
 }

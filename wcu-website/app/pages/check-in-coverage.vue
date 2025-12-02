@@ -88,7 +88,7 @@ const { calKey } = useCalEmbed({
   </section>
 
   <!-- Section B: Progress Tracker -->
-  <section class="bg-base-100 py-6">
+  <section id="orientation" class="bg-base-100 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="card card-border bg-base-200 flex flex-col sm:flex-row items-center p-4 gap-4">
         <!-- Left: Status + Info -->
@@ -177,7 +177,7 @@ const { calKey } = useCalEmbed({
   </section>
 
   <!-- Section D: Resource Repository -->
-  <section class="bg-base-100 py-8">
+  <section id="shift-materials" class="bg-base-100 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold mb-6">{{ $t('check_in_coverage.resources.heading') }}</h2>
       
