@@ -24,12 +24,17 @@ logs
 .env.*
 !.env.example
 
-# Editor specific
-.vscode/settings.json
-.vscode/launch.json
+# Editor/IDE specific
+.vscode/
+.cursor/
+*.code-workspace
 *.swp
 *.swo
 *~
+
+# Roo AI assistant
+.roo/
+.roomodes
 
 # OS specific
 Thumbs.db
