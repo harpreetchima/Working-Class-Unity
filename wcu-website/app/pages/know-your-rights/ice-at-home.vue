@@ -10,7 +10,7 @@ const getList = (key: string) => {
   <div class="min-h-screen bg-base-100">
     <!-- Skip Navigation -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-content focus:rounded-lg">
-      Skip to main content
+      {{ $t('common.skip_to_main') }}
     </a>
     
     <section class="py-12 md:py-16">
@@ -21,7 +21,7 @@ const getList = (key: string) => {
           <span class="text-xs uppercase tracking-wide text-base-content/80 block mb-3">{{ $t('kyr_nav.section_label') }}</span>
           <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-base-content mb-4 flex items-center justify-center gap-3 flex-wrap">
             {{ $t('kyr_ice_at_home.header.title') }}
-            <span class="badge badge-soft badge-error"><span class="sr-only">Priority:</span> Critical</span>
+            <span class="badge badge-soft badge-error"><span class="sr-only">Priority:</span> {{ $t('common.critical') }}</span>
           </h1>
           <p class="text-lg text-base-content/80 max-w-2xl mx-auto">
             {{ $t('kyr_ice_at_home.header.subtitle') }}
@@ -40,9 +40,9 @@ const getList = (key: string) => {
               
               <!-- Step Header -->
               <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs uppercase tracking-wide text-base-content/80" aria-label="Step 1 of 4">Step 01</span>
-                <h2 class="text-xl font-bold tracking-tight">Entry Protocol</h2>
-                <span class="badge badge-soft badge-error text-xs"><span class="sr-only">Priority:</span> Critical</span>
+                <span class="text-xs uppercase tracking-wide text-base-content/80" :aria-label="$t('common.step_label', { number: 1, total: 4 })">{{ $t('common.step_format', { number: '01' }) }}</span>
+                <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_at_home.steps.entry_protocol') }}</h2>
+                <span class="badge badge-soft badge-error text-xs"><span class="sr-only">Priority:</span> {{ $t('common.critical') }}</span>
               </div>
               
               <!-- Step Content Card -->
@@ -56,11 +56,11 @@ const getList = (key: string) => {
                     </svg>
                     <div class="space-y-3">
                       <div class="flex items-start gap-3">
-                        <span class="badge badge-soft badge-error shrink-0" role="img" aria-label="Do not">DO NOT</span>
+                        <span class="badge badge-soft badge-error shrink-0" role="img" :aria-label="$t('common.do_not_label')">{{ $t('common.do_not_label') }}</span>
                         <p class="text-sm text-base-content">{{ $t('kyr_ice_at_home.do_not_consent.do_not') }}</p>
                       </div>
                       <div class="flex items-start gap-3">
-                        <span class="badge badge-soft badge-success shrink-0" role="img" aria-label="Do">DO</span>
+                        <span class="badge badge-soft badge-success shrink-0" role="img" :aria-label="$t('common.do_label')">{{ $t('common.do_label') }}</span>
                         <p class="text-sm text-base-content">{{ $t('kyr_ice_at_home.do_not_consent.do') }}</p>
                       </div>
                     </div>
@@ -72,7 +72,7 @@ const getList = (key: string) => {
                       <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
                     </svg>
                     <div>
-                      <span class="text-xs uppercase tracking-wide text-base-content/80 font-medium">Say This</span>
+                      <span class="text-xs uppercase tracking-wide text-base-content/80 font-medium">{{ $t('common.say_this') }}</span>
                       <p class="font-mono text-sm mt-1">"{{ $t('kyr_ice_at_home.do_not_consent.say') }}"</p>
                     </div>
                   </div>
@@ -94,8 +94,8 @@ const getList = (key: string) => {
               
               <!-- Step Header -->
               <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs uppercase tracking-wide text-base-content/80" aria-label="Step 2 of 4">Step 02</span>
-                <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_at_home.ask_id.title') }}</h2>
+                <span class="text-xs uppercase tracking-wide text-base-content/80" :aria-label="$t('common.step_label', { number: 2, total: 4 })">{{ $t('common.step_format', { number: '02' }) }}</span>
+                <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_at_home.steps.verification') }}</h2>
               </div>
               
               <!-- Step Content Card -->
@@ -106,7 +106,7 @@ const getList = (key: string) => {
                     <svg class="h-5 w-5 text-secondary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
                     </svg>
-                    <p class="text-sm text-base-content">Request badge numbers and names through the closed door.</p>
+                    <p class="text-sm text-base-content">{{ $t('kyr_ice_at_home.do_not_consent.instruction') }}</p>
                   </div>
 
                   <ul class="space-y-2 text-sm text-base-content">
@@ -133,8 +133,8 @@ const getList = (key: string) => {
               
               <!-- Step Header -->
               <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs uppercase tracking-wide text-base-content/80" aria-label="Step 3 of 4">Step 03</span>
-                <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_at_home.warrant.title') }}</h2>
+                <span class="text-xs uppercase tracking-wide text-base-content/80" :aria-label="$t('common.step_label', { number: 3, total: 4 })">{{ $t('common.step_format', { number: '03' }) }}</span>
+                <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_at_home.steps.warrant_protocol') }}</h2>
               </div>
               
               <!-- Step Content Card -->
@@ -210,7 +210,7 @@ const getList = (key: string) => {
                         <div class="flex-1">
                           <p class="text-sm">{{ rt(item) }}</p>
                         </div>
-                        <span class="badge badge-soft badge-success text-xs"><span class="sr-only">Status:</span> Required</span>
+                        <span class="badge badge-soft badge-success text-xs"><span class="sr-only">Status:</span> {{ $t('common.required') }}</span>
                       </div>
                     </div>
                   </div>
@@ -232,9 +232,9 @@ const getList = (key: string) => {
               
               <!-- Step Header -->
               <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs uppercase tracking-wide text-base-content/80" aria-label="Step 4 of 4">Step 04</span>
-                <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_at_home.if_enters.title') }}</h2>
-                <span class="badge badge-soft badge-error text-xs"><span class="sr-only">Priority:</span> Critical</span>
+                <span class="text-xs uppercase tracking-wide text-base-content/80" :aria-label="$t('common.step_label', { number: 4, total: 4 })">{{ $t('common.step_format', { number: '04' }) }}</span>
+                <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_at_home.steps.if_enters') }}</h2>
+                <span class="badge badge-soft badge-error text-xs"><span class="sr-only">Priority:</span> {{ $t('common.critical') }}</span>
               </div>
               
               <!-- Step Content Card -->
@@ -262,8 +262,8 @@ const getList = (key: string) => {
                       <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
                     </svg>
                     <div>
-                      <span class="text-xs uppercase tracking-wide text-base-content/80 font-medium">Remember</span>
-                      <p class="font-mono text-sm mt-1">"I do not consent to any searches. I wish to remain silent. I want to speak with a lawyer."</p>
+                      <span class="text-xs uppercase tracking-wide text-base-content/80 font-medium">{{ $t('common.remember') }}</span>
+                      <p class="font-mono text-sm mt-1">"{{ $t('kyr_ice_at_home.if_enters.remember_script') }}"</p>
                     </div>
                   </div>
                   

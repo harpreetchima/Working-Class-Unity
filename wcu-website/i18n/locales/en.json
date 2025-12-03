@@ -138,19 +138,50 @@
     }
   },
   "common": {
-    "close": "close"
+    "close": "close",
+    "skip_to_main": "Skip to main content",
+    "critical": "Critical",
+    "required": "Required",
+    "important": "Important",
+    "step_label": "Step {number} of {total}",
+    "step_format": "Step {number}",
+    "do_label": "DO",
+    "do_not_label": "DO NOT",
+    "say_this": "Say This",
+    "remember": "Remember",
+    "item_label": "Item {number}",
+    "opens_in_new_tab": "(opens in new tab)"
   },
   "logo_alt": "WCU Logo",
   "about_page": {
     "title": "They Have Their Parties. We Need Our Own Organization",
     "p1": "The bosses and landlords have two political parties. The working class needs a fighting organization of its own.",
     "p2": "Across San Joaquin, rents rise while our wages stall. Bosses demand more while giving less. Both the Democratic and Republican parties answer to their donors, not to us.",
-    "p3": "Our political and economic system is not broken; it is working exactly as designed to protect the profits of the wealthy by keeping the rest of us divided and powerless. It makes us too poor to live in and own the homes we’ve built, too poor to eat the food we’ve grown and served, too poor to benefit from the fruits of our labor.",
+    "p3": "Our political and economic system is not broken; it is working exactly as designed to protect the profits of the wealthy by keeping the rest of us divided and powerless. It makes us too poor to live in and own the homes we've built, too poor to eat the food we've grown and served, too poor to benefit from the fruits of our labor.",
     "p4": "We refuse to accept this. We are organizing a mass working-class movement to build the genuine democracy we deserve – one where working people have real control over our lives, our communities, and our economy. We are not a political party. We organize collectively through mass membership. We do not have to continue relying on politicians, lobbying them, and hoping that they side with us over their donors.",
     "p5": "Working Class Unity is just as the name suggests, an organization fighting to unite the working class, to give individuals in San Joaquin control over their lives. We demand truly affordable and safe housing, workplace autonomy, protection of our communities from police oppression, and accountability from our elected officials. Our mission is to strengthen working class power by forging alliances between labor and tenant unions and social movements through education, advocacy, and direct action.",
-    "p6": "We fight for our families. For the future prosperity of our children. Whatever your race, your creed, your birthplace - don’t stand by and let the wealthy tear down this country that each one of us has helped build.",
+    "p6": "We fight for our families. For the future prosperity of our children. Whatever your race, your creed, your birthplace - don't stand by and let the wealthy tear down this country that each one of us has helped build.",
     "p7": "Together, we can build a member-run movement in San Joaquin County that wins concrete victories, without the compromises and betrayals of politicians and their wealthy donors.",
     "cta_button": "Join us"
+  },
+  "home_page": {
+    "hero": {
+      "title": "They Have Their Parties. We Need Our Own Organization.",
+      "description": "The bosses and landlords have two political parties. The working class needs a fighting organization of its own. Join us to build a member-run movement in San Joaquin County that wins concrete victories, without the compromises and betrayals of politicians and their wealthy donors.",
+      "join_button": "Join WCU",
+      "events_button": "See Upcoming Events"
+    },
+    "events": {
+      "heading": "Upcoming Events",
+      "view_all": "View All Events"
+    },
+    "problem": {
+      "label": "The Problem",
+      "title": "The Dictatorship of the Wealthy",
+      "p1": "Across San Joaquin, rents rise while our wages stall. Bosses demand more while giving less. Both the Democratic and Republican parties answer to their donors, not to us.",
+      "p2": "Our political and economic system is not broken; it is working exactly as designed to protect the profits of the wealthy by keeping the rest of us divided and powerless.",
+      "p3": "We refuse to accept this. We are organizing a mass working-class movement to build the genuine democracy we deserve – one where working people have real control over our lives, our communities, and our economy."
+    }
   },
   "join": {
     "hero": {
@@ -239,16 +270,19 @@
       "duration": "5 min • Security & Logging Protocol",
       "watch_button": "Watch",
       "coming_soon_button": "Coming Soon",
-      "video_placeholder": "Video Player"
+      "video_placeholder": "Video Player",
+      "completed_label": "Completed",
+      "modal_label": "Orientation Video"
     },
     "schedule": {
       "heading": "Claim Your Shift",
       "intro": "We need disciplined, reliable observers.",
-      "arrival": "Arrival: You must arrive 15 minutes early to to get a clipboard and get a briefing from the previous volunteer.",
-      "role": "Role: You are an observer. You log arrivals/departures and provide resources.",
+      "arrival": "You must arrive 15 minutes early to get a clipboard and get a briefing from the previous volunteer.",
+      "role": "You are an observer. You log arrivals/departures and provide resources.",
       "calendar_refresh_note": "Please refresh the page if you do not see the calendar below.",
       "arrival_label": "Arrival Time",
-      "role_label": "Your Role"
+      "role_label": "Your Role",
+      "calendar_label": "Scheduling calendar"
     },
     "resources": {
       "heading": "Shift Materials",
@@ -265,6 +299,7 @@
         "tracker_log": "Tracker Log",
         "quick_guide": "Volunteer Quick Guide",
         "if_detained": "\"If Detained\" Packet",
+        "if_detained_title_override": "If Detained: Emergency Resource Guide",
         "kyr_flyers": "KYR Flyers (English/Spanish)",
         "button": "Download PDF"
       },
@@ -277,6 +312,7 @@
     },
     "end_of_shift": {
       "heading": "AFTER YOUR SHIFT",
+      "checklist_label": "End of shift checklist",
       "copy": "Your shift isn't over until the data is safe.",
       "debrief": {
         "title": "1. The Debrief",
@@ -294,6 +330,7 @@
       "handover": {
         "title": "Drop off at WCU Mail Slot",
         "description": "Deliver completed logs",
+        "flyer_note": "Look for a WCU flyer on the door.",
         "directions": "Get Directions"
       }
     },
@@ -305,6 +342,7 @@
     }
   },
   "kyr_ice_at_work": {
+    "timeline_label": "Steps to follow if ICE comes to your workplace",
     "where_ice_can_go": {
       "title": "Where ICE can go",
       "public_areas": {
@@ -464,11 +502,18 @@
       "title": "Protocol: ICE Interaction.",
       "subtitle": "Follow these steps immediately if approached at your home."
     },
+    "steps": {
+      "entry_protocol": "Entry Protocol",
+      "verification": "Ask for identification",
+      "warrant_protocol": "Demand to see a warrant",
+      "if_enters": "If ICE enters your home"
+    },
     "do_not_consent": {
       "title": "Do not consent to a search",
-      "say": "SAY: “I do not consent to entry.”",
-      "do_not": "DO NOT: Open the door or step outside.",
-      "do": "DO: Record from inside your home."
+      "say": "I do not consent to entry.",
+      "do_not": "Open the door or step outside.",
+      "do": "Record from inside your home.",
+      "instruction": "Request badge numbers and names through the closed door."
     },
     "ask_id": {
       "title": "Ask for identification",
@@ -509,7 +554,8 @@
       "list": [
         "Record these violations: force, violence, intimidation, lies, or excessive searching.",
         "If you cannot film during the incident, record yourself describing what happened as soon as possible afterward."
-      ]
+      ],
+      "remember_script": "I do not consent to any searches. I wish to remain silent. I want to speak with a lawyer."
     }
   },
   "kyr_ice_pulls_you_over": {
@@ -622,11 +668,39 @@
         },
         "resistance": "Do not physically resist. Verbal objection may protect your legal rights."
       }
+    },
+    "labels": {
+      "timeline_aria": "Steps to follow if ICE pulls you over",
+      "step_01": "Step 01",
+      "step_02": "Step 02",
+      "step_03": "Step 03",
+      "step_04": "Step 04",
+      "step_1_of_4": "Step 1 of 4",
+      "step_2_of_4": "Step 2 of 4",
+      "step_3_of_4": "Step 3 of 4",
+      "step_4_of_4": "Step 4 of 4",
+      "start_recording": "Start Recording",
+      "questions_to_ask": "Questions to Ask",
+      "driver": "Driver",
+      "passenger": "Passenger",
+      "say_this": "Say This"
     }
   },
   "kyr_ice_in_public": {
     "tactics": {
       "title": "ICE Tactics",
+      "surveillance": {
+        "title": "Surveillance",
+        "description": "Follow you near your home or in public spaces"
+      },
+      "plain_clothes": {
+        "title": "Plain Clothes",
+        "description": "Wear plain clothes without identifying themselves"
+      },
+      "identity": {
+        "title": "Identity Confirmation",
+        "description": "Call out your name to confirm your identity"
+      },
       "list": [
         "Follow you near your home or in public spaces.",
         "Wear plain clothes without identifying themselves.",
@@ -635,20 +709,25 @@
     },
     "stopped": {
       "title": "If stopped by ICE",
+      "caution_badge": "Caution",
+      "caution_aria": "Caution warning",
+      "stay_silent": "Stay Silent",
       "silent": "Stay silent. Do not state your name or answer questions.",
+      "say_this": "Say this",
+      "am_i_free": "\"Am I free to go?\"",
       "ask_free": {
-        "question": "Ask: “Am I free to go?”",
+        "question": "Ask: \"Am I free to go?\"",
         "if_yes": {
           "title": "If they say YES:",
           "steps": [
-            "SAY: “I will not answer questions.”",
+            "SAY: \"I will not answer questions.\"",
             "Walk away calmly if they let you."
           ]
         },
         "if_no": {
           "title": "If they say NO:",
           "steps": [
-            "SAY: “I will not answer questions. I want a lawyer.”",
+            "SAY: \"I will not answer questions. I want a lawyer.\"",
             "Do not lie, show false documents, or run."
           ]
         }
@@ -656,11 +735,29 @@
     },
     "protect": {
       "title": "Protect Yourself",
+      "record": {
+        "title": "Record",
+        "description": "Record the encounter or ask someone to record. Anything you say can be used against you, so stick to repeating your rights."
+      },
+      "anonymity": {
+        "title": "Stay Anonymous",
+        "description": "When requesting help, avoid saying your name. Give them a contact's name to send the video."
+      },
+      "emergency_card": {
+        "title": "Emergency Card",
+        "description": "Carry an emergency card with your lawyer's and family's contact information."
+      },
+      "non_consent": {
+        "title": "Do Not Consent",
+        "description": "If searched without consent, say: \"I do not consent to this search. I want a lawyer.\""
+      },
+      "if_searched": "If searched, say this",
+      "search_script": "\"I do not consent to this search. I want a lawyer.\"",
       "list": [
         "Record the encounter or ask someone to record. Remember that anything you say in that recording can be used against you, so stick to repeating your rights.",
         "When requesting help, avoid saying your name. Give them a contact's name to send the video.",
-        "Carry an emergency card with your lawyer's and family’s contact information.",
-        "If searched without consent: Say, “I do not consent to this search. I want a lawyer.”"
+        "Carry an emergency card with your lawyer's and family's contact information.",
+        "If searched without consent: Say, \"I do not consent to this search. I want a lawyer.\""
       ]
     }
   },
@@ -763,6 +860,8 @@
       "title": "Upcoming Events",
       "description": "Join us at our community events, workshops, and actions. Filter by type to find events that interest you."
     },
+    "filter_aria_label": "Filter events by type",
+    "events_list_aria_label": "Upcoming events",
     "filters": {
       "all": "All Events",
       "meeting": "Meetings",

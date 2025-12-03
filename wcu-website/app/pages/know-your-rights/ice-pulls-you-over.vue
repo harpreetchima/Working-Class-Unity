@@ -22,7 +22,7 @@ const getList = (key: string) => {
       </header>
       
       <!-- B. Main Timeline Content -->
-      <ul class="timeline timeline-vertical timeline-compact max-w-4xl mx-auto" role="list" aria-label="Steps to follow if ICE pulls you over">
+      <ul class="timeline timeline-vertical timeline-compact max-w-4xl mx-auto" role="list" :aria-label="$t('kyr_ice_pulls_you_over.labels.timeline_aria')">
         
         <!-- Step 1: Always Pull Over -->
         <li>
@@ -33,7 +33,7 @@ const getList = (key: string) => {
             
             <!-- Step Header -->
             <div class="flex items-center gap-3 mb-4">
-              <span class="text-xs uppercase tracking-wide text-base-content" aria-label="Step 1 of 4">Step 01</span>
+              <span class="text-xs uppercase tracking-wide text-base-content" :aria-label="$t('kyr_ice_pulls_you_over.labels.step_1_of_4')">{{ $t('kyr_ice_pulls_you_over.labels.step_01') }}</span>
               <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_pulls_you_over.always_pull_over.title') }}</h2>
             </div>
             
@@ -48,7 +48,7 @@ const getList = (key: string) => {
                     <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
                   </svg>
                   <div>
-                    <span class="text-xs uppercase tracking-wide text-base-content font-medium">Start Recording</span>
+                    <span class="text-xs uppercase tracking-wide text-base-content font-medium">{{ $t('kyr_ice_pulls_you_over.labels.start_recording') }}</span>
                     <p class="text-sm mt-1">{{ $t('kyr_ice_pulls_you_over.always_pull_over.recording_tip') }}</p>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ const getList = (key: string) => {
             
             <!-- Step Header -->
             <div class="flex items-center gap-3 mb-4">
-              <span class="text-xs uppercase tracking-wide text-base-content" aria-label="Step 2 of 4">Step 02</span>
+              <span class="text-xs uppercase tracking-wide text-base-content" :aria-label="$t('kyr_ice_pulls_you_over.labels.step_2_of_4')">{{ $t('kyr_ice_pulls_you_over.labels.step_02') }}</span>
               <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_pulls_you_over.identify_officers.title') }}</h2>
             </div>
             
@@ -80,7 +80,7 @@ const getList = (key: string) => {
                 <div class="grid md:grid-cols-2 gap-6">
                   <!-- Questions to Ask -->
                   <div>
-                    <h4 class="text-xs uppercase tracking-wide text-base-content mb-3">Questions to Ask</h4>
+                    <h4 class="text-xs uppercase tracking-wide text-base-content mb-3">{{ $t('kyr_ice_pulls_you_over.labels.questions_to_ask') }}</h4>
                     <ul class="space-y-2 text-sm text-base-content">
                       <li v-for="(question, index) in getList('kyr_ice_pulls_you_over.identify_officers.questions')" :key="index" class="flex items-start gap-2">
                         <span class="text-base-content/50" aria-hidden="true">•</span>
@@ -120,7 +120,7 @@ const getList = (key: string) => {
             
             <!-- Step Header -->
             <div class="flex items-center gap-3 mb-4">
-              <span class="text-xs uppercase tracking-wide text-base-content" aria-label="Step 3 of 4">Step 03</span>
+              <span class="text-xs uppercase tracking-wide text-base-content" :aria-label="$t('kyr_ice_pulls_you_over.labels.step_3_of_4')">{{ $t('kyr_ice_pulls_you_over.labels.step_03') }}</span>
               <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_pulls_you_over.during_stop.title') }}</h2>
               <span class="badge badge-soft badge-warning text-xs" role="status">{{ $t('kyr_ice_pulls_you_over.warnings.caution') }}</span>
             </div>
@@ -166,7 +166,7 @@ const getList = (key: string) => {
                     </div>
                     <div>
                       <h4 class="font-semibold text-sm">{{ $t('kyr_ice_pulls_you_over.during_stop.providing_info.drivers.title') }}</h4>
-                      <span class="badge badge-soft badge-primary text-xs" aria-hidden="true">Driver</span>
+                      <span class="badge badge-soft badge-primary text-xs" aria-hidden="true">{{ $t('kyr_ice_pulls_you_over.labels.driver') }}</span>
                     </div>
                   </div>
                   <ul class="space-y-2 text-sm text-base-content">
@@ -192,7 +192,7 @@ const getList = (key: string) => {
                     </div>
                     <div>
                       <h4 class="font-semibold text-sm">{{ $t('kyr_ice_pulls_you_over.during_stop.providing_info.passengers.title') }}</h4>
-                      <span class="badge badge-soft badge-secondary text-xs" aria-hidden="true">Passenger</span>
+                      <span class="badge badge-soft badge-secondary text-xs" aria-hidden="true">{{ $t('kyr_ice_pulls_you_over.labels.passenger') }}</span>
                     </div>
                   </div>
                   <ul class="space-y-2 text-sm text-base-content">
@@ -241,7 +241,7 @@ const getList = (key: string) => {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
                   </svg>
                   <div>
-                    <span class="text-xs uppercase tracking-wide text-base-content font-medium">Say This</span>
+                    <span class="text-xs uppercase tracking-wide text-base-content font-medium">{{ $t('kyr_ice_pulls_you_over.labels.say_this') }}</span>
                     <p class="font-mono text-sm mt-1">"{{ $t('kyr_ice_pulls_you_over.during_stop.providing_info.all_occupants.say') }}"</p>
                   </div>
                 </div>
@@ -262,7 +262,7 @@ const getList = (key: string) => {
             
             <!-- Step Header -->
             <div class="flex items-center gap-3 mb-4">
-              <span class="text-xs uppercase tracking-wide text-base-content" aria-label="Step 4 of 4">Step 04</span>
+              <span class="text-xs uppercase tracking-wide text-base-content" :aria-label="$t('kyr_ice_pulls_you_over.labels.step_4_of_4')">{{ $t('kyr_ice_pulls_you_over.labels.step_04') }}</span>
               <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_pulls_you_over.compliance_searches.title') }}</h2>
               <span class="badge badge-soft badge-error text-xs" role="status">{{ $t('kyr_ice_pulls_you_over.warnings.critical') }}</span>
             </div>
@@ -320,7 +320,7 @@ const getList = (key: string) => {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
                   </svg>
                   <div>
-                    <span class="text-xs uppercase tracking-wide text-base-content font-medium">Say This</span>
+                    <span class="text-xs uppercase tracking-wide text-base-content font-medium">{{ $t('kyr_ice_pulls_you_over.labels.say_this') }}</span>
                     <p class="font-mono text-sm mt-1">"{{ $t('kyr_ice_pulls_you_over.compliance_searches.search_limitations.say') }}"</p>
                     <p class="text-xs text-base-content mt-1">{{ $t('kyr_ice_pulls_you_over.compliance_searches.search_limitations.repeat') }}</p>
                   </div>

@@ -41,113 +41,147 @@
   },
   "kyr_home": {
     "hero": {
-      "title": "[SPANISH] Know Your Rights. Protect Your Community.",
-      "description": "[SPANISH] Immigration enforcement and police are used to divide and intimidate the working class. Know your rights, prepare your family, and stand together so no one faces ICE or the courts alone. This is how we fight back."
+      "title": "Conozca Sus Derechos. Proteja a Su Comunidad.",
+      "description": "El control migratorio y la policía se usan para dividir e intimidar a la clase trabajadora. Conozca sus derechos, prepare a su familia y manténgase unido para que nadie enfrente a ICE o a los tribunales solo. Así es como nos defendemos."
     },
     "buttons": {
       "emergency": {
-        "title": "[SPANISH] Emergency & Preparation",
-        "subtitle": "[SPANISH] I need to know my rights or prepare my family."
+        "title": "Emergencia y Preparación",
+        "subtitle": "Necesito conocer mis derechos o preparar a mi familia."
       },
       "support": {
-        "title": "[SPANISH] Request Support",
-        "subtitle": "[SPANISH] I have an ICE check-in or court date."
+        "title": "Solicitar Apoyo",
+        "subtitle": "Tengo una cita con ICE o una fecha en la corte."
       },
       "involved": {
-        "title": "[SPANISH] Get Involved",
-        "subtitle": "[SPANISH] I want to volunteer or stand with immigrants."
+        "title": "Involúcrate",
+        "subtitle": "Quiero ser voluntario o apoyar a los inmigrantes."
       }
     },
-    "disclaimer": "[SPANISH] Disclaimer: These materials are for information only, not legal advice. Always consult a trusted attorney or legal worker about your specific situation.",
+    "disclaimer": "Aviso legal: Estos materiales son solo informativos, no constituyen asesoría legal. Siempre consulte a un abogado o trabajador legal de confianza sobre su situación específica.",
     "sections": {
-      "rights_prep": "[SPANISH] Know Your Rights & Preparation",
-      "get_involved": "[SPANISH] Get Involved",
-      "rights_prep_title": "[SPANISH] Know Your Rights & Prepare Your Family",
-      "rights_prep_intro": "[SPANISH] The most important tools you have are the right to remain silent and the right to not consent to searches. Memorize them. Teach them to your family. The guides below provide step-by-step instructions for what to do in common situations.",
+      "rights_prep": "Conozca Sus Derechos y Preparación",
+      "get_involved": "Involúcrate",
+      "rights_prep_title": "Conozca Sus Derechos y Prepare a Su Familia",
+      "rights_prep_intro": "Las herramientas más importantes que tiene son el derecho a permanecer en silencio y el derecho a no consentir registros. Memorícelos. Enséñelos a su familia. Las guías a continuación proporcionan instrucciones paso a paso sobre qué hacer en situaciones comunes.",
       "emergency_box": {
-        "text": "[SPANISH] If someone has already been detained or is being detained right now, call the VWN hotline immediately at {phone} and read our {link}.",
-        "link_text": "[SPANISH] Detention Guide",
+        "text": "Si alguien ya ha sido detenido o está siendo detenido en este momento, llame a la línea directa de VWN inmediatamente al {phone} y lea nuestra {link}.",
+        "link_text": "Guía de Detención",
         "phone": "(559) 206-0151"
       }
     },
     "get_involved_section": {
-      "title": "[SPANISH] From Knowledge to Action: Stand with the Working Class",
-      "intro": "[SPANISH] Knowing your rights is the first step. The next is acting collectively. The bosses and landlords use immigration status to keep wages low and crush organizing for everyone. When we stand together, we make it harder for them to operate in silence and fear. This is how we build power.",
+      "title": "Del Conocimiento a la Acción: Únase a la Clase Trabajadora",
+      "intro": "Conocer sus derechos es el primer paso. El siguiente es actuar colectivamente. Los patrones y propietarios usan el estatus migratorio para mantener los salarios bajos y aplastar la organización de todos. Cuando nos mantenemos unidos, les hacemos más difícil operar en silencio y miedo. Así es como construimos poder.",
       "subsection_a": {
-        "title": "[SPANISH] Direct Support & Community Defense",
-        "h3": "[SPANISH] ICE Check-In Coverage, Accompaniment & Volunteer",
-        "copy": "[SPANISH] We organize volunteer teams to observe ICE check-ins and accompany people to high-risk appointments. Our presence provides community protection, documents state activity, and ensures no one disappears alone. This is not charity; it is disciplined, working-class solidarity.",
+        "title": "Apoyo Directo y Defensa Comunitaria",
+        "h3": "Cobertura de Citas de ICE, Acompañamiento y Voluntariado",
+        "copy": "Organizamos equipos de voluntarios para observar las citas de ICE y acompañar a personas a citas de alto riesgo. Nuestra presencia proporciona protección comunitaria, documenta la actividad estatal y asegura que nadie desaparezca solo. Esto no es caridad; es solidaridad disciplinada de la clase trabajadora.",
         "button_1": {
-          "text": "[SPANISH] Sign up for an ICE Check-In Coverage shift",
-          "subtext": "[SPANISH] Observe and log activity outside the Stockton ICE facility."
+          "text": "Inscríbase para un turno de Cobertura de Citas de ICE",
+          "subtext": "Observe y registre la actividad fuera de las instalaciones de ICE en Stockton."
         },
         "button_2": {
-          "text": "[SPANISH] Provide Accompaniment Support",
-          "subtext": "[SPANISH] Support people at check-ins, court dates, and other appointments."
+          "text": "Proporcione Apoyo de Acompañamiento",
+          "subtext": "Apoye a personas en citas con ICE, fechas de corte y otras citas."
         },
         "button_3": {
-          "text": "[SPANISH] Volunteer in other ways",
-          "subtext": "[SPANISH] Spread information by canvassing, tabling, and giving presentations to your family or congregation."
+          "text": "Sea voluntario de otras maneras",
+          "subtext": "Difunda información haciendo campaña puerta a puerta, en mesas informativas y dando presentaciones a su familia o congregación."
         }
       },
       "subsection_b": {
-        "title": "[SPANISH] Political Commitment",
-        "h3": "[SPANISH] Build a United Front of the Working Class",
-        "copy": "[SPANISH] We are building a united front of workers in San Joaquin County—farmworkers, tenants, congregations, and union members—independent of both major parties. We will not be divided by papers, race, or language. We will organize where we live and work until no employer can threaten a worker into silence and no family faces these crises alone.",
+        "title": "Compromiso Político",
+        "h3": "Construya un Frente Unido de la Clase Trabajadora",
+        "copy": "Estamos construyendo un frente unido de trabajadores en el Condado de San Joaquín—trabajadores agrícolas, inquilinos, congregaciones y miembros de sindicatos—independiente de ambos partidos principales. No nos dividirán por papeles, raza o idioma. Nos organizaremos donde vivimos y trabajamos hasta que ningún empleador pueda amenazar a un trabajador para silenciarlo y ninguna familia enfrente estas crisis sola.",
         "button_1": {
-          "text": "[SPANISH] Read & Sign the United Front Letter",
-          "subtext": "[SPANISH] Show that San Joaquin's working class stands with our immigrant neighbors."
+          "text": "Lea y Firme la Carta del Frente Unido",
+          "subtext": "Demuestre que la clase trabajadora de San Joaquín apoya a nuestros vecinos inmigrantes."
         },
         "button_2": {
-          "text": "[SPANISH] Join Working Class Unity",
-          "subtext": "[SPANISH] Become a member of a democratic, fighting organization."
+          "text": "Únase a Working Class Unity",
+          "subtext": "Conviértase en miembro de una organización democrática y combativa."
         }
       }
     }
   },
   "request_support": {
-    "title": "[SPANISH] Support for Your ICE Check-In or Appointment",
-    "intro": "[SPANISH] You do not have to face this alone. If you have an upcoming ICE check-in or other high-risk appointment, you can securely share your information with us. We will do our best to support you.",
+    "title": "Apoyo para su Cita con ICE o Presentación",
+    "intro": "No tiene que enfrentar esto solo. Si tiene una próxima cita con ICE u otra cita de alto riesgo, puede compartir su información de forma segura con nosotros. Haremos todo lo posible para apoyarlo.",
     "section1": {
-      "title": "[SPANISH] How We Can Help",
-      "p1": "[SPANISH] We are volunteers, not lawyers. We keep your information confidential and only share it with trusted members of our team who are directly involved in your support. We will never share your details with ICE, police, or your employer.",
-      "p2": "[SPANISH] Based on your request and our volunteer availability, we can try to:",
+      "title": "Cómo Podemos Ayudar",
+      "p1": "Somos voluntarios, no abogados. Mantenemos su información confidencial y solo la compartimos con miembros de confianza de nuestro equipo que están directamente involucrados en su apoyo. Nunca compartiremos sus datos con ICE, la policía o su empleador.",
+      "p2": "Según su solicitud y la disponibilidad de nuestros voluntarios, podemos intentar:",
       "list": [
-        "[SPANISH] Organize volunteers outside the building during your appointment time.",
-        "[SPANISH] Call or text you before your appointment to check in.",
-        "[SPANISH] Call or text you after your appointment to confirm you are safe.",
-        "[SPANISH] Contact your emergency person and community hotlines if we believe you may have been detained."
+        "Organizar voluntarios fuera del edificio durante la hora de su cita.",
+        "Llamarle o enviarle un mensaje de texto antes de su cita para ver cómo está.",
+        "Llamarle o enviarle un mensaje de texto después de su cita para confirmar que está a salvo.",
+        "Contactar a su persona de emergencia y a las líneas directas de la comunidad si creemos que puede haber sido detenido."
       ]
     },
     "form": {
-      "title": "[SPANISH] Confidential Support Request",
-      "intro": "[SPANISH] Please fill out the form below. The more information you provide, the better we can prepare to support you."
+      "title": "Solicitud de Apoyo Confidencial",
+      "intro": "Por favor complete el formulario a continuación. Cuanta más información proporcione, mejor podremos prepararnos para apoyarlo."
     },
     "next_steps": {
-      "title": "[SPANISH] What Happens Next",
+      "title": "Qué Sucede Después",
       "steps": [
-        "[SPANISH] A trusted WCU coordinator will review your request.",
-        "[SPANISH] We will contact you via your safe phone number to confirm we received your information and let you know what support we can realistically provide.",
-        "[SPANISH] We prioritize higher-risk cases and will always be honest about our volunteer capacity. We cannot guarantee someone will be present in person, but we will always do our best."
+        "Un coordinador de confianza de WCU revisará su solicitud.",
+        "Nos pondremos en contacto con usted a través de su número de teléfono seguro para confirmar que recibimos su información y hacerle saber qué apoyo podemos brindar de manera realista.",
+        "Damos prioridad a los casos de mayor riesgo y siempre seremos honestos sobre nuestra capacidad de voluntarios. No podemos garantizar que alguien esté presente en persona, pero siempre haremos nuestro mejor esfuerzo."
       ]
     },
     "emergency": {
-      "text": "[SPANISH] If someone has already been detained or is being detained right now, do not use this form. Go to our {link} or call the VWN hotline immediately at {phone}.",
-      "link_text": "[SPANISH] Detention Guide",
+      "text": "Si alguien ya ha sido detenido o está siendo detenido en este momento, no use este formulario. Vaya a nuestra {link} o llame a la línea directa de VWN inmediatamente al {phone}.",
+      "link_text": "Guía de Detención",
       "phone": "(559) 206-0151"
     }
   },
+  "common": {
+    "close": "cerrar",
+    "skip_to_main": "Saltar al contenido principal",
+    "critical": "Crítico",
+    "required": "Requerido",
+    "important": "Importante",
+    "step_label": "Paso {number} de {total}",
+    "step_format": "Paso {number}",
+    "do_label": "SÍ",
+    "do_not_label": "NO",
+    "say_this": "Diga Esto",
+    "remember": "Recuerde",
+    "item_label": "Ítem {number}",
+    "opens_in_new_tab": "(abre en nueva pestaña)"
+  },
   "logo_alt": "Logotipo de WCU",
   "about_page": {
-    "title": "They Have Their Parties. We Need Our Own Organization",
-    "p1": "The bosses and landlords have two political parties. The working class needs a fighting organization of its own.",
-    "p2": "Across San Joaquin, rents rise while our wages stall. Bosses demand more while giving less. Both the Democratic and Republican parties answer to their donors, not to us.",
-    "p3": "Our political and economic system is not broken; it is working exactly as designed to protect the profits of the wealthy by keeping the rest of us divided and powerless. It makes us too poor to live in and own the homes we’ve built, too poor to eat the food we’ve grown and served, too poor to benefit from the fruits of our labor.",
-    "p4": "We refuse to accept this. We are organizing a mass working-class movement to build the genuine democracy we deserve – one where working people have real control over our lives, our communities, and our economy. We are not a political party. We organize collectively through mass membership. We do not have to continue relying on politicians, lobbying them, and hoping that they side with us over their donors.",
-    "p5": "Working Class Unity is just as the name suggests, an organization fighting to unite the working class, to give individuals in San Joaquin control over their lives. We demand truly affordable and safe housing, workplace autonomy, protection of our communities from police oppression, and accountability from our elected officials. Our mission is to strengthen working class power by forging alliances between labor and tenant unions and social movements through education, advocacy, and direct action.",
-    "p6": "We fight for our families. For the future prosperity of our children. Whatever your race, your creed, your birthplace - don’t stand by and let the wealthy tear down this country that each one of us has helped build.",
-    "p7": "Together, we can build a member-run movement in San Joaquin County that wins concrete victories, without the compromises and betrayals of politicians and their wealthy donors.",
-    "cta_button": "Join us"
+    "title": "Ellos tienen sus partidos. Nosotros necesitamos nuestra propia organización",
+    "p1": "Los patrones y propietarios tienen dos partidos políticos. La clase trabajadora necesita una organización de lucha propia.",
+    "p2": "En todo San Joaquín, los alquileres suben mientras nuestros salarios se estancan. Los patrones exigen más mientras dan menos. Ambos partidos, Demócrata y Republicano, responden a sus donantes, no a nosotros.",
+    "p3": "Nuestro sistema político y económico no está roto; funciona exactamente como fue diseñado para proteger las ganancias de los ricos manteniéndonos divididos e impotentes. Nos hace demasiado pobres para vivir y ser dueños de las casas que construimos, demasiado pobres para comer la comida que cultivamos y servimos, demasiado pobres para beneficiarnos de los frutos de nuestro trabajo.",
+    "p4": "Nos negamos a aceptar esto. Estamos organizando un movimiento masivo de la clase trabajadora para construir la democracia genuina que merecemos – una donde los trabajadores tengan control real sobre nuestras vidas, nuestras comunidades y nuestra economía. No somos un partido político. Nos organizamos colectivamente a través de membresía masiva. No tenemos que seguir dependiendo de los políticos, presionándolos y esperando que se pongan de nuestro lado en lugar del de sus donantes.",
+    "p5": "Working Class Unity es justo lo que su nombre sugiere, una organización que lucha por unir a la clase trabajadora, para dar a los individuos en San Joaquín control sobre sus vidas. Exigimos vivienda verdaderamente asequible y segura, autonomía laboral, protección de nuestras comunidades contra la opresión policial y rendición de cuentas de nuestros funcionarios electos. Nuestra misión es fortalecer el poder de la clase trabajadora forjando alianzas entre sindicatos laborales e inquilinos y movimientos sociales a través de la educación, la defensa y la acción directa.",
+    "p6": "Luchamos por nuestras familias. Por la prosperidad futura de nuestros hijos. Sin importar tu raza, tu credo, tu lugar de nacimiento – no te quedes de brazos cruzados y dejes que los ricos destruyan este país que cada uno de nosotros ha ayudado a construir.",
+    "p7": "Juntos, podemos construir un movimiento dirigido por miembros en el Condado de San Joaquín que gane victorias concretas, sin los compromisos y traiciones de los políticos y sus donantes ricos.",
+    "cta_button": "Únete a nosotros"
+  },
+  "home_page": {
+    "hero": {
+      "title": "Ellos tienen sus partidos. Nosotros necesitamos nuestra propia organización.",
+      "description": "Los patrones y propietarios tienen dos partidos políticos. La clase trabajadora necesita una organización de lucha propia. Únete a nosotros para construir un movimiento dirigido por miembros en el Condado de San Joaquín que gane victorias concretas, sin los compromisos y traiciones de los políticos y sus donantes ricos.",
+      "join_button": "Únete a WCU",
+      "events_button": "Ver próximos eventos"
+    },
+    "events": {
+      "heading": "Próximos Eventos",
+      "view_all": "Ver todos los eventos"
+    },
+    "problem": {
+      "label": "El Problema",
+      "title": "La Dictadura de los Ricos",
+      "p1": "En todo San Joaquín, los alquileres suben mientras nuestros salarios se estancan. Los patrones exigen más mientras dan menos. Ambos partidos, Demócrata y Republicano, responden a sus donantes, no a nosotros.",
+      "p2": "Nuestro sistema político y económico no está roto; funciona exactamente como fue diseñado para proteger las ganancias de los ricos manteniéndonos divididos e impotentes.",
+      "p3": "Nos negamos a aceptar esto. Estamos organizando un movimiento masivo de la clase trabajadora para construir la democracia genuina que merecemos – una donde los trabajadores tengan control real sobre nuestras vidas, nuestras comunidades y nuestra economía."
+    }
   },
   "join": {
     "hero": {
@@ -221,38 +255,51 @@
     }
   },
   "check_in_coverage": {
-    "page_title": "ICE Check-In Coverage",
+    "page_title": "Cobertura de Citas de ICE",
     "hero": {
-      "title": "We will not abandon our neighbors.",
-      "subtitle": "Independent Check-In Monitoring & Accompaniment",
-      "description": "The system relies on people being alone. We rely on solidarity. We need people at the local ICE facility to ensure no one disappears in silence.",
-      "schedule_button": "Schedule a Shift",
-      "appointment_button": "I have an appointment",
-      "appointment_help_text": "Click here if you need someone to watch out for you."
+      "title": "No abandonaremos a nuestros vecinos.",
+      "subtitle": "Monitoreo Independiente de Citas y Acompañamiento",
+      "description": "El sistema depende de que las personas estén solas. Nosotros dependemos de la solidaridad. Necesitamos personas en las instalaciones locales de ICE para asegurar que nadie desaparezca en silencio.",
+      "schedule_button": "Programar un Turno",
+      "appointment_button": "Tengo una cita",
+      "appointment_help_text": "Haga clic aquí si necesita que alguien esté pendiente de usted."
     },
     "orientation": {
-      "heading": "Onboarding Video",
-      "caption": "Watch: How we monitor, how we log, and how we stay safe.",
-      "coming_soon_button": "Próximamente"
+      "heading": "Video de Orientación",
+      "caption": "Vea: Cómo monitoreamos, cómo registramos y cómo nos mantenemos seguros.",
+      "duration": "5 min • Protocolo de Seguridad y Registro",
+      "watch_button": "Ver",
+      "coming_soon_button": "Próximamente",
+      "video_placeholder": "Reproductor de Video",
+      "completed_label": "Completado",
+      "modal_label": "Video de orientación"
     },
     "schedule": {
-      "heading": "Claim Your Shift",
-      "intro": "We need disciplined, reliable observers.",
-      "arrival": "Arrival: You must arrive 15 minutes early to to get a clipboard and get a briefing from the previous volunteer.",
-      "role": "Role: You are an observer. You log arrivals/departures and provide resources.",
-      "calendar_refresh_note": "Por favor actualice la página si no ve el calendario a continuación."
+      "heading": "Reclama Tu Turno",
+      "intro": "Necesitamos observadores disciplinados y confiables.",
+      "arrival": "Debes llegar 15 minutos antes para obtener un portapapeles y recibir información del voluntario anterior.",
+      "role": "Eres un observador. Registras llegadas/salidas y proporcionas recursos.",
+      "calendar_refresh_note": "Por favor actualice la página si no ve el calendario a continuación.",
+      "arrival_label": "Hora de Llegada",
+      "role_label": "Tu Rol",
+      "calendar_label": "Calendario de programación"
     },
     "resources": {
       "heading": "Materiales del Turno",
       "notice": {
+        "title": "Aviso Importante",
         "text": "Las tácticas de detención de emergencia cambian. Antes de cada turno, abra esta página para ver las instrucciones actuales sobre qué hacer si alguien es detenido.",
         "button": "Ver Protocolo de Detención"
       },
+      "download_pdf": "Descargar PDF",
+      "view_page": "Ver Página",
+      "pdf": "PDF",
       "downloads": {
         "check_in_sheet": "Hoja de Registro",
         "tracker_log": "Registro de Seguimiento",
         "quick_guide": "Guía Rápida del Voluntario",
         "if_detained": "Paquete \"Si Es Detenido\"",
+        "if_detained_title_override": "Si es detenido: Guía de recursos de emergencia",
         "kyr_flyers": "Volantes KYR (Inglés/Español)",
         "button": "Descargar PDF"
       },
@@ -264,17 +311,27 @@
       }
     },
     "end_of_shift": {
-      "heading": "AFTER YOUR SHIFT",
-      "copy": "Your shift isn't over until the data is safe.",
+      "heading": "DESPUÉS DE TU TURNO",
+      "checklist_label": "Lista de verificación de fin de turno",
+      "copy": "Tu turno no termina hasta que los datos estén seguros.",
       "debrief": {
-        "title": "1. The Debrief",
-        "description": "Tell us how it went. How many safe check-ins? Did you see ICE agents? How did you feel? You'll receive a link via email/SMS."
+        "title": "1. El Informe",
+        "description": "Cuéntanos cómo fue. ¿Cuántas citas seguras? ¿Viste agentes de ICE? ¿Cómo te sentiste? Recibirás un enlace por correo/SMS.",
+        "open_form": "Abrir Formulario →"
       },
       "logs": {
-        "title": "2. The Logs (Security Protocol)",
-        "do_not_photo": "DO NOT photograph the logs.",
-        "do_not_text": "DO NOT text the logs.",
-        "drop_off": "DROP OFF the physical sheets at the WCU Office Mail Slot:"
+        "title": "2. Los Registros (Protocolo de Seguridad)",
+        "do_not_photo": "NO fotografíes los registros.",
+        "do_not_text": "NO envíes los registros por mensaje.",
+        "drop_off": "ENTREGA las hojas físicas en el buzón de la oficina de WCU:",
+        "description": "Maneja toda la documentación de forma segura.",
+        "warning": "ADVERTENCIA: NO DIGITALICES LOS REGISTROS FÍSICOS"
+      },
+      "handover": {
+        "title": "Dejar en el buzón de WCU",
+        "description": "Entregar registros completados",
+        "flyer_note": "Busque un volante de WCU en la puerta.",
+        "directions": "Obtener Direcciones"
       }
     },
     "contact": {
@@ -285,155 +342,159 @@
     }
   },
   "kyr_ice_at_work": {
+    "timeline_label": "Pasos a seguir si ICE viene a su lugar de trabajo",
     "where_ice_can_go": {
-      "title": "[SPANISH] Where ICE can go",
+      "title": "Dónde puede ir ICE",
       "public_areas": {
-        "title": "[SPANISH] Public areas (no permission needed):",
-        "description": "[SPANISH] Lobbies, dining rooms, and retail spaces. Entry alone does not grant authority to stop, question, or arrest anyone."
+        "title": "Áreas públicas (no se necesita permiso):",
+        "description": "Vestíbulos, comedores y espacios comerciales. El solo hecho de entrar no les da autoridad para detener, interrogar o arrestar a nadie."
       },
       "private_areas": {
-        "title": "[SPANISH] Private areas (permission required):",
-        "description": "[SPANISH] ICE needs a judicial warrant signed by a judge—not a DHS order. If an employee or employer consents, ICE can enter without a warrant."
-      }
+        "title": "Áreas privadas (se requiere permiso):",
+        "description": "ICE necesita una orden judicial firmada por un juez, no una orden del DHS. Si un empleado o empleador da su consentimiento, ICE puede entrar sin orden."
+      },
+      "public_areas_examples": "Vestíbulos, estacionamientos, áreas de clientes",
+      "private_areas_examples": "Oficinas, almacenes, áreas solo para empleados",
+      "warrant_note": "ICE necesita una orden firmada por un juez para entrar a áreas privadas/no públicas sin consentimiento."
     },
     "rights_at_work": {
-      "title": "[SPANISH] Your rights at work",
-      "intro": "[SPANISH] All workers can:",
+      "title": "Sus derechos en el trabajo",
+      "intro": "Todos los trabajadores pueden:",
       "list": [
-        "[SPANISH] Remain silent.",
-        "[SPANISH] Refuse searches.",
-        "[SPANISH] Refuse to show documentation or ID.",
-        "[SPANISH] Stand together in the center of the room. Refuse to separate by immigration status. ICE uses this tactic to isolate individuals—protect each other."
+        "Permanecer en silencio.",
+        "Rechazar registros.",
+        "Negarse a mostrar documentación o identificación.",
+        "Permanecer juntos en el centro de la habitación. Negarse a separarse por estatus migratorio. ICE usa esta táctica para aislar a las personas—protéjanse mutuamente."
       ]
     },
     "hero": {
-      "subtitle": "[SPANISH] Caution",
-      "description": "[SPANISH] Understand your rights when ICE appears at your workplace. Know where they can and cannot go."
+      "subtitle": "Precaución",
+      "description": "Entienda sus derechos cuando ICE aparece en su lugar de trabajo. Sepa dónde pueden y no pueden ir."
     },
     "approaches": {
-      "title": "[SPANISH] If ICE Approaches You",
-      "critical": "[SPANISH] Critical",
+      "title": "Si ICE se le acerca",
+      "critical": "Crítico",
       "do_not_list": [
-        "[SPANISH] Run, resist, or lie about your identity",
-        "[SPANISH] Sign any documents without an attorney"
+        "Correr, resistir o mentir sobre su identidad",
+        "Firmar cualquier documento sin un abogado"
       ],
       "do_list": [
-        "[SPANISH] Stay calm and remember your rights",
-        "[SPANISH] Ask if you are free to leave"
+        "Mantener la calma y recordar sus derechos",
+        "Preguntar si es libre de irse"
       ],
-      "say_this_title": "[SPANISH] Say This",
-      "say_this_text": "[SPANISH] \"I wish to remain silent. I do not consent to a search. Am I free to go?\""
+      "say_this_title": "Diga esto",
+      "say_this_text": "\"Deseo permanecer en silencio. No consiento a un registro. ¿Soy libre de irme?\""
     },
     "employer": {
-      "title": "[SPANISH] Employer Responsibilities",
-      "intro": "[SPANISH] Your employer has rights and responsibilities during an ICE visit:",
+      "title": "Responsabilidades del empleador",
+      "intro": "Su empleador tiene derechos y responsabilidades durante una visita de ICE:",
       "cards": {
         "warrant": {
-          "title": "[SPANISH] Ask for Warrant",
-          "desc": "[SPANISH] Can request to see a valid judicial warrant"
+          "title": "Pedir la orden",
+          "desc": "Puede solicitar ver una orden judicial válida"
         },
         "deny": {
-          "title": "[SPANISH] Deny Access",
-          "desc": "[SPANISH] Can refuse entry to non-public areas without warrant"
+          "title": "Negar acceso",
+          "desc": "Puede rechazar la entrada a áreas no públicas sin orden"
         },
         "attorney": {
-          "title": "[SPANISH] Call Attorney",
-          "desc": "[SPANISH] Can contact company lawyer before cooperating"
+          "title": "Llamar al abogado",
+          "desc": "Puede contactar al abogado de la empresa antes de cooperar"
         },
         "notify": {
-          "title": "[SPANISH] Notify Workers",
-          "desc": "[SPANISH] Can inform employees of their rights"
+          "title": "Notificar a trabajadores",
+          "desc": "Puede informar a los empleados sobre sus derechos"
         }
       }
     }
   },
   "kyr_documents_to_keep": {
     "header": {
-      "title": "[SPANISH] Documents to Keep",
-      "description": "[SPANISH] Know which documents to carry, when to show them, and how to protect your rights based on your immigration status."
+      "title": "Documentos que debe llevar consigo",
+      "description": "Sepa qué documentos llevar, cuándo mostrarlos y cómo proteger sus derechos según su estatus migratorio."
     },
     "safety": {
-      "title": "[SPANISH] Document Safety",
+      "title": "Seguridad de documentos",
       "list": [
-        "[SPANISH] Make copies of everything. Store originals with trusted family or friends.",
-        "[SPANISH] Never show foreign documents (passports, birth certificates) that reveal birthplace outside the U.S. These can trigger deportation."
+        "Haga copias de todo. Guarde los originales con familiares o amigos de confianza.",
+        "Nunca muestre documentos extranjeros (pasaportes, actas de nacimiento) que revelen un lugar de nacimiento fuera de EE.UU. Estos pueden provocar la deportación."
       ]
     },
     "legal_status": {
-      "title": "[SPANISH] If You Have Legal Status",
-      "badge": "[SPANISH] Legal",
-      "includes_label": "[SPANISH] Includes",
-      "includes_text": "[SPANISH] Green card, asylum, refugee status, valid student visa, or TPS.",
-      "carry_label": "[SPANISH] Carry",
+      "title": "Si tiene estatus legal",
+      "badge": "Legal",
+      "includes_label": "Incluye",
+      "includes_text": "Tarjeta verde, asilo, estatus de refugiado, visa de estudiante válida o TPS.",
+      "carry_label": "Llevar",
       "carry_list": [
-        "[SPANISH] Your lawful resident card or immigration papers"
+        "Su tarjeta de residente legal o documentos de inmigración"
       ],
-      "show_label": "[SPANISH] Show",
+      "show_label": "Mostrar",
       "show_list": [
-        "[SPANISH] Present these documents if law enforcement requests them"
+        "Presente estos documentos si las autoridades lo solicitan"
       ]
     },
     "pending_status": {
-      "title": "[SPANISH] If You Have Pending Status",
-      "badge": "[SPANISH] Pending",
-      "includes_label": "[SPANISH] Includes",
-      "includes_text": "[SPANISH] Pending asylum application, open immigration court case, or immigration appeal.",
-      "carry_label": "[SPANISH] Carry",
+      "title": "Si tiene estatus pendiente",
+      "badge": "Pendiente",
+      "includes_label": "Incluye",
+      "includes_text": "Solicitud de asilo pendiente, caso abierto en corte de inmigración o apelación de inmigración.",
+      "carry_label": "Llevar",
       "carry_list": [
-        "[SPANISH] Copies of papers proving you applied for status or filed an appeal"
+        "Copias de documentos que demuestren que solicitó estatus o presentó una apelación"
       ],
-      "show_label": "[SPANISH] Show",
+      "show_label": "Mostrar",
       "show_list": [
-        "[SPANISH] Present these documents only if arrested"
+        "Presente estos documentos solo si es arrestado"
       ],
-      "otherwise_label": "[SPANISH] Otherwise",
+      "otherwise_label": "De lo contrario",
       "otherwise_list": [
-        "[SPANISH] Remain silent"
+        "Permanezca en silencio"
       ]
     },
     "undocumented": {
-      "title": "[SPANISH] If Undocumented or Expired",
-      "badge": "[SPANISH] Critical",
-      "carry_label": "[SPANISH] Carry proof of U.S. residence for 2+ years",
+      "title": "Si es indocumentado o tiene estatus vencido",
+      "badge": "Crítico",
+      "carry_label": "Lleve prueba de residencia en EE.UU. por más de 2 años",
       "carry_list": [
-        "[SPANISH] Rental agreements",
-        "[SPANISH] School records with address",
-        "[SPANISH] Mail addressed to you",
-        "[SPANISH] Documents showing your name, U.S. address, and date"
+        "Contratos de alquiler",
+        "Registros escolares con dirección",
+        "Correo dirigido a usted",
+        "Documentos que muestren su nombre, dirección en EE.UU. y fecha"
       ],
-      "callout_title": "[SPANISH] Why this matters",
-      "callout_text": "[SPANISH] These documents can prevent expedited removal without a hearing. Without proof of 2+ years residence, you can face deportation without seeing a judge."
+      "callout_title": "Por qué es importante",
+      "callout_text": "Estos documentos pueden evitar la deportación acelerada sin audiencia. Sin prueba de 2 o más años de residencia, puede enfrentar deportación sin ver a un juez."
     },
     "quick_ref": {
-      "title": "[SPANISH] Quick Reference",
+      "title": "Referencia rápida",
       "table": {
         "headers": {
-          "status": "[SPANISH] Status",
-          "carry": "[SPANISH] What to Carry",
-          "show": "[SPANISH] When to Show"
+          "status": "Estatus",
+          "carry": "Qué llevar",
+          "show": "Cuándo mostrar"
         },
         "rows": {
           "legal": {
-            "status": "[SPANISH] Legal Status",
-            "carry": "[SPANISH] Lawful resident card or immigration papers",
-            "show": "[SPANISH] If law enforcement requests"
+            "status": "Estatus legal",
+            "carry": "Tarjeta de residente legal o documentos de inmigración",
+            "show": "Si las autoridades lo solicitan"
           },
           "pending": {
-            "status": "[SPANISH] Pending Status",
-            "carry": "[SPANISH] Copies of application/appeal papers",
-            "show": "[SPANISH] Only if arrested"
+            "status": "Estatus pendiente",
+            "carry": "Copias de documentos de solicitud/apelación",
+            "show": "Solo si es arrestado"
           },
           "undocumented": {
-            "status": "[SPANISH] Undocumented",
-            "carry": "[SPANISH] Proof of 2+ years U.S. residence",
-            "show": "[SPANISH] To prevent expedited removal"
+            "status": "Indocumentado",
+            "carry": "Prueba de 2+ años de residencia en EE.UU.",
+            "show": "Para evitar deportación acelerada"
           }
         }
       }
     },
     "remember": {
-      "title": "[SPANISH] Remember",
-      "text": "[SPANISH] \"I wish to remain silent. I do not consent to any searches.\""
+      "title": "Recuerde",
+      "text": "\"Deseo permanecer en silencio. No consiento a ningún registro.\""
     }
   },
   "kyr_ice_at_home": {
@@ -441,11 +502,18 @@
       "title": "SI LA POLICÍA DE INMIGRACIÓN Y ADUANAS (ICE) LLEGA A SU HOGAR",
       "subtitle": "Siga estos pasos inmediatamente si lo abordan en su casa."
     },
+    "steps": {
+      "entry_protocol": "Protocolo de Entrada",
+      "verification": "Pida Identificación",
+      "warrant_protocol": "Exija Ver la Orden Judicial",
+      "if_enters": "Si ICE Entra a Su Hogar"
+    },
     "do_not_consent": {
       "title": "No consienta que registren",
-      "say": "DIGA: «No consiento que entren».",
-      "do_not": "NO: Abra la puerta ni salga afuera.",
-      "do": "SÍ: Grabe el encuentro desde dentro de su hogar."
+      "say": "No consiento que entren.",
+      "do_not": "Abra la puerta ni salga afuera.",
+      "do": "Grabe el encuentro desde dentro de su hogar.",
+      "instruction": "Pida los números de placa y sus nombres a través de la puerta cerrada."
     },
     "ask_id": {
       "title": "PIDA POR IDENTIFICACIÓN",
@@ -494,158 +562,210 @@
           "Diga: «Ejerzo mi derecho a permanecer en silencio. No pueden entrar».",
           "Mantenga la puerta cerrada."
         ]
-      }
+      },
+      "remember_script": "No consiento ningún registro. Deseo permanecer en silencio. Quiero hablar con un abogado."
     }
   },
   "kyr_ice_pulls_you_over": {
     "hero": {
-      "description": "[SPANISH] Stay calm, know your rights, and protect yourself during a traffic stop."
+      "description": "Mantenga la calma, conozca sus derechos y protéjase durante una parada de tráfico."
     },
     "warnings": {
-      "caution": "[SPANISH] Caution",
-      "critical": "[SPANISH] Critical"
+      "caution": "Precaución",
+      "critical": "Crítico"
     },
     "always_pull_over": {
-      "title": "[SPANISH] Always pull over",
-      "content": "[SPANISH] Pull over when any law enforcement signals you to stop, even if you do not think you did anything wrong.",
-      "recording_tip": "[SPANISH] Start recording. If alone, place the phone in a cup holder or pocket while recording continues."
+      "title": "Siempre deténgase",
+      "content": "Deténgase cuando cualquier autoridad le indique que pare, aunque no crea haber hecho nada malo.",
+      "recording_tip": "Comience a grabar. Si está solo, coloque el teléfono en un portavasos o bolsillo mientras continúa grabando."
     },
     "identify_officers": {
-      "title": "[SPANISH] Identify the officers",
+      "title": "Identifique a los oficiales",
       "questions": [
-        "[SPANISH] Are you police?",
-        "[SPANISH] Are you highway patrol?",
-        "[SPANISH] Are you immigration?",
-        "[SPANISH] Why did you stop me?"
+        "¿Es usted policía?",
+        "¿Es usted patrulla de carreteras?",
+        "¿Es usted de inmigración?",
+        "¿Por qué me detuvo?"
       ],
       "warning": {
-        "title": "[SPANISH] Warning",
-        "content": "[SPANISH] ICE uses unmarked vehicles and may wear plain clothes or vests labeled “POLICE” without identifying themselves as immigration."
+        "title": "Advertencia",
+        "content": "ICE usa vehículos sin identificación y puede vestir ropa de civil o chalecos que dicen \"POLICE\" sin identificarse como inmigración."
       }
     },
     "during_stop": {
-      "title": "[SPANISH] During the stop",
+      "title": "Durante la parada",
       "window": {
-        "title": "[SPANISH] Your window",
-        "content": "[SPANISH] Roll down your window slightly when asked.",
-        "questions_title": "[SPANISH] Before anything else, ask:",
+        "title": "Su ventana",
+        "content": "Baje la ventana ligeramente cuando se lo pidan.",
+        "questions_title": "Antes que nada, pregunte:",
         "questions": [
-          "[SPANISH] Am I free to go?",
-          "[SPANISH] Who are you?",
-          "[SPANISH] Why did you stop me?",
-          "[SPANISH] Do you have a warrant?"
+          "¿Soy libre de irme?",
+          "¿Quién es usted?",
+          "¿Por qué me detuvo?",
+          "¿Tiene una orden judicial?"
         ]
       },
       "providing_info": {
-        "title": "[SPANISH] Providing information",
+        "title": "Proporcionar información",
         "drivers": {
-          "title": "[SPANISH] Drivers must provide:",
+          "title": "Los conductores deben proporcionar:",
           "list": [
-            "[SPANISH] Driver’s license.",
-            "[SPANISH] Registration and proof of insurance."
+            "Licencia de conducir.",
+            "Registro y comprobante de seguro."
           ]
         },
         "passengers": {
-          "title": "[SPANISH] Passengers",
+          "title": "Pasajeros",
           "list": [
-            "[SPANISH] Cannot be forced to show ID.",
-            "[SPANISH] Cannot be forced to give name, address, legal status or place of birth."
+            "No pueden ser obligados a mostrar identificación.",
+            "No pueden ser obligados a dar nombre, dirección, estatus legal o lugar de nacimiento."
           ]
         },
         "advice": [
-          "[SPANISH] Request officer identification before presenting any documents.",
-          "[SPANISH] Do not lie or give false documents."
+          "Solicite identificación del oficial antes de presentar cualquier documento.",
+          "No mienta ni entregue documentos falsos."
         ],
         "all_occupants": {
-          "title": "[SPANISH] For all occupants:",
+          "title": "Para todos los ocupantes:",
           "list": [
-            "[SPANISH] Decline to discuss immigration status or criminal history."
+            "Negarse a discutir estatus migratorio o historial criminal."
           ],
-          "say": "[SPANISH] Am I free to go? I do not consent to provide ID or answer questions."
+          "say": "¿Soy libre de irme? No consiento a proporcionar identificación ni responder preguntas."
         }
       }
     },
     "compliance_searches": {
-      "title": "[SPANISH] Physical compliance and searches",
+      "title": "Cumplimiento físico y registros",
       "exiting": {
-        "title": "[SPANISH] Exiting the vehicle",
-        "content": "[SPANISH] Officer may order you to get out for “officer safety.” This order often precedes arrest.",
-        "ask_title": "[SPANISH] Before moving, ask:",
+        "title": "Salir del vehículo",
+        "content": "El oficial puede ordenarle que salga por \"seguridad del oficial\". Esta orden a menudo precede a un arresto.",
+        "ask_title": "Antes de moverse, pregunte:",
         "questions": [
-          "[SPANISH] Am I free to go?",
-          "[SPANISH] Who are you?",
-          "[SPANISH] Why did you stop me?"
+          "¿Soy libre de irme?",
+          "¿Quién es usted?",
+          "¿Por qué me detuvo?"
         ],
-        "warning": "[SPANISH] Officers may force removal if you delay."
+        "warning": "Los oficiales pueden forzar su salida si se demora."
       },
       "search_limitations": {
-        "title": "[SPANISH] Search limitations",
-        "content": "[SPANISH] ICE needs a judicial warrant or your consent to search:",
+        "title": "Limitaciones de registro",
+        "content": "ICE necesita una orden judicial o su consentimiento para registrar:",
         "list": [
-          "[SPANISH] Your body (beyond a pat-down).",
-          "[SPANISH] The inside of your vehicle.",
-          "[SPANISH] Glove compartment or trunk."
+          "Su cuerpo (más allá de un cacheo).",
+          "El interior de su vehículo.",
+          "Guantera o maletero."
         ],
-        "say": "[SPANISH] I do not consent to any searches.",
-        "repeat": "[SPANISH] Repeat this even if officers proceed anyway."
+        "say": "No consiento a ningún registro.",
+        "repeat": "Repita esto aunque los oficiales procedan de todos modos."
       },
       "fingerprints": {
-        "title": "[SPANISH] Fingerprint collection",
+        "title": "Toma de huellas dactilares",
         "when": {
-          "title": "[SPANISH] ICE can take fingerprints only when:",
+          "title": "ICE solo puede tomar huellas cuando:",
           "list": [
-            "[SPANISH] Officers suspect immigration violations.",
-            "[SPANISH] You are under arrest."
+            "Los oficiales sospechan violaciones de inmigración.",
+            "Usted está bajo arresto."
           ]
         },
         "if_requested": {
-          "title": "[SPANISH] If requested without a clear cause:",
+          "title": "Si se solicita sin causa clara:",
           "list": [
-            "[SPANISH] Ask: “Why am I being fingerprinted?”",
-            "[SPANISH] Say: “I do not consent to fingerprinting.”"
+            "Pregunte: \"¿Por qué me están tomando las huellas?\"",
+            "Diga: \"No consiento a que me tomen las huellas.\""
           ]
         },
-        "resistance": "[SPANISH] Do not physically resist. Verbal objection may protect your legal rights."
+        "resistance": "No resista físicamente. La objeción verbal puede proteger sus derechos legales."
       }
+    },
+    "labels": {
+      "timeline_aria": "Pasos a seguir si ICE lo detiene en el camino",
+      "step_01": "Paso 01",
+      "step_02": "Paso 02",
+      "step_03": "Paso 03",
+      "step_04": "Paso 04",
+      "step_1_of_4": "Paso 1 de 4",
+      "step_2_of_4": "Paso 2 de 4",
+      "step_3_of_4": "Paso 3 de 4",
+      "step_4_of_4": "Paso 4 de 4",
+      "start_recording": "Comience a Grabar",
+      "questions_to_ask": "Preguntas para Hacer",
+      "driver": "Conductor",
+      "passenger": "Pasajero",
+      "say_this": "Diga Esto"
     }
   },
   "kyr_ice_in_public": {
     "tactics": {
-      "title": "[SPANISH] ICE Tactics",
+      "title": "Tácticas de ICE",
+      "surveillance": {
+        "title": "Vigilancia",
+        "description": "Seguirlo cerca de su casa o en espacios públicos"
+      },
+      "plain_clothes": {
+        "title": "Ropa de Civil",
+        "description": "Vestir ropa de civil sin identificarse"
+      },
+      "identity": {
+        "title": "Confirmación de Identidad",
+        "description": "Llamarlo por su nombre para confirmar su identidad"
+      },
       "list": [
-        "[SPANISH] Follow you near your home or in public spaces.",
-        "[SPANISH] Wear plain clothes without identifying themselves.",
-        "[SPANISH] Call out your name to confirm your identity."
+        "Seguirlo cerca de su casa o en espacios públicos.",
+        "Vestir ropa de civil sin identificarse.",
+        "Llamarlo por su nombre para confirmar su identidad."
       ]
     },
     "stopped": {
-      "title": "[SPANISH] If stopped by ICE",
-      "silent": "[SPANISH] Stay silent. Do not state your name or answer questions.",
+      "title": "Si ICE lo detiene",
+      "caution_badge": "Precaución",
+      "caution_aria": "Advertencia de precaución",
+      "stay_silent": "Guarde Silencio",
+      "silent": "Permanezca en silencio. No diga su nombre ni responda preguntas.",
+      "say_this": "Diga esto",
+      "am_i_free": "\"¿Soy libre de irme?\"",
       "ask_free": {
-        "question": "[SPANISH] Ask: “Am I free to go?”",
+        "question": "Pregunte: \"¿Soy libre de irme?\"",
         "if_yes": {
-          "title": "[SPANISH] If they say YES:",
+          "title": "Si dicen SÍ:",
           "steps": [
-            "[SPANISH] SAY: “I will not answer questions.”",
-            "[SPANISH] Walk away calmly if they let you."
+            "DIGA: \"No voy a responder preguntas.\"",
+            "Aléjese con calma si lo dejan ir."
           ]
         },
         "if_no": {
-          "title": "[SPANISH] If they say NO:",
+          "title": "Si dicen NO:",
           "steps": [
-            "[SPANISH] SAY: “I will not answer questions. I want a lawyer.”",
-            "[SPANISH] Do not lie, show false documents, or run."
+            "DIGA: \"No voy a responder preguntas. Quiero un abogado.\"",
+            "No mienta, no muestre documentos falsos ni corra."
           ]
         }
       }
     },
     "protect": {
-      "title": "[SPANISH] Protect Yourself",
+      "title": "Protéjase",
+      "record": {
+        "title": "Grabe",
+        "description": "Grabe el encuentro o pida a alguien que grabe. Todo lo que diga puede usarse en su contra, así que repita solo sus derechos."
+      },
+      "anonymity": {
+        "title": "Manténgase Anónimo",
+        "description": "Al pedir ayuda, evite decir su nombre. Dé el nombre de un contacto para enviar el video."
+      },
+      "emergency_card": {
+        "title": "Tarjeta de Emergencia",
+        "description": "Lleve una tarjeta de emergencia con la información de contacto de su abogado y familia."
+      },
+      "non_consent": {
+        "title": "No Dé Consentimiento",
+        "description": "Si lo registran sin consentimiento, diga: \"No consiento a este registro. Quiero un abogado.\""
+      },
+      "if_searched": "Si lo registran, diga esto",
+      "search_script": "\"No consiento a este registro. Quiero un abogado.\"",
       "list": [
-        "[SPANISH] Record the encounter or ask someone to record. Remember that anything you say in that recording can be used against you, so stick to repeating your rights.",
-        "[SPANISH] When requesting help, avoid saying your name. Give them a contact's name to send the video.",
-        "[SPANISH] Carry an emergency card with your lawyer's and family’s contact information.",
-        "[SPANISH] If searched without consent: Say, “I do not consent to this search. I want a lawyer.”"
+        "Grabe el encuentro o pida a alguien que grabe. Recuerde que todo lo que diga en esa grabación puede usarse en su contra, así que repita solo sus derechos.",
+        "Al pedir ayuda, evite decir su nombre. Dé el nombre de un contacto para enviar el video.",
+        "Lleve una tarjeta de emergencia con la información de contacto de su abogado y familia.",
+        "Si lo registran sin consentimiento: Diga, \"No consiento a este registro. Quiero un abogado.\""
       ]
     }
   },
@@ -752,6 +872,8 @@
       "title": "Próximos Eventos",
       "description": "Únete a nuestros eventos comunitarios, talleres y acciones. Filtra por tipo para encontrar eventos que te interesen."
     },
+    "filter_aria_label": "Filtrar eventos por tipo",
+    "events_list_aria_label": "Próximos eventos",
     "filters": {
       "all": "Todos los Eventos",
       "meeting": "Reuniones",
@@ -782,6 +904,18 @@
     "join_virtual": "Unirse al Evento Virtual",
     "rsvp_here": "Confirmar Asistencia",
     "events": {
+      "generalMeeting": {
+        "title": "Reunión General",
+        "description": "Reunión General de WCU de diciembre."
+      },
+      "fightTheFearCanvassing": {
+        "title": "Difusión Combate el Miedo",
+        "description": "Únete a nosotros para un esfuerzo de difusión comunitaria para apoyar a nuestros vecinos y compañeros de trabajo inmigrantes y compartir recursos de \"Conozca Sus Derechos\". Nos reuniremos en el lugar indicado para prepararnos, proporcionar materiales y guiones, y luego iremos juntos a los vecindarios locales. Después de la difusión, regresaremos para debatir y discutir nuestras experiencias."
+      },
+      "kyrCommunityForum": {
+        "title": "Foro Comunitario Conozca Sus Derechos",
+        "description": "Aprende lo básico sobre Conozca Sus Derechos. Ponte al día con organizadores y voluntarios involucrados en difusión, mesas informativas y alcance comunitario."
+      },
       "event1": {
         "title": "Reunión General de Miembros",
         "description": "Reunión mensual de miembros generales para discutir campañas en curso y actualizaciones organizacionales."

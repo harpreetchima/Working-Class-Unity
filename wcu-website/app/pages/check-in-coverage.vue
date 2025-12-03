@@ -31,7 +31,7 @@ const shiftMaterials = [
   },
   {
     key: 'if_detained',
-    titleOverride: 'If Detained: Emergency Resource Guide',
+    titleKey: 'check_in_coverage.resources.downloads.if_detained_title_override',
     icon: 'exclamation',
     pdfOnly: true,
     pdfUrl: '#',
@@ -93,7 +93,7 @@ const { calKey } = useCalEmbed({
       <div class="card card-border bg-base-200 flex flex-col sm:flex-row items-center p-4 gap-4">
         <!-- Left: Status + Info -->
         <div class="flex items-center gap-3 flex-1">
-          <div class="text-success" aria-label="Completed">
+          <div class="text-success" :aria-label="$t('check_in_coverage.orientation.completed_label')">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg>
@@ -112,7 +112,7 @@ const { calKey } = useCalEmbed({
   </section>
 
   <!-- Modal for video -->
-  <dialog id="orientation_modal" class="modal" aria-label="Orientation Video">
+  <dialog id="orientation_modal" class="modal" :aria-label="$t('check_in_coverage.orientation.modal_label')">
     <div class="modal-box max-w-4xl p-0">
       <div class="aspect-video bg-base-300 flex items-center justify-center">
         <span class="text-base-content/50">{{ $t('check_in_coverage.orientation.video_placeholder') }}</span>
@@ -129,7 +129,7 @@ const { calKey } = useCalEmbed({
       <!-- Calendar - Full Width -->
       <h2 class="text-2xl font-bold mb-2">{{ $t('check_in_coverage.schedule.heading') }}</h2>
       <p class="text-sm text-base-content mb-4">{{ $t('check_in_coverage.schedule.calendar_refresh_note') }}</p>
-      <div class="card card-border bg-base-200 overflow-hidden mb-6" aria-label="Scheduling calendar">
+      <div class="card card-border bg-base-200 overflow-hidden mb-6" :aria-label="$t('check_in_coverage.schedule.calendar_label')">
         <ClientOnly>
           <div :key="calKey" id="my-cal-inline-checkincoverage" class="min-h-[350px] md:min-h-[500px]" style="width:100%;height:100%;overflow:scroll"></div>
           <template #fallback>
@@ -234,7 +234,7 @@ const { calKey } = useCalEmbed({
               <!-- Content -->
               <div class="flex-1">
                 <h4 class="font-semibold text-base-content">
-                  {{ material.titleOverride || $t(`check_in_coverage.resources.downloads.${material.key}`) }}
+                  {{ material.titleKey ? $t(material.titleKey) : $t(`check_in_coverage.resources.downloads.${material.key}`) }}
                 </h4>
                 <p class="text-sm text-base-content mt-1">
                   {{ $t(material.description) }}
@@ -281,7 +281,7 @@ const { calKey } = useCalEmbed({
       <p class="text-base-content mb-6">{{ $t('check_in_coverage.end_of_shift.copy') }}</p>
       
       <!-- Git-style Vertical Timeline -->
-      <ul class="timeline timeline-vertical timeline-compact" aria-label="End of shift checklist">
+      <ul class="timeline timeline-vertical timeline-compact" :aria-label="$t('check_in_coverage.end_of_shift.checklist_label')">
         <!-- Step 1: Debrief -->
         <li>
           <div class="timeline-middle">
@@ -321,7 +321,7 @@ const { calKey } = useCalEmbed({
           <div class="timeline-end py-3">
             <h3 class="font-bold text-base">{{ $t('check_in_coverage.end_of_shift.handover.title') }}</h3>
             <p class="text-sm text-base-content mt-1">{{ $t('check_in_coverage.end_of_shift.handover.description') }}</p>
-            <p class="text-sm text-base-content mt-2">Look for a WCU flyer on the door.</p>
+            <p class="text-sm text-base-content mt-2">{{ $t('check_in_coverage.end_of_shift.handover.flyer_note') }}</p>
             <a href="https://maps.app.goo.gl/feHLNz6zeRdEzhau5" target="_blank" rel="noopener noreferrer" class="link link-primary text-sm mt-2 inline-flex items-center gap-1">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />

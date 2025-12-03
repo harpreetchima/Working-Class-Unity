@@ -41,113 +41,147 @@
   },
   "kyr_home": {
     "hero": {
-      "title": "[PUNJABI] Know Your Rights. Protect Your Community.",
-      "description": "[PUNJABI] Immigration enforcement and police are used to divide and intimidate the working class. Know your rights, prepare your family, and stand together so no one faces ICE or the courts alone. This is how we fight back."
+      "title": "ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ। ਆਪਣੇ ਭਾਈਚਾਰੇ ਦੀ ਰੱਖਿਆ ਕਰੋ।",
+      "description": "ਇਮੀਗ੍ਰੇਸ਼ਨ ਇਨਫੋਰਸਮੈਂਟ ਅਤੇ ਪੁਲਿਸ ਦੀ ਵਰਤੋਂ ਮਜ਼ਦੂਰ ਜਮਾਤ ਨੂੰ ਵੰਡਣ ਅਤੇ ਡਰਾਉਣ ਲਈ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ, ਆਪਣੇ ਪਰਿਵਾਰ ਨੂੰ ਤਿਆਰ ਕਰੋ, ਅਤੇ ਇਕੱਠੇ ਖੜ੍ਹੇ ਹੋਵੋ ਤਾਂ ਜੋ ਕੋਈ ਵੀ ਇਕੱਲੇ ICE ਜਾਂ ਅਦਾਲਤਾਂ ਦਾ ਸਾਹਮਣਾ ਨਾ ਕਰੇ। ਇਸ ਤਰ੍ਹਾਂ ਅਸੀਂ ਲੜਦੇ ਹਾਂ।"
     },
     "buttons": {
       "emergency": {
-        "title": "[PUNJABI] Emergency & Preparation",
-        "subtitle": "[PUNJABI] I need to know my rights or prepare my family."
+        "title": "ਐਮਰਜੈਂਸੀ ਅਤੇ ਤਿਆਰੀ",
+        "subtitle": "ਮੈਨੂੰ ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣਨੇ ਜਾਂ ਆਪਣੇ ਪਰਿਵਾਰ ਨੂੰ ਤਿਆਰ ਕਰਨਾ ਹੈ।"
       },
       "support": {
-        "title": "[PUNJABI] Request Support",
-        "subtitle": "[PUNJABI] I have an ICE check-in or court date."
+        "title": "ਸਹਾਇਤਾ ਦੀ ਬੇਨਤੀ ਕਰੋ",
+        "subtitle": "ਮੇਰੀ ICE ਚੈੱਕ-ਇਨ ਜਾਂ ਅਦਾਲਤ ਦੀ ਤਾਰੀਖ ਹੈ।"
       },
       "involved": {
-        "title": "[PUNJABI] Get Involved",
-        "subtitle": "[PUNJABI] I want to volunteer or stand with immigrants."
+        "title": "ਸ਼ਾਮਲ ਹੋਵੋ",
+        "subtitle": "ਮੈਂ ਵਲੰਟੀਅਰ ਬਣਨਾ ਜਾਂ ਪ੍ਰਵਾਸੀਆਂ ਦੇ ਨਾਲ ਖੜ੍ਹਨਾ ਚਾਹੁੰਦਾ ਹਾਂ।"
       }
     },
-    "disclaimer": "[PUNJABI] Disclaimer: These materials are for information only, not legal advice. Always consult a trusted attorney or legal worker about your specific situation.",
+    "disclaimer": "ਬੇਦਾਅਵਾ: ਇਹ ਸਮੱਗਰੀਆਂ ਸਿਰਫ਼ ਜਾਣਕਾਰੀ ਲਈ ਹਨ, ਕਾਨੂੰਨੀ ਸਲਾਹ ਨਹੀਂ। ਆਪਣੀ ਖਾਸ ਸਥਿਤੀ ਬਾਰੇ ਹਮੇਸ਼ਾ ਕਿਸੇ ਭਰੋਸੇਮੰਦ ਵਕੀਲ ਜਾਂ ਕਾਨੂੰਨੀ ਕਰਮਚਾਰੀ ਨਾਲ ਸਲਾਹ ਕਰੋ।",
     "sections": {
-      "rights_prep": "[PUNJABI] Know Your Rights & Preparation",
-      "get_involved": "[PUNJABI] Get Involved",
-      "rights_prep_title": "[PUNJABI] Know Your Rights & Prepare Your Family",
-      "rights_prep_intro": "[PUNJABI] The most important tools you have are the right to remain silent and the right to not consent to searches. Memorize them. Teach them to your family. The guides below provide step-by-step instructions for what to do in common situations.",
+      "rights_prep": "ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ ਅਤੇ ਤਿਆਰੀ",
+      "get_involved": "ਸ਼ਾਮਲ ਹੋਵੋ",
+      "rights_prep_title": "ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ ਅਤੇ ਆਪਣੇ ਪਰਿਵਾਰ ਨੂੰ ਤਿਆਰ ਕਰੋ",
+      "rights_prep_intro": "ਤੁਹਾਡੇ ਕੋਲ ਸਭ ਤੋਂ ਮਹੱਤਵਪੂਰਨ ਸਾਧਨ ਚੁੱਪ ਰਹਿਣ ਦਾ ਅਧਿਕਾਰ ਅਤੇ ਤਲਾਸ਼ੀ ਲਈ ਸਹਿਮਤੀ ਨਾ ਦੇਣ ਦਾ ਅਧਿਕਾਰ ਹਨ। ਇਨ੍ਹਾਂ ਨੂੰ ਯਾਦ ਕਰੋ। ਆਪਣੇ ਪਰਿਵਾਰ ਨੂੰ ਸਿਖਾਓ। ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਗਾਈਡਾਂ ਆਮ ਸਥਿਤੀਆਂ ਵਿੱਚ ਕੀ ਕਰਨਾ ਹੈ ਬਾਰੇ ਕਦਮ-ਦਰ-ਕਦਮ ਹਿਦਾਇਤਾਂ ਪ੍ਰਦਾਨ ਕਰਦੀਆਂ ਹਨ।",
       "emergency_box": {
-        "text": "[PUNJABI] If someone has already been detained or is being detained right now, call the VWN hotline immediately at {phone} and read our {link}.",
-        "link_text": "[PUNJABI] Detention Guide",
+        "text": "ਜੇਕਰ ਕਿਸੇ ਨੂੰ ਪਹਿਲਾਂ ਹੀ ਹਿਰਾਸਤ ਵਿੱਚ ਲਿਆ ਗਿਆ ਹੈ ਜਾਂ ਇਸ ਸਮੇਂ ਹਿਰਾਸਤ ਵਿੱਚ ਲਿਆ ਜਾ ਰਿਹਾ ਹੈ, ਤਾਂ ਤੁਰੰਤ VWN ਹੌਟਲਾਈਨ ਨੂੰ {phone} 'ਤੇ ਕਾਲ ਕਰੋ ਅਤੇ ਸਾਡੀ {link} ਪੜ੍ਹੋ।",
+        "link_text": "ਹਿਰਾਸਤ ਗਾਈਡ",
         "phone": "(559) 206-0151"
       }
     },
     "get_involved_section": {
-      "title": "[PUNJABI] From Knowledge to Action: Stand with the Working Class",
-      "intro": "[PUNJABI] Knowing your rights is the first step. The next is acting collectively. The bosses and landlords use immigration status to keep wages low and crush organizing for everyone. When we stand together, we make it harder for them to operate in silence and fear. This is how we build power.",
+      "title": "ਗਿਆਨ ਤੋਂ ਕਾਰਵਾਈ ਤੱਕ: ਮਜ਼ਦੂਰ ਜਮਾਤ ਨਾਲ ਖੜ੍ਹੇ ਹੋਵੋ",
+      "intro": "ਆਪਣੇ ਅਧਿਕਾਰਾਂ ਨੂੰ ਜਾਣਨਾ ਪਹਿਲਾ ਕਦਮ ਹੈ। ਅਗਲਾ ਕਦਮ ਸਮੂਹਿਕ ਤੌਰ 'ਤੇ ਕਾਰਵਾਈ ਕਰਨਾ ਹੈ। ਮਾਲਕ ਅਤੇ ਜ਼ਮੀਨਦਾਰ ਇਮੀਗ੍ਰੇਸ਼ਨ ਸਥਿਤੀ ਦੀ ਵਰਤੋਂ ਤਨਖਾਹਾਂ ਘੱਟ ਰੱਖਣ ਅਤੇ ਸਭ ਲਈ ਸੰਗਠਨ ਨੂੰ ਕੁਚਲਣ ਲਈ ਕਰਦੇ ਹਨ। ਜਦੋਂ ਅਸੀਂ ਇਕੱਠੇ ਖੜ੍ਹੇ ਹੁੰਦੇ ਹਾਂ, ਅਸੀਂ ਉਨ੍ਹਾਂ ਲਈ ਚੁੱਪ ਅਤੇ ਡਰ ਵਿੱਚ ਕੰਮ ਕਰਨਾ ਔਖਾ ਬਣਾਉਂਦੇ ਹਾਂ। ਇਸ ਤਰ੍ਹਾਂ ਅਸੀਂ ਤਾਕਤ ਬਣਾਉਂਦੇ ਹਾਂ।",
       "subsection_a": {
-        "title": "[PUNJABI] Direct Support & Community Defense",
-        "h3": "[PUNJABI] ICE Check-In Coverage, Accompaniment & Volunteer",
-        "copy": "[PUNJABI] We organize volunteer teams to observe ICE check-ins and accompany people to high-risk appointments. Our presence provides community protection, documents state activity, and ensures no one disappears alone. This is not charity; it is disciplined, working-class solidarity.",
+        "title": "ਸਿੱਧੀ ਸਹਾਇਤਾ ਅਤੇ ਭਾਈਚਾਰਕ ਰੱਖਿਆ",
+        "h3": "ICE ਚੈੱਕ-ਇਨ ਕਵਰੇਜ, ਸਾਥ ਅਤੇ ਵਲੰਟੀਅਰ",
+        "copy": "ਅਸੀਂ ICE ਚੈੱਕ-ਇਨ ਦੇਖਣ ਅਤੇ ਉੱਚ-ਜੋਖਮ ਵਾਲੀਆਂ ਮੁਲਾਕਾਤਾਂ ਵਿੱਚ ਲੋਕਾਂ ਦੇ ਨਾਲ ਜਾਣ ਲਈ ਵਲੰਟੀਅਰ ਟੀਮਾਂ ਸੰਗਠਿਤ ਕਰਦੇ ਹਾਂ। ਸਾਡੀ ਮੌਜੂਦਗੀ ਭਾਈਚਾਰਕ ਸੁਰੱਖਿਆ ਪ੍ਰਦਾਨ ਕਰਦੀ ਹੈ, ਸਰਕਾਰੀ ਗਤੀਵਿਧੀ ਦਾ ਦਸਤਾਵੇਜ਼ੀਕਰਨ ਕਰਦੀ ਹੈ, ਅਤੇ ਯਕੀਨੀ ਬਣਾਉਂਦੀ ਹੈ ਕਿ ਕੋਈ ਵੀ ਇਕੱਲਾ ਗਾਇਬ ਨਾ ਹੋਵੇ। ਇਹ ਦਾਨ ਨਹੀਂ ਹੈ; ਇਹ ਅਨੁਸ਼ਾਸਿਤ, ਮਜ਼ਦੂਰ ਜਮਾਤ ਦੀ ਏਕਤਾ ਹੈ।",
         "button_1": {
-          "text": "[PUNJABI] Sign up for an ICE Check-In Coverage shift",
-          "subtext": "[PUNJABI] Observe and log activity outside the Stockton ICE facility."
+          "text": "ICE ਚੈੱਕ-ਇਨ ਕਵਰੇਜ ਸ਼ਿਫਟ ਲਈ ਸਾਈਨ ਅੱਪ ਕਰੋ",
+          "subtext": "ਸਟਾਕਟਨ ICE ਸਹੂਲਤ ਦੇ ਬਾਹਰ ਗਤੀਵਿਧੀ ਦੇਖੋ ਅਤੇ ਦਰਜ ਕਰੋ।"
         },
         "button_2": {
-          "text": "[PUNJABI] Provide Accompaniment Support",
-          "subtext": "[PUNJABI] Support people at check-ins, court dates, and other appointments."
+          "text": "ਸਾਥ ਸਹਾਇਤਾ ਪ੍ਰਦਾਨ ਕਰੋ",
+          "subtext": "ਚੈੱਕ-ਇਨ, ਅਦਾਲਤ ਦੀਆਂ ਤਾਰੀਖਾਂ ਅਤੇ ਹੋਰ ਮੁਲਾਕਾਤਾਂ ਵਿੱਚ ਲੋਕਾਂ ਦੀ ਸਹਾਇਤਾ ਕਰੋ।"
         },
         "button_3": {
-          "text": "[PUNJABI] Volunteer in other ways",
-          "subtext": "[PUNJABI] Spread information by canvassing, tabling, and giving presentations to your family or congregation."
+          "text": "ਹੋਰ ਤਰੀਕਿਆਂ ਨਾਲ ਵਲੰਟੀਅਰ ਕਰੋ",
+          "subtext": "ਘਰ-ਘਰ ਜਾ ਕੇ, ਮੇਜ਼ਾਂ ਲਗਾ ਕੇ, ਅਤੇ ਆਪਣੇ ਪਰਿਵਾਰ ਜਾਂ ਸੰਗਤ ਨੂੰ ਪ੍ਰੇਜ਼ੈਂਟੇਸ਼ਨ ਦੇ ਕੇ ਜਾਣਕਾਰੀ ਫੈਲਾਓ।"
         }
       },
       "subsection_b": {
-        "title": "[PUNJABI] Political Commitment",
-        "h3": "[PUNJABI] Build a United Front of the Working Class",
-        "copy": "[PUNJABI] We are building a united front of workers in San Joaquin County—farmworkers, tenants, congregations, and union members—independent of both major parties. We will not be divided by papers, race, or language. We will organize where we live and work until no employer can threaten a worker into silence and no family faces these crises alone.",
+        "title": "ਰਾਜਨੀਤਿਕ ਵਚਨਬੱਧਤਾ",
+        "h3": "ਮਜ਼ਦੂਰ ਜਮਾਤ ਦਾ ਸੰਯੁਕਤ ਮੋਰਚਾ ਬਣਾਓ",
+        "copy": "ਅਸੀਂ ਸੈਨ ਜੋਆਕਿਨ ਕਾਊਂਟੀ ਵਿੱਚ ਕਾਮਿਆਂ ਦਾ ਇੱਕ ਸੰਯੁਕਤ ਮੋਰਚਾ ਬਣਾ ਰਹੇ ਹਾਂ—ਖੇਤ ਮਜ਼ਦੂਰ, ਕਿਰਾਏਦਾਰ, ਸੰਗਤਾਂ, ਅਤੇ ਯੂਨੀਅਨ ਮੈਂਬਰ—ਦੋਵੇਂ ਵੱਡੀਆਂ ਪਾਰਟੀਆਂ ਤੋਂ ਸੁਤੰਤਰ। ਅਸੀਂ ਕਾਗਜ਼ਾਂ, ਨਸਲ ਜਾਂ ਭਾਸ਼ਾ ਨਾਲ ਨਹੀਂ ਵੰਡੇ ਜਾਵਾਂਗੇ। ਅਸੀਂ ਜਿੱਥੇ ਰਹਿੰਦੇ ਅਤੇ ਕੰਮ ਕਰਦੇ ਹਾਂ ਉੱਥੇ ਸੰਗਠਿਤ ਕਰਾਂਗੇ ਜਦੋਂ ਤੱਕ ਕੋਈ ਮਾਲਕ ਕਿਸੇ ਕਾਮੇ ਨੂੰ ਚੁੱਪ ਕਰਾਉਣ ਦੀ ਧਮਕੀ ਨਹੀਂ ਦੇ ਸਕਦਾ ਅਤੇ ਕੋਈ ਪਰਿਵਾਰ ਇਕੱਲੇ ਇਨ੍ਹਾਂ ਸੰਕਟਾਂ ਦਾ ਸਾਹਮਣਾ ਨਹੀਂ ਕਰਦਾ।",
         "button_1": {
-          "text": "[PUNJABI] Read & Sign the United Front Letter",
-          "subtext": "[PUNJABI] Show that San Joaquin's working class stands with our immigrant neighbors."
+          "text": "ਸੰਯੁਕਤ ਮੋਰਚੇ ਦਾ ਪੱਤਰ ਪੜ੍ਹੋ ਅਤੇ ਦਸਤਖਤ ਕਰੋ",
+          "subtext": "ਦਿਖਾਓ ਕਿ ਸੈਨ ਜੋਆਕਿਨ ਦੀ ਮਜ਼ਦੂਰ ਜਮਾਤ ਸਾਡੇ ਪ੍ਰਵਾਸੀ ਗੁਆਂਢੀਆਂ ਦੇ ਨਾਲ ਖੜ੍ਹੀ ਹੈ।"
         },
         "button_2": {
-          "text": "[PUNJABI] Join Working Class Unity",
-          "subtext": "[PUNJABI] Become a member of a democratic, fighting organization."
+          "text": "Working Class Unity ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
+          "subtext": "ਇੱਕ ਲੋਕਤੰਤਰੀ, ਲੜਾਕੂ ਸੰਗਠਨ ਦੇ ਮੈਂਬਰ ਬਣੋ।"
         }
       }
     }
   },
   "request_support": {
-    "title": "[PUNJABI] Support for Your ICE Check-In or Appointment",
-    "intro": "[PUNJABI] You do not have to face this alone. If you have an upcoming ICE check-in or other high-risk appointment, you can securely share your information with us. We will do our best to support you.",
+    "title": "ਤੁਹਾਡੀ ICE ਚੈੱਕ-ਇਨ ਜਾਂ ਮੁਲਾਕਾਤ ਲਈ ਸਹਾਇਤਾ",
+    "intro": "ਤੁਹਾਨੂੰ ਇਸਦਾ ਇਕੱਲੇ ਸਾਹਮਣਾ ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ। ਜੇਕਰ ਤੁਹਾਡੀ ਆਉਣ ਵਾਲੀ ICE ਚੈੱਕ-ਇਨ ਜਾਂ ਕੋਈ ਹੋਰ ਉੱਚ-ਜੋਖਮ ਵਾਲੀ ਮੁਲਾਕਾਤ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਆਪਣੀ ਜਾਣਕਾਰੀ ਸਾਡੇ ਨਾਲ ਸਾਂਝੀ ਕਰ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਡੀ ਸਹਾਇਤਾ ਲਈ ਪੂਰੀ ਕੋਸ਼ਿਸ਼ ਕਰਾਂਗੇ।",
     "section1": {
-      "title": "[PUNJABI] How We Can Help",
-      "p1": "[PUNJABI] We are volunteers, not lawyers. We keep your information confidential and only share it with trusted members of our team who are directly involved in your support. We will never share your details with ICE, police, or your employer.",
-      "p2": "[PUNJABI] Based on your request and our volunteer availability, we can try to:",
+      "title": "ਅਸੀਂ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦੇ ਹਾਂ",
+      "p1": "ਅਸੀਂ ਵਲੰਟੀਅਰ ਹਾਂ, ਵਕੀਲ ਨਹੀਂ। ਅਸੀਂ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਨੂੰ ਗੁਪਤ ਰੱਖਦੇ ਹਾਂ ਅਤੇ ਇਸਨੂੰ ਸਿਰਫ਼ ਆਪਣੀ ਟੀਮ ਦੇ ਭਰੋਸੇਮੰਦ ਮੈਂਬਰਾਂ ਨਾਲ ਸਾਂਝਾ ਕਰਦੇ ਹਾਂ ਜੋ ਸਿੱਧੇ ਤੌਰ 'ਤੇ ਤੁਹਾਡੀ ਸਹਾਇਤਾ ਵਿੱਚ ਸ਼ਾਮਲ ਹਨ। ਅਸੀਂ ਤੁਹਾਡੇ ਵੇਰਵੇ ਕਦੇ ਵੀ ICE, ਪੁਲਿਸ ਜਾਂ ਤੁਹਾਡੇ ਰੁਜ਼ਗਾਰਦਾਤਾ ਨਾਲ ਸਾਂਝੇ ਨਹੀਂ ਕਰਾਂਗੇ।",
+      "p2": "ਤੁਹਾਡੀ ਬੇਨਤੀ ਅਤੇ ਸਾਡੇ ਵਲੰਟੀਅਰਾਂ ਦੀ ਉਪਲਬਧਤਾ ਦੇ ਆਧਾਰ 'ਤੇ, ਅਸੀਂ ਕੋਸ਼ਿਸ਼ ਕਰ ਸਕਦੇ ਹਾਂ:",
       "list": [
-        "[PUNJABI] Organize volunteers outside the building during your appointment time.",
-        "[PUNJABI] Call or text you before your appointment to check in.",
-        "[PUNJABI] Call or text you after your appointment to confirm you are safe.",
-        "[PUNJABI] Contact your emergency person and community hotlines if we believe you may have been detained."
+        "ਤੁਹਾਡੀ ਮੁਲਾਕਾਤ ਦੇ ਸਮੇਂ ਦੌਰਾਨ ਇਮਾਰਤ ਦੇ ਬਾਹਰ ਵਲੰਟੀਅਰਾਂ ਨੂੰ ਸੰਗਠਿਤ ਕਰਨਾ।",
+        "ਤੁਹਾਡੀ ਮੁਲਾਕਾਤ ਤੋਂ ਪਹਿਲਾਂ ਹਾਲ-ਚਾਲ ਪੁੱਛਣ ਲਈ ਤੁਹਾਨੂੰ ਕਾਲ ਜਾਂ ਟੈਕਸਟ ਕਰਨਾ।",
+        "ਤੁਹਾਡੀ ਮੁਲਾਕਾਤ ਤੋਂ ਬਾਅਦ ਇਹ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਕਾਲ ਜਾਂ ਟੈਕਸਟ ਕਰਨਾ ਕਿ ਤੁਸੀਂ ਸੁਰੱਖਿਅਤ ਹੋ।",
+        "ਜੇਕਰ ਸਾਨੂੰ ਲੱਗਦਾ ਹੈ ਕਿ ਤੁਹਾਨੂੰ ਹਿਰਾਸਤ ਵਿੱਚ ਲਿਆ ਗਿਆ ਹੋ ਸਕਦਾ ਹੈ ਤਾਂ ਤੁਹਾਡੇ ਐਮਰਜੈਂਸੀ ਸੰਪਰਕ ਅਤੇ ਭਾਈਚਾਰਕ ਹੌਟਲਾਈਨਾਂ ਨਾਲ ਸੰਪਰਕ ਕਰਨਾ।"
       ]
     },
     "form": {
-      "title": "[PUNJABI] Confidential Support Request",
-      "intro": "[PUNJABI] Please fill out the form below. The more information you provide, the better we can prepare to support you."
+      "title": "ਗੁਪਤ ਸਹਾਇਤਾ ਬੇਨਤੀ",
+      "intro": "ਕਿਰਪਾ ਕਰਕੇ ਹੇਠਾਂ ਦਿੱਤਾ ਫਾਰਮ ਭਰੋ। ਤੁਸੀਂ ਜਿੰਨੀ ਜ਼ਿਆਦਾ ਜਾਣਕਾਰੀ ਪ੍ਰਦਾਨ ਕਰੋਗੇ, ਅਸੀਂ ਤੁਹਾਡੀ ਸਹਾਇਤਾ ਲਈ ਓਨੀ ਹੀ ਬਿਹਤਰ ਤਿਆਰੀ ਕਰ ਸਕਾਂਗੇ।"
     },
     "next_steps": {
-      "title": "[PUNJABI] What Happens Next",
+      "title": "ਅੱਗੇ ਕੀ ਹੁੰਦਾ ਹੈ",
       "steps": [
-        "[PUNJABI] A trusted WCU coordinator will review your request.",
-        "[PUNJABI] We will contact you via your safe phone number to confirm we received your information and let you know what support we can realistically provide.",
-        "[PUNJABI] We prioritize higher-risk cases and will always be honest about our volunteer capacity. We cannot guarantee someone will be present in person, but we will always do our best."
+        "ਇੱਕ ਭਰੋਸੇਮੰਦ WCU ਕੋਆਰਡੀਨੇਟਰ ਤੁਹਾਡੀ ਬੇਨਤੀ ਦੀ ਸਮੀਖਿਆ ਕਰੇਗਾ।",
+        "ਅਸੀਂ ਇਹ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਸੁਰੱਖਿਅਤ ਫ਼ੋਨ ਨੰਬਰ ਰਾਹੀਂ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰਾਂਗੇ ਕਿ ਸਾਨੂੰ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਹੋਈ ਹੈ ਅਤੇ ਤੁਹਾਨੂੰ ਦੱਸਾਂਗੇ ਕਿ ਅਸੀਂ ਅਸਲ ਵਿੱਚ ਕੀ ਸਹਾਇਤਾ ਪ੍ਰਦਾਨ ਕਰ ਸਕਦੇ ਹਾਂ।",
+        "ਅਸੀਂ ਉੱਚ-ਜੋਖਮ ਵਾਲੇ ਮਾਮਲਿਆਂ ਨੂੰ ਪਹਿਲ ਦਿੰਦੇ ਹਾਂ ਅਤੇ ਸਾਡੀ ਵਲੰਟੀਅਰ ਸਮਰੱਥਾ ਬਾਰੇ ਹਮੇਸ਼ਾ ਇਮਾਨਦਾਰ ਰਹਾਂਗੇ। ਅਸੀਂ ਇਹ ਗਰੰਟੀ ਨਹੀਂ ਦੇ ਸਕਦੇ ਕਿ ਕੋਈ ਵਿਅਕਤੀਗਤ ਤੌਰ 'ਤੇ ਮੌਜੂਦ ਹੋਵੇਗਾ, ਪਰ ਅਸੀਂ ਹਮੇਸ਼ਾ ਆਪਣੀ ਪੂਰੀ ਕੋਸ਼ਿਸ਼ ਕਰਾਂਗੇ।"
       ]
     },
     "emergency": {
-      "text": "[PUNJABI] If someone has already been detained or is being detained right now, do not use this form. Go to our {link} or call the VWN hotline immediately at {phone}.",
-      "link_text": "[PUNJABI] Detention Guide",
+      "text": "ਜੇਕਰ ਕਿਸੇ ਨੂੰ ਪਹਿਲਾਂ ਹੀ ਹਿਰਾਸਤ ਵਿੱਚ ਲਿਆ ਗਿਆ ਹੈ ਜਾਂ ਇਸ ਸਮੇਂ ਹਿਰਾਸਤ ਵਿੱਚ ਲਿਆ ਜਾ ਰਿਹਾ ਹੈ, ਤਾਂ ਇਸ ਫਾਰਮ ਦੀ ਵਰਤੋਂ ਨਾ ਕਰੋ। ਸਾਡੀ {link} 'ਤੇ ਜਾਓ ਜਾਂ ਤੁਰੰਤ VWN ਹੌਟਲਾਈਨ ਨੂੰ {phone} 'ਤੇ ਕਾਲ ਕਰੋ।",
+      "link_text": "ਹਿਰਾਸਤ ਗਾਈਡ",
       "phone": "(559) 206-0151"
     }
+  },
+  "common": {
+    "close": "ਬੰਦ ਕਰੋ",
+    "skip_to_main": "ਮੁੱਖ ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ",
+    "critical": "ਨਾਜ਼ੁਕ",
+    "required": "ਲੋੜੀਂਦਾ",
+    "important": "ਮਹੱਤਵਪੂਰਨ",
+    "step_label": "ਕਦਮ {number} / {total}",
+    "step_format": "ਕਦਮ {number}",
+    "do_label": "ਕਰੋ",
+    "do_not_label": "ਨਾ ਕਰੋ",
+    "say_this": "ਇਹ ਕਹੋ",
+    "remember": "ਯਾਦ ਰੱਖੋ",
+    "item_label": "ਆਈਟਮ {number}",
+    "opens_in_new_tab": "(opens in new tab)"
   },
   "logo_alt": "WCU ਲੋਗੋ",
   "about_page": {
     "title": "They Have Their Parties. We Need Our Own Organization",
     "p1": "The bosses and landlords have two political parties. The working class needs a fighting organization of its own.",
     "p2": "Across San Joaquin, rents rise while our wages stall. Bosses demand more while giving less. Both the Democratic and Republican parties answer to their donors, not to us.",
-    "p3": "Our political and economic system is not broken; it is working exactly as designed to protect the profits of the wealthy by keeping the rest of us divided and powerless. It makes us too poor to live in and own the homes we’ve built, too poor to eat the food we’ve grown and served, too poor to benefit from the fruits of our labor.",
+    "p3": "Our political and economic system is not broken; it is working exactly as designed to protect the profits of the wealthy by keeping the rest of us divided and powerless. It makes us too poor to live in and own the homes we've built, too poor to eat the food we've grown and served, too poor to benefit from the fruits of our labor.",
     "p4": "We refuse to accept this. We are organizing a mass working-class movement to build the genuine democracy we deserve – one where working people have real control over our lives, our communities, and our economy. We are not a political party. We organize collectively through mass membership. We do not have to continue relying on politicians, lobbying them, and hoping that they side with us over their donors.",
     "p5": "Working Class Unity is just as the name suggests, an organization fighting to unite the working class, to give individuals in San Joaquin control over their lives. We demand truly affordable and safe housing, workplace autonomy, protection of our communities from police oppression, and accountability from our elected officials. Our mission is to strengthen working class power by forging alliances between labor and tenant unions and social movements through education, advocacy, and direct action.",
-    "p6": "We fight for our families. For the future prosperity of our children. Whatever your race, your creed, your birthplace - don’t stand by and let the wealthy tear down this country that each one of us has helped build.",
+    "p6": "We fight for our families. For the future prosperity of our children. Whatever your race, your creed, your birthplace - don't stand by and let the wealthy tear down this country that each one of us has helped build.",
     "p7": "Together, we can build a member-run movement in San Joaquin County that wins concrete victories, without the compromises and betrayals of politicians and their wealthy donors.",
     "cta_button": "Join us"
+  },
+  "home_page": {
+    "hero": {
+      "title": "They Have Their Parties. We Need Our Own Organization.",
+      "description": "The bosses and landlords have two political parties. The working class needs a fighting organization of its own. Join us to build a member-run movement in San Joaquin County that wins concrete victories, without the compromises and betrayals of politicians and their wealthy donors.",
+      "join_button": "Join WCU",
+      "events_button": "See Upcoming Events"
+    },
+    "events": {
+      "heading": "Upcoming Events",
+      "view_all": "View All Events"
+    },
+    "problem": {
+      "label": "The Problem",
+      "title": "The Dictatorship of the Wealthy",
+      "p1": "Across San Joaquin, rents rise while our wages stall. Bosses demand more while giving less. Both the Democratic and Republican parties answer to their donors, not to us.",
+      "p2": "Our political and economic system is not broken; it is working exactly as designed to protect the profits of the wealthy by keeping the rest of us divided and powerless.",
+      "p3": "We refuse to accept this. We are organizing a mass working-class movement to build the genuine democracy we deserve – one where working people have real control over our lives, our communities, and our economy."
+    }
   },
   "join": {
     "hero": {
@@ -221,38 +255,51 @@
     }
   },
   "check_in_coverage": {
-    "page_title": "ICE Check-In Coverage",
+    "page_title": "ICE ਚੈੱਕ-ਇਨ ਕਵਰੇਜ",
     "hero": {
-      "title": "We will not abandon our neighbors.",
-      "subtitle": "Independent Check-In Monitoring & Accompaniment",
-      "description": "The system relies on people being alone. We rely on solidarity. We need people at the local ICE facility to ensure no one disappears in silence.",
-      "schedule_button": "Schedule a Shift",
-      "appointment_button": "I have an appointment",
-      "appointment_help_text": "Click here if you need someone to watch out for you."
+      "title": "ਅਸੀਂ ਆਪਣੇ ਗੁਆਂਢੀਆਂ ਨੂੰ ਨਹੀਂ ਛੱਡਾਂਗੇ।",
+      "subtitle": "ਸੁਤੰਤਰ ਚੈੱਕ-ਇਨ ਨਿਗਰਾਨੀ ਅਤੇ ਸਾਥ",
+      "description": "ਸਿਸਟਮ ਲੋਕਾਂ ਦੇ ਇਕੱਲੇ ਹੋਣ 'ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ। ਅਸੀਂ ਏਕਤਾ 'ਤੇ ਨਿਰਭਰ ਕਰਦੇ ਹਾਂ। ਸਾਨੂੰ ਸਥਾਨਕ ICE ਸਹੂਲਤ 'ਤੇ ਲੋਕਾਂ ਦੀ ਲੋੜ ਹੈ ਤਾਂ ਜੋ ਕੋਈ ਵੀ ਚੁੱਪਚਾਪ ਗਾਇਬ ਨਾ ਹੋਵੇ।",
+      "schedule_button": "ਸ਼ਿਫਟ ਬੁੱਕ ਕਰੋ",
+      "appointment_button": "ਮੇਰੀ ਮੁਲਾਕਾਤ ਹੈ",
+      "appointment_help_text": "ਜੇ ਤੁਹਾਨੂੰ ਕਿਸੇ ਦੀ ਲੋੜ ਹੈ ਜੋ ਤੁਹਾਡੇ ਲਈ ਧਿਆਨ ਰੱਖੇ ਤਾਂ ਇੱਥੇ ਕਲਿੱਕ ਕਰੋ।"
     },
     "orientation": {
-      "heading": "Onboarding Video",
-      "caption": "Watch: How we monitor, how we log, and how we stay safe.",
-      "coming_soon_button": "ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ"
+      "heading": "ਓਰੀਐਂਟੇਸ਼ਨ ਵੀਡੀਓ",
+      "caption": "ਦੇਖੋ: ਅਸੀਂ ਕਿਵੇਂ ਨਿਗਰਾਨੀ ਕਰਦੇ ਹਾਂ, ਕਿਵੇਂ ਰਿਕਾਰਡ ਕਰਦੇ ਹਾਂ, ਅਤੇ ਕਿਵੇਂ ਸੁਰੱਖਿਅਤ ਰਹਿੰਦੇ ਹਾਂ।",
+      "duration": "5 ਮਿੰਟ • ਸੁਰੱਖਿਆ ਅਤੇ ਲੌਗਿੰਗ ਪ੍ਰੋਟੋਕੋਲ",
+      "watch_button": "ਦੇਖੋ",
+      "coming_soon_button": "ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ",
+      "video_placeholder": "ਵੀਡੀਓ ਪਲੇਅਰ",
+      "completed_label": "ਪੂਰਾ ਹੋਇਆ",
+      "modal_label": "ਓਰੀਐਂਟੇਸ਼ਨ ਵੀਡੀਓ"
     },
     "schedule": {
-      "heading": "Claim Your Shift",
-      "intro": "We need disciplined, reliable observers.",
-      "arrival": "Arrival: You must arrive 15 minutes early to to get a clipboard and get a briefing from the previous volunteer.",
-      "role": "Role: You are an observer. You log arrivals/departures and provide resources.",
-      "calendar_refresh_note": "ਜੇਕਰ ਤੁਸੀਂ ਹੇਠਾਂ ਕੈਲੰਡਰ ਨਹੀਂ ਦੇਖਦੇ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਪੰਨੇ ਨੂੰ ਰਿਫ੍ਰੈਸ਼ ਕਰੋ।"
+      "heading": "ਆਪਣੀ ਸ਼ਿਫਟ ਲਓ",
+      "intro": "ਸਾਨੂੰ ਅਨੁਸ਼ਾਸਿਤ, ਭਰੋਸੇਯੋਗ ਨਿਗਰਾਨੀਕਰਤਾਵਾਂ ਦੀ ਲੋੜ ਹੈ।",
+      "arrival": "ਤੁਹਾਨੂੰ ਕਲਿੱਪਬੋਰਡ ਲੈਣ ਅਤੇ ਪਿਛਲੇ ਵਲੰਟੀਅਰ ਤੋਂ ਜਾਣਕਾਰੀ ਲੈਣ ਲਈ 15 ਮਿੰਟ ਪਹਿਲਾਂ ਪਹੁੰਚਣਾ ਚਾਹੀਦਾ ਹੈ।",
+      "role": "ਤੁਸੀਂ ਇੱਕ ਨਿਗਰਾਨੀਕਰਤਾ ਹੋ। ਤੁਸੀਂ ਆਮਦ/ਰਵਾਨਗੀ ਦਰਜ ਕਰਦੇ ਹੋ ਅਤੇ ਸਰੋਤ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹੋ।",
+      "calendar_refresh_note": "ਜੇਕਰ ਤੁਸੀਂ ਹੇਠਾਂ ਕੈਲੰਡਰ ਨਹੀਂ ਦੇਖਦੇ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਪੰਨੇ ਨੂੰ ਰਿਫ੍ਰੈਸ਼ ਕਰੋ।",
+      "arrival_label": "ਆਮਦ ਦਾ ਸਮਾਂ",
+      "role_label": "ਤੁਹਾਡੀ ਭੂਮਿਕਾ",
+      "calendar_label": "ਸਮਾਂ-ਸਾਰਣੀ ਕੈਲੰਡਰ"
     },
     "resources": {
       "heading": "ਸ਼ਿਫਟ ਸਮੱਗਰੀ",
       "notice": {
+        "title": "ਮਹੱਤਵਪੂਰਨ ਸੂਚਨਾ",
         "text": "ਐਮਰਜੈਂਸੀ ਹਿਰਾਸਤ ਦੀਆਂ ਰਣਨੀਤੀਆਂ ਬਦਲਦੀਆਂ ਰਹਿੰਦੀਆਂ ਹਨ। ਹਰ ਸ਼ਿਫਟ ਤੋਂ ਪਹਿਲਾਂ, ਇਹ ਦੇਖਣ ਲਈ ਇਸ ਪੰਨੇ ਨੂੰ ਖੋਲ੍ਹੋ ਕਿ ਜੇ ਕਿਸੇ ਨੂੰ ਹਿਰਾਸਤ ਵਿੱਚ ਲਿਆ ਜਾਂਦਾ ਹੈ ਤਾਂ ਕੀ ਕਰਨਾ ਹੈ।",
         "button": "ਹਿਰਾਸਤ ਪ੍ਰੋਟੋਕੋਲ ਦੇਖੋ"
       },
+      "download_pdf": "PDF ਡਾਊਨਲੋਡ ਕਰੋ",
+      "view_page": "ਪੰਨਾ ਦੇਖੋ",
+      "pdf": "PDF",
       "downloads": {
         "check_in_sheet": "ਚੈਕ-ਇਨ ਸ਼ੀਟ",
         "tracker_log": "ਟ੍ਰੈਕਰ ਲੌਗ",
         "quick_guide": "ਵਲੰਟੀਅਰ ਕਵਿੱਕ ਗਾਈਡ",
         "if_detained": "\"ਜੇ ਹਿਰਾਸਤ ਵਿੱਚ ਲਿਆ ਜਾਵੇ\" ਪੈਕੇਟ",
+        "if_detained_title_override": "ਜੇਕਰ ਹਿਰਾਸਤ ਵਿੱਚ ਲਿਆ ਗਿਆ: ਐਮਰਜੈਂਸੀ ਸਰੋਤ ਗਾਈਡ",
         "kyr_flyers": "KYR ਫਲਾਇਰ (ਅੰਗਰੇਜ਼ੀ/ਸਪੈਨਿਸ਼)",
         "button": "PDF ਡਾਊਨਲੋਡ ਕਰੋ"
       },
@@ -264,17 +311,27 @@
       }
     },
     "end_of_shift": {
-      "heading": "AFTER YOUR SHIFT",
-      "copy": "Your shift isn't over until the data is safe.",
+      "heading": "ਤੁਹਾਡੀ ਸ਼ਿਫਟ ਤੋਂ ਬਾਅਦ",
+      "checklist_label": "ਸ਼ਿਫਟ ਦੀ ਸਮਾਪਤੀ ਚੈਕਲਿਸਟ",
+      "copy": "ਤੁਹਾਡੀ ਸ਼ਿਫਟ ਉਦੋਂ ਤੱਕ ਖਤਮ ਨਹੀਂ ਹੁੰਦੀ ਜਦੋਂ ਤੱਕ ਡੇਟਾ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੁੰਦਾ।",
       "debrief": {
-        "title": "1. The Debrief",
-        "description": "Tell us how it went. How many safe check-ins? Did you see ICE agents? How did you feel? You'll receive a link via email/SMS."
+        "title": "1. ਰਿਪੋਰਟ",
+        "description": "ਸਾਨੂੰ ਦੱਸੋ ਕਿਵੇਂ ਰਿਹਾ। ਕਿੰਨੀਆਂ ਸੁਰੱਖਿਅਤ ਚੈੱਕ-ਇਨ? ਕੀ ਤੁਸੀਂ ICE ਏਜੰਟ ਦੇਖੇ? ਤੁਹਾਨੂੰ ਕਿਵੇਂ ਲੱਗਾ? ਤੁਹਾਨੂੰ ਈਮੇਲ/SMS ਰਾਹੀਂ ਲਿੰਕ ਮਿਲੇਗਾ।",
+        "open_form": "ਫਾਰਮ ਖੋਲ੍ਹੋ →"
       },
       "logs": {
-        "title": "2. The Logs (Security Protocol)",
-        "do_not_photo": "DO NOT photograph the logs.",
-        "do_not_text": "DO NOT text the logs.",
-        "drop_off": "DROP OFF the physical sheets at the WCU Office Mail Slot:"
+        "title": "2. ਲੌਗ (ਸੁਰੱਖਿਆ ਪ੍ਰੋਟੋਕੋਲ)",
+        "do_not_photo": "ਲੌਗਾਂ ਦੀਆਂ ਫੋਟੋਆਂ ਨਾ ਲਓ।",
+        "do_not_text": "ਲੌਗ ਮੈਸੇਜ ਨਾ ਕਰੋ।",
+        "drop_off": "ਭੌਤਿਕ ਸ਼ੀਟਾਂ WCU ਦਫ਼ਤਰ ਦੇ ਮੇਲ ਸਲਾਟ 'ਤੇ ਛੱਡੋ:",
+        "description": "ਸਾਰੀ ਦਸਤਾਵੇਜ਼ੀ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਸੰਭਾਲੋ।",
+        "warning": "ਚੇਤਾਵਨੀ: ਭੌਤਿਕ ਲੌਗਾਂ ਨੂੰ ਡਿਜੀਟਲ ਨਾ ਕਰੋ"
+      },
+      "handover": {
+        "title": "WCU ਮੇਲ ਸਲਾਟ 'ਤੇ ਛੱਡੋ",
+        "description": "ਮੁਕੰਮਲ ਹੋਏ ਲੌਗ ਡਿਲੀਵਰ ਕਰੋ",
+        "flyer_note": "ਦਰਵਾਜ਼ੇ 'ਤੇ WCU ਫਲਾਇਰ ਲੱਭੋ।",
+        "directions": "ਨਿਰਦੇਸ਼ ਪ੍ਰਾਪਤ ਕਰੋ"
       }
     },
     "contact": {
@@ -285,155 +342,159 @@
     }
   },
   "kyr_ice_at_work": {
+    "timeline_label": "ਜੇ ICE ਤੁਹਾਡੇ ਕੰਮ ਵਾਲੀ ਥਾਂ 'ਤੇ ਆਵੇ ਤਾਂ ਕਦਮ",
     "where_ice_can_go": {
-      "title": "[PUNJABI] Where ICE can go",
+      "title": "ICE ਕਿੱਥੇ ਜਾ ਸਕਦਾ ਹੈ",
       "public_areas": {
-        "title": "[PUNJABI] Public areas (no permission needed):",
-        "description": "[PUNJABI] Lobbies, dining rooms, and retail spaces. Entry alone does not grant authority to stop, question, or arrest anyone."
+        "title": "ਜਨਤਕ ਖੇਤਰ (ਇਜਾਜ਼ਤ ਦੀ ਲੋੜ ਨਹੀਂ):",
+        "description": "ਲਾਬੀਆਂ, ਡਾਇਨਿੰਗ ਰੂਮ, ਅਤੇ ਰਿਟੇਲ ਸਪੇਸ। ਸਿਰਫ਼ ਦਾਖਲ ਹੋਣ ਨਾਲ ਕਿਸੇ ਨੂੰ ਰੋਕਣ, ਸਵਾਲ ਕਰਨ ਜਾਂ ਗ੍ਰਿਫਤਾਰ ਕਰਨ ਦਾ ਅਧਿਕਾਰ ਨਹੀਂ ਮਿਲਦਾ।"
       },
       "private_areas": {
-        "title": "[PUNJABI] Private areas (permission required):",
-        "description": "[PUNJABI] ICE needs a judicial warrant signed by a judge—not a DHS order. If an employee or employer consents, ICE can enter without a warrant."
-      }
+        "title": "ਨਿੱਜੀ ਖੇਤਰ (ਇਜਾਜ਼ਤ ਲੋੜੀਂਦੀ):",
+        "description": "ICE ਨੂੰ ਜੱਜ ਦੁਆਰਾ ਦਸਤਖਤ ਕੀਤੀ ਅਦਾਲਤੀ ਵਾਰੰਟ ਦੀ ਲੋੜ ਹੈ—DHS ਆਰਡਰ ਨਹੀਂ। ਜੇ ਕੋਈ ਕਰਮਚਾਰੀ ਜਾਂ ਮਾਲਕ ਸਹਿਮਤੀ ਦਿੰਦਾ ਹੈ, ਤਾਂ ICE ਬਿਨਾਂ ਵਾਰੰਟ ਦੇ ਦਾਖਲ ਹੋ ਸਕਦਾ ਹੈ।"
+      },
+      "public_areas_examples": "ਲਾਬੀਆਂ, ਪਾਰਕਿੰਗ, ਗਾਹਕ ਖੇਤਰ",
+      "private_areas_examples": "ਦਫ਼ਤਰ, ਗੋਦਾਮ, ਸਿਰਫ਼-ਕਰਮਚਾਰੀ ਖੇਤਰ",
+      "warrant_note": "ICE ਨੂੰ ਸਹਿਮਤੀ ਤੋਂ ਬਿਨਾਂ ਨਿੱਜੀ/ਗੈਰ-ਜਨਤਕ ਖੇਤਰਾਂ ਵਿੱਚ ਦਾਖਲ ਹੋਣ ਲਈ ਜੱਜ ਦੁਆਰਾ ਦਸਤਖਤ ਕੀਤੀ ਵਾਰੰਟ ਦੀ ਲੋੜ ਹੈ।"
     },
     "rights_at_work": {
-      "title": "[PUNJABI] Your rights at work",
-      "intro": "[PUNJABI] All workers can:",
+      "title": "ਕੰਮ 'ਤੇ ਤੁਹਾਡੇ ਅਧਿਕਾਰ",
+      "intro": "ਸਾਰੇ ਕਾਮੇ ਕਰ ਸਕਦੇ ਹਨ:",
       "list": [
-        "[PUNJABI] Remain silent.",
-        "[PUNJABI] Refuse searches.",
-        "[PUNJABI] Refuse to show documentation or ID.",
-        "[PUNJABI] Stand together in the center of the room. Refuse to separate by immigration status. ICE uses this tactic to isolate individuals—protect each other."
+        "ਚੁੱਪ ਰਹਿਣਾ।",
+        "ਤਲਾਸ਼ੀ ਤੋਂ ਇਨਕਾਰ ਕਰਨਾ।",
+        "ਦਸਤਾਵੇਜ਼ ਜਾਂ ID ਦਿਖਾਉਣ ਤੋਂ ਇਨਕਾਰ ਕਰਨਾ।",
+        "ਕਮਰੇ ਦੇ ਵਿਚਕਾਰ ਇਕੱਠੇ ਖੜ੍ਹੇ ਹੋਵੋ। ਇਮੀਗ੍ਰੇਸ਼ਨ ਸਥਿਤੀ ਦੁਆਰਾ ਵੱਖ ਹੋਣ ਤੋਂ ਇਨਕਾਰ ਕਰੋ। ICE ਵਿਅਕਤੀਆਂ ਨੂੰ ਅਲੱਗ ਕਰਨ ਲਈ ਇਹ ਚਾਲ ਵਰਤਦਾ ਹੈ—ਇੱਕ ਦੂਜੇ ਦੀ ਰੱਖਿਆ ਕਰੋ।"
       ]
     },
     "hero": {
-      "subtitle": "[PUNJABI] Caution",
-      "description": "[PUNJABI] Understand your rights when ICE appears at your workplace. Know where they can and cannot go."
+      "subtitle": "ਸਾਵਧਾਨ",
+      "description": "ਜਦੋਂ ICE ਤੁਹਾਡੇ ਕੰਮ ਵਾਲੀ ਥਾਂ 'ਤੇ ਆਵੇ ਤਾਂ ਆਪਣੇ ਅਧਿਕਾਰ ਸਮਝੋ। ਜਾਣੋ ਕਿ ਉਹ ਕਿੱਥੇ ਜਾ ਸਕਦੇ ਹਨ ਅਤੇ ਕਿੱਥੇ ਨਹੀਂ।"
     },
     "approaches": {
-      "title": "[PUNJABI] If ICE Approaches You",
-      "critical": "[PUNJABI] Critical",
+      "title": "ਜੇ ICE ਤੁਹਾਡੇ ਕੋਲ ਆਵੇ",
+      "critical": "ਨਾਜ਼ੁਕ",
       "do_not_list": [
-        "[PUNJABI] Run, resist, or lie about your identity",
-        "[PUNJABI] Sign any documents without an attorney"
+        "ਭੱਜੋ, ਵਿਰੋਧ ਕਰੋ, ਜਾਂ ਆਪਣੀ ਪਛਾਣ ਬਾਰੇ ਝੂਠ ਬੋਲੋ",
+        "ਵਕੀਲ ਤੋਂ ਬਿਨਾਂ ਕੋਈ ਵੀ ਦਸਤਾਵੇਜ਼ 'ਤੇ ਦਸਤਖਤ ਕਰੋ"
       ],
       "do_list": [
-        "[PUNJABI] Stay calm and remember your rights",
-        "[PUNJABI] Ask if you are free to leave"
+        "ਸ਼ਾਂਤ ਰਹੋ ਅਤੇ ਆਪਣੇ ਅਧਿਕਾਰ ਯਾਦ ਰੱਖੋ",
+        "ਪੁੱਛੋ ਕਿ ਕੀ ਤੁਸੀਂ ਜਾਣ ਲਈ ਆਜ਼ਾਦ ਹੋ"
       ],
-      "say_this_title": "[PUNJABI] Say This",
-      "say_this_text": "[PUNJABI] \"I wish to remain silent. I do not consent to a search. Am I free to go?\""
+      "say_this_title": "ਇਹ ਕਹੋ",
+      "say_this_text": "\"ਮੈਂ ਚੁੱਪ ਰਹਿਣਾ ਚਾਹੁੰਦਾ ਹਾਂ। ਮੈਂ ਤਲਾਸ਼ੀ ਲਈ ਸਹਿਮਤੀ ਨਹੀਂ ਦਿੰਦਾ। ਕੀ ਮੈਂ ਜਾਣ ਲਈ ਆਜ਼ਾਦ ਹਾਂ?\""
     },
     "employer": {
-      "title": "[PUNJABI] Employer Responsibilities",
-      "intro": "[PUNJABI] Your employer has rights and responsibilities during an ICE visit:",
+      "title": "ਮਾਲਕ ਦੀਆਂ ਜ਼ਿੰਮੇਵਾਰੀਆਂ",
+      "intro": "ICE ਦੀ ਮੁਲਾਕਾਤ ਦੌਰਾਨ ਤੁਹਾਡੇ ਮਾਲਕ ਦੇ ਅਧਿਕਾਰ ਅਤੇ ਜ਼ਿੰਮੇਵਾਰੀਆਂ ਹਨ:",
       "cards": {
         "warrant": {
-          "title": "[PUNJABI] Ask for Warrant",
-          "desc": "[PUNJABI] Can request to see a valid judicial warrant"
+          "title": "ਵਾਰੰਟ ਮੰਗੋ",
+          "desc": "ਵੈਧ ਅਦਾਲਤੀ ਵਾਰੰਟ ਦੇਖਣ ਦੀ ਬੇਨਤੀ ਕਰ ਸਕਦਾ ਹੈ"
         },
         "deny": {
-          "title": "[PUNJABI] Deny Access",
-          "desc": "[PUNJABI] Can refuse entry to non-public areas without warrant"
+          "title": "ਦਾਖਲੇ ਤੋਂ ਇਨਕਾਰ",
+          "desc": "ਬਿਨਾਂ ਵਾਰੰਟ ਦੇ ਗੈਰ-ਜਨਤਕ ਖੇਤਰਾਂ ਵਿੱਚ ਦਾਖਲੇ ਤੋਂ ਇਨਕਾਰ ਕਰ ਸਕਦਾ ਹੈ"
         },
         "attorney": {
-          "title": "[PUNJABI] Call Attorney",
-          "desc": "[PUNJABI] Can contact company lawyer before cooperating"
+          "title": "ਵਕੀਲ ਨੂੰ ਕਾਲ ਕਰੋ",
+          "desc": "ਸਹਿਯੋਗ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕੰਪਨੀ ਦੇ ਵਕੀਲ ਨਾਲ ਸੰਪਰਕ ਕਰ ਸਕਦਾ ਹੈ"
         },
         "notify": {
-          "title": "[PUNJABI] Notify Workers",
-          "desc": "[PUNJABI] Can inform employees of their rights"
+          "title": "ਕਾਮਿਆਂ ਨੂੰ ਸੂਚਿਤ ਕਰੋ",
+          "desc": "ਕਰਮਚਾਰੀਆਂ ਨੂੰ ਉਨ੍ਹਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਬਾਰੇ ਦੱਸ ਸਕਦਾ ਹੈ"
         }
       }
     }
   },
   "kyr_documents_to_keep": {
     "header": {
-      "title": "[PUNJABI] Documents to Keep",
-      "description": "[PUNJABI] Know which documents to carry, when to show them, and how to protect your rights based on your immigration status."
+      "title": "ਆਪਣੇ ਕੋਲ ਰੱਖਣ ਵਾਲੇ ਦਸਤਾਵੇਜ਼",
+      "description": "ਜਾਣੋ ਕਿ ਕਿਹੜੇ ਦਸਤਾਵੇਜ਼ ਲੈ ਕੇ ਚੱਲਣੇ ਹਨ, ਕਦੋਂ ਦਿਖਾਉਣੇ ਹਨ, ਅਤੇ ਆਪਣੀ ਇਮੀਗ੍ਰੇਸ਼ਨ ਸਥਿਤੀ ਦੇ ਆਧਾਰ 'ਤੇ ਆਪਣੇ ਅਧਿਕਾਰਾਂ ਦੀ ਰੱਖਿਆ ਕਿਵੇਂ ਕਰਨੀ ਹੈ।"
     },
     "safety": {
-      "title": "[PUNJABI] Document Safety",
+      "title": "ਦਸਤਾਵੇਜ਼ ਸੁਰੱਖਿਆ",
       "list": [
-        "[PUNJABI] Make copies of everything. Store originals with trusted family or friends.",
-        "[PUNJABI] Never show foreign documents (passports, birth certificates) that reveal birthplace outside the U.S. These can trigger deportation."
+        "ਹਰ ਚੀਜ਼ ਦੀਆਂ ਕਾਪੀਆਂ ਬਣਾਓ। ਅਸਲ ਦਸਤਾਵੇਜ਼ ਭਰੋਸੇਮੰਦ ਪਰਿਵਾਰ ਜਾਂ ਦੋਸਤਾਂ ਕੋਲ ਰੱਖੋ।",
+        "ਕਦੇ ਵੀ ਵਿਦੇਸ਼ੀ ਦਸਤਾਵੇਜ਼ (ਪਾਸਪੋਰਟ, ਜਨਮ ਸਰਟੀਫਿਕੇਟ) ਨਾ ਦਿਖਾਓ ਜੋ ਅਮਰੀਕਾ ਤੋਂ ਬਾਹਰ ਜਨਮ ਸਥਾਨ ਪ੍ਰਗਟ ਕਰਦੇ ਹਨ। ਇਹ ਡਿਪੋਰਟੇਸ਼ਨ ਦਾ ਕਾਰਨ ਬਣ ਸਕਦੇ ਹਨ।"
       ]
     },
     "legal_status": {
-      "title": "[PUNJABI] If You Have Legal Status",
-      "badge": "[PUNJABI] Legal",
-      "includes_label": "[PUNJABI] Includes",
-      "includes_text": "[PUNJABI] Green card, asylum, refugee status, valid student visa, or TPS.",
-      "carry_label": "[PUNJABI] Carry",
+      "title": "ਜੇ ਤੁਹਾਡੇ ਕੋਲ ਕਾਨੂੰਨੀ ਸਥਿਤੀ ਹੈ",
+      "badge": "ਕਾਨੂੰਨੀ",
+      "includes_label": "ਸ਼ਾਮਲ ਹਨ",
+      "includes_text": "ਗ੍ਰੀਨ ਕਾਰਡ, ਸ਼ਰਣ, ਸ਼ਰਨਾਰਥੀ ਸਥਿਤੀ, ਵੈਧ ਵਿਦਿਆਰਥੀ ਵੀਜ਼ਾ, ਜਾਂ TPS।",
+      "carry_label": "ਲੈ ਕੇ ਚੱਲੋ",
       "carry_list": [
-        "[PUNJABI] Your lawful resident card or immigration papers"
+        "ਤੁਹਾਡਾ ਕਾਨੂੰਨੀ ਰਿਹਾਇਸ਼ੀ ਕਾਰਡ ਜਾਂ ਇਮੀਗ੍ਰੇਸ਼ਨ ਕਾਗਜ਼ਾਤ"
       ],
-      "show_label": "[PUNJABI] Show",
+      "show_label": "ਦਿਖਾਓ",
       "show_list": [
-        "[PUNJABI] Present these documents if law enforcement requests them"
+        "ਜੇ ਕਾਨੂੰਨ ਲਾਗੂ ਕਰਨ ਵਾਲੇ ਮੰਗਣ ਤਾਂ ਇਹ ਦਸਤਾਵੇਜ਼ ਪੇਸ਼ ਕਰੋ"
       ]
     },
     "pending_status": {
-      "title": "[PUNJABI] If You Have Pending Status",
-      "badge": "[PUNJABI] Pending",
-      "includes_label": "[PUNJABI] Includes",
-      "includes_text": "[PUNJABI] Pending asylum application, open immigration court case, or immigration appeal.",
-      "carry_label": "[PUNJABI] Carry",
+      "title": "ਜੇ ਤੁਹਾਡੀ ਸਥਿਤੀ ਬਕਾਇਆ ਹੈ",
+      "badge": "ਬਕਾਇਆ",
+      "includes_label": "ਸ਼ਾਮਲ ਹਨ",
+      "includes_text": "ਬਕਾਇਆ ਸ਼ਰਣ ਅਰਜ਼ੀ, ਖੁੱਲ੍ਹਾ ਇਮੀਗ੍ਰੇਸ਼ਨ ਅਦਾਲਤ ਕੇਸ, ਜਾਂ ਇਮੀਗ੍ਰੇਸ਼ਨ ਅਪੀਲ।",
+      "carry_label": "ਲੈ ਕੇ ਚੱਲੋ",
       "carry_list": [
-        "[PUNJABI] Copies of papers proving you applied for status or filed an appeal"
+        "ਕਾਗਜ਼ਾਤ ਦੀਆਂ ਕਾਪੀਆਂ ਜੋ ਸਾਬਤ ਕਰਦੀਆਂ ਹਨ ਕਿ ਤੁਸੀਂ ਸਥਿਤੀ ਲਈ ਅਰਜ਼ੀ ਦਿੱਤੀ ਹੈ ਜਾਂ ਅਪੀਲ ਦਾਇਰ ਕੀਤੀ ਹੈ"
       ],
-      "show_label": "[PUNJABI] Show",
+      "show_label": "ਦਿਖਾਓ",
       "show_list": [
-        "[PUNJABI] Present these documents only if arrested"
+        "ਇਹ ਦਸਤਾਵੇਜ਼ ਸਿਰਫ਼ ਗ੍ਰਿਫਤਾਰ ਹੋਣ 'ਤੇ ਪੇਸ਼ ਕਰੋ"
       ],
-      "otherwise_label": "[PUNJABI] Otherwise",
+      "otherwise_label": "ਨਹੀਂ ਤਾਂ",
       "otherwise_list": [
-        "[PUNJABI] Remain silent"
+        "ਚੁੱਪ ਰਹੋ"
       ]
     },
     "undocumented": {
-      "title": "[PUNJABI] If Undocumented or Expired",
-      "badge": "[PUNJABI] Critical",
-      "carry_label": "[PUNJABI] Carry proof of U.S. residence for 2+ years",
+      "title": "ਜੇ ਬਿਨਾਂ ਦਸਤਾਵੇਜ਼ਾਂ ਦੇ ਜਾਂ ਮਿਆਦ ਪੁੱਗੀ",
+      "badge": "ਨਾਜ਼ੁਕ",
+      "carry_label": "2+ ਸਾਲ ਅਮਰੀਕਾ ਵਿੱਚ ਰਹਿਣ ਦਾ ਸਬੂਤ ਲੈ ਕੇ ਚੱਲੋ",
       "carry_list": [
-        "[PUNJABI] Rental agreements",
-        "[PUNJABI] School records with address",
-        "[PUNJABI] Mail addressed to you",
-        "[PUNJABI] Documents showing your name, U.S. address, and date"
+        "ਕਿਰਾਏ ਦੇ ਸਮਝੌਤੇ",
+        "ਪਤੇ ਵਾਲੇ ਸਕੂਲ ਰਿਕਾਰਡ",
+        "ਤੁਹਾਡੇ ਨਾਮ 'ਤੇ ਡਾਕ",
+        "ਦਸਤਾਵੇਜ਼ ਜੋ ਤੁਹਾਡਾ ਨਾਮ, ਅਮਰੀਕਾ ਦਾ ਪਤਾ, ਅਤੇ ਤਾਰੀਖ ਦਿਖਾਉਂਦੇ ਹਨ"
       ],
-      "callout_title": "[PUNJABI] Why this matters",
-      "callout_text": "[PUNJABI] These documents can prevent expedited removal without a hearing. Without proof of 2+ years residence, you can face deportation without seeing a judge."
+      "callout_title": "ਇਹ ਮਹੱਤਵਪੂਰਨ ਕਿਉਂ ਹੈ",
+      "callout_text": "ਇਹ ਦਸਤਾਵੇਜ਼ ਸੁਣਵਾਈ ਤੋਂ ਬਿਨਾਂ ਤੇਜ਼ ਡਿਪੋਰਟੇਸ਼ਨ ਰੋਕ ਸਕਦੇ ਹਨ। 2+ ਸਾਲ ਦੀ ਰਿਹਾਇਸ਼ ਦੇ ਸਬੂਤ ਤੋਂ ਬਿਨਾਂ, ਤੁਹਾਨੂੰ ਜੱਜ ਨੂੰ ਮਿਲੇ ਬਿਨਾਂ ਡਿਪੋਰਟੇਸ਼ਨ ਦਾ ਸਾਹਮਣਾ ਕਰਨਾ ਪੈ ਸਕਦਾ ਹੈ।"
     },
     "quick_ref": {
-      "title": "[PUNJABI] Quick Reference",
+      "title": "ਤੁਰੰਤ ਸੰਦਰਭ",
       "table": {
         "headers": {
-          "status": "[PUNJABI] Status",
-          "carry": "[PUNJABI] What to Carry",
-          "show": "[PUNJABI] When to Show"
+          "status": "ਸਥਿਤੀ",
+          "carry": "ਕੀ ਲੈ ਕੇ ਚੱਲਣਾ ਹੈ",
+          "show": "ਕਦੋਂ ਦਿਖਾਉਣਾ ਹੈ"
         },
         "rows": {
           "legal": {
-            "status": "[PUNJABI] Legal Status",
-            "carry": "[PUNJABI] Lawful resident card or immigration papers",
-            "show": "[PUNJABI] If law enforcement requests"
+            "status": "ਕਾਨੂੰਨੀ ਸਥਿਤੀ",
+            "carry": "ਕਾਨੂੰਨੀ ਰਿਹਾਇਸ਼ੀ ਕਾਰਡ ਜਾਂ ਇਮੀਗ੍ਰੇਸ਼ਨ ਕਾਗਜ਼ਾਤ",
+            "show": "ਜੇ ਕਾਨੂੰਨ ਲਾਗੂ ਕਰਨ ਵਾਲੇ ਮੰਗਣ"
           },
           "pending": {
-            "status": "[PUNJABI] Pending Status",
-            "carry": "[PUNJABI] Copies of application/appeal papers",
-            "show": "[PUNJABI] Only if arrested"
+            "status": "ਬਕਾਇਆ ਸਥਿਤੀ",
+            "carry": "ਅਰਜ਼ੀ/ਅਪੀਲ ਕਾਗਜ਼ਾਤ ਦੀਆਂ ਕਾਪੀਆਂ",
+            "show": "ਸਿਰਫ਼ ਗ੍ਰਿਫਤਾਰ ਹੋਣ 'ਤੇ"
           },
           "undocumented": {
-            "status": "[PUNJABI] Undocumented",
-            "carry": "[PUNJABI] Proof of 2+ years U.S. residence",
-            "show": "[PUNJABI] To prevent expedited removal"
+            "status": "ਬਿਨਾਂ ਦਸਤਾਵੇਜ਼ਾਂ ਦੇ",
+            "carry": "2+ ਸਾਲ ਅਮਰੀਕਾ ਵਿੱਚ ਰਹਿਣ ਦਾ ਸਬੂਤ",
+            "show": "ਤੇਜ਼ ਡਿਪੋਰਟੇਸ਼ਨ ਰੋਕਣ ਲਈ"
           }
         }
       }
     },
     "remember": {
-      "title": "[PUNJABI] Remember",
-      "text": "[PUNJABI] \"I wish to remain silent. I do not consent to any searches.\""
+      "title": "ਯਾਦ ਰੱਖੋ",
+      "text": "\"ਮੈਂ ਚੁੱਪ ਰਹਿਣਾ ਚਾਹੁੰਦਾ ਹਾਂ। ਮੈਂ ਕਿਸੇ ਵੀ ਤਲਾਸ਼ੀ ਲਈ ਸਹਿਮਤੀ ਨਹੀਂ ਦਿੰਦਾ।\""
     }
   },
   "kyr_ice_at_home": {
@@ -441,203 +502,262 @@
       "title": "ਪ੍ਰੋਟੋਕੋਲ: ICE ਨਾਲ ਗੱਲਬਾਤ।",
       "subtitle": "ਜੇ ਤੁਹਾਡੇ ਘਰ ਆਉਣ 'ਤੇ ਤੁਰੰਤ ਇਹ ਕਦਮ ਚੁੱਕੋ।"
     },
+    "steps": {
+      "entry_protocol": "ਦਾਖਲਾ ਪ੍ਰੋਟੋਕੋਲ",
+      "verification": "ਪਛਾਣ ਮੰਗੋ",
+      "warrant_protocol": "ਵਾਰੰਟ ਦਿਖਾਉਣ ਦੀ ਮੰਗ ਕਰੋ",
+      "if_enters": "ਜੇ ICE ਤੁਹਾਡੇ ਘਰ ਵਿੱਚ ਦਾਖਲ ਹੋ ਜਾਵੇ"
+    },
     "do_not_consent": {
-      "title": "[PUNJABI] Do not consent to a search",
-      "say": "[PUNJABI] SAY: “I do not consent to entry.”",
-      "do_not": "[PUNJABI] DO NOT: Open the door or step outside.",
-      "do": "[PUNJABI] DO: Record from inside your home."
+      "title": "ਤਲਾਸ਼ੀ ਲਈ ਸਹਿਮਤੀ ਨਾ ਦਿਓ",
+      "say": "ਮੈਂ ਅੰਦਰ ਆਉਣ ਦੀ ਸਹਿਮਤੀ ਨਹੀਂ ਦਿੰਦਾ।",
+      "do_not": "ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਣਾ ਜਾਂ ਬਾਹਰ ਆਉਣਾ।",
+      "do": "ਆਪਣੇ ਘਰ ਦੇ ਅੰਦਰੋਂ ਰਿਕਾਰਡ ਕਰੋ।",
+      "instruction": "ਬੰਦ ਦਰਵਾਜ਼ੇ ਰਾਹੀਂ ਬੈਜ ਨੰਬਰ ਅਤੇ ਨਾਮ ਮੰਗੋ।"
     },
     "ask_id": {
-      "title": "[PUNJABI] Ask for identification",
+      "title": "ਪਛਾਣ ਮੰਗੋ",
       "list": [
-        "[PUNJABI] Request badge numbers and names.",
-        "[PUNJABI] Record or write down this information."
+        "ਬੈਜ ਨੰਬਰ ਅਤੇ ਨਾਮ ਮੰਗੋ।",
+        "ਇਹ ਜਾਣਕਾਰੀ ਰਿਕਾਰਡ ਕਰੋ ਜਾਂ ਲਿਖ ਲਓ।"
       ]
     },
     "warrant": {
-      "title": "[PUNJABI] Demand to see a warrant",
+      "title": "ਵਾਰੰਟ ਦਿਖਾਉਣ ਦੀ ਮੰਗ ਕਰੋ",
       "no_warrant": {
-        "title": "[PUNJABI] If they claim to have no warrant or you see it lacks a judge’s signature:",
+        "title": "ਜੇ ਉਹ ਕਹਿੰਦੇ ਹਨ ਕਿ ਉਨ੍ਹਾਂ ਕੋਲ ਵਾਰੰਟ ਨਹੀਂ ਹੈ ਜਾਂ ਤੁਸੀਂ ਦੇਖਦੇ ਹੋ ਕਿ ਜੱਜ ਦੇ ਦਸਤਖਤ ਨਹੀਂ ਹਨ:",
         "list": [
-          "[PUNJABI] Say: “I exercise my right to remain silent.”",
-          "[PUNJABI] Say: “You cannot enter without my consent.”",
-          "[PUNJABI] Keep the door closed."
+          "ਕਹੋ: \"ਮੈਂ ਚੁੱਪ ਰਹਿਣ ਦੇ ਆਪਣੇ ਅਧਿਕਾਰ ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹਾਂ।\"",
+          "ਕਹੋ: \"ਤੁਸੀਂ ਮੇਰੀ ਸਹਿਮਤੀ ਤੋਂ ਬਿਨਾਂ ਅੰਦਰ ਨਹੀਂ ਆ ਸਕਦੇ।\"",
+          "ਦਰਵਾਜ਼ਾ ਬੰਦ ਰੱਖੋ।"
         ]
       },
       "has_warrant": {
-        "title": "[PUNJABI] If they claim to have a warrant:",
+        "title": "ਜੇ ਉਹ ਕਹਿੰਦੇ ਹਨ ਕਿ ਉਨ੍ਹਾਂ ਕੋਲ ਵਾਰੰਟ ਹੈ:",
         "list": [
-          "[PUNJABI] Request they slide it under the door or display it at a window.",
-          "[PUNJABI] Photograph the warrant."
+          "ਉਨ੍ਹਾਂ ਨੂੰ ਦਰਵਾਜ਼ੇ ਦੇ ਹੇਠੋਂ ਖਿਸਕਾਉਣ ਜਾਂ ਖਿੜਕੀ 'ਤੇ ਦਿਖਾਉਣ ਲਈ ਕਹੋ।",
+          "ਵਾਰੰਟ ਦੀ ਫੋਟੋ ਖਿੱਚੋ।"
         ]
       },
       "check_items": {
-        "title": "[PUNJABI] Check these four items:",
+        "title": "ਇਹ ਚਾਰ ਚੀਜ਼ਾਂ ਜਾਂਚੋ:",
         "list": [
-          "[PUNJABI] Issuing authority: Must be from a COURT, not Homeland Security or ICE.",
-          "[PUNJABI] Subject identity: Your correct name and address must appear, not someone else’s.",
-          "[PUNJABI] Expiration date: The “execute by” date must be within 14 days.",
-          "[PUNJABI] Signature: A judge or magistrate must sign it, not an immigration officer."
+          "ਜਾਰੀ ਕਰਨ ਵਾਲਾ ਅਧਿਕਾਰੀ: ਇਹ ਅਦਾਲਤ ਤੋਂ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ, ਹੋਮਲੈਂਡ ਸਿਕਿਓਰਿਟੀ ਜਾਂ ICE ਤੋਂ ਨਹੀਂ।",
+          "ਵਿਸ਼ੇ ਦੀ ਪਛਾਣ: ਤੁਹਾਡਾ ਸਹੀ ਨਾਮ ਅਤੇ ਪਤਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ, ਕਿਸੇ ਹੋਰ ਦਾ ਨਹੀਂ।",
+          "ਮਿਆਦ ਪੁੱਗਣ ਦੀ ਤਾਰੀਖ: \"ਲਾਗੂ ਕਰਨ\" ਦੀ ਤਾਰੀਖ 14 ਦਿਨਾਂ ਦੇ ਅੰਦਰ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।",
+          "ਦਸਤਖਤ: ਜੱਜ ਜਾਂ ਮੈਜਿਸਟ੍ਰੇਟ ਦੇ ਦਸਤਖਤ ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ, ਇਮੀਗ੍ਰੇਸ਼ਨ ਅਧਿਕਾਰੀ ਦੇ ਨਹੀਂ।"
         ]
       }
     },
     "if_enters": {
-      "title": "[PUNJABI] If ICE enters your home",
+      "title": "ਜੇ ICE ਤੁਹਾਡੇ ਘਰ ਵਿੱਚ ਦਾਖਲ ਹੋ ਜਾਵੇ",
       "list": [
-        "[PUNJABI] Record these violations: force, violence, intimidation, lies, or excessive searching.",
-        "[PUNJABI] If you cannot film during the incident, record yourself describing what happened as soon as possible afterward."
-      ]
+        "ਇਹ ਉਲੰਘਣਾਵਾਂ ਰਿਕਾਰਡ ਕਰੋ: ਤਾਕਤ, ਹਿੰਸਾ, ਧਮਕੀ, ਝੂਠ, ਜਾਂ ਬਹੁਤ ਜ਼ਿਆਦਾ ਤਲਾਸ਼ੀ।",
+        "ਜੇ ਤੁਸੀਂ ਘਟਨਾ ਦੌਰਾਨ ਫਿਲਮ ਨਹੀਂ ਕਰ ਸਕਦੇ, ਤਾਂ ਜਿੰਨੀ ਜਲਦੀ ਹੋ ਸਕੇ ਬਾਅਦ ਵਿੱਚ ਆਪਣੇ ਆਪ ਨੂੰ ਦੱਸਦੇ ਹੋਏ ਰਿਕਾਰਡ ਕਰੋ ਕਿ ਕੀ ਹੋਇਆ।"
+      ],
+      "remember_script": "ਮੈਂ ਕਿਸੇ ਵੀ ਤਲਾਸ਼ੀ ਲਈ ਸਹਿਮਤੀ ਨਹੀਂ ਦਿੰਦਾ। ਮੈਂ ਚੁੱਪ ਰਹਿਣਾ ਚਾਹੁੰਦਾ ਹਾਂ। ਮੈਂ ਵਕੀਲ ਨਾਲ ਗੱਲ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹਾਂ।"
     }
   },
   "kyr_ice_pulls_you_over": {
     "hero": {
-      "description": "[PUNJABI] Stay calm, know your rights, and protect yourself during a traffic stop."
+      "description": "ਸ਼ਾਂਤ ਰਹੋ, ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ, ਅਤੇ ਟ੍ਰੈਫਿਕ ਸਟਾਪ ਦੌਰਾਨ ਆਪਣੇ ਆਪ ਨੂੰ ਬਚਾਓ।"
     },
     "warnings": {
-      "caution": "[PUNJABI] Caution",
-      "critical": "[PUNJABI] Critical"
+      "caution": "ਸਾਵਧਾਨ",
+      "critical": "ਨਾਜ਼ੁਕ"
     },
     "always_pull_over": {
-      "title": "[PUNJABI] Always pull over",
-      "content": "[PUNJABI] Pull over when any law enforcement signals you to stop, even if you do not think you did anything wrong.",
-      "recording_tip": "[PUNJABI] Start recording. If alone, place the phone in a cup holder or pocket while recording continues."
+      "title": "ਹਮੇਸ਼ਾ ਗੱਡੀ ਰੋਕੋ",
+      "content": "ਜਦੋਂ ਕੋਈ ਵੀ ਕਾਨੂੰਨ ਲਾਗੂ ਕਰਨ ਵਾਲਾ ਤੁਹਾਨੂੰ ਰੋਕਣ ਦਾ ਸੰਕੇਤ ਦੇਵੇ ਤਾਂ ਗੱਡੀ ਰੋਕੋ, ਭਾਵੇਂ ਤੁਹਾਨੂੰ ਲੱਗੇ ਕਿ ਤੁਸੀਂ ਕੁਝ ਗਲਤ ਨਹੀਂ ਕੀਤਾ।",
+      "recording_tip": "ਰਿਕਾਰਡਿੰਗ ਸ਼ੁਰੂ ਕਰੋ। ਜੇ ਇਕੱਲੇ ਹੋ, ਤਾਂ ਫ਼ੋਨ ਨੂੰ ਕੱਪ ਹੋਲਡਰ ਜਾਂ ਜੇਬ ਵਿੱਚ ਰੱਖੋ ਜਦੋਂ ਰਿਕਾਰਡਿੰਗ ਜਾਰੀ ਰਹੇ।"
     },
     "identify_officers": {
-      "title": "[PUNJABI] Identify the officers",
+      "title": "ਅਧਿਕਾਰੀਆਂ ਦੀ ਪਛਾਣ ਕਰੋ",
       "questions": [
-        "[PUNJABI] Are you police?",
-        "[PUNJABI] Are you highway patrol?",
-        "[PUNJABI] Are you immigration?",
-        "[PUNJABI] Why did you stop me?"
+        "ਕੀ ਤੁਸੀਂ ਪੁਲਿਸ ਹੋ?",
+        "ਕੀ ਤੁਸੀਂ ਹਾਈਵੇ ਪੈਟਰੋਲ ਹੋ?",
+        "ਕੀ ਤੁਸੀਂ ਇਮੀਗ੍ਰੇਸ਼ਨ ਹੋ?",
+        "ਤੁਸੀਂ ਮੈਨੂੰ ਕਿਉਂ ਰੋਕਿਆ?"
       ],
       "warning": {
-        "title": "[PUNJABI] Warning",
-        "content": "[PUNJABI] ICE uses unmarked vehicles and may wear plain clothes or vests labeled “POLICE” without identifying themselves as immigration."
+        "title": "ਚੇਤਾਵਨੀ",
+        "content": "ICE ਬਿਨਾਂ ਨਿਸ਼ਾਨ ਵਾਲੇ ਵਾਹਨ ਵਰਤਦਾ ਹੈ ਅਤੇ ਆਮ ਕੱਪੜੇ ਜਾਂ \"POLICE\" ਲਿਖੀਆਂ ਜੈਕਟਾਂ ਪਾ ਸਕਦਾ ਹੈ ਬਿਨਾਂ ਆਪਣੇ ਆਪ ਨੂੰ ਇਮੀਗ੍ਰੇਸ਼ਨ ਵਜੋਂ ਪਛਾਣੇ।"
       }
     },
     "during_stop": {
-      "title": "[PUNJABI] During the stop",
+      "title": "ਸਟਾਪ ਦੌਰਾਨ",
       "window": {
-        "title": "[PUNJABI] Your window",
-        "content": "[PUNJABI] Roll down your window slightly when asked.",
-        "questions_title": "[PUNJABI] Before anything else, ask:",
+        "title": "ਤੁਹਾਡੀ ਖਿੜਕੀ",
+        "content": "ਜਦੋਂ ਕਿਹਾ ਜਾਵੇ ਤਾਂ ਆਪਣੀ ਖਿੜਕੀ ਥੋੜ੍ਹੀ ਜਿਹੀ ਹੇਠਾਂ ਕਰੋ।",
+        "questions_title": "ਕੁਝ ਵੀ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ, ਪੁੱਛੋ:",
         "questions": [
-          "[PUNJABI] Am I free to go?",
-          "[PUNJABI] Who are you?",
-          "[PUNJABI] Why did you stop me?",
-          "[PUNJABI] Do you have a warrant?"
+          "ਕੀ ਮੈਂ ਜਾਣ ਲਈ ਆਜ਼ਾਦ ਹਾਂ?",
+          "ਤੁਸੀਂ ਕੌਣ ਹੋ?",
+          "ਤੁਸੀਂ ਮੈਨੂੰ ਕਿਉਂ ਰੋਕਿਆ?",
+          "ਕੀ ਤੁਹਾਡੇ ਕੋਲ ਵਾਰੰਟ ਹੈ?"
         ]
       },
       "providing_info": {
-        "title": "[PUNJABI] Providing information",
+        "title": "ਜਾਣਕਾਰੀ ਦੇਣਾ",
         "drivers": {
-          "title": "[PUNJABI] Drivers must provide:",
+          "title": "ਡਰਾਈਵਰਾਂ ਨੂੰ ਦੇਣਾ ਚਾਹੀਦਾ ਹੈ:",
           "list": [
-            "[PUNJABI] Driver’s license.",
-            "[PUNJABI] Registration and proof of insurance."
+            "ਡਰਾਈਵਿੰਗ ਲਾਇਸੈਂਸ।",
+            "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਅਤੇ ਬੀਮੇ ਦਾ ਸਬੂਤ।"
           ]
         },
         "passengers": {
-          "title": "[PUNJABI] Passengers",
+          "title": "ਸਵਾਰੀਆਂ",
           "list": [
-            "[PUNJABI] Cannot be forced to show ID.",
-            "[PUNJABI] Cannot be forced to give name, address, legal status or place of birth."
+            "ID ਦਿਖਾਉਣ ਲਈ ਮਜਬੂਰ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।",
+            "ਨਾਮ, ਪਤਾ, ਕਾਨੂੰਨੀ ਸਥਿਤੀ ਜਾਂ ਜਨਮ ਸਥਾਨ ਦੇਣ ਲਈ ਮਜਬੂਰ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।"
           ]
         },
         "advice": [
-          "[PUNJABI] Request officer identification before presenting any documents.",
-          "[PUNJABI] Do not lie or give false documents."
+          "ਕੋਈ ਵੀ ਦਸਤਾਵੇਜ਼ ਪੇਸ਼ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਅਧਿਕਾਰੀ ਦੀ ਪਛਾਣ ਮੰਗੋ।",
+          "ਝੂਠ ਨਾ ਬੋਲੋ ਅਤੇ ਨਾ ਹੀ ਝੂਠੇ ਦਸਤਾਵੇਜ਼ ਦਿਓ।"
         ],
         "all_occupants": {
-          "title": "[PUNJABI] For all occupants:",
+          "title": "ਸਾਰੇ ਸਵਾਰਾਂ ਲਈ:",
           "list": [
-            "[PUNJABI] Decline to discuss immigration status or criminal history."
+            "ਇਮੀਗ੍ਰੇਸ਼ਨ ਸਥਿਤੀ ਜਾਂ ਅਪਰਾਧਿਕ ਇਤਿਹਾਸ ਬਾਰੇ ਚਰਚਾ ਕਰਨ ਤੋਂ ਇਨਕਾਰ ਕਰੋ।"
           ],
-          "say": "[PUNJABI] Am I free to go? I do not consent to provide ID or answer questions."
+          "say": "ਕੀ ਮੈਂ ਜਾਣ ਲਈ ਆਜ਼ਾਦ ਹਾਂ? ਮੈਂ ID ਦੇਣ ਜਾਂ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਦੇਣ ਦੀ ਸਹਿਮਤੀ ਨਹੀਂ ਦਿੰਦਾ।"
         }
       }
     },
     "compliance_searches": {
-      "title": "[PUNJABI] Physical compliance and searches",
+      "title": "ਸਰੀਰਕ ਪਾਲਣਾ ਅਤੇ ਤਲਾਸ਼ੀ",
       "exiting": {
-        "title": "[PUNJABI] Exiting the vehicle",
-        "content": "[PUNJABI] Officer may order you to get out for “officer safety.” This order often precedes arrest.",
-        "ask_title": "[PUNJABI] Before moving, ask:",
+        "title": "ਵਾਹਨ ਤੋਂ ਬਾਹਰ ਨਿਕਲਣਾ",
+        "content": "ਅਧਿਕਾਰੀ ਤੁਹਾਨੂੰ \"ਅਧਿਕਾਰੀ ਦੀ ਸੁਰੱਖਿਆ\" ਲਈ ਬਾਹਰ ਨਿਕਲਣ ਦਾ ਹੁਕਮ ਦੇ ਸਕਦਾ ਹੈ। ਇਹ ਹੁਕਮ ਅਕਸਰ ਗ੍ਰਿਫਤਾਰੀ ਤੋਂ ਪਹਿਲਾਂ ਹੁੰਦਾ ਹੈ।",
+        "ask_title": "ਹਿੱਲਣ ਤੋਂ ਪਹਿਲਾਂ, ਪੁੱਛੋ:",
         "questions": [
-          "[PUNJABI] Am I free to go?",
-          "[PUNJABI] Who are you?",
-          "[PUNJABI] Why did you stop me?"
+          "ਕੀ ਮੈਂ ਜਾਣ ਲਈ ਆਜ਼ਾਦ ਹਾਂ?",
+          "ਤੁਸੀਂ ਕੌਣ ਹੋ?",
+          "ਤੁਸੀਂ ਮੈਨੂੰ ਕਿਉਂ ਰੋਕਿਆ?"
         ],
-        "warning": "[PUNJABI] Officers may force removal if you delay."
+        "warning": "ਜੇ ਤੁਸੀਂ ਦੇਰੀ ਕਰੋ ਤਾਂ ਅਧਿਕਾਰੀ ਜ਼ਬਰਦਸਤੀ ਬਾਹਰ ਕੱਢ ਸਕਦੇ ਹਨ।"
       },
       "search_limitations": {
-        "title": "[PUNJABI] Search limitations",
-        "content": "[PUNJABI] ICE needs a judicial warrant or your consent to search:",
+        "title": "ਤਲਾਸ਼ੀ ਦੀਆਂ ਸੀਮਾਵਾਂ",
+        "content": "ICE ਨੂੰ ਤਲਾਸ਼ੀ ਲਈ ਅਦਾਲਤੀ ਵਾਰੰਟ ਜਾਂ ਤੁਹਾਡੀ ਸਹਿਮਤੀ ਦੀ ਲੋੜ ਹੈ:",
         "list": [
-          "[PUNJABI] Your body (beyond a pat-down).",
-          "[PUNJABI] The inside of your vehicle.",
-          "[PUNJABI] Glove compartment or trunk."
+          "ਤੁਹਾਡਾ ਸਰੀਰ (ਥਪਥਪਾਹਟ ਤੋਂ ਇਲਾਵਾ)।",
+          "ਤੁਹਾਡੇ ਵਾਹਨ ਦਾ ਅੰਦਰਲਾ ਹਿੱਸਾ।",
+          "ਗਲੋਵ ਕੰਪਾਰਟਮੈਂਟ ਜਾਂ ਡਿੱਕੀ।"
         ],
-        "say": "[PUNJABI] I do not consent to any searches.",
-        "repeat": "[PUNJABI] Repeat this even if officers proceed anyway."
+        "say": "ਮੈਂ ਕਿਸੇ ਵੀ ਤਲਾਸ਼ੀ ਲਈ ਸਹਿਮਤੀ ਨਹੀਂ ਦਿੰਦਾ।",
+        "repeat": "ਭਾਵੇਂ ਅਧਿਕਾਰੀ ਫਿਰ ਵੀ ਅੱਗੇ ਵਧਣ, ਇਹ ਦੁਹਰਾਓ।"
       },
       "fingerprints": {
-        "title": "[PUNJABI] Fingerprint collection",
+        "title": "ਉਂਗਲਾਂ ਦੇ ਨਿਸ਼ਾਨ ਲੈਣਾ",
         "when": {
-          "title": "[PUNJABI] ICE can take fingerprints only when:",
+          "title": "ICE ਸਿਰਫ਼ ਉਦੋਂ ਉਂਗਲਾਂ ਦੇ ਨਿਸ਼ਾਨ ਲੈ ਸਕਦਾ ਹੈ ਜਦੋਂ:",
           "list": [
-            "[PUNJABI] Officers suspect immigration violations.",
-            "[PUNJABI] You are under arrest."
+            "ਅਧਿਕਾਰੀਆਂ ਨੂੰ ਇਮੀਗ੍ਰੇਸ਼ਨ ਉਲੰਘਣਾ ਦਾ ਸ਼ੱਕ ਹੋਵੇ।",
+            "ਤੁਸੀਂ ਗ੍ਰਿਫਤਾਰੀ ਅਧੀਨ ਹੋ।"
           ]
         },
         "if_requested": {
-          "title": "[PUNJABI] If requested without a clear cause:",
+          "title": "ਜੇ ਬਿਨਾਂ ਸਪੱਸ਼ਟ ਕਾਰਨ ਦੇ ਮੰਗਿਆ ਜਾਵੇ:",
           "list": [
-            "[PUNJABI] Ask: “Why am I being fingerprinted?”",
-            "[PUNJABI] Say: “I do not consent to fingerprinting.”"
+            "ਪੁੱਛੋ: \"ਮੇਰੇ ਉਂਗਲਾਂ ਦੇ ਨਿਸ਼ਾਨ ਕਿਉਂ ਲਏ ਜਾ ਰਹੇ ਹਨ?\"",
+            "ਕਹੋ: \"ਮੈਂ ਉਂਗਲਾਂ ਦੇ ਨਿਸ਼ਾਨ ਲੈਣ ਲਈ ਸਹਿਮਤੀ ਨਹੀਂ ਦਿੰਦਾ।\""
           ]
         },
-        "resistance": "[PUNJABI] Do not physically resist. Verbal objection may protect your legal rights."
+        "resistance": "ਸਰੀਰਕ ਤੌਰ 'ਤੇ ਵਿਰੋਧ ਨਾ ਕਰੋ। ਜ਼ੁਬਾਨੀ ਇਤਰਾਜ਼ ਤੁਹਾਡੇ ਕਾਨੂੰਨੀ ਅਧਿਕਾਰਾਂ ਦੀ ਰੱਖਿਆ ਕਰ ਸਕਦਾ ਹੈ।"
       }
+    },
+    "labels": {
+      "timeline_aria": "ਜੇ ICE ਤੁਹਾਨੂੰ ਗੱਡੀ ਰੋਕਦਾ ਹੈ ਤਾਂ ਅਮਲ ਕਰਨ ਲਈ ਕਦਮ",
+      "step_01": "ਕਦਮ 01",
+      "step_02": "ਕਦਮ 02",
+      "step_03": "ਕਦਮ 03",
+      "step_04": "ਕਦਮ 04",
+      "step_1_of_4": "ਕਦਮ 1 ਵਿੱਚੋਂ 4",
+      "step_2_of_4": "ਕਦਮ 2 ਵਿੱਚੋਂ 4",
+      "step_3_of_4": "ਕਦਮ 3 ਵਿੱਚੋਂ 4",
+      "step_4_of_4": "ਕਦਮ 4 ਵਿੱਚੋਂ 4",
+      "start_recording": "ਰਿਕਾਰਡਿੰਗ ਸ਼ੁਰੂ ਕਰੋ",
+      "questions_to_ask": "ਪੁੱਛਣ ਲਈ ਸਵਾਲ",
+      "driver": "ਡਰਾਈਵਰ",
+      "passenger": "ਸਵਾਰੀ",
+      "say_this": "ਇਹ ਕਹੋ"
     }
   },
   "kyr_ice_in_public": {
     "tactics": {
-      "title": "[PUNJABI] ICE Tactics",
+      "title": "ICE ਦੀਆਂ ਚਾਲਾਂ",
+      "surveillance": {
+        "title": "ਨਿਗਰਾਨੀ",
+        "description": "ਤੁਹਾਡੇ ਘਰ ਦੇ ਨੇੜੇ ਜਾਂ ਜਨਤਕ ਥਾਵਾਂ 'ਤੇ ਤੁਹਾਡਾ ਪਿੱਛਾ ਕਰਨਾ"
+      },
+      "plain_clothes": {
+        "title": "ਆਮ ਕੱਪੜੇ",
+        "description": "ਆਪਣੀ ਪਛਾਣ ਦੱਸੇ ਬਿਨਾਂ ਆਮ ਕੱਪੜੇ ਪਾਉਣਾ"
+      },
+      "identity": {
+        "title": "ਪਛਾਣ ਦੀ ਪੁਸ਼ਟੀ",
+        "description": "ਤੁਹਾਡੀ ਪਛਾਣ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਤੁਹਾਡਾ ਨਾਮ ਬੁਲਾਉਣਾ"
+      },
       "list": [
-        "[PUNJABI] Follow you near your home or in public spaces.",
-        "[PUNJABI] Wear plain clothes without identifying themselves.",
-        "[PUNJABI] Call out your name to confirm your identity."
+        "ਤੁਹਾਡੇ ਘਰ ਦੇ ਨੇੜੇ ਜਾਂ ਜਨਤਕ ਥਾਵਾਂ 'ਤੇ ਤੁਹਾਡਾ ਪਿੱਛਾ ਕਰਨਾ।",
+        "ਆਪਣੀ ਪਛਾਣ ਦੱਸੇ ਬਿਨਾਂ ਆਮ ਕੱਪੜੇ ਪਾਉਣਾ।",
+        "ਤੁਹਾਡੀ ਪਛਾਣ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਤੁਹਾਡਾ ਨਾਮ ਬੁਲਾਉਣਾ।"
       ]
     },
     "stopped": {
-      "title": "[PUNJABI] If stopped by ICE",
-      "silent": "[PUNJABI] Stay silent. Do not state your name or answer questions.",
+      "title": "ਜੇ ICE ਦੁਆਰਾ ਰੋਕਿਆ ਜਾਵੇ",
+      "caution_badge": "ਸਾਵਧਾਨ",
+      "caution_aria": "ਸਾਵਧਾਨੀ ਦੀ ਚੇਤਾਵਨੀ",
+      "stay_silent": "ਚੁੱਪ ਰਹੋ",
+      "silent": "ਚੁੱਪ ਰਹੋ। ਆਪਣਾ ਨਾਮ ਨਾ ਦੱਸੋ ਅਤੇ ਨਾ ਹੀ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਦਿਓ।",
+      "say_this": "ਇਹ ਕਹੋ",
+      "am_i_free": "\"ਕੀ ਮੈਂ ਜਾਣ ਲਈ ਆਜ਼ਾਦ ਹਾਂ?\"",
       "ask_free": {
-        "question": "[PUNJABI] Ask: “Am I free to go?”",
+        "question": "ਪੁੱਛੋ: \"ਕੀ ਮੈਂ ਜਾਣ ਲਈ ਆਜ਼ਾਦ ਹਾਂ?\"",
         "if_yes": {
-          "title": "[PUNJABI] If they say YES:",
+          "title": "ਜੇ ਉਹ ਹਾਂ ਕਹਿਣ:",
           "steps": [
-            "[PUNJABI] SAY: “I will not answer questions.”",
-            "[PUNJABI] Walk away calmly if they let you."
+            "ਕਹੋ: \"ਮੈਂ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਨਹੀਂ ਦਿਆਂਗਾ।\"",
+            "ਜੇ ਉਹ ਤੁਹਾਨੂੰ ਜਾਣ ਦੇਣ ਤਾਂ ਸ਼ਾਂਤੀ ਨਾਲ ਚਲੇ ਜਾਓ।"
           ]
         },
         "if_no": {
-          "title": "[PUNJABI] If they say NO:",
+          "title": "ਜੇ ਉਹ ਨਾਂਹ ਕਹਿਣ:",
           "steps": [
-            "[PUNJABI] SAY: “I will not answer questions. I want a lawyer.”",
-            "[PUNJABI] Do not lie, show false documents, or run."
+            "ਕਹੋ: \"ਮੈਂ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਨਹੀਂ ਦਿਆਂਗਾ। ਮੈਨੂੰ ਵਕੀਲ ਚਾਹੀਦਾ ਹੈ।\"",
+            "ਝੂਠ ਨਾ ਬੋਲੋ, ਝੂਠੇ ਦਸਤਾਵੇਜ਼ ਨਾ ਦਿਖਾਓ, ਜਾਂ ਭੱਜੋ ਨਾ।"
           ]
         }
       }
     },
     "protect": {
-      "title": "[PUNJABI] Protect Yourself",
+      "title": "ਆਪਣੇ ਆਪ ਨੂੰ ਬਚਾਓ",
+      "record": {
+        "title": "ਰਿਕਾਰਡ ਕਰੋ",
+        "description": "ਮੁਲਾਕਾਤ ਨੂੰ ਰਿਕਾਰਡ ਕਰੋ ਜਾਂ ਕਿਸੇ ਨੂੰ ਰਿਕਾਰਡ ਕਰਨ ਲਈ ਕਹੋ। ਤੁਸੀਂ ਜੋ ਵੀ ਕਹੋਗੇ ਉਹ ਤੁਹਾਡੇ ਵਿਰੁੱਧ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ, ਇਸ ਲਈ ਸਿਰਫ਼ ਆਪਣੇ ਅਧਿਕਾਰ ਦੁਹਰਾਓ।"
+      },
+      "anonymity": {
+        "title": "ਗੁਮਨਾਮ ਰਹੋ",
+        "description": "ਮਦਦ ਮੰਗਦੇ ਸਮੇਂ, ਆਪਣਾ ਨਾਮ ਦੱਸਣ ਤੋਂ ਬਚੋ। ਵੀਡੀਓ ਭੇਜਣ ਲਈ ਉਨ੍ਹਾਂ ਨੂੰ ਕਿਸੇ ਸੰਪਰਕ ਦਾ ਨਾਮ ਦਿਓ।"
+      },
+      "emergency_card": {
+        "title": "ਐਮਰਜੈਂਸੀ ਕਾਰਡ",
+        "description": "ਆਪਣੇ ਵਕੀਲ ਅਤੇ ਪਰਿਵਾਰ ਦੀ ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਵਾਲਾ ਐਮਰਜੈਂਸੀ ਕਾਰਡ ਰੱਖੋ।"
+      },
+      "non_consent": {
+        "title": "ਸਹਿਮਤੀ ਨਾ ਦਿਓ",
+        "description": "ਜੇ ਬਿਨਾਂ ਸਹਿਮਤੀ ਦੇ ਤਲਾਸ਼ੀ ਲਈ ਜਾਵੇ, ਕਹੋ: \"ਮੈਂ ਇਸ ਤਲਾਸ਼ੀ ਲਈ ਸਹਿਮਤੀ ਨਹੀਂ ਦਿੰਦਾ। ਮੈਨੂੰ ਵਕੀਲ ਚਾਹੀਦਾ ਹੈ।\""
+      },
+      "if_searched": "ਜੇ ਤਲਾਸ਼ੀ ਲਈ ਜਾਵੇ, ਇਹ ਕਹੋ",
+      "search_script": "\"ਮੈਂ ਇਸ ਤਲਾਸ਼ੀ ਲਈ ਸਹਿਮਤੀ ਨਹੀਂ ਦਿੰਦਾ। ਮੈਨੂੰ ਵਕੀਲ ਚਾਹੀਦਾ ਹੈ।\"",
       "list": [
-        "[PUNJABI] Record the encounter or ask someone to record. Remember that anything you say in that recording can be used against you, so stick to repeating your rights.",
-        "[PUNJABI] When requesting help, avoid saying your name. Give them a contact's name to send the video.",
-        "[PUNJABI] Carry an emergency card with your lawyer's and family’s contact information.",
-        "[PUNJABI] If searched without consent: Say, “I do not consent to this search. I want a lawyer.”"
+        "ਮੁਲਾਕਾਤ ਨੂੰ ਰਿਕਾਰਡ ਕਰੋ ਜਾਂ ਕਿਸੇ ਨੂੰ ਰਿਕਾਰਡ ਕਰਨ ਲਈ ਕਹੋ। ਯਾਦ ਰੱਖੋ ਕਿ ਉਸ ਰਿਕਾਰਡਿੰਗ ਵਿੱਚ ਤੁਸੀਂ ਜੋ ਵੀ ਕਹੋਗੇ ਉਹ ਤੁਹਾਡੇ ਵਿਰੁੱਧ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ, ਇਸ ਲਈ ਸਿਰਫ਼ ਆਪਣੇ ਅਧਿਕਾਰ ਦੁਹਰਾਓ।",
+        "ਮਦਦ ਮੰਗਦੇ ਸਮੇਂ, ਆਪਣਾ ਨਾਮ ਦੱਸਣ ਤੋਂ ਬਚੋ। ਵੀਡੀਓ ਭੇਜਣ ਲਈ ਉਨ੍ਹਾਂ ਨੂੰ ਕਿਸੇ ਸੰਪਰਕ ਦਾ ਨਾਮ ਦਿਓ।",
+        "ਆਪਣੇ ਵਕੀਲ ਅਤੇ ਪਰਿਵਾਰ ਦੀ ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਵਾਲਾ ਐਮਰਜੈਂਸੀ ਕਾਰਡ ਰੱਖੋ।",
+        "ਜੇ ਬਿਨਾਂ ਸਹਿਮਤੀ ਦੇ ਤਲਾਸ਼ੀ ਲਈ ਜਾਵੇ: ਕਹੋ, \"ਮੈਂ ਇਸ ਤਲਾਸ਼ੀ ਲਈ ਸਹਿਮਤੀ ਨਹੀਂ ਦਿੰਦਾ। ਮੈਨੂੰ ਵਕੀਲ ਚਾਹੀਦਾ ਹੈ।\""
       ]
     }
   },
@@ -744,6 +864,8 @@
       "title": "ਆਉਣ ਵਾਲੇ ਸਮਾਗਮ",
       "description": "ਸਾਡੇ ਭਾਈਚਾਰਕ ਸਮਾਗਮਾਂ, ਵਰਕਸ਼ਾਪਾਂ ਅਤੇ ਕਾਰਵਾਈਆਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ। ਆਪਣੀ ਦਿਲਚਸਪੀ ਵਾਲੇ ਸਮਾਗਮ ਲੱਭਣ ਲਈ ਕਿਸਮ ਦੁਆਰਾ ਫਿਲਟਰ ਕਰੋ।"
     },
+    "filter_aria_label": "ਕਿਸਮ ਦੁਆਰਾ ਸਮਾਗਮ ਫਿਲਟਰ ਕਰੋ",
+    "events_list_aria_label": "ਆਉਣ ਵਾਲੇ ਸਮਾਗਮ",
     "filters": {
       "all": "ਸਾਰੇ ਸਮਾਗਮ",
       "meeting": "ਮੀਟਿੰਗਾਂ",
@@ -774,6 +896,18 @@
     "join_virtual": "ਵਰਚੁਅਲ ਸਮਾਗਮ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
     "rsvp_here": "ਹਾਜ਼ਰੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
     "events": {
+      "generalMeeting": {
+        "title": "ਆਮ ਮੀਟਿੰਗ",
+        "description": "ਦਸੰਬਰ ਦੀ WCU ਆਮ ਮੀਟਿੰਗ।"
+      },
+      "fightTheFearCanvassing": {
+        "title": "ਡਰ ਨਾਲ ਲੜੋ ਪ੍ਰਚਾਰ",
+        "description": "ਸਾਡੇ ਪ੍ਰਵਾਸੀ ਗੁਆਂਢੀਆਂ ਅਤੇ ਸਹਿਕਰਮੀਆਂ ਦੀ ਸਹਾਇਤਾ ਲਈ ਅਤੇ \"ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ\" ਸਰੋਤ ਸਾਂਝੇ ਕਰਨ ਲਈ ਭਾਈਚਾਰਕ ਪ੍ਰਚਾਰ ਮੁਹਿੰਮ ਵਿੱਚ ਸਾਡੇ ਨਾਲ ਸ਼ਾਮਲ ਹੋਵੋ। ਅਸੀਂ ਤਿਆਰੀ ਕਰਨ, ਸਮੱਗਰੀ ਅਤੇ ਸਕ੍ਰਿਪਟ ਪ੍ਰਦਾਨ ਕਰਨ ਲਈ ਉਪਰੋਕਤ ਸਥਾਨ 'ਤੇ ਇਕੱਠੇ ਹੋਵਾਂਗੇ, ਫਿਰ ਸਥਾਨਕ ਮੁਹੱਲਿਆਂ ਵਿੱਚ ਇਕੱਠੇ ਜਾਵਾਂਗੇ। ਪ੍ਰਚਾਰ ਤੋਂ ਬਾਅਦ, ਅਸੀਂ ਆਪਣੇ ਤਜ਼ਰਬਿਆਂ ਬਾਰੇ ਚਰਚਾ ਕਰਨ ਲਈ ਵਾਪਸ ਆਵਾਂਗੇ।"
+      },
+      "kyrCommunityForum": {
+        "title": "ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ ਭਾਈਚਾਰਕ ਫੋਰਮ",
+        "description": "ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ ਬਾਰੇ ਮੁੱਢਲੀ ਜਾਣਕਾਰੀ ਸਿੱਖੋ। ਪ੍ਰਚਾਰ, ਮੇਜ਼ਾਂ ਲਗਾਉਣ ਅਤੇ ਪਹੁੰਚ ਵਿੱਚ ਸ਼ਾਮਲ ਆਰਗੇਨਾਈਜ਼ਰਾਂ ਅਤੇ ਵਲੰਟੀਅਰਾਂ ਨਾਲ ਜੁੜੋ।"
+      },
       "event1": {
         "title": "ਆਮ ਮੈਂਬਰਸ਼ਿਪ ਮੀਟਿੰਗ",
         "description": "ਚੱਲ ਰਹੀਆਂ ਮੁਹਿੰਮਾਂ ਅਤੇ ਸੰਗਠਨਾਤਮਕ ਅੱਪਡੇਟਾਂ ਬਾਰੇ ਚਰਚਾ ਕਰਨ ਲਈ ਮਹੀਨਾਵਾਰ ਆਮ ਮੈਂਬਰਸ਼ਿਪ ਮੀਟਿੰਗ।"

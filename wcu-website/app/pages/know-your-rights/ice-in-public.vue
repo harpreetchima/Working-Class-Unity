@@ -38,8 +38,8 @@ const getList = (key: string) => {
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-sm">Surveillance</h3>
-                  <p class="text-xs text-base-content">Follow you near your home or in public spaces</p>
+                  <h3 class="font-semibold text-sm">{{ $t('kyr_ice_in_public.tactics.surveillance.title') }}</h3>
+                  <p class="text-xs text-base-content">{{ $t('kyr_ice_in_public.tactics.surveillance.description') }}</p>
                 </div>
               </div>
             </div>
@@ -56,8 +56,8 @@ const getList = (key: string) => {
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-sm">Plain Clothes</h3>
-                  <p class="text-xs text-base-content">Wear plain clothes without identifying themselves</p>
+                  <h3 class="font-semibold text-sm">{{ $t('kyr_ice_in_public.tactics.plain_clothes.title') }}</h3>
+                  <p class="text-xs text-base-content">{{ $t('kyr_ice_in_public.tactics.plain_clothes.description') }}</p>
                 </div>
               </div>
             </div>
@@ -74,8 +74,8 @@ const getList = (key: string) => {
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-sm">Identity Confirmation</h3>
-                  <p class="text-xs text-base-content">Call out your name to confirm your identity</p>
+                  <h3 class="font-semibold text-sm">{{ $t('kyr_ice_in_public.tactics.identity.title') }}</h3>
+                  <p class="text-xs text-base-content">{{ $t('kyr_ice_in_public.tactics.identity.description') }}</p>
                 </div>
               </div>
             </div>
@@ -87,7 +87,7 @@ const getList = (key: string) => {
       <section class="mb-12" aria-labelledby="stopped-heading">
         <div class="flex items-center gap-3 mb-6">
           <h2 id="stopped-heading" class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_in_public.stopped.title') }}</h2>
-          <span class="badge badge-soft badge-warning" role="status" aria-label="Caution warning">Caution</span>
+          <span class="badge badge-soft badge-warning" role="status" :aria-label="$t('kyr_ice_in_public.stopped.caution_aria')">{{ $t('kyr_ice_in_public.stopped.caution_badge') }}</span>
         </div>
 
         <!-- Warning Callout: Stay Silent -->
@@ -97,7 +97,7 @@ const getList = (key: string) => {
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/>
             </svg>
             <div>
-              <p class="font-bold text-sm">Stay Silent</p>
+              <p class="font-bold text-sm">{{ $t('kyr_ice_in_public.stopped.stay_silent') }}</p>
               <p class="text-sm text-base-content/80">{{ $t('kyr_ice_in_public.stopped.silent') }}</p>
             </div>
           </div>
@@ -111,8 +111,8 @@ const getList = (key: string) => {
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
             </svg>
             <div>
-              <p class="text-xs uppercase tracking-wide text-base-content mb-1">Say this</p>
-              <p class="font-mono text-sm">"Am I free to go?"</p>
+              <p class="text-xs uppercase tracking-wide text-base-content mb-1">{{ $t('kyr_ice_in_public.stopped.say_this') }}</p>
+              <p class="font-mono text-sm">{{ $t('kyr_ice_in_public.stopped.am_i_free') }}</p>
             </div>
           </div>
         </div>
@@ -173,8 +173,8 @@ const getList = (key: string) => {
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">Record</h3>
-                  <p class="text-sm text-base-content mt-1">Record the encounter or ask someone to record. Anything you say can be used against you, so stick to repeating your rights.</p>
+                  <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">{{ $t('kyr_ice_in_public.protect.record.title') }}</h3>
+                  <p class="text-sm text-base-content mt-1">{{ $t('kyr_ice_in_public.protect.record.description') }}</p>
                 </div>
               </div>
             </div>
@@ -191,8 +191,8 @@ const getList = (key: string) => {
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">Stay Anonymous</h3>
-                  <p class="text-sm text-base-content mt-1">When requesting help, avoid saying your name. Give them a contact's name to send the video.</p>
+                  <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">{{ $t('kyr_ice_in_public.protect.anonymity.title') }}</h3>
+                  <p class="text-sm text-base-content mt-1">{{ $t('kyr_ice_in_public.protect.anonymity.description') }}</p>
                 </div>
               </div>
             </div>
@@ -209,8 +209,8 @@ const getList = (key: string) => {
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">Emergency Card</h3>
-                  <p class="text-sm text-base-content mt-1">Carry an emergency card with your lawyer's and family's contact information.</p>
+                  <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">{{ $t('kyr_ice_in_public.protect.emergency_card.title') }}</h3>
+                  <p class="text-sm text-base-content mt-1">{{ $t('kyr_ice_in_public.protect.emergency_card.description') }}</p>
                 </div>
               </div>
             </div>
@@ -227,8 +227,8 @@ const getList = (key: string) => {
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">Do Not Consent</h3>
-                  <p class="text-sm text-base-content mt-1">If searched without consent, say: "I do not consent to this search. I want a lawyer."</p>
+                  <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">{{ $t('kyr_ice_in_public.protect.non_consent.title') }}</h3>
+                  <p class="text-sm text-base-content mt-1">{{ $t('kyr_ice_in_public.protect.non_consent.description') }}</p>
                 </div>
               </div>
             </div>
@@ -243,8 +243,8 @@ const getList = (key: string) => {
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
             </svg>
             <div>
-              <p class="text-xs uppercase tracking-wide text-base-content mb-1">If searched, say this</p>
-              <p class="font-mono text-sm">"I do not consent to this search. I want a lawyer."</p>
+              <p class="text-xs uppercase tracking-wide text-base-content mb-1">{{ $t('kyr_ice_in_public.protect.if_searched') }}</p>
+              <p class="font-mono text-sm">{{ $t('kyr_ice_in_public.protect.search_script') }}</p>
             </div>
           </div>
         </div>

@@ -16,15 +16,15 @@ const getList = (key: string) => {
           <span class="text-xs uppercase tracking-wide text-base-content block mb-3">{{ $t('kyr_nav.section_label') }}</span>
           <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-base-content mb-4 flex items-center justify-center gap-3 flex-wrap">
             {{ $t('kyr.work.title') }}
-            <span class="badge badge-soft badge-warning">{{ $t('kyr.hero.subtitle') }}</span>
+            <span class="badge badge-soft badge-warning">{{ $t('kyr_ice_at_work.hero.subtitle') }}</span>
           </h1>
           <p class="text-lg text-base-content/80 max-w-2xl mx-auto">
-            {{ $t('kyr.hero.description') }}
+            {{ $t('kyr_ice_at_work.hero.description') }}
           </p>
         </header>
 
         <!-- Main Timeline Content -->
-        <ul class="timeline timeline-vertical timeline-compact max-w-4xl mx-auto" role="list" aria-label="Steps to follow if ICE comes to your workplace">
+        <ul class="timeline timeline-vertical timeline-compact max-w-4xl mx-auto" role="list" :aria-label="$t('kyr_ice_at_work.timeline_label')">
           
           <!-- Step 1: Where ICE Can Go -->
           <li>
@@ -35,7 +35,7 @@ const getList = (key: string) => {
               
               <!-- Step Header -->
               <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs uppercase tracking-wide text-base-content" aria-label="Step 1 of 4">Step 01</span>
+                <span class="text-xs uppercase tracking-wide text-base-content" :aria-label="$t('common.step_label', { number: 1, total: 4 })">{{ $t('common.step_format', { number: '01' }) }}</span>
                 <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_at_work.where_ice_can_go.title') }}</h2>
               </div>
               
@@ -89,7 +89,7 @@ const getList = (key: string) => {
                       <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
                     </svg>
                     <div>
-                      <span class="text-xs uppercase tracking-wide text-base-content font-medium">Important</span>
+                      <span class="text-xs uppercase tracking-wide text-base-content font-medium">{{ $t('common.important') }}</span>
                       <p class="text-sm mt-1">{{ $t('kyr_ice_at_work.where_ice_can_go.warrant_note') }}</p>
                     </div>
                   </div>
@@ -111,7 +111,7 @@ const getList = (key: string) => {
               
               <!-- Step Header -->
               <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs uppercase tracking-wide text-base-content" aria-label="Step 2 of 4">Step 02</span>
+                <span class="text-xs uppercase tracking-wide text-base-content" :aria-label="$t('common.step_label', { number: 2, total: 4 })">{{ $t('common.step_format', { number: '02' }) }}</span>
                 <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_at_work.rights_at_work.title') }}</h2>
               </div>
               
@@ -124,7 +124,7 @@ const getList = (key: string) => {
                   <div class="grid gap-3">
                     <div v-for="(item, index) in getList('kyr_ice_at_work.rights_at_work.list')" :key="index" class="flex items-start gap-3 p-4 bg-base-200 rounded-lg">
                       <div class="w-8 h-8 rounded-full bg-base-300 flex items-center justify-center shrink-0">
-                        <span class="text-xs font-mono text-base-content" :aria-label="`Item ${index + 1}`">{{ String(index + 1).padStart(2, '0') }}</span>
+                        <span class="text-xs font-mono text-base-content" :aria-label="$t('common.item_label', { number: index + 1 })">{{ String(index + 1).padStart(2, '0') }}</span>
                       </div>
                       <p class="text-sm text-base-content flex-1 pt-1">{{ rt(item) }}</p>
                     </div>
@@ -147,9 +147,9 @@ const getList = (key: string) => {
               
               <!-- Step Header -->
               <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs uppercase tracking-wide text-base-content" aria-label="Step 3 of 4">Step 03</span>
-                <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr.approaches.title') }}</h2>
-                <span class="badge badge-soft badge-error text-xs">{{ $t('kyr.approaches.critical') }}</span>
+                <span class="text-xs uppercase tracking-wide text-base-content" :aria-label="$t('common.step_label', { number: 3, total: 4 })">{{ $t('common.step_format', { number: '03' }) }}</span>
+                <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_at_work.approaches.title') }}</h2>
+                <span class="badge badge-soft badge-error text-xs">{{ $t('common.critical') }}</span>
               </div>
               
               <!-- Step Content Card -->
@@ -158,12 +158,12 @@ const getList = (key: string) => {
                   
                   <!-- DO NOT / DO Section -->
                   <div class="space-y-4">
-                    <div v-for="(item, index) in getList('kyr.approaches.do_not_list')" :key="'donot-'+index" class="flex items-start gap-3">
-                      <span class="badge badge-soft badge-error shrink-0" role="img" aria-label="Do not">DO NOT</span>
+                    <div v-for="(item, index) in getList('kyr_ice_at_work.approaches.do_not_list')" :key="'donot-'+index" class="flex items-start gap-3">
+                      <span class="badge badge-soft badge-error shrink-0" role="img" :aria-label="$t('common.do_not_label')">{{ $t('common.do_not_label') }}</span>
                       <p class="text-sm text-base-content">{{ rt(item) }}</p>
                     </div>
-                    <div v-for="(item, index) in getList('kyr.approaches.do_list')" :key="'do-'+index" class="flex items-start gap-3">
-                      <span class="badge badge-soft badge-success shrink-0" role="img" aria-label="Do">DO</span>
+                    <div v-for="(item, index) in getList('kyr_ice_at_work.approaches.do_list')" :key="'do-'+index" class="flex items-start gap-3">
+                      <span class="badge badge-soft badge-success shrink-0" role="img" :aria-label="$t('common.do_label')">{{ $t('common.do_label') }}</span>
                       <p class="text-sm text-base-content">{{ rt(item) }}</p>
                     </div>
                   </div>
@@ -174,8 +174,8 @@ const getList = (key: string) => {
                       <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
                     </svg>
                     <div>
-                      <span class="text-xs uppercase tracking-wide text-base-content font-medium">{{ $t('kyr.approaches.say_this_title') }}</span>
-                      <p class="font-mono text-sm mt-1">{{ $t('kyr.approaches.say_this_text') }}</p>
+                      <span class="text-xs uppercase tracking-wide text-base-content font-medium">{{ $t('common.say_this') }}</span>
+                      <p class="font-mono text-sm mt-1">{{ $t('kyr_ice_at_work.approaches.say_this_text') }}</p>
                     </div>
                   </div>
                   
@@ -196,15 +196,15 @@ const getList = (key: string) => {
               
               <!-- Step Header -->
               <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs uppercase tracking-wide text-base-content" aria-label="Step 4 of 4">Step 04</span>
-                <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr.employer.title') }}</h2>
+                <span class="text-xs uppercase tracking-wide text-base-content" :aria-label="$t('common.step_label', { number: 4, total: 4 })">{{ $t('common.step_format', { number: '04' }) }}</span>
+                <h2 class="text-xl font-bold tracking-tight">{{ $t('kyr_ice_at_work.employer.title') }}</h2>
               </div>
               
               <!-- Step Content Card -->
               <div class="card card-border bg-base-100 hover:border-primary/50 focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-colors" tabindex="0" role="article">
                 <div class="card-body p-5">
                   
-                  <p class="text-sm text-base-content mb-4">{{ $t('kyr.employer.intro') }}</p>
+                  <p class="text-sm text-base-content mb-4">{{ $t('kyr_ice_at_work.employer.intro') }}</p>
                   
                   <div class="grid sm:grid-cols-2 gap-4">
                     <div class="flex items-start gap-3 p-4 bg-base-200 rounded-lg">
@@ -214,8 +214,8 @@ const getList = (key: string) => {
                         </svg>
                       </div>
                       <div class="flex-1">
-                        <p class="text-sm font-semibold">{{ $t('kyr.employer.cards.warrant.title') }}</p>
-                        <p class="text-sm text-base-content/80">{{ $t('kyr.employer.cards.warrant.desc') }}</p>
+                        <p class="text-sm font-semibold">{{ $t('kyr_ice_at_work.employer.cards.warrant.title') }}</p>
+                        <p class="text-sm text-base-content/80">{{ $t('kyr_ice_at_work.employer.cards.warrant.desc') }}</p>
                       </div>
                     </div>
                     
@@ -226,8 +226,8 @@ const getList = (key: string) => {
                         </svg>
                       </div>
                       <div class="flex-1">
-                        <p class="text-sm font-semibold">{{ $t('kyr.employer.cards.deny.title') }}</p>
-                        <p class="text-sm text-base-content/80">{{ $t('kyr.employer.cards.deny.desc') }}</p>
+                        <p class="text-sm font-semibold">{{ $t('kyr_ice_at_work.employer.cards.deny.title') }}</p>
+                        <p class="text-sm text-base-content/80">{{ $t('kyr_ice_at_work.employer.cards.deny.desc') }}</p>
                       </div>
                     </div>
                     
@@ -238,8 +238,8 @@ const getList = (key: string) => {
                         </svg>
                       </div>
                       <div class="flex-1">
-                        <p class="text-sm font-semibold">{{ $t('kyr.employer.cards.attorney.title') }}</p>
-                        <p class="text-sm text-base-content/80">{{ $t('kyr.employer.cards.attorney.desc') }}</p>
+                        <p class="text-sm font-semibold">{{ $t('kyr_ice_at_work.employer.cards.attorney.title') }}</p>
+                        <p class="text-sm text-base-content/80">{{ $t('kyr_ice_at_work.employer.cards.attorney.desc') }}</p>
                       </div>
                     </div>
                     
@@ -250,8 +250,8 @@ const getList = (key: string) => {
                         </svg>
                       </div>
                       <div class="flex-1">
-                        <p class="text-sm font-semibold">{{ $t('kyr.employer.cards.notify.title') }}</p>
-                        <p class="text-sm text-base-content/80">{{ $t('kyr.employer.cards.notify.desc') }}</p>
+                        <p class="text-sm font-semibold">{{ $t('kyr_ice_at_work.employer.cards.notify.title') }}</p>
+                        <p class="text-sm text-base-content/80">{{ $t('kyr_ice_at_work.employer.cards.notify.desc') }}</p>
                       </div>
                     </div>
                   </div>

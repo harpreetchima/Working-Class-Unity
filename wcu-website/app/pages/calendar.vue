@@ -92,7 +92,7 @@ function getBadgeClass(eventType: EventType): string {
     <!-- Filter Section -->
     <section class="pb-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-wrap gap-2 justify-center" role="group" aria-label="Filter events by type">
+        <div class="flex flex-wrap gap-2 justify-center" role="group" :aria-label="$t('calendar.filter_aria_label')">
           <button
             v-for="type in eventTypes"
             :key="type.value"
@@ -131,7 +131,7 @@ function getBadgeClass(eventType: EventType): string {
         <ul
           v-else
           role="list"
-          aria-label="Upcoming events"
+          :aria-label="$t('calendar.events_list_aria_label')"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 list-none"
         >
           <li v-for="event in filteredEvents" :key="event.id">
