@@ -38,7 +38,7 @@ export const events: Event[] = [
     endDateTime: '2025-12-05T03:30:00.000Z',
     allDay: false,
     location: '2522 Grand Canal Boulevard Suite # 6, Stockton, CA 95207, USA',
-    rsvpLink: null,
+    rsvpLink: 'https://tech.workingclassunity.com/wcu-general-meeting',
     isVirtual: false,
     isHybrid: true,
     isActive: true,
