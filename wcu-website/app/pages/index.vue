@@ -3,6 +3,50 @@ import { getUpcomingEvents, type Event, type EventType } from '~/data/events'
 
 const { t, locale } = useI18n()
 
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
+// Page title (gets appended with " | Working Class Unity" via titleTemplate in app.vue)
+useHead({
+  title: t('home_page.hero.title'),
+})
+
+// SEO meta tags for search engines, Open Graph (Facebook/LinkedIn), and Twitter
+useSeoMeta({
+  description: t('home_page.hero.description'),
+  
+  // Open Graph tags (Facebook, LinkedIn, etc.)
+  ogType: 'website',
+  ogTitle: `${t('home_page.hero.title')} | Working Class Unity`,
+  ogDescription: t('home_page.hero.description'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com',
+  ogSiteName: 'Working Class Unity',
+  ogLocale: locale.value,
+  
+  // Twitter Card tags
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('home_page.hero.title')} | Working Class Unity`,
+  twitterDescription: t('home_page.hero.description'),
+  twitterImage: 'https://workingclassunity.com/logo_dark.svg',
+})
+
+// =============================================================================
+// Schema.org Structured Data
+// =============================================================================
+// WebPage schema for the home page - automatically links to the Organization defined in app.vue
+// The "about" relation is automatically added for the home page (/) pointing to the Organization
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'WebPage',
+    'name': t('home_page.hero.title'),
+    'description': t('home_page.hero.description'),
+  }),
+])
+
+// =============================================================================
+// Page Data
+// =============================================================================
 // Get 3 upcoming events
 const upcomingEvents = computed(() => getUpcomingEvents(3))
 
@@ -167,18 +211,18 @@ function getBadgeClass(eventType: EventType): string {
                 </div>
               </div>
 
-              <!-- Actions row (if virtual link available) -->
-              <div v-if="event.virtualLink" class="flex gap-2 mt-4 pt-3 border-t border-base-300">
+              <!-- Actions row (if RSVP link available) -->
+              <div v-if="event.rsvpLink" class="flex gap-2 mt-4 pt-3 border-t border-base-300">
                 <a
-                  :href="event.virtualLink"
+                  :href="event.rsvpLink"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn-sm btn-primary gap-2 flex-1"
                 >
-                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                   </svg>
-                  {{ $t('calendar.join_virtual') }}
+                  {{ $t('calendar.rsvp_here') }}
                   <span class="sr-only">{{ $t('common.opens_in_new_tab') }}</span>
                 </a>
               </div>

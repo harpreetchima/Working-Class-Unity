@@ -3,16 +3,43 @@ import { ref, computed } from 'vue'
 import { campaigns } from '~/data/campaigns'
 import type { Campaign } from '~/data/campaigns'
 
-// Page meta
+const { t } = useI18n()
+
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
 useHead({
-  title: 'Our Campaigns - WCU',
-  meta: [
-    {
-      name: 'description',
-      content: 'Explore our active campaigns and side quests. Join us in fighting for workers rights, housing justice, and community organizing.'
-    }
-  ]
+  title: t('campaigns.pageTitle'),
 })
+
+useSeoMeta({
+  description: t('campaigns.pageSubtitle'),
+  ogType: 'website',
+  ogTitle: `${t('campaigns.pageTitle')} | Working Class Unity`,
+  ogDescription: t('campaigns.pageSubtitle'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com/campaigns',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('campaigns.pageTitle')} | Working Class Unity`,
+  twitterDescription: t('campaigns.pageSubtitle'),
+})
+
+// =============================================================================
+// Schema.org Structured Data
+// =============================================================================
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'CollectionPage',
+    'name': t('campaigns.pageTitle'),
+    'description': t('campaigns.pageSubtitle'),
+  }),
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Home', item: '/' },
+      { name: t('campaigns.pageTitle') },
+    ],
+  }),
+])
 
 // State
 const activeFilter = ref<string>('active')

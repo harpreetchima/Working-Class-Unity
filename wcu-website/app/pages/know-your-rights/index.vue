@@ -1,4 +1,41 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
+useHead({
+  title: t('kyr.overview.title'),
+})
+
+useSeoMeta({
+  description: t('kyr.overview.description'),
+  ogType: 'website',
+  ogTitle: `${t('kyr.overview.title')} | Working Class Unity`,
+  ogDescription: t('kyr.overview.description'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com/know-your-rights',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('kyr.overview.title')} | Working Class Unity`,
+  twitterDescription: t('kyr.overview.description'),
+})
+
+// =============================================================================
+// Schema.org Structured Data
+// =============================================================================
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'WebPage',
+    'name': t('kyr.overview.title'),
+    'description': t('kyr.overview.description'),
+  }),
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Home', item: '/' },
+      { name: t('nav.kyr') },
+    ],
+  }),
+])
 </script>
 
 <template>

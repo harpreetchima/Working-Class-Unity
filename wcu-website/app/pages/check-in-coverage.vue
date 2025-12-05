@@ -1,9 +1,32 @@
 <script setup>
-const { t } = useI18n();
+const { t } = useI18n()
 
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
 useHead({
   title: t('check_in_coverage.page_title'),
-});
+})
+
+useSeoMeta({
+  description: t('check_in_coverage.hero.description'),
+  ogType: 'website',
+  ogTitle: `${t('check_in_coverage.page_title')} | Working Class Unity`,
+  ogDescription: t('check_in_coverage.hero.description'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com/check-in-coverage',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('check_in_coverage.page_title')} | Working Class Unity`,
+  twitterDescription: t('check_in_coverage.hero.description'),
+})
+
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'WebPage',
+    'name': t('check_in_coverage.page_title'),
+    'description': t('check_in_coverage.hero.description'),
+  }),
+])
 
 // Shift Materials data structure for Section D
 const shiftMaterials = [

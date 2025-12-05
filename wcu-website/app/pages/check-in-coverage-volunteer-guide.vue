@@ -1,9 +1,32 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
 
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
 useHead({
   title: t('volunteer_guide.page_title'),
 })
+
+useSeoMeta({
+  description: t('volunteer_guide.hero.subtitle'),
+  ogType: 'website',
+  ogTitle: `${t('volunteer_guide.hero.title')} | Working Class Unity`,
+  ogDescription: t('volunteer_guide.hero.subtitle'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com/check-in-coverage-volunteer-guide',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('volunteer_guide.hero.title')} | Working Class Unity`,
+  twitterDescription: t('volunteer_guide.hero.subtitle'),
+})
+
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'WebPage',
+    'name': t('volunteer_guide.hero.title'),
+    'description': t('volunteer_guide.hero.subtitle'),
+  }),
+])
 
 const getList = (key: string) => {
   return tm(key) as string[]

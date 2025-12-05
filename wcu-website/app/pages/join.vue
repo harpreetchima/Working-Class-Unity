@@ -1,3 +1,55 @@
+<script setup lang="ts">
+const { t } = useI18n()
+
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
+useHead({
+  title: t('join.hero.title'),
+})
+
+useSeoMeta({
+  description: t('join.hero.description'),
+  ogType: 'website',
+  ogTitle: `${t('join.hero.title')} | Working Class Unity`,
+  ogDescription: t('join.hero.description'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com/join',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('join.hero.title')} | Working Class Unity`,
+  twitterDescription: t('join.hero.description'),
+})
+
+// =============================================================================
+// Schema.org Structured Data
+// =============================================================================
+// FAQPage schema for the join page with FAQ section
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'FAQPage',
+    'name': t('join.hero.title'),
+    'description': t('join.hero.description'),
+  }),
+  // FAQ Questions - these appear in Google's FAQ rich results
+  defineQuestion({
+    name: t('join.faq.items.eligibility.question'),
+    acceptedAnswer: t('join.faq.items.eligibility.answer'),
+  }),
+  defineQuestion({
+    name: t('join.faq.items.good_standing.question'),
+    acceptedAnswer: t('join.faq.items.good_standing.answer'),
+  }),
+  defineQuestion({
+    name: t('join.faq.items.dues.question'),
+    acceptedAnswer: t('join.faq.items.dues.answer'),
+  }),
+  defineQuestion({
+    name: t('join.faq.items.contact.question'),
+    acceptedAnswer: 'Yes, of course! You can schedule a quick call with a member of the Steering Committee by using the link on our website.',
+  }),
+])
+</script>
+
 <template>
   <div class="flex flex-col gap-12 pb-12">
     <!-- Hero Section -->
@@ -207,9 +259,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-definePageMeta({
-  title: 'Join WCU'
-})
-</script>

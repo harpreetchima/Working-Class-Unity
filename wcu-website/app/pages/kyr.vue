@@ -1,7 +1,38 @@
-<script setup>
-definePageMeta({
-  title: 'nav.kyr'
+<script setup lang="ts">
+const { t } = useI18n()
+
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
+useHead({
+  title: t('kyr_home.hero.title'),
 })
+
+useSeoMeta({
+  description: t('kyr_home.hero.description'),
+  ogType: 'website',
+  ogTitle: `${t('kyr_home.hero.title')} | Working Class Unity`,
+  ogDescription: t('kyr_home.hero.description'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com/kyr',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('kyr_home.hero.title')} | Working Class Unity`,
+  twitterDescription: t('kyr_home.hero.description'),
+})
+
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'WebPage',
+    'name': t('kyr_home.hero.title'),
+    'description': t('kyr_home.hero.description'),
+  }),
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Home', item: '/' },
+      { name: t('nav.kyr') },
+    ],
+  }),
+])
 </script>
 
 <template>

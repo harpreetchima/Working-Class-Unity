@@ -4,6 +4,43 @@ const { t, tm, rt } = useI18n()
 const getList = (key: string) => {
   return tm(key) as string[]
 }
+
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
+useHead({
+  title: t('kyr.home.title'),
+})
+
+useSeoMeta({
+  description: t('kyr.home.description'),
+  ogType: 'article',
+  ogTitle: `${t('kyr.home.title')} | Working Class Unity`,
+  ogDescription: t('kyr.home.description'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com/know-your-rights/ice-at-home',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('kyr.home.title')} | Working Class Unity`,
+  twitterDescription: t('kyr.home.description'),
+})
+
+// =============================================================================
+// Schema.org Structured Data
+// =============================================================================
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'WebPage',
+    'name': t('kyr.home.title'),
+    'description': t('kyr.home.description'),
+  }),
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Home', item: '/' },
+      { name: t('nav.kyr'), item: '/kyr' },
+      { name: t('kyr.home.title') },
+    ],
+  }),
+])
 </script>
 
 <template>

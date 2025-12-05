@@ -1,11 +1,34 @@
 <script setup lang="ts">
 import { events, getUpcomingEvents, type Event, type EventType } from '~/data/events'
 
-definePageMeta({
-  title: 'calendar.page_title'
+const { t, locale } = useI18n()
+
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
+useHead({
+  title: t('calendar.hero.title'),
 })
 
-const { t, locale } = useI18n()
+useSeoMeta({
+  description: t('calendar.hero.description'),
+  ogType: 'website',
+  ogTitle: `${t('calendar.hero.title')} | Working Class Unity`,
+  ogDescription: t('calendar.hero.description'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com/calendar',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('calendar.hero.title')} | Working Class Unity`,
+  twitterDescription: t('calendar.hero.description'),
+})
+
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'CollectionPage',
+    'name': t('calendar.hero.title'),
+    'description': t('calendar.hero.description'),
+  }),
+])
 
 // Filter state
 const selectedType = ref<EventType | 'all'>('all')
@@ -228,6 +251,7 @@ function getBadgeClass(eventType: EventType): string {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                   </svg>
                   {{ $t('calendar.rsvp_here') }}
+                  <span class="sr-only">{{ $t('common.opens_in_new_tab') }}</span>
                 </a>
               </div>
             </div>

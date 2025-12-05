@@ -1,9 +1,32 @@
 <script setup>
-definePageMeta({
-  title: 'request_support.title'
+const { t, tm, rt } = useI18n()
+
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
+useHead({
+  title: t('request_support.title'),
 })
 
-const { tm, rt } = useI18n()
+useSeoMeta({
+  description: t('request_support.intro'),
+  ogType: 'website',
+  ogTitle: `${t('request_support.title')} | Working Class Unity`,
+  ogDescription: t('request_support.intro'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com/checkinsupport',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('request_support.title')} | Working Class Unity`,
+  twitterDescription: t('request_support.intro'),
+})
+
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'WebPage',
+    'name': t('request_support.title'),
+    'description': t('request_support.intro'),
+  }),
+])
 
 // Track button click for Formbricks survey trigger
 // Using dynamic import to avoid SSR issues - Formbricks requires browser APIs

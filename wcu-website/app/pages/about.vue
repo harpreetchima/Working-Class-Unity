@@ -75,8 +75,33 @@
   </div>
 </template>
 
-<script setup>
-definePageMeta({
-  title: 'About'
+<script setup lang="ts">
+const { t } = useI18n()
+
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
+useHead({
+  title: t('about_page.title'),
 })
+
+useSeoMeta({
+  description: t('about_page.p1'),
+  ogType: 'website',
+  ogTitle: `${t('about_page.title')} | Working Class Unity`,
+  ogDescription: t('about_page.p1'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com/about',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('about_page.title')} | Working Class Unity`,
+  twitterDescription: t('about_page.p1'),
+})
+
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'AboutPage',
+    'name': t('about_page.title'),
+    'description': t('about_page.p1'),
+  }),
+])
 </script>

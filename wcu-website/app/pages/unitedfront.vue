@@ -211,8 +211,33 @@
   </div>
 </template>
 
-<script setup>
-definePageMeta({
-  title: 'United Front'
+<script setup lang="ts">
+const { t } = useI18n()
+
+// =============================================================================
+// SEO Meta Tags
+// =============================================================================
+useHead({
+  title: t('unitedfront.pageTitle'),
 })
+
+useSeoMeta({
+  description: t('unitedfront.pledge.content'),
+  ogType: 'article',
+  ogTitle: `${t('unitedfront.title')} | Working Class Unity`,
+  ogDescription: t('unitedfront.pledge.content'),
+  ogImage: 'https://workingclassunity.com/logo_dark.svg',
+  ogUrl: 'https://workingclassunity.com/unitedfront',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${t('unitedfront.title')} | Working Class Unity`,
+  twitterDescription: t('unitedfront.pledge.content'),
+})
+
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'WebPage',
+    'name': t('unitedfront.title'),
+    'description': t('unitedfront.pledge.content'),
+  }),
+])
 </script>
