@@ -29,9 +29,9 @@ useSeoMeta({
 // =============================================================================
 useSchemaOrg([
   defineWebPage({
-    '@type': 'WebPage',
-    'name': t('kyr.car.title'),
-    'description': t('kyr.car.description'),
+    name: t('kyr.car.title'),
+    description: t('kyr.car.description'),
+    url: 'https://workingclassunity.com/know-your-rights/ice-pulls-you-over',
   }),
   defineBreadcrumb({
     itemListElement: [

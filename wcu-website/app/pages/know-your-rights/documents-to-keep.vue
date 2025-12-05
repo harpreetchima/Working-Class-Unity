@@ -29,9 +29,9 @@ useSeoMeta({
 // =============================================================================
 useSchemaOrg([
   defineWebPage({
-    '@type': 'WebPage',
-    'name': t('kyr.documents.title'),
-    'description': t('kyr.documents.description'),
+    name: t('kyr.documents.title'),
+    description: t('kyr.documents.description'),
+    url: 'https://workingclassunity.com/know-your-rights/documents-to-keep',
   }),
   defineBreadcrumb({
     itemListElement: [

@@ -25,8 +25,9 @@ useSeoMeta({
 useSchemaOrg([
   defineWebPage({
     '@type': 'CollectionPage',
-    'name': t('calendar.hero.title'),
-    'description': t('calendar.hero.description'),
+    name: t('calendar.hero.title'),
+    description: t('calendar.hero.description'),
+    url: 'https://workingclassunity.com/calendar',
   }),
 ])
 

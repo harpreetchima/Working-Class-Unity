@@ -13,7 +13,7 @@ useSchemaOrg([
   // Organization identity - establishes WCU as the site's identity
   defineOrganization({
     name: 'Working Class Unity',
-    logo: '/logo_dark.svg',
+    logo: 'https://workingclassunity.com/logo_dark.svg',
     description: 'A member-run working-class organization fighting for genuine democracy in San Joaquin County.',
     url: 'https://workingclassunity.com',
     sameAs: [
@@ -25,6 +25,7 @@ useSchemaOrg([
   defineWebSite({
     name: 'Working Class Unity',
     description: 'Build a member-run movement in San Joaquin County that wins concrete victories.',
+    url: 'https://workingclassunity.com',
   }),
 ])
 </script>

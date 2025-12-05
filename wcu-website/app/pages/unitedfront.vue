@@ -235,9 +235,9 @@ useSeoMeta({
 
 useSchemaOrg([
   defineWebPage({
-    '@type': 'WebPage',
-    'name': t('unitedfront.title'),
-    'description': t('unitedfront.pledge.content'),
+    name: t('unitedfront.title'),
+    description: t('unitedfront.pledge.content'),
+    url: 'https://workingclassunity.com/unitedfront',
   }),
 ])
 </script>

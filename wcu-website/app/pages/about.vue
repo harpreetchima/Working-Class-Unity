@@ -100,8 +100,9 @@ useSeoMeta({
 useSchemaOrg([
   defineWebPage({
     '@type': 'AboutPage',
-    'name': t('about_page.title'),
-    'description': t('about_page.p1'),
+    name: t('about_page.title'),
+    description: t('about_page.p1'),
+    url: 'https://workingclassunity.com/about',
   }),
 ])
 </script>

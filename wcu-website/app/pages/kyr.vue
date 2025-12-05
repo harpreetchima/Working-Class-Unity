@@ -22,9 +22,9 @@ useSeoMeta({
 
 useSchemaOrg([
   defineWebPage({
-    '@type': 'WebPage',
-    'name': t('kyr_home.hero.title'),
-    'description': t('kyr_home.hero.description'),
+    name: t('kyr_home.hero.title'),
+    description: t('kyr_home.hero.description'),
+    url: 'https://workingclassunity.com/kyr',
   }),
   defineBreadcrumb({
     itemListElement: [

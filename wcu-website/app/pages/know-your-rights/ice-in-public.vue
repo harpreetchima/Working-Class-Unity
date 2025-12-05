@@ -29,9 +29,9 @@ useSeoMeta({
 // =============================================================================
 useSchemaOrg([
   defineWebPage({
-    '@type': 'WebPage',
-    'name': t('kyr.public.title'),
-    'description': t('kyr.public.description'),
+    name: t('kyr.public.title'),
+    description: t('kyr.public.description'),
+    url: 'https://workingclassunity.com/know-your-rights/ice-in-public',
   }),
   defineBreadcrumb({
     itemListElement: [

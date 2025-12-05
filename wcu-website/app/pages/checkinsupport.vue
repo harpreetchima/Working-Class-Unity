@@ -22,9 +22,9 @@ useSeoMeta({
 
 useSchemaOrg([
   defineWebPage({
-    '@type': 'WebPage',
-    'name': t('request_support.title'),
-    'description': t('request_support.intro'),
+    name: t('request_support.title'),
+    description: t('request_support.intro'),
+    url: 'https://workingclassunity.com/checkinsupport',
   }),
 ])
 

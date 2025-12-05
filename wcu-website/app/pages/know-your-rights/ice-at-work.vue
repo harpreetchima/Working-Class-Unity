@@ -29,9 +29,9 @@ useSeoMeta({
 // =============================================================================
 useSchemaOrg([
   defineWebPage({
-    '@type': 'WebPage',
-    'name': t('kyr.work.title'),
-    'description': t('kyr.work.description'),
+    name: t('kyr.work.title'),
+    description: t('kyr.work.description'),
+    url: 'https://workingclassunity.com/know-your-rights/ice-at-work',
   }),
   defineBreadcrumb({
     itemListElement: [

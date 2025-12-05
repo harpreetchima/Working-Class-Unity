@@ -38,9 +38,9 @@ useSeoMeta({
 // The "about" relation is automatically added for the home page (/) pointing to the Organization
 useSchemaOrg([
   defineWebPage({
-    '@type': 'WebPage',
-    'name': t('home_page.hero.title'),
-    'description': t('home_page.hero.description'),
+    name: t('home_page.hero.title'),
+    description: t('home_page.hero.description'),
+    url: 'https://workingclassunity.com',
   }),
 ])
 

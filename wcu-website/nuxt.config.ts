@@ -32,7 +32,7 @@ export default defineNuxtConfig({
     identity: {
       type: 'Organization',
       name: 'Working Class Unity',
-      logo: '/logo_dark.svg',
+      logo: 'https://workingclassunity.com/logo_dark.svg',
       sameAs: [
         'https://x.com/workclassunity',
         'https://www.facebook.com/WorkClassUnity/',
@@ -58,4 +58,43 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  
+  // Runtime configuration for environment variables
+  runtimeConfig: {
+    // Public keys (exposed to client) - Formbricks needs client-side access
+    public: {
+      formbricksEnvironmentId: process.env.NUXT_PUBLIC_FORMBRICKS_ENVIRONMENT_ID || 'cminsehli0009o8015hjuzkuz',
+      formbricksAppUrl: process.env.NUXT_PUBLIC_FORMBRICKS_APP_URL || 'https://form.workingclassunity.com',
+    },
+  },
+  
+  // Nitro configuration for security headers and CSP
+  nitro: {
+    routeRules: {
+      '/**': {
+        headers: {
+          'X-Frame-Options': 'SAMEORIGIN',
+          'X-Content-Type-Options': 'nosniff',
+          'X-XSS-Protection': '1; mode=block',
+          'Referrer-Policy': 'strict-origin-when-cross-origin',
+          'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
+          'Content-Security-Policy': [
+            "default-src 'self'",
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://app.cal.com https://form.workingclassunity.com",
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+            "font-src 'self' data: https://fonts.gstatic.com",
+            "img-src 'self' data: blob: https:",
+            "connect-src 'self' https://app.cal.com https://form.workingclassunity.com https://api.formbricks.com",
+            "frame-src 'self' https://app.cal.com https://cal.com",
+            "object-src 'none'",
+            "base-uri 'self'",
+            "form-action 'self'",
+            "frame-ancestors 'self'",
+            "upgrade-insecure-requests",
+          ].join('; '),
+        },
+      },
+    },
+  },
+  
 });

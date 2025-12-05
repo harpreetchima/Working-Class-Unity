@@ -25,9 +25,9 @@ useSeoMeta({
 // =============================================================================
 useSchemaOrg([
   defineWebPage({
-    '@type': 'WebPage',
-    'name': t('kyr.overview.title'),
-    'description': t('kyr.overview.description'),
+    name: t('kyr.overview.title'),
+    description: t('kyr.overview.description'),
+    url: 'https://workingclassunity.com/know-your-rights',
   }),
   defineBreadcrumb({
     itemListElement: [

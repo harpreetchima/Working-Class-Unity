@@ -3,9 +3,10 @@ import formbricks from "@formbricks/js";
 export default defineNuxtPlugin(async () => {
   // Only initialize on client side
   if (typeof window !== "undefined") {
+    const config = useRuntimeConfig();
     await formbricks.setup({
-      environmentId: "cminsehli0009o8015hjuzkuz",
-      appUrl: "https://form.workingclassunity.com",
+      environmentId: config.public.formbricksEnvironmentId,
+      appUrl: config.public.formbricksAppUrl,
     });
   }
 

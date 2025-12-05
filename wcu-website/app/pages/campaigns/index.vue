@@ -30,8 +30,9 @@ useSeoMeta({
 useSchemaOrg([
   defineWebPage({
     '@type': 'CollectionPage',
-    'name': t('campaigns.pageTitle'),
-    'description': t('campaigns.pageSubtitle'),
+    name: t('campaigns.pageTitle'),
+    description: t('campaigns.pageSubtitle'),
+    url: 'https://workingclassunity.com/campaigns',
   }),
   defineBreadcrumb({
     itemListElement: [

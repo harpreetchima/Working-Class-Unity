@@ -19,10 +19,20 @@ RUN npm run build
 # Production stage
 FROM node:22-alpine AS runner
 
+# Create a non-root user for security
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nuxt -u 1001
+
 WORKDIR /app
 
 # Copy only the built output from builder stage
 COPY --from=builder /app/.output .output
+
+# Change ownership to non-root user
+RUN chown -R nuxt:nodejs /app
+
+# Switch to non-root user
+USER nuxt
 
 # Set production environment
 ENV NODE_ENV=production

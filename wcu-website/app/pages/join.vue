@@ -27,8 +27,9 @@ useSeoMeta({
 useSchemaOrg([
   defineWebPage({
     '@type': 'FAQPage',
-    'name': t('join.hero.title'),
-    'description': t('join.hero.description'),
+    name: t('join.hero.title'),
+    description: t('join.hero.description'),
+    url: 'https://workingclassunity.com/join',
   }),
   // FAQ Questions - these appear in Google's FAQ rich results
   defineQuestion({
@@ -249,7 +250,7 @@ useSchemaOrg([
             <div class="collapse-content text-base-content/70">
               <i18n-t keypath="join.faq.items.contact.answer" tag="p">
                 <template #link>
-                  <a href="https://cal.com/workingclassunity/15min" target="_blank" class="link link-primary">{{ $t('join.faq.items.contact.link_text') }}</a>
+                  <a href="https://cal.com/workingclassunity/15min" target="_blank" rel="noopener noreferrer" class="link link-primary">{{ $t('join.faq.items.contact.link_text') }}</a>
                 </template>
               </i18n-t>
             </div>
