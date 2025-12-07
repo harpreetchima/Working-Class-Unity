@@ -1,4 +1,19 @@
 {
+  "links": {
+    "page_title": "Enlaces",
+    "description": "Acceso rápido a todos los recursos de Working Class Unity, guías sobre sus derechos y próximos eventos.",
+    "org_name": "Working Class Unity",
+    "org_blurb": "Una organización de la clase trabajadora dirigida por sus miembros que lucha por una democracia genuina en el condado de San Joaquín.",
+    "join_cta": "Únete a WCU",
+    "kyr_guides_title": "Guías y Recursos",
+    "kyr_overview": "Resumen",
+    "check_in_support": "Solicitar Apoyo para Check-In",
+    "volunteer_guide": "Guía Rápida para Voluntarios",
+    "kyr_scenarios": "Escenarios de Conozca Sus Derechos",
+    "get_involved_heading": "Participa",
+    "upcoming_events": "Próximos Eventos",
+    "footer_text": "workingclassunity.com"
+  },
   "nav": {
     "about": "Sobre Nosotros",
     "kyr": "Conozca Sus Derechos",

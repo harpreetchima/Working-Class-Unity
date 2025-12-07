@@ -1,4 +1,19 @@
 {
+  "links": {
+    "page_title": "Links",
+    "description": "Quick access to all Working Class Unity resources, know your rights guides, and upcoming events.",
+    "org_name": "Working Class Unity",
+    "org_blurb": "A member-run working-class organization fighting for genuine democracy in San Joaquin County.",
+    "join_cta": "Join WCU",
+    "kyr_guides_title": "Guides & Resources",
+    "kyr_overview": "Overview",
+    "check_in_support": "Request Check-In Support",
+    "volunteer_guide": "Check-In Coverage Vol Guide",
+    "kyr_scenarios": "Know Your Rights Scenarios",
+    "get_involved_heading": "Get Involved",
+    "upcoming_events": "Next Events",
+    "footer_text": "workingclassunity.com"
+  },
   "nav": {
     "about": "About",
     "kyr": "Know Your Rights",

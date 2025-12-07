@@ -674,6 +674,215 @@ Nuxt auto-generates lazy variants of all components. Prefix any component with `
 *   Loaded via dynamic import when first rendered
 
 
+## 🔍 SEO & Schema.org
+
+This project implements [Schema.org](https://schema.org/) structured data to help search engines understand the website's content and improve search visibility. Schema.org markup enables rich results in search engines, potentially showing enhanced information like organization details, FAQ snippets, and page types.
+
+### Module
+
+We use the [`nuxt-schema-org`](https://github.com/harlan-zw/nuxt-schema-org) module (v5.0.9), which is built on top of [`@unhead/schema-org`](https://unhead.unjs.io/schema-org/getting-started/introduction). This module provides type-safe Schema.org definitions and automatic deduplication of schema nodes.
+
+### Global Configuration
+
+**Module Registration** ([`nuxt.config.ts`](wcu-website/nuxt.config.ts)):
+
+```typescript
+modules: ['@nuxtjs/i18n', '@nuxt/image', '@nuxt/fonts', '@nuxt/scripts', 'nuxt-schema-org'],
+
+// Schema.org configuration
+schemaOrg: {
+  identity: {
+    type: 'Organization',
+    name: 'Working Class Unity',
+    logo: 'https://workingclassunity.com/logo_dark.svg',
+    sameAs: [
+      'https://x.com/workclassunity',
+      'https://www.facebook.com/WorkClassUnity/',
+    ],
+  },
+},
+```
+
+**Global Schema Definitions** ([`app/app.vue`](wcu-website/app/app.vue)):
+
+The app-level schema defines the Organization and WebSite identities that apply to the entire site:
+
+```vue
+<script setup lang="ts">
+// Global Schema.org - defines the Organization and WebSite for the entire app
+// The nuxt-schema-org module handles deduplication, so this runs once at the app level
+useSchemaOrg([
+  // Organization identity - establishes WCU as the site's identity
+  defineOrganization({
+    name: 'Working Class Unity',
+    logo: 'https://workingclassunity.com/logo_dark.svg',
+    description: 'A member-run working-class organization fighting for genuine democracy in San Joaquin County.',
+    url: 'https://workingclassunity.com',
+    sameAs: [
+      'https://x.com/workclassunity',
+      'https://www.facebook.com/WorkClassUnity/',
+    ],
+  }),
+  // WebSite definition - describes the website itself
+  defineWebSite({
+    name: 'Working Class Unity',
+    description: 'Build a member-run movement in San Joaquin County that wins concrete victories.',
+    url: 'https://workingclassunity.com',
+  }),
+])
+</script>
+```
+
+**Key Points:**
+*   The module automatically deduplicates schema nodes, so global definitions in `app.vue` are shared across all pages
+*   Individual pages automatically inherit the Organization identity
+*   The `sameAs` property links to social media profiles for knowledge graph integration
+
+### Page-Level Implementation
+
+Each page can define its own Schema.org markup using the `useSchemaOrg()` composable. The module automatically links page schemas to the global Organization identity.
+
+**Basic WebPage Example** ([`app/pages/index.vue`](wcu-website/app/pages/index.vue)):
+
+```vue
+<script setup lang="ts">
+useSchemaOrg([
+  defineWebPage({
+    name: t('home_page.hero.title'),
+    description: t('home_page.hero.description'),
+    url: 'https://workingclassunity.com',
+  }),
+])
+</script>
+```
+
+**FAQPage Example** ([`app/pages/join.vue`](wcu-website/app/pages/join.vue)):
+
+```vue
+<script setup lang="ts">
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'FAQPage',
+    name: t('join.hero.title'),
+    description: t('join.hero.description'),
+    url: 'https://workingclassunity.com/join',
+  }),
+  // FAQ Questions - these appear in Google's FAQ rich results
+  defineQuestion({
+    name: t('join.faq.items.eligibility.question'),
+    acceptedAnswer: t('join.faq.items.eligibility.answer'),
+  }),
+  defineQuestion({
+    name: t('join.faq.items.good_standing.question'),
+    acceptedAnswer: t('join.faq.items.good_standing.answer'),
+  }),
+])
+</script>
+```
+
+**CollectionPage Example** ([`app/pages/calendar.vue`](wcu-website/app/pages/calendar.vue)):
+
+```vue
+<script setup lang="ts">
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'CollectionPage',
+    name: t('calendar.hero.title'),
+    description: t('calendar.hero.description'),
+    url: 'https://workingclassunity.com/calendar',
+  }),
+])
+</script>
+```
+
+**AboutPage Example** ([`app/pages/about.vue`](wcu-website/app/pages/about.vue)):
+
+```vue
+<script setup lang="ts">
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'AboutPage',
+    name: t('about_page.title'),
+    description: t('about_page.p1'),
+    url: 'https://workingclassunity.com/about',
+  }),
+])
+</script>
+```
+
+### Supported Page Types
+
+The project uses various Schema.org page types depending on content:
+
+| Page Type | Use Case | Example Pages |
+| :--- | :--- | :--- |
+| `WebPage` | Standard pages | Home page (`index.vue`) |
+| `AboutPage` | About/company information | `about.vue` |
+| `CollectionPage` | Lists of items (events, campaigns) | `calendar.vue`, `campaigns/index.vue` |
+| `FAQPage` | Pages with FAQ sections | `join.vue` |
+
+### Benefits
+
+*   **Rich Results**: Enables enhanced search result displays (FAQ snippets, organization knowledge panels)
+*   **Better SEO**: Helps search engines understand content structure and relationships
+*   **Knowledge Graph**: Organization identity can appear in Google's knowledge panel
+*   **Type Safety**: TypeScript support ensures correct schema definitions
+*   **Automatic Deduplication**: Module prevents duplicate schema nodes across pages
+
+### Adding Schema.org to New Pages
+
+When creating a new page, add Schema.org markup in the `<script setup>` section:
+
+1.  Import the necessary functions (auto-imported by Nuxt):
+    ```typescript
+    // defineWebPage, defineQuestion, etc. are auto-imported
+    ```
+
+2.  Use the `useSchemaOrg()` composable:
+    ```vue
+    <script setup lang="ts">
+    const { t } = useI18n()
+    
+    useSchemaOrg([
+      defineWebPage({
+        name: t('page.title'),
+        description: t('page.description'),
+        url: `https://workingclassunity.com${route.path}`,
+        // Add '@type' for specific page types
+        '@type': 'CollectionPage', // Optional: for list pages
+      }),
+    ])
+    </script>
+    ```
+
+3.  For FAQ pages, include `defineQuestion()` nodes:
+    ```vue
+    useSchemaOrg([
+      defineWebPage({
+        '@type': 'FAQPage',
+        // ... page metadata
+      }),
+      defineQuestion({
+        name: 'Question text',
+        acceptedAnswer: 'Answer text',
+      }),
+      // Add more questions as needed
+    ])
+    ```
+
+### Validation
+
+Validate your Schema.org markup using:
+*   [Google Rich Results Test](https://search.google.com/test/rich-results)
+*   [Schema.org Validator](https://validator.schema.org/)
+
+### Resources
+
+*   [nuxt-schema-org Documentation](https://github.com/harlan-zw/nuxt-schema-org)
+*   [Unhead Schema.org Guide](https://unhead.unjs.io/schema-org/getting-started/introduction)
+*   [Schema.org Documentation](https://schema.org/)
+
+
 ## ♿ Accessibility Guidelines
 
 This project follows WCAG (Web Content Accessibility Guidelines) standards to ensure our content is accessible to all users, including those using assistive technologies.

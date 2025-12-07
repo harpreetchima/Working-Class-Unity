@@ -1,4 +1,19 @@
 {
+  "links": {
+    "page_title": "ਲਿੰਕ",
+    "description": "Working Class Unity ਦੇ ਸਾਰੇ ਸਰੋਤਾਂ, ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ ਗਾਈਡਾਂ, ਅਤੇ ਆਉਣ ਵਾਲੇ ਸਮਾਗਮਾਂ ਤੱਕ ਤੇਜ਼ ਪਹੁੰਚ।",
+    "org_name": "Working Class Unity",
+    "org_blurb": "ਸੈਨ ਜੋਆਕਿਨ ਕਾਊਂਟੀ ਵਿੱਚ ਅਸਲ ਲੋਕਤੰਤਰ ਲਈ ਲੜਨ ਵਾਲੀ ਮੈਂਬਰ-ਚਲਿਤ ਮਜ਼ਦੂਰ ਵਰਗ ਦੀ ਸੰਸਥਾ।",
+    "join_cta": "WCU ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
+    "kyr_guides_title": "ਗਾਈਡਾਂ ਅਤੇ ਸਰੋਤ",
+    "kyr_overview": "ਸੰਖੇਪ ਜਾਣਕਾਰੀ",
+    "check_in_support": "ਚੈਕ-ਇਨ ਸਹਾਇਤਾ ਲਈ ਬੇਨਤੀ ਕਰੋ",
+    "volunteer_guide": "ਵਲੰਟੀਅਰ ਤੁਰੰਤ ਗਾਈਡ",
+    "kyr_scenarios": "ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ ਦ੍ਰਿਸ਼",
+    "get_involved_heading": "ਸ਼ਾਮਲ ਹੋਵੋ",
+    "upcoming_events": "ਅਗਲੇ ਸਮਾਗਮ",
+    "footer_text": "workingclassunity.com"
+  },
   "nav": {
     "about": "ਸਾਡੇ ਬਾਰੇ",
     "kyr": "ਆਪਣੇ ਅਧਿਕਾਰ ਜਾਣੋ",
