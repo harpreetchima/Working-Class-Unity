@@ -4,7 +4,7 @@ Welcome to the WCU Website project!
 
 This application is built with a modern stack featuring **Nuxt 4**, **Tailwind CSS 4**, and **DaisyUI 5**.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: [Nuxt 4](https://nuxt.com) (Vue 3)
 - **Styling**: [Tailwind CSS 4](https://tailwindcss.com)
@@ -15,7 +15,7 @@ This application is built with a modern stack featuring **Nuxt 4**, **Tailwind C
 - **Surveys**: [Formbricks](https://formbricks.com) client SDK
 - **Deployment**: Docker / Nixpacks / Coolify
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -41,7 +41,7 @@ This application is built with a modern stack featuring **Nuxt 4**, **Tailwind C
     ```
     The app will be available at `http://localhost:3000`.
 
-## 📂 Project Structure
+## Project Structure
 
 This project follows the **Nuxt 4** directory structure, where the application source code resides in the `app/` directory.
 
@@ -66,7 +66,7 @@ wcu-website/
 └── package.json         # Project dependencies
 ```
 
-## 🎨 Styling & Theming
+## Styling & Theming
 
 We use **Tailwind CSS 4** and **DaisyUI 5**, which introduces a CSS-first configuration approach. **We do not use `tailwind.config.js`**.
 
@@ -143,7 +143,7 @@ We follow an industry-standard width system to ensure a consistent, polished aes
 *   Use `max-w-7xl` as the outer container, then nest narrower widths for specific content.
 *   **Do NOT use** the Tailwind `container` class; use explicit `max-w-*` classes instead.
 
-## 🧩 Components & Layouts
+## Components & Layouts
 
 ### Navbar & Logo Switching
 
@@ -326,7 +326,7 @@ Formbricks surveys are integrated via a Nuxt client plugin at [`app/plugins/form
 
 **Note:** The Formbricks SDK is imported from `@formbricks/js` and is listed in `package.json` dependencies.
 
-## ⚠️ SSR & Hydration Best Practices
+## SSR & Hydration Best Practices
 
 **Hydration** is the process where Vue takes over the static HTML rendered by the server and makes it interactive on the client. A **hydration mismatch** occurs when the HTML generated on the server differs from what Vue expects to render on the client, causing console warnings and potential UI glitches.
 
@@ -450,11 +450,11 @@ const year = useState('footerYear', () => new Date().getFullYear())
 
 **Why this works:** The `useState` composable creates shared state that is serialized from server to client. The year is computed once during SSR, and the same value is used during client hydration, preventing any mismatch.
 
-**⚠️ Computed Properties with Time:**
+**Computed Properties with Time:**
 
 Using `new Date()` inside computed properties is a common source of hydration mismatches. Computed properties run during both SSR and client hydration, and since the server and client execute at different times, the timestamp values will differ.
 
-**❌ Bad - Creates hydration mismatch:**
+**Bad - Creates hydration mismatch:**
 
 ```vue
 <script setup>
@@ -466,7 +466,7 @@ const upcomingEvents = computed(() => {
 </script>
 ```
 
-**✅ Good - Use useState for time-dependent computed properties:**
+**Good - Use useState for time-dependent computed properties:**
 
 ```vue
 <script setup>
@@ -545,7 +545,7 @@ function formatDate(dateString: string): string {
 *   `Number.toLocaleString()`
 
 
-## 🚀 Performance Best Practices
+## Performance Best Practices
 
 This project implements several performance optimizations using Nuxt modules and best practices to improve loading times, Core Web Vitals, and overall user experience.
 
@@ -613,7 +613,7 @@ The `@nuxt/fonts` module handles font optimization automatically. For custom fon
 
 Use the `@nuxt/scripts` module's `useScript()` composable instead of manual DOM injection for external scripts like Cal.com embeds, analytics, or chat widgets.
 
-**❌ Bad - Manual DOM injection:**
+**Bad - Manual DOM injection:**
 
 ```vue
 <script setup>
@@ -626,7 +626,7 @@ onMounted(() => {
 </script>
 ```
 
-**✅ Good - Using useScript composable:**
+**Good - Using useScript composable:**
 
 ```vue
 <script setup>
@@ -674,7 +674,7 @@ Nuxt auto-generates lazy variants of all components. Prefix any component with `
 *   Loaded via dynamic import when first rendered
 
 
-## 🔍 SEO & Schema.org
+## SEO & Schema.org
 
 This project implements [Schema.org](https://schema.org/) structured data to help search engines understand the website's content and improve search visibility. Schema.org markup enables rich results in search engines, potentially showing enhanced information like organization details, FAQ snippets, and page types.
 
@@ -883,7 +883,7 @@ Validate your Schema.org markup using:
 *   [Schema.org Documentation](https://schema.org/)
 
 
-## ♿ Accessibility Guidelines
+## Accessibility Guidelines
 
 This project follows WCAG (Web Content Accessibility Guidelines) standards to ensure our content is accessible to all users, including those using assistive technologies.
 
@@ -1020,7 +1020,7 @@ When reviewing a page for accessibility, follow this checklist:
 *   **Screen readers**: VoiceOver (Mac), NVDA (Windows), or browser built-in readers
 
 
-## 🌍 Internationalization (i18n)
+## Internationalization (i18n)
 
 We support multiple languages using `@nuxtjs/i18n`.
 
@@ -1038,7 +1038,7 @@ We support multiple languages using `@nuxtjs/i18n`.
 *   **Links**: Use `<NuxtLinkLocale to="about">` instead of `<NuxtLink to="/about">` to preserve the active language prefix.
 *   **Switching**: Use `switchLocalePath('es')` to generate the URL for a language switch.
 
-## 🐳 Deployment Options
+## Deployment Options
 
 ### Docker Deployment
 
@@ -1082,7 +1082,7 @@ cmds = ["npm run build"]
 
 See the full [Coolify Deployment Guide](wcu-website/docs/coolify-deployment.md) for detailed instructions including environment variables, health checks, and troubleshooting.
 
-## 📦 Production Build
+## Production Build
 
 To build the application for production:
 
