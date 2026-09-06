@@ -138,6 +138,42 @@ test('Events navigation shows the next three public sessions with working destin
   await expect(page.getByRole('button', { name: 'Menu', exact: true })).toHaveAttribute('aria-expanded', 'false')
 })
 
+test('Events navigation reopens immediately after keyboard dismissal during the hover delay', async ({ page }) => {
+  const pauseAt = new Date(Date.now() + 60_000)
+  await page.clock.install()
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto('/')
+  const navigation = page.getByRole('navigation', { name: 'Primary', exact: true })
+  const events = navigation.getByRole('button', { name: 'Events', exact: true })
+  await expect(events).toBeVisible()
+  await page.clock.pauseAt(pauseAt)
+
+  await events.hover()
+  await page.clock.runFor(200)
+  await expect(events).toHaveAttribute('aria-expanded', 'true')
+  await expect(navigation.getByRole('link', { name: 'All events', exact: true })).toBeVisible()
+  await page.keyboard.press('Escape')
+  await expect(events).toHaveAttribute('aria-expanded', 'false')
+  await expect(events).toBeFocused()
+
+  // Reopen before the original 300 ms hover guard expires.
+  await events.click()
+  await expect(events).toHaveAttribute('aria-expanded', 'true')
+  await expect(navigation.getByRole('link', { name: 'All events', exact: true })).toBeVisible()
+  await page.clock.runFor(300)
+  await events.click()
+  await expect(events).toHaveAttribute('aria-expanded', 'false')
+
+  const currentWork = navigation.getByRole('button', { name: 'Current Work', exact: true })
+  await currentWork.hover()
+  await page.clock.runFor(200)
+  await expect(currentWork).toHaveAttribute('aria-expanded', 'true')
+  await expect(events).toHaveAttribute('aria-expanded', 'false')
+  await page.keyboard.press('Escape')
+  await expect(currentWork).toHaveAttribute('aria-expanded', 'false')
+  await expect(currentWork).toBeFocused()
+})
+
 test('Events navigation keeps the calendar reachable when the public feed fails', async ({ page }) => {
   // A network fixture is necessary to exercise an unavailable API; the content
   // and visibility checks above use the real database and endpoint.

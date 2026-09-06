@@ -1,0 +1,62 @@
+diff --git a/dist/NavigationMenu/NavigationMenuTrigger.cjs b/dist/NavigationMenu/NavigationMenuTrigger.cjs
+index 32a784b7cd170fada684e3bf58c5ff0e436b22a1..68acdfb0d31b44dafed2755f8411d12e96c7f9c5 100644
+--- a/dist/NavigationMenu/NavigationMenuTrigger.cjs
++++ b/dist/NavigationMenu/NavigationMenuTrigger.cjs
+@@ -40,6 +40,9 @@ var NavigationMenuTrigger_vue_vue_type_script_setup_true_lang_default = /* @__PU
+ 		const hasPointerMoveOpenedRef = (0, __vueuse_core.refAutoReset)(false, 300);
+ 		const wasClickCloseRef = (0, vue.ref)(false);
+ 		const open = (0, vue.computed)(() => itemContext.value === menuContext.modelValue.value);
++		(0, vue.watch)(open, (isOpen) => {
++			if (!isOpen) hasPointerMoveOpenedRef.value = false;
++		}, { flush: "sync" });
+ 		(0, vue.onMounted)(() => {
+ 			itemContext.triggerRef = triggerElement;
+ 			triggerId.value = require_NavigationMenu_utils.makeTriggerId(menuContext.baseId, itemContext.value);
+diff --git a/dist/NavigationMenu/NavigationMenuTrigger.js b/dist/NavigationMenu/NavigationMenuTrigger.js
+index 9f06816174faf5dac744313f738e0c47afb70cca..bce3a640a7fbcf2a7f9dd481f04697826780f2f7 100644
+--- a/dist/NavigationMenu/NavigationMenuTrigger.js
++++ b/dist/NavigationMenu/NavigationMenuTrigger.js
+@@ -5,7 +5,7 @@ import { VisuallyHidden_default } from "../VisuallyHidden/VisuallyHidden.js";
+ import { getOpenState, makeContentId, makeTriggerId } from "./utils.js";
+ import { injectNavigationMenuContext } from "./NavigationMenuRoot.js";
+ import { injectNavigationMenuItemContext } from "./NavigationMenuItem.js";
+-import { Fragment, computed, createCommentVNode, createElementBlock, createVNode, defineComponent, mergeProps, onMounted, openBlock, ref, renderSlot, unref, withCtx } from "vue";
++import { Fragment, computed, createCommentVNode, createElementBlock, createVNode, defineComponent, mergeProps, onMounted, openBlock, ref, renderSlot, unref, watch, withCtx } from "vue";
+ import { refAutoReset, unrefElement } from "@vueuse/core";
+ 
+ //#region src/NavigationMenu/NavigationMenuTrigger.vue?vue&type=script&setup=true&lang.ts
+@@ -39,6 +39,9 @@ var NavigationMenuTrigger_vue_vue_type_script_setup_true_lang_default = /* @__PU
+ 		const hasPointerMoveOpenedRef = refAutoReset(false, 300);
+ 		const wasClickCloseRef = ref(false);
+ 		const open = computed(() => itemContext.value === menuContext.modelValue.value);
++		watch(open, (isOpen) => {
++			if (!isOpen) hasPointerMoveOpenedRef.value = false;
++		}, { flush: "sync" });
+ 		onMounted(() => {
+ 			itemContext.triggerRef = triggerElement;
+ 			triggerId.value = makeTriggerId(menuContext.baseId, itemContext.value);
+diff --git a/src/NavigationMenu/NavigationMenuTrigger.vue b/src/NavigationMenu/NavigationMenuTrigger.vue
+index eee302cb9a4dd8b5b069dfa3f30e4b580ae19a64..216cd1ba9a72fa1046356c426ac5325475df190f 100644
+--- a/src/NavigationMenu/NavigationMenuTrigger.vue
++++ b/src/NavigationMenu/NavigationMenuTrigger.vue
+@@ -12,7 +12,7 @@ export interface NavigationMenuTriggerProps extends PrimitiveProps {
+ 
+ <script setup lang="ts">
+ import { refAutoReset, unrefElement } from '@vueuse/core'
+-import { computed, onMounted, ref } from 'vue'
++import { computed, onMounted, ref, watch } from 'vue'
+ import {
+   Primitive,
+ } from '@/Primitive'
+@@ -42,6 +42,11 @@ const wasClickCloseRef = ref(false)
+ 
+ const open = computed(() => itemContext.value === menuContext.modelValue.value)
+ 
++watch(open, (isOpen) => {
++  if (!isOpen)
++    hasPointerMoveOpenedRef.value = false
++}, { flush: 'sync' })
++
+ onMounted(() => {
+   itemContext.triggerRef = triggerElement
+   triggerId.value = makeTriggerId(menuContext.baseId, itemContext.value)
