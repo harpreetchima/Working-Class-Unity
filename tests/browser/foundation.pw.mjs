@@ -4,6 +4,7 @@ import Database from 'better-sqlite3'
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import { assertIdentityAccountJourney } from './identity-account-journey.mjs'
+import { petitionDemand } from '../../app/content/remove-flock-stockton/petition.ts'
 
 const runtimeName = requiredEnvironment('BROWSER_RUNTIME_APP_NAME')
 const runtimeUrl = requiredEnvironment('BROWSER_RUNTIME_APP_URL')
@@ -234,10 +235,17 @@ test('global public navigation exposes current routes and a route-closing mobile
       heading: 'They Have Their Parties. We Need Our Own Organization',
       title: 'About'
     },
-    { path: '/calendar', label: 'Events', heading: 'Find your place in the work', title: 'Calendar' }
+    {
+      path: '/calendar',
+      label: 'All events',
+      heading: 'Find your place in the work',
+      title: 'Calendar',
+      menu: 'Events'
+    }
   ]) {
     await page.goto(destination.path)
     const primaryNavigation = page.getByRole('navigation', { name: 'Primary' })
+    if (destination.menu) await primaryNavigation.getByRole('button', { name: destination.menu, exact: true }).click()
     const currentLink = primaryNavigation.getByRole('link', { name: destination.label, exact: true })
 
     await expect(page.getByRole('heading', { name: destination.heading, exact: true })).toBeVisible()
@@ -246,12 +254,13 @@ test('global public navigation exposes current routes and a route-closing mobile
     await expect(currentLink).toHaveAttribute('aria-current', 'page')
     await expect(primaryNavigation.locator('[aria-current="page"]')).toHaveCount(1)
     await page.waitForLoadState('networkidle')
+    if (destination.menu) await page.keyboard.press('Escape')
   }
 
   const desktopNavigation = page.locator('[data-reka-navigation-menu]')
   const aboutLink = desktopNavigation.getByRole('link', { name: 'Who We Are', exact: true })
   const currentWorkTrigger = desktopNavigation.getByRole('button', { name: 'Current Work', exact: true })
-  const calendarLink = desktopNavigation.getByRole('link', { name: 'Events', exact: true })
+  const eventsTrigger = desktopNavigation.getByRole('button', { name: 'Events', exact: true })
   const forumLink = page.getByRole('link', { name: /Member Forum.*opens in a new tab/ })
 
   await expect(desktopNavigation).toHaveRole('navigation')
@@ -265,9 +274,9 @@ test('global public navigation exposes current routes and a route-closing mobile
   await page.keyboard.press('ArrowRight')
   await expect(currentWorkTrigger).toBeFocused()
   await page.keyboard.press('ArrowRight')
-  await expect(calendarLink).toBeFocused()
+  await expect(eventsTrigger).toBeFocused()
   await page.keyboard.press('End')
-  await expect(calendarLink).toBeFocused()
+  await expect(eventsTrigger).toBeFocused()
   await page.keyboard.press('Home')
   await expect(aboutLink).toBeFocused()
 
@@ -276,16 +285,18 @@ test('global public navigation exposes current routes and a route-closing mobile
   await expect(currentWorkTrigger).toHaveAttribute('aria-expanded', 'true')
   const allWorkLink = desktopNavigation.getByRole('link', { name: 'All current work', exact: true })
   const flockLink = desktopNavigation.getByRole('link', { name: 'Remove Flock Stockton', exact: true })
+  const contractLink = desktopNavigation.getByRole('link', { name: 'What Stockton Bought', exact: true })
+  const removalLink = desktopNavigation.getByRole('link', { name: 'Removal, not Reform', exact: true })
   const unitedFrontLink = desktopNavigation.getByRole('link', { name: 'United Front', exact: true })
   await expect(allWorkLink).toHaveAttribute('href', '/#current-work')
   await expect(flockLink).toHaveAttribute('href', '/campaigns/remove-flock-stockton')
   await expect(unitedFrontLink).toHaveAttribute('href', '/campaigns/united-front')
   await page.keyboard.press('ArrowDown')
-  await expect(allWorkLink).toBeFocused()
-  await page.keyboard.press('ArrowDown')
   await expect(flockLink).toBeFocused()
   await page.keyboard.press('ArrowDown')
-  await expect(unitedFrontLink).toBeFocused()
+  await expect(contractLink).toBeFocused()
+  await page.keyboard.press('ArrowDown')
+  await expect(removalLink).toBeFocused()
   await page.keyboard.press('Escape')
   await expect(currentWorkTrigger).toHaveAttribute('aria-expanded', 'false')
   await expect(currentWorkTrigger).toBeFocused()
@@ -319,10 +330,10 @@ test('global public navigation exposes current routes and a route-closing mobile
 
   const mobileNavigation = page.locator('.mobile-navigation')
   await assertMinimumTargetSize(mobileNavigation.getByRole('link', { name: 'Who We Are', exact: true }))
-  await assertMinimumTargetSize(mobileNavigation.getByRole('link', { name: 'Current Work', exact: true }))
+  await assertMinimumTargetSize(mobileNavigation.getByRole('button', { name: 'Current Work', exact: true }))
   await assertMinimumTargetSize(mobileNavigation.getByRole('link', { name: 'Remove Flock Stockton', exact: true }))
   await assertMinimumTargetSize(mobileNavigation.getByRole('link', { name: 'United Front', exact: true }))
-  await assertMinimumTargetSize(mobileNavigation.getByRole('link', { name: 'Events', exact: true }))
+  await assertMinimumTargetSize(mobileNavigation.getByRole('button', { name: 'Events', exact: true }))
   await assertMinimumTargetSize(mobileForumLink)
   await assertMinimumTargetSize(page.getByRole('link', { name: 'Member Login', exact: true }))
   await assertMinimumTargetSize(page.getByRole('link', { name: 'Get Involved', exact: true }))
@@ -474,6 +485,101 @@ test.describe('localized browsing', () => {
   })
 })
 
+test('Flock overview preserves the demands and makes the council record accessible', async ({ page }) => {
+  const observations = observePage(page)
+  await page.setViewportSize({ width: 1440, height: 1000 })
+  await page.goto('/campaigns/remove-flock-stockton')
+
+  const council = page.getByRole('region', { name: 'Stockton City Council Voted for Mass Surveillance', exact: true })
+  await council.scrollIntoViewIfNeeded()
+  await expect(council.locator('time')).toHaveAttribute('datetime', '2026-03-31')
+  await expect(council).toContainText('April 14, 2031')
+  await expect(council).toContainText('The additional $3.15 million brings the combined contract cap to $5,416,700.')
+  await expect(council).toContainText('Raised the spending cap')
+  await expect(council.getByText('Voted yes', { exact: true })).toHaveCount(7)
+  await expect(council.locator('.landing-member-name')).toHaveText([
+    'Christina Fugazi',
+    'Michele Padilla',
+    'Mariela Ponce',
+    'Michael Blower',
+    'Mario Enríquez',
+    'Brando Villapudua',
+    'Jason Lee'
+  ])
+  await expect
+    .poll(() =>
+      council
+        .locator('img')
+        .evaluateAll((images) => images.every((image) => image.complete && image.naturalWidth === 400))
+    )
+    .toBe(true)
+
+  const records = council.locator('details')
+  await expect(records).not.toHaveAttribute('open')
+  await records.locator('summary').focus()
+  await page.keyboard.press('Enter')
+  await expect(records).toHaveAttribute('open')
+  for (const link of await records.getByRole('link').all()) {
+    await expect(link).toHaveAttribute('target', '_blank')
+    await expect(link).toHaveAttribute('rel', 'noopener noreferrer')
+    await expect(link).toHaveAccessibleName(/opens in a new tab/)
+  }
+
+  const demands = page.getByRole('region', { name: petitionDemand.title, exact: true })
+  await expect(demands.getByRole('listitem')).toHaveText(petitionDemand.demands)
+  const signLinks = page.getByRole('link', { name: 'Sign the demand letter', exact: true })
+  await expect(signLinks).toHaveCount(2)
+  for (const link of await signLinks.all()) {
+    await expect(link).toHaveAttribute('href', 'https://tech.workingclassunity.com/deflock-stockton')
+    await assertMinimumTargetSize(link)
+  }
+
+  for (const width of [1440, 390, 320]) {
+    await page.setViewportSize({ width, height: 900 })
+    await assertAccessibleWithoutOverflow(page, '.campaign-landing')
+  }
+  await page.evaluate(() => {
+    document.documentElement.style.fontSize = '200%'
+  })
+  await assertNoHorizontalOverflow(page)
+  await assertCleanPage(page, observations)
+})
+
+test('one mobile menu provides all four Flock destinations and closes on navigation', async ({ page }) => {
+  const observations = observePage(page)
+  const routes = [
+    ['Remove Flock Stockton', '/campaigns/remove-flock-stockton'],
+    ['What Stockton Bought', '/campaigns/remove-flock-stockton/what-stockton-bought'],
+    ['Removal, not Reform', '/campaigns/remove-flock-stockton/why-safeguards-are-not-enough'],
+    ['FAQ', '/campaigns/remove-flock-stockton/faq']
+  ]
+  await page.goto(routes[0][1])
+  const menu = page.getByRole('button', { name: 'Menu', exact: true })
+  const contextNavigation = page.locator('#mobile-current-work .context-navigation').first()
+  for (const width of [320, 390]) {
+    await page.setViewportSize({ width, height: 844 })
+    for (const [label, path] of routes) {
+      await expect(page.locator('.campaign-bar')).toHaveCount(0)
+      await expect(menu).toHaveAttribute('aria-expanded', 'false')
+      await menu.click()
+      await expect(contextNavigation.getByRole('link')).toHaveCount(4)
+      await contextNavigation.getByRole('link', { name: label, exact: true }).click()
+      await expect(page).toHaveURL(new RegExp(`${path}$`))
+      await expect(menu).toHaveAttribute('aria-expanded', 'false')
+      await menu.click()
+      const current = contextNavigation.getByRole('link', { name: label, exact: true })
+      await expect(current).toHaveAttribute('aria-current', 'page')
+      await assertMinimumTargetSize(current)
+      await current.focus()
+      await page.keyboard.press('Escape')
+      await expect(menu).toHaveAttribute('aria-expanded', 'false')
+      await expect(menu).toBeFocused()
+      await assertNoHorizontalOverflow(page)
+    }
+  }
+  await assertCleanPage(page, observations)
+})
+
 test('campaign update prompt uses the hosted Deflock form without collecting contact details', async ({ page }) => {
   const observations = observePage(page)
   await page.setViewportSize({ width: 1280, height: 900 })
@@ -492,7 +598,7 @@ test('campaign update prompt uses the hosted Deflock form without collecting con
   await expect(updatesLink).toHaveAttribute('href', 'https://tech.workingclassunity.com/deflock-stockton-updates')
   await assertMinimumTargetSize(updatesLink)
   const colors = await updatesLink.evaluate((element) => {
-    const section = element.closest('.campaign-participation')
+    const section = element.closest('.campaign-newsletter')
     return {
       background: getComputedStyle(section ?? element).backgroundColor,
       text: getComputedStyle(element).color

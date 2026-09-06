@@ -1,15 +1,12 @@
 <script setup lang="ts">
+import { flockNavigation } from '~/content/navigation'
+
 const route = useRoute()
 const { t } = useI18n()
 
-const campaignBase = '/campaigns/remove-flock-stockton'
+const campaignBase = flockNavigation.path
 const petitionUrl = 'https://tech.workingclassunity.com/deflock-stockton'
-const campaignLinks = computed(() => [
-  { to: campaignBase, label: t('removeFlock.navigation.overview') },
-  { to: `${campaignBase}/what-stockton-bought`, label: t('removeFlock.navigation.whatStocktonBought') },
-  { to: `${campaignBase}/why-safeguards-are-not-enough`, label: t('removeFlock.navigation.whySafeguards') },
-  { to: `${campaignBase}/faq`, label: t('removeFlock.navigation.faq') }
-])
+const campaignLinks = computed(() => flockNavigation.links.map((link) => ({ path: link.path, label: t(link.label) })))
 
 function currentPage(path: string) {
   return route.path === path ? 'page' : undefined
@@ -18,28 +15,7 @@ function currentPage(path: string) {
 
 <template>
   <div class="campaign-shell">
-    <div class="campaign-bar">
-      <NuxtLink class="campaign-name" :to="campaignBase" :aria-label="t('removeFlock.campaignHome')">
-        <span class="campaign-name-kicker">{{ t('removeFlock.shell.kicker') }}</span>
-        <span>{{ t('removeFlock.shell.name') }}</span>
-      </NuxtLink>
-
-      <nav class="campaign-navigation" :aria-label="t('removeFlock.navigationLabel')">
-        <div class="campaign-navigation-scroll">
-          <ul class="campaign-navigation-list" role="list">
-            <li v-for="link in campaignLinks" :key="link.to">
-              <NuxtLink class="campaign-navigation-link" :to="link.to" :aria-current="currentPage(link.to)">
-                {{ link.label }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <a class="campaign-petition-link" :href="petitionUrl">{{ t('removeFlock.petitionAction') }}</a>
-    </div>
-
-    <div class="campaign-page-slot">
+    <div class="campaign-page-slot" :class="{ 'campaign-page-slot--overview': route.path === campaignBase }">
       <slot />
     </div>
 
@@ -53,8 +29,8 @@ function currentPage(path: string) {
       <div class="campaign-footer-column">
         <h2>{{ t('removeFlock.footer.campaign') }}</h2>
         <ul role="list">
-          <li v-for="link in campaignLinks" :key="`footer-${link.to}`">
-            <NuxtLink :to="link.to" :aria-current="currentPage(link.to)">{{ link.label }}</NuxtLink>
+          <li v-for="link in campaignLinks" :key="`footer-${link.path}`">
+            <NuxtLink :to="link.path" :aria-current="currentPage(link.path)">{{ link.label }}</NuxtLink>
           </li>
         </ul>
       </div>
@@ -101,104 +77,8 @@ function currentPage(path: string) {
     min-width: 0;
   }
 
-  .campaign-bar {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
-    gap: var(--space-5);
-    min-width: 0;
-    border-block: var(--border-width) solid var(--campaign-border);
-    padding-inline: var(--campaign-content-inset);
-    padding-block: var(--space-3);
-  }
-
-  .campaign-name {
-    display: grid;
-    gap: var(--space-1);
-    min-block-size: var(--control-min-block-size);
-    min-inline-size: max-content;
-    align-content: center;
-    color: var(--color-brand-primary);
-    font-family: var(--font-family-display);
-    font-size: 1.125rem;
-    font-stretch: 110%;
-    font-weight: 700;
-    line-height: 1;
-    text-decoration: none;
-  }
-
-  .campaign-name-kicker {
-    color: var(--color-accent-action);
-    font-family: var(--font-family-mono);
-    font-size: 0.6875rem;
-    font-weight: var(--font-weight-strong);
-    letter-spacing: 0.08em;
-  }
-
-  .campaign-navigation,
-  .campaign-navigation-scroll {
-    min-width: 0;
-  }
-
-  .campaign-navigation-scroll {
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    scrollbar-width: thin;
-  }
-
-  .campaign-navigation-list {
-    display: flex;
-    inline-size: max-content;
-    min-inline-size: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-1);
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  .campaign-navigation-link {
-    display: inline-flex;
-    min-block-size: var(--control-min-block-size);
-    align-items: center;
-    border-radius: var(--radius-1);
-    padding: var(--space-2) var(--space-3);
-    color: var(--color-brand-primary);
-    font-size: 1rem;
-    font-weight: 650;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .campaign-navigation-link:hover,
-  .campaign-navigation-link:focus-visible,
-  .campaign-navigation-link[aria-current='page'] {
-    color: var(--color-brand-primary);
-    background: var(--color-action-soft);
-  }
-
-  .campaign-petition-link {
-    display: inline-flex;
-    min-block-size: var(--control-min-block-size);
-    align-items: center;
-    border: 2px solid var(--color-accent-action);
-    border-radius: var(--radius-1);
-    padding: var(--space-2) var(--space-3);
-    color: var(--color-accent-action);
-    background: transparent;
-    font-size: 1rem;
-    font-weight: 650;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .campaign-petition-link:hover,
-  .campaign-petition-link:focus-visible {
-    border-color: var(--color-brand-primary);
-    color: var(--color-brand-primary);
-    background: var(--color-action-soft);
+  .campaign-page-slot.campaign-page-slot--overview {
+    padding-inline: 0;
   }
 
   .campaign-page-slot {
@@ -295,15 +175,10 @@ function currentPage(path: string) {
   }
 
   @media (width > 40rem) {
-    .campaign-navigation-link,
     .campaign-footer-intro p,
     .campaign-footer-column a,
     .campaign-footer-column span {
       font-size: 0.9375rem;
-    }
-
-    .campaign-petition-link {
-      font-size: 0.875rem;
     }
 
     .campaign-footer-intro .campaign-footer-source-note {
@@ -312,22 +187,6 @@ function currentPage(path: string) {
   }
 
   @media (width <= 68rem) {
-    .campaign-bar {
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: var(--space-3);
-    }
-
-    .campaign-navigation {
-      grid-column: 1 / -1;
-      grid-row: 2;
-      margin-inline: calc(-1 * var(--campaign-content-inset));
-    }
-
-    .campaign-navigation-list {
-      justify-content: flex-start;
-      padding-inline: var(--campaign-content-inset);
-    }
-
     .campaign-footer {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -342,42 +201,12 @@ function currentPage(path: string) {
       --campaign-content-inset: var(--content-gutter-compact);
     }
 
-    .campaign-name {
-      font-size: 1rem;
-    }
-
-    .campaign-petition-link {
-      max-inline-size: 8.5rem;
-    }
-
     .campaign-footer {
       grid-template-columns: minmax(0, 1fr);
     }
 
     .campaign-footer-intro {
       grid-column: auto;
-    }
-  }
-
-  @media (width <= 24rem) {
-    .campaign-bar {
-      grid-template-columns: minmax(0, 1fr);
-    }
-
-    .campaign-name {
-      min-inline-size: 0;
-      overflow-wrap: anywhere;
-    }
-
-    .campaign-petition-link {
-      grid-row: 2;
-      justify-self: start;
-      max-inline-size: 100%;
-      overflow-wrap: anywhere;
-    }
-
-    .campaign-navigation {
-      grid-row: 3;
     }
   }
 }

@@ -21,6 +21,9 @@ overrides:
   drizzle-kit@0.31.10>@esbuild-kit/esm-loader: '-'
   vue: 3.5.40
 
+patchedDependencies:
+  reka-ui@2.10.1: eeedd083883306901856c429ff6e058e4173b8bbe74145988188f1f8c5147c69
+
 importers:
 
   .:
@@ -75,7 +78,7 @@ importers:
         version: 6.47.0(@aws-sdk/credential-provider-node@3.972.44)(@smithy/hash-node@4.3.4)(@smithy/signature-v4@5.6.4)(ws@8.21.0)(zod@4.4.3)
       reka-ui:
         specifier: 2.10.1
-        version: 2.10.1(vue@3.5.40(typescript@6.0.3))
+        version: 2.10.1(patch_hash=eeedd083883306901856c429ff6e058e4173b8bbe74145988188f1f8c5147c69)(vue@3.5.40(typescript@6.0.3))
       resend:
         specifier: 6.18.1
         version: 6.18.1
@@ -12924,7 +12927,7 @@ snapshots:
     dependencies:
       jsesc: 3.1.0
 
-  reka-ui@2.10.1(vue@3.5.40(typescript@6.0.3)):
+  reka-ui@2.10.1(patch_hash=eeedd083883306901856c429ff6e058e4173b8bbe74145988188f1f8c5147c69)(vue@3.5.40(typescript@6.0.3)):
     dependencies:
       '@floating-ui/dom': 1.8.0
       '@floating-ui/vue': 1.1.11(vue@3.5.40(typescript@6.0.3))

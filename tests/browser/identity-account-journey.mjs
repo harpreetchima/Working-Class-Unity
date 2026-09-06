@@ -9,6 +9,7 @@ export async function assertIdentityAccountJourney(context, helpers) {
 async function assertPublicEntryAndLegalRoutes(context, helpers) {
   const page = await context.newPage()
   const observations = helpers.observePage(page)
+  const topbar = page.getByRole('banner', { name: 'Working Class Unity site header' })
 
   try {
     await page.route('**/api/auth/get-session', (route) => helpers.fulfillJson(route, null))
@@ -27,7 +28,7 @@ async function assertPublicEntryAndLegalRoutes(context, helpers) {
     if (await page.getByRole('button', { name: 'Menu', exact: true }).isVisible()) {
       await page.getByRole('button', { name: 'Menu', exact: true }).click()
     }
-    const getStarted = page.getByRole('link', { name: 'Get Involved', exact: true })
+    const getStarted = topbar.getByRole('link', { name: 'Get Involved', exact: true })
     await getStarted.focus()
     await expect(getStarted).toBeFocused()
     await page.keyboard.press('Enter')
@@ -61,7 +62,7 @@ async function assertPublicEntryAndLegalRoutes(context, helpers) {
     if (await page.getByRole('button', { name: 'Menu', exact: true }).isVisible()) {
       await page.getByRole('button', { name: 'Menu', exact: true }).click()
     }
-    await page.getByRole('link', { name: 'Get Involved', exact: true }).click()
+    await topbar.getByRole('link', { name: 'Get Involved', exact: true }).click()
     await expect(page).toHaveURL(/\/#get-involved$/)
     await expect(page.getByRole('heading', { name: 'Start by showing up', exact: true })).toBeVisible()
     await page.goto('/legal/terms')

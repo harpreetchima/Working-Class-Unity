@@ -6,6 +6,7 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends python3 make g++ ca-certificates \
   && rm -rf /var/lib/apt/lists/*
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY patches ./patches
 COPY scripts/run-pnpm.mjs scripts/toolchain-contract.mjs scripts/
 RUN npm run bootstrap
 

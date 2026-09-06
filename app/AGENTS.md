@@ -29,8 +29,17 @@ The root [`AGENTS.md`](../AGENTS.md) governs all work. The normative interface a
 - `AppField`: label, hint, required, and validation-message relationships for a slotted native control.
 - `AppInput`: native input contract with model, attribute, class, focus, and validity forwarding.
 - `AppNotice`: persistent visual feedback with explicit, opt-in announcement behavior.
-- `AppTopbar`: application-shell header, Reka desktop primary navigation with a Current Work campaign
-  submenu, and native mobile disclosure with directly accessible campaign links.
+- `AppTopbar`: the single site header, with Reka desktop Current Work and Events panels and native
+  mobile disclosures. All links close the menu, including links to the current route. The campaign
+  shell supplies page framing and its footer, without a second navigation bar.
+- `ContextNavigation`: a labelled group of translated destinations in two desktop columns or one
+  mobile column. Its `entry` slot lets AppTopbar own Reka link integration; its default is `NavigationEntry`.
+- `NavigationEntry`: an internal or external navigation link with a concise accessible title,
+  separately associated description, exact current-page indication, and optional machine-readable date.
+  `content/navigation.ts` defines active campaign groups; no future destination is rendered speculatively.
+- `useUpcomingNavigationEvents`: requests the existing events endpoint only when the header opens its
+  Events panel, omits credentials, and provides the next three scheduled public sessions. The header
+  owns pending, error/retry, and empty presentation, with All events always available.
 - `LanguageSelector`: compact native select with a globe label, localized accessible name, and full language names.
 - `AccountMenu`: feature-owned Reka dropdown for identity, account navigation, and sign-out.
 - `calendar/CalendarDatePicker`: feature-owned Reka calendar and popover for agenda date navigation.
