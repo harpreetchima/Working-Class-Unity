@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { flockNavigation } from '~/content/navigation'
 import type { CampaignPageContent } from '~/content/remove-flock-stockton'
 
 defineProps<{ page: CampaignPageContent }>()
 const { t } = useI18n()
+const detailLinks = flockNavigation.links.filter((link) => link.path !== flockNavigation.path)
 </script>
 
 <template>
@@ -20,6 +22,13 @@ const { t } = useI18n()
           {{ t('removeFlock.landing.signDemand') }}
         </AppActionLink>
       </div>
+      <nav class="landing-hero-links" :aria-label="t('removeFlock.navigationLabel')">
+        <ul role="list">
+          <li v-for="link in detailLinks" :key="link.path">
+            <NuxtLink :to="link.path">{{ t(link.label) }}</NuxtLink>
+          </li>
+        </ul>
+      </nav>
     </div>
     <figure class="landing-hero-photo">
       <!-- eslint-disable-next-line vue/html-self-closing -->
@@ -70,6 +79,24 @@ const { t } = useI18n()
 
   .landing-sign-action {
     min-block-size: 3.25rem;
+  }
+
+  .landing-hero-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-5);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .landing-hero-links a {
+    display: inline-flex;
+    min-block-size: var(--control-min-block-size);
+    align-items: center;
+    color: var(--color-brand-primary);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
 
   .landing-hero-photo {
