@@ -9,6 +9,7 @@ import {
   NavigationMenuTrigger
 } from 'reka-ui'
 import { toAppSession } from '~/composables/useAppSession'
+import { currentWorkNavigation } from '~/content/navigation'
 import { authClient } from '~/lib/auth-client'
 
 const route = useRoute()
@@ -21,10 +22,30 @@ const retryState = ref<'idle' | 'pending' | 'failed'>('idle')
 const mobileMenuOpen = ref(false)
 const desktopMenuValue = ref('')
 const mobileMenuToggle = ref<HTMLButtonElement | null>(null)
-const campaignLinks = [
-  { path: '/campaigns/remove-flock-stockton', label: 'navigation.removeFlock' },
-  { path: '/campaigns/united-front', label: 'unitedfront.pageTitle' }
-]
+const workGroups = computed(() =>
+  currentWorkNavigation.map((group) => ({
+    label: t(group.label),
+    links: group.links.map((link) => ({
+      path: link.path,
+      label: t(link.label),
+      description: t(link.description)
+    }))
+  }))
+)
+const mobileWorkOpen = ref(route.path.startsWith('/campaigns/'))
+const mobileEventsOpen = ref(false)
+const {
+  entries: upcomingEvents,
+  status: eventsStatus,
+  error: eventsError,
+  refresh: refreshEvents
+} = useUpcomingNavigationEvents()
+watch(
+  () => desktopMenuValue.value === 'events' || (mobileMenuOpen.value && mobileEventsOpen.value),
+  (open) => {
+    if (open && eventsStatus.value !== 'pending') void refreshEvents()
+  }
+)
 const retrying = computed(() => retryState.value === 'pending')
 const nuxtUseId = () => useId()
 const retryAnnouncement = computed<'polite' | 'assertive' | undefined>(() => {
@@ -60,9 +81,16 @@ watch(
   () => {
     mobileMenuOpen.value = false
     desktopMenuValue.value = ''
+    mobileWorkOpen.value = route.path.startsWith('/campaigns/')
   },
   { flush: 'sync' }
 )
+
+function onNavigationClick(event: MouseEvent) {
+  if (!(event.target instanceof Element) || !event.target.closest('a[href]')) return
+  desktopMenuValue.value = ''
+  void closeMobileMenu()
+}
 
 function signedOut() {
   session.value = null
@@ -137,6 +165,7 @@ function currentParticipationLocation() {
         class="topbar-panel"
         :class="{ 'topbar-panel--open': mobileMenuOpen }"
         @keydown.esc="closeMobileMenu"
+        @click="onNavigationClick"
       >
         <ConfigProvider :use-id="nuxtUseId">
           <NavigationMenuRoot
@@ -157,44 +186,77 @@ function currentParticipationLocation() {
                   <button
                     type="button"
                     class="topbar-link topbar-link--public topbar-work-trigger"
-                    :data-active="
-                      currentWorkLocation() || campaignLinks.some((link) => route.path.startsWith(link.path))
-                        ? ''
-                        : undefined
-                    "
+                    :data-active="currentWorkLocation() || route.path.startsWith('/campaigns/') ? '' : undefined"
                   >
                     {{ t('navigation.currentWork') }}
                   </button>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent class="topbar-work-menu">
-                  <ul class="topbar-work-links" role="list">
-                    <li>
-                      <NavigationMenuLink as-child :active="Boolean(currentWorkLocation())">
-                        <NuxtLink
-                          class="topbar-link topbar-work-link"
-                          to="/#current-work"
-                          :aria-current="currentWorkLocation()"
-                        >
-                          {{ t('navigation.allCurrentWork') }}
-                        </NuxtLink>
-                      </NavigationMenuLink>
-                    </li>
-                    <li v-for="link in campaignLinks" :key="link.path">
-                      <NavigationMenuLink as-child :active="route.path === link.path">
-                        <NuxtLink class="topbar-link topbar-work-link" :to="link.path">
-                          {{ t(link.label) }}
-                        </NuxtLink>
+                  <div class="topbar-work-groups">
+                    <ContextNavigation
+                      v-for="group in workGroups"
+                      :key="group.label"
+                      :label="group.label"
+                      :links="group.links"
+                      :current-path="route.path"
+                    >
+                      <template #entry="{ entry }">
+                        <NavigationMenuLink as-child :active="route.path === entry.path">
+                          <NavigationEntry :entry="entry" :current="route.path === entry.path" />
+                        </NavigationMenuLink>
+                      </template>
+                    </ContextNavigation>
+                  </div>
+                  <NavigationMenuLink as-child :active="Boolean(currentWorkLocation())">
+                    <NuxtLink
+                      class="topbar-link topbar-panel-footer"
+                      to="/#current-work"
+                      :aria-current="currentWorkLocation()"
+                    >
+                      {{ t('navigation.allCurrentWork') }}
+                    </NuxtLink>
+                  </NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem value="events" class="topbar-work-item">
+                <NavigationMenuTrigger as-child>
+                  <button
+                    type="button"
+                    class="topbar-link topbar-link--public topbar-work-trigger"
+                    :data-active="route.path === '/calendar' ? '' : undefined"
+                  >
+                    {{ t('navigation.calendar') }}
+                  </button>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent class="topbar-work-menu topbar-events-menu">
+                  <p class="topbar-panel-label">{{ t('navigation.upcomingEvents') }}</p>
+                  <p v-if="eventsStatus === 'pending'" class="topbar-event-state" role="status">
+                    {{ t('calendar.loading') }}
+                  </p>
+                  <div v-else-if="eventsError" class="topbar-event-state">
+                    <p>{{ t('calendar.loadError') }}</p>
+                    <AppButton variant="secondary" size="compact" @click="refreshEvents()">{{
+                      t('common.retry')
+                    }}</AppButton>
+                  </div>
+                  <p v-else-if="upcomingEvents.length === 0" class="topbar-event-state">{{ t('calendar.empty') }}</p>
+                  <ul v-else class="topbar-event-list" role="list">
+                    <li v-for="entry in upcomingEvents" :key="entry.id">
+                      <NavigationMenuLink as-child>
+                        <NavigationEntry :entry="entry" />
                       </NavigationMenuLink>
                     </li>
                   </ul>
+                  <NavigationMenuLink as-child :active="route.path === '/calendar'">
+                    <NuxtLink
+                      class="topbar-link topbar-panel-footer"
+                      to="/calendar"
+                      :aria-current="currentPage('/calendar')"
+                    >
+                      {{ t('navigation.allEvents') }}
+                    </NuxtLink>
+                  </NavigationMenuLink>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink as-child :active="route.path === '/calendar'">
-                  <NuxtLink class="topbar-link topbar-link--public" to="/calendar">
-                    {{ t('navigation.calendar') }}
-                  </NuxtLink>
-                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenuRoot>
@@ -208,31 +270,65 @@ function currentParticipationLocation() {
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink
-                class="topbar-link topbar-link--public"
-                to="/#current-work"
-                :aria-current="currentWorkLocation()"
-                @click="closeMobileMenu"
+              <button
+                class="topbar-link topbar-link--public topbar-work-trigger"
+                type="button"
+                :aria-expanded="mobileWorkOpen"
+                aria-controls="mobile-current-work"
+                @click="mobileWorkOpen = !mobileWorkOpen"
               >
                 {{ t('navigation.currentWork') }}
-              </NuxtLink>
-              <ul class="mobile-work-links" role="list">
-                <li v-for="link in campaignLinks" :key="link.path">
-                  <NuxtLink
-                    class="topbar-link topbar-work-link"
-                    :to="link.path"
-                    :aria-current="currentPage(link.path)"
-                    @click="closeMobileMenu"
-                  >
-                    {{ t(link.label) }}
-                  </NuxtLink>
-                </li>
-              </ul>
+              </button>
+              <div v-show="mobileWorkOpen" id="mobile-current-work" class="mobile-work-groups">
+                <ContextNavigation
+                  v-for="group in workGroups"
+                  :key="group.label"
+                  :label="group.label"
+                  :links="group.links"
+                  :current-path="route.path"
+                />
+                <NuxtLink
+                  class="topbar-link topbar-panel-footer"
+                  to="/#current-work"
+                  :aria-current="currentWorkLocation()"
+                >
+                  {{ t('navigation.allCurrentWork') }}
+                </NuxtLink>
+              </div>
             </li>
             <li>
-              <NuxtLink class="topbar-link topbar-link--public" to="/calendar" :aria-current="currentPage('/calendar')">
+              <button
+                class="topbar-link topbar-link--public topbar-work-trigger"
+                type="button"
+                :aria-expanded="mobileEventsOpen"
+                aria-controls="mobile-upcoming-events"
+                @click="mobileEventsOpen = !mobileEventsOpen"
+              >
                 {{ t('navigation.calendar') }}
-              </NuxtLink>
+              </button>
+              <div v-show="mobileEventsOpen" id="mobile-upcoming-events">
+                <p class="topbar-panel-label">{{ t('navigation.upcomingEvents') }}</p>
+                <p v-if="eventsStatus === 'pending'" class="topbar-event-state" role="status">
+                  {{ t('calendar.loading') }}
+                </p>
+                <div v-else-if="eventsError" class="topbar-event-state">
+                  <p>{{ t('calendar.loadError') }}</p>
+                  <AppButton variant="secondary" size="compact" @click="refreshEvents()">{{
+                    t('common.retry')
+                  }}</AppButton>
+                </div>
+                <p v-else-if="upcomingEvents.length === 0" class="topbar-event-state">{{ t('calendar.empty') }}</p>
+                <ul v-else class="topbar-event-list" role="list">
+                  <li v-for="entry in upcomingEvents" :key="entry.id"><NavigationEntry :entry="entry" /></li>
+                </ul>
+                <NuxtLink
+                  class="topbar-link topbar-panel-footer"
+                  to="/calendar"
+                  :aria-current="currentPage('/calendar')"
+                >
+                  {{ t('navigation.allEvents') }}
+                </NuxtLink>
+              </div>
             </li>
           </ul>
         </nav>
@@ -431,7 +527,8 @@ function currentParticipationLocation() {
     transform: rotate(45deg);
   }
 
-  .topbar-work-trigger[data-state='open']::after {
+  .topbar-work-trigger[data-state='open']::after,
+  .topbar-work-trigger[aria-expanded='true']::after {
     transform: rotate(225deg);
   }
 
@@ -439,7 +536,7 @@ function currentParticipationLocation() {
     position: absolute;
     inset-block-start: 100%;
     inset-inline-start: 0;
-    inline-size: 18rem;
+    inline-size: min(46rem, calc(100vw - 4rem));
     border: var(--border-width) solid rgb(4 51 79 / 12%);
     border-radius: var(--radius-1);
     padding: var(--space-2);
@@ -447,23 +544,50 @@ function currentParticipationLocation() {
     box-shadow: var(--shadow-panel);
   }
 
-  .topbar-work-links,
-  .mobile-work-links {
+  .topbar-event-list {
     padding: 0;
     margin: 0;
     list-style: none;
   }
 
-  .topbar-work-link {
-    inline-size: 100%;
-    justify-content: flex-start;
-    text-align: start;
+  :deep(.topbar-events-menu) {
+    inline-size: min(28rem, calc(100vw - 4rem));
   }
 
-  .topbar-work-link:hover,
-  .topbar-work-link:focus-visible,
-  .topbar-work-link[aria-current] {
-    background: var(--color-action-soft);
+  .topbar-work-groups,
+  .mobile-work-groups {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .topbar-panel-label {
+    margin: 0;
+    padding: var(--space-2) var(--space-3);
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .topbar-event-state {
+    display: grid;
+    justify-items: start;
+    gap: var(--space-3);
+    margin: 0;
+    padding: var(--space-3);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .topbar-event-state p {
+    margin: 0;
+  }
+
+  .topbar-panel-footer {
+    inline-size: 100%;
+    justify-content: flex-start;
+    border-block-start-color: var(--color-border);
+    margin-block-start: var(--space-3);
+    text-align: start;
   }
 
   .topbar-link--utility,
@@ -516,14 +640,15 @@ function currentParticipationLocation() {
 
   @media (width <= 77rem) {
     .topbar-row {
-      grid-template-columns: minmax(0, 1fr) auto auto;
+      display: flex;
+      flex-wrap: wrap;
       gap: 0 0.625rem;
       inline-size: min(var(--content-max-width), calc(100% - 3rem));
       min-block-size: 4.5rem;
     }
 
     .topbar-brand-area {
-      grid-area: 1 / 1;
+      flex: 1 1 auto;
     }
 
     .brand-mark {
@@ -531,7 +656,7 @@ function currentParticipationLocation() {
     }
 
     .mobile-menu-toggle {
-      grid-area: 1 / 2;
+      flex: 0 0 auto;
       display: inline-flex;
       min-block-size: var(--control-min-block-size);
       min-inline-size: var(--control-min-inline-size);
@@ -554,18 +679,23 @@ function currentParticipationLocation() {
     }
 
     .topbar-row > .topbar-link--involved {
-      grid-area: 1 / 3;
+      order: 3;
+      flex: 0 1 auto;
+      inline-size: auto;
       min-block-size: 2.75rem;
       min-inline-size: auto;
       justify-content: center;
       padding-inline: var(--space-3);
+      min-width: 0;
       font-size: 0.875rem;
       text-align: center;
+      overflow-wrap: anywhere;
     }
 
     .topbar-panel {
-      grid-column: 1 / 4;
-      grid-row: 2;
+      order: 4;
+      flex-basis: 100%;
+      min-inline-size: 0;
       display: none;
       gap: var(--space-4);
       border-block-start: var(--border-width) solid var(--color-border);
@@ -596,13 +726,6 @@ function currentParticipationLocation() {
       border-block-end: var(--border-width) solid var(--color-border);
     }
 
-    .mobile-work-links {
-      border-inline-start: var(--border-width) solid var(--color-border);
-      padding-inline-start: var(--space-3);
-      margin-inline-start: var(--space-3);
-      margin-block-end: var(--space-3);
-    }
-
     .topbar-actions {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
@@ -619,6 +742,7 @@ function currentParticipationLocation() {
     }
 
     .topbar-link--public {
+      justify-content: space-between;
       border-block-end: 0;
       padding-block: var(--space-3);
     }

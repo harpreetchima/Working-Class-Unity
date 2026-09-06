@@ -2,19 +2,19 @@
   "localizedRemoveFlock": {
     "campaignFacts": [
       {
-        "value": "Hasta 2031",
-        "label": "Plazo del contrato",
-        "detail": "Stockton extendió el acuerdo Flock hasta el 14 de abril de 2031."
+        "value": "14 de abril de 2031",
+        "label": "Extendieron el contrato",
+        "detail": "El Concejo Municipal autorizó los servicios de Flock hasta el 14 de abril de 2031."
       },
       {
-        "value": "$5.4M+",
-        "label": "Valor potencial del contrato",
-        "detail": "Los registros de la ciudad indican un máximo de $5,416,700 después de la enmienda de marzo de 2026."
+        "value": "$5,416,700",
+        "label": "Aumentaron el límite de gasto",
+        "detail": "Los $3.15 millones adicionales elevan el límite total del contrato a $5,416,700."
       },
       {
-        "value": "Un sistema conectado",
-        "label": "Más que cámaras",
-        "detail": "El paquete contratado incluye lectores de placas, software de respuesta a emergencias, drones, radares, secuencias de vídeo y herramientas de búsqueda."
+        "value": "Más herramientas de vigilancia",
+        "label": "Ampliaron la red",
+        "detail": "La enmienda añade seis drones con sus estaciones, dos unidades de radar, un remolque móvil con cámaras y nuevas herramientas de búsqueda con una asignación para diez transmisiones de video."
       }
     ],
     "campaignFaqPage": {
@@ -190,36 +190,23 @@
       ]
     },
     "campaignLandingPage": {
-      "eyebrow": "UNA MISIÓN SECUNDARIA DE WORKING CLASS UNITY",
+      "eyebrow": "WORKING CLASS UNITY · STOCKTON",
       "title": "Eliminar la vigilancia masiva de Stockton",
-      "description": "Se obliga a la clase trabajadora de Stockton a financiar un sistema privado de vigilancia que el Concejo Municipal aprobó y que los residentes no controlan. El contrato modificado con Flock puede costar hasta $5,416,700 y durar hasta el 14 de abril de 2031. Registra los viajes cotidianos y amplía el poder policial de búsqueda y observación. Nuestros impuestos deberían financiar una seguridad que la clase trabajadora decida y en la que confíe.",
-      "reviewedThrough": "3 de septiembre de 2026",
-      "qualification": "Partimos de otra idea de la seguridad pública. La clase trabajadora debe tener control democrático sobre las instituciones, los presupuestos y las tecnologías que afectan nuestra vida. La seguridad debe basarse en viviendas estables, empleos seguros, prevención y sistemas públicos que podamos inspeccionar y dirigir. Retirar Flock es un paso para que la clase trabajadora gobierne los recursos y las instituciones que afectan nuestra vida.",
+      "description": "Las cámaras de Flock convierten el paso de vehículos en registros de viajes cotidianos que se pueden buscar. El Concejo Municipal de Stockton está ampliando esa vigilancia con dinero público. La clase trabajadora debe controlar las instituciones y los presupuestos que afectan nuestra vida, no pagar para que la policía tenga más poder sobre nosotros.",
       "sections": [
         {
-          "title": "Flock no se limita a los lectores de matrículas.",
-          "summary": "Tres hechos orientan la misión secundaria sin convertir las afirmaciones contractuales en prueba de despliegue.",
-          "paragraphs": [
-            {
-              "text": "Stockton aprobó una expansión del contrato hasta 2031 con un valor potencial declarado superior a $5.4 millones."
-            },
-            {
-              "text": "El paquete incluye más que cámaras lectoras de matrículas. Los registros de la ciudad describen software de respuesta a emergencias, drones, radares, transmisiones de video integradas y herramientas de búsqueda."
-            }
-          ]
+          "title": "El Concejo Municipal de Stockton votó a favor de la vigilancia masiva",
+          "summary": "Todos los miembros del Concejo votaron a favor de ampliar Flock. Esto es lo que aprobaron."
         },
         {
-          "title": "¿Por qué Stockton debería eliminar Flock?",
-          "summary": "La clase trabajadora necesita seguridad sin un seguimiento habitual. El contrato de Stockton destina dinero público a un proveedor privado y amplía la capacidad policial, pero no da a los residentes un control equivalente sobre el sistema.",
+          "title": "Nosotros pagamos. La policía gana poder.",
+          "summary": "La clase trabajadora financia el contrato. La policía obtiene más capacidad para vigilar y buscar información, y una empresa privada recibe ingresos recurrentes. Pagar por el sistema no nos da control sobre su uso.",
           "points": [
             {
-              "text": "La clase trabajadora merece una seguridad basada en viviendas estables, empleos seguros, servicios públicos confiables e instituciones a las que podamos exigir cuentas."
+              "text": "No hace falta que un vehículo esté vinculado a un delito para que quede registrado. Los viajes cotidianos pueden convertirse en datos que se pueden buscar."
             },
             {
-              "text": "Flock registra viajes ordinarios y los convierte en datos que se pueden buscar. La recopilación puede ser amplia, pero los riesgos recaen más en las personas que ya están expuestas a la policía, las autoridades de inmigración, los empleadores, los propietarios o las parejas abusivas."
-            },
-            {
-              "text": "La clase trabajadora financia el contrato, la policía obtiene más capacidad y un proveedor privado recibe ingresos recurrentes. Los residentes no obtienen un poder equivalente sobre el sistema."
+              "text": "Las consecuencias no son iguales. Quienes ya están expuestos a una fuerte vigilancia policial, al control migratorio o al abuso tienen más que perder si sus registros de viajes se divulgan o se usan de forma indebida."
             }
           ]
         },
@@ -250,73 +237,50 @@
           ]
         },
         {
-          "title": "Stockton compró un sistema, no una sola herramienta",
-          "summary": "La recopilación, la búsqueda, la observación aérea y la infraestructura del proveedor funcionan como una sola plataforma conectada.",
+          "title": "Stockton compró una red de vigilancia masiva, no solo lectores de placas",
+          "summary": "Un lector de placas registra un vehículo en un lugar y momento determinados. El software conectado permite a la policía buscar en esos registros junto con otra información.",
           "points": [
             {
-              "text": "Matrículas, detalles de vehículos, hora y ubicación."
+              "text": "Placas, características de los vehículos, hora y ubicación."
             },
             {
-              "text": "Alertas, conexiones con la respuesta de emergencia, búsquedas de matrículas y video conectado."
+              "text": "Video de las cámaras habilitadas y del remolque móvil con cámaras."
             },
             {
-              "text": "Seis drones y estaciones de carga contratados, radar y transmisiones en vivo."
-            },
-            {
-              "text": "Software, permisos, asistencia, suscripciones y términos contractuales del proveedor."
+              "text": "Video de drones e información de llamadas de emergencia."
             }
           ]
         },
         {
-          "title": "Las reglas pueden reducir el daño. No pueden poner fin a la recogida masiva rutinaria.",
-          "summary": "Una prohibición del uso para hacer cumplir las leyes de inmigración y reglas estrictas de acceso solo servirían como medida temporal. Esas reglas pueden reducir el daño, pero la demanda final sigue siendo retirar el sistema.",
+          "title": "Las reglas de acceso no ponen fin a la recopilación masiva",
+          "summary": "Prohibir el uso para hacer cumplir las leyes de inmigración e imponer reglas estrictas de acceso puede reducir el daño mientras nos organizamos. Estas medidas no sustituyen la demanda de retirar Flock e impedir que otro sistema de vigilancia lo reemplace.",
           "paragraphs": [
             {
-              "text": "Una norma escrita no borra el poder que el sistema otorga a la policía."
-            },
-            {
-              "text": "Otras ciudades California encontraron brechas entre la política escrita y la configuración de la plataforma o el acceso a la red en la práctica."
+              "text": "Otras ciudades de California encontraron diferencias entre la política escrita y la configuración de la plataforma o el acceso a la red en la práctica."
             }
           ]
         },
         {
-          "title": "La seguridad debería hacer que las personas estén más protegidas, no más fáciles de buscar",
-          "summary": "Stockton debe desarrollar capacidad pública en vez de depender de un proveedor privado de vigilancia. La clase trabajadora debe decidir qué financian los presupuestos de seguridad y gobernar las instituciones que realizan ese trabajo.",
+          "title": "Construyamos lo que nos mantiene a salvo",
+          "summary": "La violencia y la inseguridad son reales. Una suscripción privada de vigilancia no nos da una vivienda estable, trabajo seguro ni atención cuando la necesitamos. El dinero público debe construir esas bases, y la clase trabajadora debe decidir qué se financia y cómo se administra.",
           "points": [
             {
-              "text": "Viviendas estables: seguridad de la vivienda, reparaciones y protección contra represalias."
+              "text": "Viviendas estables, reparaciones y protecciones para los inquilinos contra el desplazamiento."
             },
             {
-              "text": "Trabajo seguro y espacio público: infraestructura confiable, iluminación, tránsito y protecciones en el lugar de trabajo."
+              "text": "Lugares de trabajo seguros, transporte confiable, iluminación y espacios públicos bien mantenidos."
             },
             {
-              "text": "Atención y prevención: programas para jóvenes, respuesta a crisis, prevención de la violencia y apoyo a los supervivientes."
-            },
-            {
-              "text": "Control público: los residentes de las instituciones pueden inspeccionar, dar forma y exigir responsabilidades."
+              "text": "Programas para jóvenes, atención en situaciones de crisis, prevención de la violencia y apoyo a sobrevivientes."
             }
           ]
         },
         {
-          "title": "Firmar es el primer paso",
-          "summary": "Firmar la petición inicia el trabajo. Debemos organizarnos con otros residentes de Stockton para impulsar estas demandas y seguir organizados después de una votación del Concejo Municipal.",
+          "title": "Ayude a decidir el rumbo de esta campaña",
+          "summary": "¿Quiere ayudar a decidir cómo se organiza esta campaña? Únase a Working Class Unity. Podemos sumar vecinos a la lucha, planear acciones públicas y construir una organización que perdure más allá de una votación del Concejo.",
           "closingParagraphs": [
             {
-              "text": "Cada paso debe dejarnos con más conocimiento compartido y una organización más fuerte para la próxima lucha. La lucha más larga busca que la clase trabajadora controle los presupuestos, las instituciones y las tecnologías que afectan nuestra vida."
-            }
-          ],
-          "points": [
-            {
-              "text": "Firme y comparta la carta de demanda."
-            },
-            {
-              "text": "Hable con otros residentes de Stockton sobre la campaña e invítelos a actuar con nosotros."
-            },
-            {
-              "text": "Revise los registros y ayude a separar los hechos establecidos de las preguntas abiertas."
-            },
-            {
-              "text": "Prepárese para la acción pública y manténgase involucrado después de una votación del consejo."
+              "text": "No hace falta ser miembro para participar en las actividades públicas de la campaña. Pero hacerse miembro y pagar cuotas significa tener voto para decidir el rumbo que tomamos y asumir responsabilidad por nuestro trabajo compartido."
             }
           ]
         }

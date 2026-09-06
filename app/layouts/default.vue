@@ -1,7 +1,11 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const route = useRoute()
 const usesWideSurface = useWideSurfaceRoute()
-const wideContainerClass = computed(() => ({ 'container--wide': usesWideSurface.value }))
+const wideContainerClass = computed(() => ({
+  'container--wide': usesWideSurface.value,
+  'page-shell--campaign-overview': route.path === '/campaigns/remove-flock-stockton'
+}))
 </script>
 
 <template>
@@ -13,3 +17,11 @@ const wideContainerClass = computed(() => ({ 'container--wide': usesWideSurface.
     </main>
   </div>
 </template>
+
+<style scoped>
+@layer components {
+  .page-shell--campaign-overview {
+    inline-size: 100%;
+  }
+}
+</style>

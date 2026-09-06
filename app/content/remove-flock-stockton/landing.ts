@@ -4,65 +4,49 @@ import type { CampaignFact, CampaignPageContent } from './types'
 
 export const campaignFacts = [
   {
-    value: 'Through 2031',
-    label: 'Contract term',
-    detail: 'Stockton extended the Flock agreement through April 14, 2031.',
+    value: 'April 14, 2031',
+    label: 'Extended the contract',
+    detail: 'City Council authorized Flock services through April 14, 2031.',
     sourceIds: ['stockton-mar-2026-staff-report', 'stockton-mar-2026-amendment']
   },
   {
-    value: '$5.4M+',
-    label: 'Potential contract value',
-    detail: 'City records state a maximum of $5,416,700 after the March 2026 amendment.',
+    value: '$5,416,700',
+    label: 'Raised the spending cap',
+    detail: 'The additional $3.15 million brings the combined contract cap to $5,416,700.',
     sourceIds: ['stockton-mar-2026-staff-report', 'stockton-mar-2026-amendment']
   },
   {
-    value: 'A connected system',
-    label: 'More than cameras',
+    value: 'More surveillance tools',
+    label: 'Expanded the network',
     detail:
-      'The contracted package joins plate readers, emergency-response software, drones, radar, video streams, and search tools.',
-    sourceIds: ['stockton-nov-2024-amendment', 'stockton-mar-2026-amendment']
+      'The amendment adds six drones and docks, two radar units, a mobile camera trailer, and new search tools with an allocation for ten video streams.',
+    sourceIds: ['stockton-mar-2026-amendment']
   }
 ] as const satisfies readonly CampaignFact[]
 
 export const campaignLandingPage = {
   path: '/campaigns/remove-flock-stockton',
-  eyebrow: 'A WORKING CLASS UNITY SIDE-QUEST',
+  eyebrow: 'WORKING CLASS UNITY · STOCKTON',
   title: 'Remove Mass Surveillance from Stockton',
   description:
-    'Working people in Stockton are being made to fund a private surveillance system that City Council approved and residents do not control. The amended Flock contract can cost as much as $5,416,700 and run through April 14, 2031. It records ordinary travel and expands police search and observation power. Our tax dollars should instead build safety that working people decide on and trust.',
-  reviewedThrough: 'September 3, 2026',
-  qualification:
-    'We start from a different idea of public safety. Working people should have democratic control over the institutions, budgets, and technologies that shape our lives. Safety should rest on stable homes, safe jobs, prevention, and public systems we can inspect and direct. Removing Flock is one step toward working people governing the resources and institutions that shape our lives.',
+    'Flock cameras turn passing vehicles into searchable records of everyday travel. Stockton’s City Council is expanding that surveillance with public money. Working people should control the institutions and budgets that shape our lives, not pay for more police power over us.',
   sections: [
     {
       id: 'verified-facts',
-      title: "Flock isn't just license plate readers.",
-      summary: 'Three facts orient the side-quest without turning contract claims into proof of deployment.',
-      paragraphs: [
-        {
-          text: 'Stockton approved a contract expansion through 2031 with a stated potential value above $5.4 million.',
-          sourceIds: ['stockton-mar-2026-staff-report', 'stockton-mar-2026-amendment']
-        },
-        {
-          text: 'The package goes beyond license-plate cameras. City records describe emergency-response software, drones, radar, integrated video streams, and search tools.',
-          sourceIds: ['stockton-nov-2024-amendment', 'stockton-mar-2026-amendment']
-        }
-      ]
+      title: 'Stockton City Council Voted for Mass Surveillance',
+      summary: 'Every councilmember voted to expand Flock. Here is what they approved.'
     },
     {
       id: 'why-remove',
-      title: 'Why Stockton should remove Flock',
+      title: 'We pay. Police gain power.',
       summary:
-        "Working people need safety without routine tracking. Stockton's contract directs public money to a private vendor and expands police capacity, but gives residents no matching control over the system.",
+        'Working people fund the contract. Police gain more capacity to watch and search. A private company receives recurring revenue. Paying for the system does not give us control over how it is used.',
       points: [
         {
-          text: 'Working people deserve safety rooted in stable homes, safe jobs, reliable public services, and institutions we can hold accountable.'
+          text: 'A vehicle does not have to be linked to a crime to be recorded. Everyday trips can become searchable data.'
         },
         {
-          text: 'Flock records ordinary travel and turns it into searchable data. Collection may be broad, but the risks fall hardest on people already exposed to police, immigration authorities, employers, landlords, or abusive partners.'
-        },
-        {
-          text: 'Working people fund the contract, police gain more capacity, and a private vendor receives recurring revenue. Residents gain no matching power over the system.'
+          text: 'The consequences are not equal. People already exposed to heavy policing, immigration enforcement, or abuse have more to lose when travel records are exposed or misused.'
         }
       ]
     },
@@ -75,67 +59,55 @@ export const campaignLandingPage = {
     },
     {
       id: 'system',
-      title: 'Stockton bought a system, not a single tool',
-      summary: 'Collection, search, aerial observation, and vendor infrastructure work as one connected platform.',
+      title: 'Stockton bought a mass surveillance network, not just license plate readers',
+      summary:
+        'A plate reader captures a vehicle at one place and time. Connected software lets police search those records alongside other information.',
       points: [
         { text: 'License plates, vehicle details, time, and location.' },
         {
-          text: 'Alerts, emergency-response links, plate lookups, and connected video.'
+          text: 'Video from enabled cameras and the mobile camera trailer.'
         },
         {
-          text: 'Six contracted drones and docks, radar, and live streams.'
-        },
-        {
-          text: 'Vendor software, permissions, support, subscriptions, and contract terms.'
+          text: 'Drone video and emergency-call information.'
         }
       ]
     },
     {
       id: 'safeguards',
-      title: 'Rules can reduce harm. They cannot end routine mass collection.',
+      title: 'Access rules do not end mass collection',
       summary:
-        'An immigration enforcement ban and strict access rules would serve only as a temporary band-aid. Such rules can reduce harm, but the final demand remains removal.',
+        'An immigration-enforcement ban and strict access rules can reduce harm during the fight for removal. They do not replace the demand to remove Flock and prevent a replacement surveillance system.',
       paragraphs: [
         {
-          text: 'A written rule does not erase the power that the system places in police hands.'
-        },
-        {
-          text: 'Other California cities found gaps between written policy and the platform settings or network access in practice.',
+          text: 'Other California cities found gaps between written policy and the platform’s settings or network access in practice.',
           sourceIds: ['mountain-view-termination', 'oxnard-suspension', 'los-altos-community-message']
         }
       ]
     },
     {
       id: 'real-safety',
-      title: 'Safety should make people more secure, not more searchable',
+      title: 'Build the things that keep us safe',
       summary:
-        'Stockton should build public capacity in place of dependence on a private surveillance vendor. Working people should decide what safety budgets fund and govern the institutions that carry that work out.',
+        'Violence and insecurity are real. A private surveillance subscription cannot give us a stable home, safe work, or care when we need it. Public money should build those foundations, with working people deciding what gets funded and how it is run.',
       points: [
-        { text: 'Stable homes: housing security, repairs, and protection from retaliation.' },
+        { text: 'Stable housing, repairs, and tenant protections from displacement.' },
         {
-          text: 'Safe work and public space: dependable infrastructure, lighting, transit, and workplace protections.'
+          text: 'Safe workplaces, reliable transit, lighting, and maintained public spaces.'
         },
         {
-          text: 'Care and prevention: youth programs, crisis response, violence prevention, and support for survivors.'
-        },
-        { text: 'Public control: institutions residents can inspect, shape, and hold accountable.' }
+          text: 'Youth programs, crisis care, violence prevention, and support for survivors.'
+        }
       ]
     },
     {
       id: 'participate',
-      title: 'Signing is the first step',
+      title: 'Help shape this campaign',
       summary:
-        'A petition signature begins the work. We must organize with other Stockton residents to carry these demands through and stay organized after a council vote.',
+        'Want to help decide how this campaign is organized? Join Working Class Unity. We can bring neighbors into the fight, plan public action, and build an organization that lasts beyond one council vote.',
       closingParagraphs: [
         {
-          text: 'Each step should leave us with more shared knowledge and a stronger organization for the next fight. The longer struggle is for working people to control the budgets, institutions, and technologies that shape our lives.'
+          text: 'You do not have to be a member to take part in public campaign activities. But becoming a dues-paying member means having a vote in deciding the direction we take and taking responsibility for our shared work.'
         }
-      ],
-      points: [
-        { text: 'Sign and share the demand letter.' },
-        { text: 'Talk with other Stockton residents about the campaign and invite them to act with us.' },
-        { text: 'Review records and help separate established facts from open questions.' },
-        { text: 'Prepare for public action and stay involved after a council vote.' }
       ]
     }
   ],
