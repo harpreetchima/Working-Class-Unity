@@ -5,12 +5,11 @@ import type { CampaignPageContent } from './types'
 export const whySafeguardsPage = {
   path: '/campaigns/remove-flock-stockton/why-safeguards-are-not-enough',
   eyebrow: 'WHY REMOVAL',
-  title: 'Why Safeguards Are Not Enough',
+  title: 'Removal, Not Reform',
   description:
-    'Rules can reduce immediate harm. A ban on immigration-enforcement access would protect people now. It would not end routine collection or change who controls the records, police searches, vendor platform, or public money paying for it.',
-  reviewedThrough: 'September 3, 2026',
+    'Stockton should end everyday collection of people’s movements and remove the system that makes those records searchable. Police search power, a private vendor’s platform, and the public money paying for it belong at the center of this debate.',
   qualification:
-    'We support firm interim protections. We are organizing for a different outcome: remove the system and put safety spending under public control. Working people should not have to accept routine tracking as the price of safe streets, useful public services, care, prevention, or accountable emergency response.',
+    'People need safe streets, protection from violence, and help when an emergency happens. Those needs deserve a serious answer. Working people should have lasting control over the institutions and budgets meant to keep us safe.',
   sections: [
     {
       id: 'ice-ban',
@@ -19,7 +18,7 @@ export const whySafeguardsPage = {
         'A clear ban on U.S. Immigration and Customs Enforcement access would protect people now. We support that ban and other firm interim protections.',
       paragraphs: [
         {
-          text: 'The ban would leave routine collection, police search power, drones, connected tools, vendor dependence, and public spending intact. Police would retain the ability to search records through a platform managed in part by a private company.'
+          text: 'The ban would leave everyday collection, police search power, drones, connected tools, vendor dependence, and public spending intact. Police would retain the ability to search records through a platform managed in part by a private company.'
         },
         {
           text: 'The larger question remains: should the city use public money to create searchable records of ordinary travel when residents are not suspected of wrongdoing?'
@@ -64,45 +63,7 @@ export const whySafeguardsPage = {
           text: 'Every passing vehicle may enter the system, but the consequences are unequal. Immigrant families, workers organizing on the job, tenants facing retaliation, protesters, survivors, and people seeking sensitive healthcare face greater danger when police or other institutions with power over their lives can reach those records.'
         },
         {
-          text: "This is not only a privacy question. It is a question of who controls public money, information, and police search power. Working people should not have to surrender freedom of movement in exchange for public safety. We can fight for safety through prevention, care, useful public services, and accountable emergency response without recording everyone's routine travel."
-        }
-      ]
-    },
-    {
-      id: 'stockton-platform',
-      title: 'Stockton approved an expanding surveillance platform',
-      summary:
-        'City records describe connected cameras, searchable records, emergency-response tools, drones, video, vendor integrations, and years of public spending.',
-      points: [
-        { text: 'License-plate cameras and searchable vehicle-location data.' },
-        { text: 'Software tied to emergency calls and dispatch.' },
-        { text: 'Six contracted drones and docks, radar, and video feeds.' },
-        { text: 'Vendor-managed software, permissions, analysis, support, and subscriptions.' },
-        {
-          text: 'A stated contract maximum above $5.4 million through April 14, 2031.',
-          sourceIds: ['stockton-mar-2026-staff-report', 'stockton-mar-2026-amendment']
-        }
-      ],
-      paragraphs: [
-        {
-          text: 'The March 2026 records place the new Drone as First Responder package at $3.15 million.',
-          sourceIds: ['stockton-mar-2026-staff-report', 'stockton-mar-2026-amendment']
-        },
-        {
-          text: 'Available local materials support an independent review, but they do not establish ICE access. An archived August 8 copy of Flock’s Stockton portal listed 320 outbound-sharing recipients and contained a 1,774-search audit whose public user IDs were all masked. Forty rows carried the stated reason “USMS case.”',
-          sourceIds: ['stockton-portal-2026-08-08']
-        },
-        {
-          text: 'A separate City response reported that an SPD Flock administrator authorized UOP through the portal and that no written agreement was located. Those materials justify an independent audit of original historical records covering access, authorization, and further sharing. An agency listed as a recipient and a search-reason label do not prove that ICE, or any other outside agency, accessed a Stockton record.',
-          sourceIds: ['stockton-uop-pra']
-        },
-        {
-          text: 'City records describe a contracted package that includes:'
-        }
-      ],
-      closingParagraphs: [
-        {
-          text: 'Public money supports this platform. Police gain new tools and search power, and Flock manages parts of the technology, permissions, analysis, support, and subscriptions. Residents whose movements produce the records do not govern that relationship.'
+          text: "This is not only a privacy question. It is a question of who controls public money, information, and police search power. Working people should not have to surrender freedom of movement in exchange for public safety. We can fight for safety through prevention, care, useful public services, and accountable emergency response without recording everyone's everyday travel."
         }
       ]
     },
@@ -124,27 +85,26 @@ export const whySafeguardsPage = {
         {
           text: 'Audit records may reveal less than readers expect. 404 Media reported that agencies were advised to be “as vague as permissible” when recording reasons for Flock searches.',
           sourceIds: ['404-vague-search-reasons']
-        },
-        {
-          text: 'Immediate limits still matter. A strong search policy, an immigration-enforcement ban, deletion rules, and public audits can reduce harm during removal. They do not justify routine collection or transfer control to the working people whose movements become records and whose public money funds the system.'
         }
       ]
     },
     {
       id: 'removal',
-      title: 'Removal is the durable safeguard',
-      summary: 'Interim rules should reduce harm during removal. They should not become the final settlement.',
+      title: 'Removal is the only answer',
+      summary: 'Organize to dismantle the system and prevent it from returning under another name.',
       paragraphs: [
         {
-          text: 'The petition calls for an end to every Flock contract, a stop to expansion, lawful data deletion, a public closeout record, and a ban on recreating the same tracking function under another name.'
+          text: 'Our petition calls for an end to every Flock contract, a stop to expansion, lawful data deletion, a public closeout record, and a ban on recreating the same tracking function under another name.'
         },
-        { text: petitionDemand.introduction }
+        {
+          text: 'By signing, you’re urging the Stockton City Council to pass a Flock Removal Resolution that ends this surveillance system, prevents it from returning under another name, and restores meaningful public control over how surveillance technology is funded and used.'
+        }
       ],
       points: petitionDemand.demands.map((text) => ({ text })),
       orderedPoints: true,
       closingParagraphs: [
         {
-          text: 'Removal is not a refusal of public safety. It is a demand that Stockton direct public money toward stable homes, safe work, care, prevention, useful public services, and accountable emergency response instead of routine tracking. Residents and workers can sign, talk with coworkers and neighbors, press the City Council, monitor compliance, and stay organized to govern the institutions and budgets meant to keep us safe.'
+          text: 'Residents and workers can sign, talk with coworkers and neighbors, press the City Council, and monitor removal. Staying organized after the cameras come down can build lasting worker control over public budgets and safety institutions, with money directed toward stable homes, safe work, care, prevention, useful public services, and accountable emergency response.'
         }
       ]
     },

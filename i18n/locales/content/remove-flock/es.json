@@ -19,33 +19,19 @@
     ],
     "campaignFaqPage": {
       "title": "FAQ de Flock en Stockton",
-      "description": "Respuestas directas sobre la seguridad pública, los datos, la tecnología policial privada, el gasto público y lo que exige retirar el sistema.",
-      "qualification": "Por ahora, no afirmamos que Stockton haya compartido datos de Flock con ICE, infringido la ley estatal ni implementado todos los productos contratados. En todo el sitio, distinguimos los registros de Stockton de las afirmaciones del proveedor y de los ejemplos de otras ciudades.",
-      "reviewedThrough": "3 de septiembre de 2026",
+      "description": "Preguntas sobre seguridad, vigilancia, dinero público y cómo podemos lograr juntos el retiro del sistema.",
       "sections": [
         {
-          "title": "El sistema y la demanda.",
-          "summary": "Lo que vende Flock, lo que autorizó Stockton y por qué pedimos que se retire."
+          "title": "Flock y la vida cotidiana",
+          "summary": "Qué registra el sistema y por qué importa."
         },
         {
-          "title": "Reclamaciones de seguridad y policía",
-          "summary": "Nos tomamos en serio la violencia y el robo sin aceptar el seguimiento habitual de los movimientos como respuesta."
+          "title": "Dinero público y control",
+          "summary": "Quién paga, quién decide y qué establecen los registros."
         },
         {
-          "title": "Poder, movimiento y riesgo desigual",
-          "summary": "La recopilación amplia ocurre dentro de relaciones desiguales entre la policía, las autoridades de inmigración, los empleadores, los propietarios de viviendas y los residentes."
-        },
-        {
-          "title": "Aplicación de la ley de inmigración y salvaguardias",
-          "summary": "Las restricciones inmediatas importan. No eliminan el sistema de recopilación de datos ni el poder de la policía y del proveedor."
-        },
-        {
-          "title": "Una plataforma privada dentro de la policía pública",
-          "summary": "El dinero público, el poder policial, los ingresos de los proveedores, las subvenciones, los drones y las cámaras privadas forman una relación política."
-        },
-        {
-          "title": "Remoción, registros públicos y acción organizada",
-          "summary": "Cambiar una regla o un proveedor no es el objetivo. El sistema debe dejar de funcionar y los residentes deben poder verificar el resultado."
+          "title": "Lograr juntos el retiro",
+          "summary": "Qué aporta tu firma y cómo participar."
         }
       ],
       "sources": [
@@ -403,8 +389,8 @@
     },
     "faqGroups": [
       {
-        "title": "El sistema y la demanda.",
-        "summary": "Lo que vende Flock, lo que autorizó Stockton y por qué pedimos que se retire.",
+        "title": "Flock y la vida cotidiana",
+        "summary": "Qué registra el sistema y por qué importa.",
         "items": [
           {
             "question": "¿Qué es el Flock?",
@@ -412,423 +398,119 @@
               {
                 "parts": [
                   {
-                    "text": "Flock Safety vende cámaras de vigilancia y software a departamentos de policía, empresas, escuelas, vecindarios y asociaciones de propietarios.",
+                    "text": "Flock Safety es una empresa privada que vende equipos y software de vigilancia. Sus lectores de matrículas registran las placas, los datos del vehículo, la hora y la ubicación para que la policía pueda buscarlos después.",
                     "citations": [{}]
                   },
                   {
-                    "text": " Sus lectores automatizados de matrículas convierten las matrículas, los detalles del vehículo, la hora y la ubicación en registros con capacidad de búsqueda.",
-                    "citations": [{}]
+                    "text": " Los contratos de Stockton también conectan las llamadas de emergencia y autorizan drones, radar y búsquedas de video.",
+                    "citations": [{}, {}]
                   }
                 ]
-              },
-              {
-                "text": "La empresa vende drones, cámaras de video, detección de audio, remolques móviles, herramientas del 911 y software que une información de diferentes sistemas. Flock vende una plataforma en expansión, no una cámara independiente."
               }
             ]
           },
           {
-            "question": "¿Qué aprobó Stockton?",
+            "question": "¿Por qué preocuparme si no he hecho nada malo?",
             "answer": [
               {
-                "text": "Los registros de Stockton describen un contrato original de 15 cámaras y una expansión posterior de 105 cámaras. En marzo de 2026, el consejo aprobó un paquete Drone as First Responder con seis drones acoplados, radar, Flock911, un remolque móvil, búsqueda FreeForm y diez transmisiones de video compatibles."
+                "text": "Las cámaras recopilan registros de vehículos antes de que alguien decida si están relacionados con un delito. Los registros repetidos pueden revelar dónde vive, trabaja, practica su religión o recibe atención médica una persona."
               },
               {
-                "text": "La enmienda agregó $3.15 millones y extendió el acuerdo hasta el 14 de abril de 2031. Los registros de la ciudad indican un total potencial superior a $5.4 millones."
-              },
-              {
-                "text": "Estos registros muestran lo que la ciudad autorizó o contrató. Por ahora, no afirmamos que todos los productos se hayan implementado."
+                "text": "No deberías tener que justificar tus viajes cotidianos ante la policía. El riesgo es especialmente alto cuando la situación migratoria, la organización en el trabajo, la protesta o la atención médica delicada pueden usarse contra alguien."
               }
             ]
           },
           {
-            "question": "¿Por qué pedimos que se retire?",
+            "question": "¿Qué pasa con los autos robados y los delitos violentos?",
             "answer": [
               {
-                "text": "La Flock comienza registrando el movimiento ordinario. La policía puede buscar esos registros más tarde. Ese enfoque da a la policía y a una empresa proveedora más poder para observar al público sin dar a los residentes un mayor control sobre las condiciones que los hacen inseguros."
+                "text": "El robo de un auto puede costarle a alguien su trabajo. La violencia puede cambiar una vida. Flock promociona su sistema como una forma de encontrar vehículos buscados y generar pistas para las investigaciones."
               },
               {
-                "text": "Pedimos poner fin a los contratos, detener la expansión, eliminar los datos cuando la ley lo permita, publicar un registro del cierre y prohibir que se vuelva a crear el mismo sistema de seguimiento masivo con el nombre de otra empresa."
+                "text": "Una pista útil no resuelve si la ciudad debe recopilar los registros de viaje de todas las personas para buscarlos después. Queremos investigaciones específicas y una respuesta de emergencia confiable, junto con vivienda, atención, calles seguras y prevención que los residentes puedan ayudar a definir."
               }
             ]
           }
         ]
       },
       {
-        "title": "Reclamaciones de seguridad y policía",
-        "summary": "Nos tomamos en serio la violencia y el robo sin aceptar el seguimiento habitual de los movimientos como respuesta.",
+        "title": "Dinero público y control",
+        "summary": "Quién paga, quién decide y qué establecen los registros.",
         "items": [
           {
-            "question": "¿Nos tomamos en serio la seguridad pública?",
+            "question": "¿Cuánto dinero ha comprometido el Concejo con Flock?",
             "answer": [
               {
-                "text": "Sí. La gente merece vivir sin robo de automóviles, violencia, calles peligrosas, respuesta lenta a emergencias o miedo en sus vecindarios."
-              },
-              {
-                "text": "La seguridad va más allá de la vigilancia. Incluye vivienda estable, trabajo seguro, respuesta confiable a emergencias y crisis, programas para jóvenes, parques y bibliotecas, protección contra la violencia, calles seguras, atención y la libertad de pedir apoyo sin exponer a una familia a un escrutinio policial o de inmigración innecesario."
-              },
-              {
-                "text": "La respuesta de Flock es más cámaras, búsquedas, datos y tecnología policial. Nosotros partimos de la inversión pública, la rendición pública de cuentas y de que la clase trabajadora obtenga poder real sobre las instituciones responsables de nuestra seguridad."
+                "text": "El Concejo aprobó otros $3.15 millones el 31 de marzo de 2026, elevando el máximo combinado del contrato a $5,416,700 y extendiendo su duración hasta el 14 de abril de 2031. El máximo es gasto autorizado, no la suma del dinero ya gastado."
               }
             ]
           },
           {
-            "question": "¿Qué pasa con los coches robados y los delitos graves?",
+            "question": "¿Y si lo pagan las subvenciones?",
             "answer": [
               {
-                "text": "Los coches robados y los delitos graves son daños reales. Merecen respuestas serias. Flock comercializa lectores de placas como herramientas para vehículos buscados, recuperación de propiedad robada y pistas de investigación."
+                "text": "Las subvenciones son dinero público, y las futuras subvenciones no están garantizadas. El plan de financiamiento de Stockton dice que la ciudad necesitaría otras asignaciones presupuestarias o poner fin al acuerdo si las subvenciones y los fondos policiales no alcanzan."
               },
               {
-                "text": "Esos daños no le dan a la ciudad carta blanca para recopilar y buscar datos sobre los movimientos de todas las personas. Las investigaciones deben limitarse a objetivos concretos."
+                "text": "Mantener el sistema significa seguir pagándolo. Algunos fondos de subvenciones tienen usos restringidos, por lo que retirar el sistema no liberaría automáticamente cada dólar del contrato para otro programa. Sí detendría nuevos compromisos con este sistema privado de vigilancia."
               }
             ]
           },
           {
-            "question": "¿Flock resuelve crímenes?",
+            "question": "¿Ha compartido Stockton datos de Flock con ICE?",
             "answer": [
               {
-                "text": "Flock y los departamentos de policía afirman que el sistema ha permitido recuperar vehículos, obtener pistas, localizar a personas desaparecidas y responder con más rapidez."
+                "text": "Los registros locales revisados no establecen una transferencia de Stockton a ICE. El portal archivado enumera ajustes de intercambio y registros de búsquedas con identidades ocultas; ninguno identifica a todas las personas que solicitaron o recibieron información. Las etiquetas “USMS case” se refieren al U.S. Marshals Service, una agencia distinta de ICE."
               },
               {
-                "text": "Esos casos pueden describir resultados reales. No deciden cuántos datos deben recopilarse, quién puede buscarlos, cómo puede ampliarse el sistema ni qué capacidad pública pierde fondos y atención. Una tecnología puede ayudar en una investigación y aun así crear una forma de poder institucional que Stockton debe rechazar."
+                "text": "Esa falta de información importa. Los residentes deberían poder auditar el acceso a los registros de nuestros viajes. Nuestra exigencia de retirar el sistema no depende de afirmar una transferencia que no podemos demostrar."
               }
             ]
           },
           {
-            "question": "¿Por qué no juzgar a Flock por los arrestos, las recuperaciones o los tiempos de respuesta?",
+            "question": "¿Por qué no mantener Flock con reglas más estrictas?",
             "answer": [
               {
-                "text": "Esas cifras describen la actividad policial. No cuentan cuántas personas ingresan a la base de datos sin conexión con un delito, con qué amplitud se pueden buscar registros, qué nuevos usos pueden aparecer o qué dependencia a largo plazo crea el contrato."
+                "text": "Una prohibición del uso para hacer cumplir las leyes de inmigración y límites firmes de acceso pueden proteger a las personas mientras se retira el sistema. Dejan intactos la recopilación de fondo, el poder policial de búsqueda y la dependencia de Flock."
               },
               {
-                "text": "Las medidas de aplicación de la ley, por sí solas, no prueban una seguridad pública duradera ni justifican un seguimiento rutinario."
+                "text": "Otras ciudades de California encontraron ajustes de acceso que contradecían sus políticas. Son advertencias de otras ciudades, no pruebas de que haya ocurrido lo mismo en Stockton. Nos organizamos para poner fin al sistema, no para facilitar la administración del seguimiento permanente."
               }
             ]
           }
         ]
       },
       {
-        "title": "Poder, movimiento y riesgo desigual",
-        "summary": "La recopilación amplia ocurre dentro de relaciones desiguales entre la policía, las autoridades de inmigración, los empleadores, los propietarios de viviendas y los residentes.",
+        "title": "Lograr juntos el retiro",
+        "summary": "Qué aporta tu firma y cómo participar.",
         "items": [
           {
-            "question": "¿Es Flock sólo una herramienta?",
+            "question": "¿Qué haría la resolución para retirar Flock?",
             "answer": [
               {
-                "text": "No. Flock describe una plataforma que conecta lectores de placas, video, drones, detección de audio, llamadas al 911, despacho, sistemas de registros, cámaras públicas y privadas y uso compartido de agencias."
-              },
-              {
-                "text": "La infraestructura cambia lo que una institución puede hacer de forma rutinaria. Una vez que existe un sistema conectado, con el tiempo se pueden agregar nuevas cámaras, agencias, bases de datos y funciones de búsqueda."
+                "text": "Pondría fin a los contratos con Flock en la primera fecha legalmente posible, detendría la expansión, exigiría la eliminación de datos conforme a la ley, publicaría un registro completo del cierre e impediría que Stockton recreara el mismo sistema de seguimiento masivo con otro nombre. Cambiar de proveedor no cumpliría la demanda."
               }
             ]
           },
           {
-            "question": "¿Flock afecta a todos por igual?",
+            "question": "¿Qué pasa cuando firmo?",
             "answer": [
               {
-                "text": "Todo aquel que pase por una cámara podrá ser grabado. No todos enfrentan las mismas consecuencias."
+                "text": "Añades tu nombre a la exigencia de que el Concejo Municipal de Stockton apruebe la resolución para retirar Flock. Una firma ayuda a mostrar oposición organizada; por sí sola no cancela el contrato."
               },
               {
-                "text": "Los registros de movimientos conllevan un mayor peligro para las familias inmigrantes, los trabajadores que se organizan en el trabajo, los inquilinos que se reúnen para discutir las condiciones de los propietarios, las personas en protestas, las personas que buscan atención médica sensible, los sobrevivientes que protegen su ubicación, las personas bajo supervisión y los residentes que ya enfrentan atención policial concentrada."
-              },
-              {
-                "text": "La recopilación masiva puede ser indiscriminada. Sus consecuencias no lo son."
+                "text": "Para ganar, necesitamos hablar con vecinos y compañeros de trabajo, llevar la demanda al Concejo y seguir participando para verificar el retiro. Esas relaciones y capacidades dan a la clase trabajadora más poder sobre las futuras decisiones acerca del dinero público y la seguridad."
               }
             ]
           },
           {
-            "question": "¿Sólo deberían preocuparse las personas que infringen la ley?",
+            "question": "¿Tengo que unirme a WCU para ayudar?",
             "answer": [
               {
-                "text": "No. Los lectores de placas registran viajes ordinarios. No saben si alguien irá al trabajo, a la escuela, a recibir atención médica, a una reunión de inquilinos, a una reunión sindical, a una protesta, a un abogado, a un familiar o a un lugar de culto."
+                "text": "No. Puedes firmar, compartir la petición, asistir a reuniones públicas, ayudar con investigación o traducción y distribuir materiales de la campaña sin hacerte miembro."
               },
               {
-                "text": "Flock dice que su sistema lector de placas no utiliza reconocimiento facial. Un sistema no necesita reconocimiento facial para revelar viajes repetidos, paradas y vehículos cercanos."
-              },
-              {
-                "text": "La cuestión no es si una persona tiene algo que ocultar. La pregunta es si Stockton debería normalizar el registro del movimiento sin sospecha individualizada."
-              }
-            ]
-          },
-          {
-            "question": "¿Qué datos recopila Flock?",
-            "answer": [
-              {
-                "text": "Flock dice que sus lectores de placas pueden recopilar caracteres de placas, imágenes de vehículos, hora, ubicación, marca, modelo, color y otras características visibles del vehículo."
-              },
-              {
-                "text": "Las herramientas de búsqueda pueden utilizar una placa o una descripción parcial del vehículo. Flock describe FreeForm como una búsqueda en lenguaje natural entre imágenes de placas compatibles y evidencia en video."
-              },
-              {
-                "text": "El sistema hace más que tomar fotografías. Los organiza en registros que se pueden buscar, comparar, compartir y unir a otra información."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Aplicación de la ley de inmigración y salvaguardias",
-        "summary": "Las restricciones inmediatas importan. No eliminan el sistema de recopilación de datos ni el poder de la policía y del proveedor.",
-        "items": [
-          {
-            "question": "¿Stockton comparte datos de Flock con ICE o con agencias federales?",
-            "answer": [
-              {
-                "text": "Por ahora, no afirmamos que Stockton haya compartido datos de Flock con ICE."
-              },
-              {
-                "text": "El subjefe Kyle Pierce dijo: \"No hemos compartido ninguna información relacionada con la inmigración con nuestros socios federales\". Esa declaración se refiere a información relacionada con la inmigración; no es una afirmación de que Stockton nunca haya cooperado con ninguna agencia federal para otro propósito."
-              },
-              {
-                "text": "Una instantánea archivada del portal del 8 de agosto enumeraba 320 destinatarios de intercambio saliente, incluidos NCRIC, el Departamento de Policía de El Cajon, el Departamento de Policía de California de la Universidad de Stanford, el Departamento de Policía de CA de la Universidad de San Francisco, la Universidad del Pacífico y la “Org. decomisionada”. ICE, CBP, DHS y USMS no figuraban como destinatarios directos. Un destinatario listado es una configuración para compartir, no una prueba de una búsqueda o divulgación real."
-              },
-              {
-                "text": "La misma auditoría pública de 1,774 filas contenía 40 filas etiquetadas como “caso USMS”, y todos los usuarios públicos ID estaban enmascarados. USMS es una agencia separada del Departamento de Justicia, no ICE. La etiqueta no identifica quién solicitó la búsqueda, si USMS tenía credenciales, qué información se devolvió o si la búsqueda fue legal."
-              },
-              {
-                "text": "Una respuesta de la ciudad a la solicitud PRA 10325372 dice que un administrador de Flock del SPD autorizó a la University of the Pacific (UOP) mediante el portal y que no se encontró ningún acuerdo escrito. Esto plantea una cuestión de auditoría y cumplimiento, pero no prueba que UOP haya accedido a los datos."
-              },
-              {
-                "text": "La estructura del Northern California Regional Intelligence Center (NCRIC) crea una posible vía indirecta para compartir datos que merece una auditoría. El material público no prueba que una agencia federal o de inmigración usara esa vía para acceder a datos de Stockton."
-              }
-            ]
-          },
-          {
-            "question": "¿Ayudaría una prohibición de ICE?",
-            "answer": [
-              {
-                "text": "Sí. Una prohibición clara y exigible del uso para hacer cumplir las leyes de inmigración atendería un peligro urgente. Apoyaríamos esa protección durante el proceso de retirar el sistema."
-              },
-              {
-                "text": "Una restricción ICE no detendría la recopilación rutinaria, otros registros policiales, los drones, la dependencia de proveedores, futuros cambios de políticas, los intermediarios de las agencias o la expansión a más funciones de vigilancia."
-              },
-              {
-                "text": "Es una protección inmediata, no un sustituto del desmantelamiento del sistema."
-              }
-            ]
-          },
-          {
-            "question": "¿Qué pasa con las salvaguardias de Flock?",
-            "answer": [
-              {
-                "text": "Flock apunta a registros de auditoría, controles de acceso, historiales de búsqueda, configuraciones de retención, permisos para compartir y paneles públicos. La configuración y aplicación adecuadas pueden reducir algunas formas de uso indebido."
-              },
-              {
-                "text": "Un período de retención más corto aún comienza con el cobro. Un registro de auditoría registra una búsqueda después de que ocurre. Un tablero describe un sistema de vigilancia que permanece en funcionamiento."
-              },
-              {
-                "text": "Los entornos no son control democrático y la supervisión no es eliminación."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Una plataforma privada dentro de la policía pública",
-        "summary": "El dinero público, el poder policial, los ingresos de los proveedores, las subvenciones, los drones y las cámaras privadas forman una relación política.",
-        "items": [
-          {
-            "question": "¿Por qué importa que Flock sea una empresa privada?",
-            "answer": [
-              {
-                "text": "Flock proporciona software, servicios en la nube, integraciones, mantenimiento, controles de acceso, actualizaciones y suscripciones recurrentes que pasan a formar parte de las operaciones policiales."
-              },
-              {
-                "text": "El público aporta el dinero. Los movimientos cotidianos de los residentes generan los datos. La policía obtiene más capacidad de vigilancia. La empresa recibe ingresos recurrentes a medida que la plataforma se amplía."
-              },
-              {
-                "text": "La Unión Estadounidense por las Libertades Civiles advirtió que los cambios en los términos estándar de Flock parecían darle a la empresa un mayor control sobre el acceso a los datos de los clientes y derechos continuos más amplios para usar la información."
-              },
-              {
-                "text": "La infraestructura de seguridad pública debería responder ante el público, no ante una empresa cuyo negocio crece gracias a una vigilancia más amplia."
-              }
-            ]
-          },
-          {
-            "question": "¿Son diferentes los drones de los lectores de matrículas?",
-            "answer": [
-              {
-                "text": "Recopilan información diferente, pero Stockton contrató para colocarlos en la misma plataforma. Flock dice que los drones policiales acoplados pueden responder a llamadas o alertas, transmitir videos en vivo y conectarse con el 911, el despacho, el lector de placas y otros sistemas."
-              },
-              {
-                "text": "Los lectores de placas crean registros de búsqueda del movimiento de vehículos. Los drones añaden observación aérea en vivo de personas, hogares, calles, patios y reuniones."
-              }
-            ]
-          },
-          {
-            "question": "¿Los drones siempre son malos?",
-            "answer": [
-              {
-                "text": "No todos los usos de drones presentan el mismo problema. Una ciudad puede debatir usos específicos de incendios, desastres o búsqueda y rescate bajo operadores y reglas de datos separados."
-              },
-              {
-                "text": "El paquete de Stockton se refiere a drones policiales con estaciones de carga conectados a una plataforma privada que integra lectores de matrículas, video, información del 911 y software de búsqueda. Nos oponemos a esa infraestructura permanente de vigilancia policial."
-              }
-            ]
-          },
-          {
-            "question": "¿Qué pasa con las empresas y los vecindarios que quieren más seguridad?",
-            "answer": [
-              {
-                "text": "La gente tiene razón al querer tiendas, estacionamientos, edificios de departamentos, empleos y vecindarios más seguros."
-              },
-              {
-                "text": "Flock vende sistemas a empresas, escuelas, vecindarios, asociaciones de propietarios y policías. Su plataforma puede conectar fuentes de datos públicas y privadas."
-              },
-              {
-                "text": "Los inquilinos, trabajadores, visitantes y personas de paso pueden ser grabados sin voz en la compra. La seguridad debe ser un compromiso público, no un producto distribuido a través de la propiedad y el poder adquisitivo."
-              }
-            ]
-          },
-          {
-            "question": "¿Qué pasa si una subvención lo paga?",
-            "answer": [
-              {
-                "text": "El dinero de las subvenciones es dinero público. Los registros Stockton identifican subvenciones y fondos policiales para partes del sistema Flock. Dejan abiertos los costes y créditos posteriores."
-              },
-              {
-                "text": "Una subvención puede cubrir los costos iniciales y aun así generar suscripciones, deberes de capacitación, dependencia de propiedad, presión para obtener fondos de reemplazo y resistencia a desmantelar el sistema."
-              },
-              {
-                "text": "Algunos fondos de subvenciones pueden tener restricciones. No prometeremos que cada dólar destinado a Flock pueda trasladarse directamente a otro programa. Stockton debe publicar todas las condiciones de financiamiento y rechazar las subvenciones que exijan un sistema de vigilancia inaceptable."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Remoción, registros públicos y acción organizada",
-        "summary": "Cambiar una regla o un proveedor no es el objetivo. El sistema debe dejar de funcionar y los residentes deben poder verificar el resultado.",
-        "items": [
-          {
-            "question": "¿Por qué no mantener a Flock con reglas más estrictas?",
-            "answer": [
-              {
-                "text": "Unas normas más estrictas pueden reducir el daño. Dejan registros de viajes ordinarios, registros policiales, cámaras y drones conectados, una plataforma privada e infraestructura que los funcionarios posteriores pueden ampliar."
-              },
-              {
-                "text": "La Unión Americana de Libertades Civiles ha publicado una resolución modelo para la cancelación total del contrato. Las reglas y la eliminación tienen diferentes objetivos."
-              },
-              {
-                "text": "Apoyamos protecciones inmediatas mientras se retira el sistema. No aceptamos como solución final una versión regulada del seguimiento masivo habitual."
-              }
-            ]
-          },
-          {
-            "question": "¿Por qué no cambiar de proveedor?",
-            "answer": [
-              {
-                "text": "Cambiar el nombre de la empresa no cambia la función. Un reemplazo que registra las ubicaciones de los vehículos, los hace buscables y los conecta a los sistemas policiales recrea el mismo poder."
-              },
-              {
-                "text": "Nuestra demanda se dirige al seguimiento masivo, sin importar el proveedor, la marca o la fuente de financiamiento."
-              }
-            ]
-          },
-          {
-            "question": "¿Qué registros debería publicar Stockton?",
-            "answer": [
-              {
-                "text": "Stockton debería publicar los registros necesarios para establecer qué se compró, quién podía usarlo, cómo se configuró, qué acceso se produjo y si se completaron el cierre y la eliminación."
-              },
-              {
-                "text": "La divulgación pública debe proteger los números de placas individuales y los registros de viaje. La redacción puede preservar esa privacidad y aún mostrar el volumen de búsqueda, las agencias, los propósitos declarados, el uso compartido y el funcionamiento del sistema."
-              },
-              {
-                "text": "Los registros públicos permiten a los residentes saber qué se construyó y verificar que se produjo la remoción."
-              }
-            ],
-            "points": [
-              {
-                "text": "Cada contrato, enmienda, cotización, término incorporado, registro de concesión y uso permitido de Flock."
-              },
-              {
-                "text": "Un inventario completo de cámaras, drones, software, sensores, integraciones, estado de implementación y ubicaciones de equipos, sujeto únicamente a redacciones legales estrictamente justificadas."
-              },
-              {
-                "text": "Reglas de retención y eliminación de datos, políticas de búsqueda y auditoría, materiales de capacitación, procedimientos operativos y listas de agencias y usuarios autorizados."
-              },
-              {
-                "text": "Configuraciones para compartir activas e históricas, identificadores de destinatarios estables, fechas para agregar y eliminar, aprobaciones de administradores y propósitos declarados."
-              },
-              {
-                "text": "Registros de acceso y búsqueda nativos debidamente redactados que muestran el usuario local, la organización, el solicitante, el número de caso, el alcance de la consulta, los registros devueltos y las divulgaciones realizadas."
-              },
-              {
-                "text": "Solicitudes de agencias externas y registros de búsquedas realizadas en su nombre."
-              },
-              {
-                "text": "Acuerdos ejecutados, registros de autorización de administrador, revisiones legales y registros de acceso reales para UOP, NCRIC, El Cajon, entidades asociadas a la universidad y cualquier otro destinatario saliente."
-              },
-              {
-                "text": "La identidad y el historial de uso compartido de la \"organización desmantelada\", además de registros de uso compartido y recompartimiento para destinatarios externos."
-              },
-              {
-                "text": "Registros originales subyacentes a cada fila de “caso USMS”, incluido si USMS solicitó la búsqueda o tenía credenciales directas."
-              },
-              {
-                "text": "Campos nativos relacionados con razones públicas en blanco e IDs de usuario ocultos, además de las reglas de redacción y publicación de la Ciudad."
-              },
-              {
-                "text": "Acuerdos de datos o cámaras privadas y comunicaciones de proveedores sobre configuración, acceso, cumplimiento y cambios en el sistema."
-              },
-              {
-                "text": "Quejas, investigaciones de uso indebido, incidentes de seguridad, acciones correctivas, paneles públicos y auditorías internas."
-              },
-              {
-                "text": "Cláusulas de rescisión, costos de cierre, procedimientos de eliminación y el proceso mediante el cual Flock y terceros eliminarán los datos de Stockton."
-              }
-            ]
-          },
-          {
-            "question": "¿Qué significa eliminación?",
-            "answer": [
-              {
-                "text": "Retirar el sistema significa poner fin a los contratos, detener la expansión, eliminar los datos cuando la ley lo permita, publicar un registro completo del cierre e impedir que el mismo sistema regrese con otro nombre."
-              }
-            ],
-            "points": [
-              {
-                "text": "Rescindir o negarse a renovar cada contrato de Flock en la fecha más temprana legal y prohibir la renovación automática."
-              },
-              {
-                "text": "Detenga inmediatamente nuevas compras, herramientas, integraciones, acuerdos de intercambio de datos, implementaciones y expansiones de Flock."
-              },
-              {
-                "text": "Exigir la eliminación, en la máxima medida permitida por la ley, de todos los datos de ubicación, imágenes, videos y vehículos recopilados por Flock en poder de la ciudad, Flock o terceros autorizados. Cualquier dato que no pueda eliminarse legalmente debe identificarse públicamente, junto con el motivo por el que debe conservarse y la fecha en que será destruido."
-              },
-              {
-                "text": "Publicar un inventario completo y un registro de cierre público. Esto debe incluir todos los equipos, contratos, integraciones, relaciones de intercambio de datos y permisos de acceso de Flock; una auditoría de quién accedió o recibió datos de Stockton y con qué propósito declarado; un cronograma fechado de desactivación y eliminación; y un informe final de cierre que confirme que el sistema ha sido desmantelado."
-              },
-              {
-                "text": "Prohibir que Stockton vuelva a crear el mismo sistema de seguimiento masivo con otro nombre. No se deben usar fondos municipales, subvenciones, contratos, autoridad de compra ni recursos de personal para adquirir, operar, renovar o ampliar Flock o cualquier sistema sustancialmente similar que registre de forma habitual y permita buscar los movimientos de personas de las que no se sospecha ninguna infracción. Esto se aplica sin importar el proveedor, la marca o la fuente de financiamiento."
-              }
-            ]
-          },
-          {
-            "question": "¿Qué debería financiar Stockton en su lugar?",
-            "answer": [
-              {
-                "text": "Stockton debe crear seguridad que los residentes puedan usar, moldear y responsabilizar: vivienda estable, empleos y recreación para jóvenes, parques y bibliotecas, prevención de la violencia, atención de crisis, servicios para sobrevivientes, iluminación, aceras, tratamiento, infraestructura vecinal, preparación para emergencias y trabajadores públicos confiables."
-              },
-              {
-                "text": "Las reglas de financiamiento pueden restringir algunos dólares. La ciudad puede revelar esos límites, rechazar subvenciones perjudiciales y dejar de destinar recursos futuros de la ciudad a la vigilancia privada."
-              },
-              {
-                "text": "La seguridad pública debería crecer a través de la inversión pública y el control democrático, no de una dependencia permanente de contratos de vigilancia privada."
-              }
-            ]
-          },
-          {
-            "question": "¿Cómo pueden participar los residentes?",
-            "answer": [
-              {
-                "text": "Los residentes pueden firmar y compartir la demanda de remoción, hablar o escribir al consejo, revisar registros, hablar con vecinos y compañeros de trabajo, hacer sondeos, invitar a organizaciones a la campaña, asistir a reuniones y asumir la responsabilidad de la investigación, la divulgación, la traducción o el seguimiento."
-              },
-              {
-                "text": "Firmar una petición o intervenir ante el Concejo inicia el trabajo, pero no lo termina."
-              },
-              {
-                "text": "Nuestro objetivo es que un público organizado pueda investigar lo que construyó la ciudad, decidir qué debe significar la seguridad, lograr que se retire el sistema y verificar que se cumplió la decisión."
+                "text": "La membresía de WCU es un compromiso aparte. Los miembros que pagan cuotas tienen voto en el rumbo de la organización y asumen responsabilidad por el trabajo compartido."
               }
             ]
           }
@@ -851,23 +533,38 @@
     "stocktonContractFacts": [
       {
         "value": "$5,416,700",
-        "label": "Máximo de contrato establecido",
-        "detail": "El informe del personal y la enmienda de marzo de 2026 indican este total después de la Enmienda n.º 4. Aún se necesitan registros financieros y copias de los contratos firmados para confirmar el costo total."
+        "label": "Máximo del contrato",
+        "detail": "Según la documentación revisada, el límite combinado del contrato incluye la ampliación de $3.15 millones aprobada en marzo de 2026."
       },
       {
-        "value": "14 de abril de 2031",
-        "label": "Vigente hasta",
-        "detail": "El Consejo aprobó la extensión del plazo el 31 de marzo de 2026."
-      },
-      {
-        "value": "147 cámaras",
-        "label": "Reportado por el portal Flock",
-        "detail": "El portal público de Flock para Stockton informó de 147 cámaras el 8 de agosto de 2026. Los registros del historial contractual de la ciudad describieron 120 lectores. Stockton debe publicar un inventario oficial del equipo que explique la diferencia."
+        "value": "120+ cámaras",
+        "label": "Lectores de matrículas",
+        "detail": "La ciudad contrató 120 lectores. El archivo del portal de Flock del 8 de agosto de 2026 informó de 147 cámaras."
       },
       {
         "value": "6 drones",
-        "label": "Paquete aprobado",
-        "detail": "La cotización enumera seis drones con estaciones de carga, dos unidades de radar, Flock911, un remolque, FreeForm y diez transmisiones de video integradas. El registro público no establece si esos productos están implementados."
+        "label": "Drones y estaciones de acoplamiento",
+        "detail": "Aprobados para despegue remoto y video aéreo durante las intervenciones policiales."
+      },
+      {
+        "value": "2 unidades de radar",
+        "label": "Radar",
+        "detail": "Incluidas en el paquete de drones aprobado."
+      },
+      {
+        "value": "Integración con el 911",
+        "label": "Llamadas de emergencia",
+        "detail": "Prepared 911 conecta la ubicación de quien llama, la transcripción, la traducción y los archivos que aporta esa persona. El paquete más reciente añade Flock911."
+      },
+      {
+        "value": "1 remolque móvil",
+        "label": "Equipo móvil",
+        "detail": "El paquete aprobado incluye un remolque de vigilancia que se puede trasladar."
+      },
+      {
+        "value": "10 transmisiones de video",
+        "label": "Video conectado y búsquedas",
+        "detail": "El paquete incluye diez transmisiones de video compatibles y búsquedas FreeForm, vinculando más video a las búsquedas policiales."
       }
     ],
     "stocktonCostStack": [
@@ -884,7 +581,7 @@
       {
         "amount": "$1,196,700",
         "label": "Enmienda No. 2",
-        "detail": "Ampliación de Falcon con 105 cámaras y las interfaces de programación de aplicaciones relacionadas."
+        "detail": "105 cámaras más y software que las conecta con el sistema más amplio."
       },
       {
         "amount": "$95,000",
@@ -900,200 +597,114 @@
     "stocktonTimeline": [
       {
         "date": "Septiembre 2023",
-        "action": "Contrato original del Flock",
-        "description": "Un informe posterior del personal dice que Stockton ejecutó un contrato para 15 cámaras Flock. La Enmienda No. 1 registra una cantidad original de $97,400."
+        "action": "Stockton firma su primer contrato con Flock",
+        "description": "Stockton firmó su primer contrato con Flock: $97,400 por 15 cámaras."
       },
       {
         "date": "9 de julio de 2024",
-        "action": "integración Prepared 911",
-        "description": "El Concejo Municipal aprobó la Enmienda n.º 1 por un monto máximo de $877,600. La agenda de consentimiento se aprobó por 6–0, con un miembro ausente."
+        "action": "El Concejo conecta Flock con la respuesta al 911",
+        "vote": "Votaron a favor: Michael Blower, Brando Villapudua, Michele Padilla, Kevin J Lincoln II, Kimberly Warmsley, Daniel Wright.",
+        "description": "El Concejo aprobó $877,600 para integrar Prepared 911. La votación fue de 6–0; Susan Lenz estuvo ausente."
       },
       {
         "date": "12 de noviembre de 2024",
-        "action": "Subvención federal de tecnología",
-        "description": "El Concejo Municipal aceptó una subvención de $963,000 del COPS Technology and Equipment Program e indicó entre los usos propuestos un programa más amplio de lectores de matrículas."
+        "action": "El Concejo acepta una subvención federal para tecnología",
+        "vote": "Votaron a favor: Michael Blower, Brando Villapudua, Michele Padilla, Susan Lenz, Kimberly Warmsley, Daniel Wright.",
+        "description": "El Concejo aceptó una subvención federal de $963,000 para tecnología, incluidos fondos para más lectores de matrículas. La votación fue de 6–0; Kevin J Lincoln II estuvo ausente."
       },
       {
         "date": "19 de noviembre de 2024",
-        "action": "expansión Falcon",
-        "description": "El Concejo Municipal aprobó la Enmienda n.º 2 por $1,196,700 para añadir 105 unidades Falcon y el software y las interfaces de programación de aplicaciones relacionados. La votación de consentimiento se aprobó por 7–0."
-      },
-      {
-        "date": "19 de marzo de 2025",
-        "action": "aviso CEQA",
-        "description": "Un registro ambiental estatal nombra dos ubicaciones de cámaras. No es un mapa de cámara completo."
+        "action": "El Concejo añade 105 cámaras",
+        "vote": "Votaron a favor: Michael Blower, Brando Villapudua, Michele Padilla, Susan Lenz, Kevin J Lincoln II, Kimberly Warmsley, Daniel Wright.",
+        "description": "El Concejo aprobó $1,196,700 para 105 cámaras más y software que las conecta con el sistema más amplio de Flock. La votación fue de 7–0."
       },
       {
         "date": "26 de junio de 2025",
-        "action": "Enmienda No. 3",
-        "description": "El informe del personal de marzo de 2026 dice que el administrador de la ciudad aprobó una extensión $95,000. La enmienda subyacente aún no se ha ubicado en el archivo revisado."
+        "action": "La ciudad extiende el acuerdo",
+        "description": "La ciudad formalizó una extensión de $95,000, según el informe del personal de marzo de 2026. La enmienda correspondiente no está en el archivo revisado."
       },
       {
         "date": "31 de marzo de 2026",
-        "action": "expansión Drone as First Responder",
+        "action": "El Concejo aprueba drones y otros cinco años",
+        "vote": "Votaron a favor: Christina Fugazi, Michael Blower, Brando Villapudua, Michele Padilla, Mariela Ponce, Mario Enríquez, Jason Lee.",
         "description": "El Concejo Municipal aprobó un paquete de $3.15 millones y extendió el acuerdo hasta el 14 de abril de 2031. El punto se aprobó por 7–0 tras considerarse por separado."
       }
     ],
     "whatStocktonBoughtPage": {
       "eyebrow": "EL REGISTRO PÚBLICO",
       "title": "Lo que compró Stockton",
-      "description": "La clase trabajadora de Stockton necesita servicios de seguridad y emergencia en los que pueda confiar y que pueda ayudar a gobernar. Los funcionarios municipales usaron dinero público para convertir un contrato de Flock de 15 cámaras en una infraestructura policial suministrada por una empresa privada que conecta registros de matrículas, llamadas de emergencia, búsqueda de video, drones, radar y redes de datos externas. Este acuerdo amplía el poder policial y vincula las operaciones públicas con un proveedor privado.",
-      "reviewedThrough": "3 de septiembre de 2026",
-      "qualification": "Los contratos e informes municipales establecen lo que Stockton autorizó o compró. Por ahora, no afirmamos que todos los productos contratados estén implementados, que sepamos cómo está configurado cada ajuste ni que sepamos quién ha buscado datos de Stockton.",
+      "description": "La seguridad real exige trabajo. El Concejo Municipal de Stockton eligió un atajo de $3.15 millones: más tecnología de Flock para vigilarnos. Este es el sistema que aprobó el Concejo, su costo y cómo pone las operaciones públicas en manos de una empresa privada.",
       "sections": [
         {
-          "title": "Una plataforma construida por etapas",
-          "summary": "Stockton no hizo una sola compra aislada de cámaras. Los funcionarios municipales ampliaron el sistema mediante una serie de contratos y enmiendas, destinaron más dinero público e hicieron que las operaciones policiales dependieran más de las herramientas suministradas por Flock.",
+          "title": "Vigilancia masiva construida paso a paso",
+          "summary": "El Concejo Municipal siguió ampliando el sistema. Cada ampliación comprometió más dinero público e hizo que las operaciones policiales dependieran más de Flock.",
           "paragraphs": [
             {
-              "text": "Los registros de Stockton describen un contrato original de 15 cámaras, una integración de Prepared 911, una subvención federal y una expansión de Falcon de 105 cámaras, una enmienda posterior cuyo documento subyacente aún falta, y un paquete 2026 para drones, radar, Flock911, un tráiler móvil, búsqueda FreeForm y diez transmisiones de video integradas."
+              "text": "Stockton comenzó con 15 cámaras y luego añadió la integración con nuestro sistema de respuesta al 911 y otras 105 cámaras. El contrato más reciente añade drones, radar, un remolque móvil y herramientas de búsqueda que conectan transmisiones de video adicionales. Estas son las capacidades contratadas; los registros no establecen que cada elemento esté funcionando."
             },
             {
-              "text": "El informe del personal de marzo de 2026 indica que el nuevo paquete agrega $3.15 millones, extiende el acuerdo hasta el 14 de abril de 2031 y eleva el máximo establecido a $5,416,700."
-            },
-            {
-              "text": "Los registros del historial contractual de la ciudad describieron 120 lectores de matrículas. El portal público de Flock para Stockton informó de 147 cámaras el 8 de agosto de 2026. Esa cifra provino de datos publicados por el proveedor y conservados por un tercero, no de un inventario certificado por la ciudad."
+              "text": "El 31 de marzo de 2026, el actual Concejo Municipal aprobó otros $3.15 millones y extendió el contrato de Stockton con Flock hasta el 14 de abril de 2031."
             }
           ]
         },
         {
           "title": "Cómo creció el sistema",
-          "summary": "Esta cronología distingue lo que aprobó el Concejo Municipal, lo que informó el personal y lo que aún falta en el archivo público."
+          "summary": "El Concejo Municipal añadió más cámaras, conectó las llamadas de emergencia y aprobó la ampliación con drones."
         },
         {
-          "title": "¿Cuánto podrían costar los contratos?",
-          "summary": "Los montos de las enmiendas y el máximo acumulado del contrato son cifras diferentes. Aparecen por separado para no contar dos veces el mismo dinero público.",
+          "title": "Los costos de Flock",
+          "summary": "Dinero público comprometido mediante el contrato original y cuatro enmiendas.",
           "paragraphs": [
             {
-              "text": "El paquete Drone as First Responder añade $3.15 millones y eleva el máximo declarado del contrato a $5.4167 millones. Stockton debe publicar los registros financieros, las facturas, las órdenes de compra y las copias de los contratos firmados necesarios para confirmar el costo total."
+              "text": "En conjunto, estas autorizaciones fijan un máximo contractual de $5,416,700."
             }
           ]
         },
         {
-          "title": "Qué contiene el paquete",
-          "summary": "Los registros municipales y el portal público de Flock describen un paquete que combina varios tipos de tecnología de vigilancia policial y respuesta de emergencia. Los registros disponibles establecen lo que se autorizó o informó, no lo que está implementado actualmente ni cómo se ha usado.",
-          "points": [
-            {
-              "text": "Lectores de placas: el personal describió 15 cámaras originales y una expansión aprobada de 105 cámaras. El portal archivado de Flock informó más tarde de 147 cámaras. Estas cifras provienen de diferentes fuentes y no establecen el inventario desplegado actualmente."
-            },
-            {
-              "text": "Prepared 911: Los documentos municipales describen la ubicación de quien llama, la transcripción, la traducción, los archivos que proporciona quien llama y las herramientas de despacho."
-            },
-            {
-              "text": "Paquete de drones: la cotización enumera seis drones y muelles, dos unidades de radar, Flock911, un remolque móvil, FreeForm y diez transmisiones de video compatibles."
-            },
-            {
-              "text": "Escala de búsqueda: las cifras de diez mil millones de lecturas mensuales en todo el país y 500 millones de lecturas mensuales regionales son afirmaciones del proveedor y del personal. No muestran que Stockton hiciera búsquedas o compartiera datos a esa escala."
-            }
-          ]
-        },
-        {
-          "title": "Financiación pública y dependencia a largo plazo",
-          "summary": "Los registros mencionan varias vías de financiamiento municipal y mediante subvenciones para el sistema Flock. No respaldan la promesa de trasladar a otro programa, dólar por dólar, el monto total del contrato.",
+          "title": "Subvenciones hoy, impuestos locales mañana",
+          "summary": "El contrato dura hasta el 14 de abril de 2031. ¿Quién pagará para mantenerlo en funcionamiento después?",
           "paragraphs": [
             {
-              "text": "Los registros mencionan fondos AB109, una subvención federal del COPS Technology and Equipment Program, fondos del Board of State and Community Corrections, el presupuesto de Field Services del Departamento de Policía, subvenciones posteriores y posibles asignaciones municipales."
+              "text": "Stockton ha usado fondos estatales de justicia penal, una subvención federal para tecnología y fondos policiales para Flock. El plan de 2026 prevé futuras subvenciones, pero este financiamiento no durará para siempre."
             },
             {
-              "text": "Las subvenciones son dinero público, no financiamiento gratuito del proveedor. Pueden tener restricciones legales y hacer que los trabajadores y residentes paguen después las suscripciones, el personal, la capacitación y los fondos de reemplazo. Cada ampliación aumenta la dependencia de la ciudad de una plataforma privada que la clase trabajadora financia, pero no posee ni gobierna."
+              "text": "Cuando terminen las subvenciones, mantener Flock requerirá encontrar dinero público para suscripciones, personal, capacitación y equipos de reemplazo. La ciudad puede buscar más fondos o poner fin al acuerdo. Cada ampliación nos vincula más a un sistema privado que financiamos, pero que no nos pertenece ni gobernamos."
             }
           ]
         },
         {
-          "title": "La ciudad citó la continuidad con el proveedor",
-          "summary": "El personal municipal dio varias razones para continuar con Flock en vez de abrir la compra a la competencia. Los registros disponibles no establecen si la excepción al proceso competitivo de licitación fue legal o ilegal.",
+          "title": "Sin licitación competitiva",
+          "summary": "El Concejo Municipal aprobó ampliaciones sin licitación competitiva.",
           "paragraphs": [
             {
-              "text": "El personal citó la integración propia del proveedor, la continuidad con la infraestructura existente de Flock, un mercado limitado y el riesgo de duplicación o incompatibilidad. Su justificación muestra cómo la dependencia de un solo proveedor puede hacer que cada nueva ampliación parezca más fácil que cambiar de rumbo."
+              "text": "El personal municipal argumentó que las herramientas de Flock encajaban con el sistema existente y que cambiar de proveedor podría duplicar equipos o crear problemas de compatibilidad. Las compras anteriores se convirtieron en el motivo para comprar más a la misma empresa."
             }
           ]
         },
         {
-          "title": "¿Quién es el propietario del hardware y de los datos operativos?",
+          "title": "Flock es dueño del equipo de drones y los datos operativos",
           "summary": "Stockton destina dinero público a un sistema cuyo proveedor se reserva el control del equipo y de una amplia categoría de información operativa y derivada.",
           "paragraphs": [
             {
-              "text": "El anexo sobre drones dice que Flock es propietario del hardware y impone al cliente el riesgo declarado de pérdida después de la entrega. Define una categoría amplia de “Flock Drone IP” que incluye información operativa y derivada."
+              "text": "El anexo sobre drones deja la propiedad de sus equipos en manos de Flock y asigna a Stockton el riesgo de pérdida después de la entrega. Flock también se reserva derechos sobre información operativa y derivada, incluidos registros de vuelo, telemetría y datos de uso agregados o anonimizados. El acuerdo excluye los Datos del Cliente (Customer Data) de esos derechos específicos."
             },
             {
-              "text": "Estos términos no establecen que Stockton haya perdido el control de registros protegidos. Sí establecen que las operaciones públicas dependen de la tecnología, los permisos y los términos contractuales de Flock."
+              "text": "El Concejo Municipal de Stockton está haciendo que las operaciones de seguridad pública dependan de la tecnología, los permisos y los términos contractuales de Flock."
             }
           ]
         },
         {
-          "title": "La configuración para compartir no es el historial de acceso",
-          "summary": "El portal archivado de Flock muestra destinatarios configurados y etiquetas públicas de búsqueda. Aún se necesitan registros propios de la ciudad para establecer quién buscó, recibió o divulgó datos de Stockton.",
+          "title": "Los ajustes actuales de intercambio plantean preguntas",
+          "summary": "¿Quién puede buscar registros de nuestros viajes y quién lo decide? Los ajustes de intercambio archivados dejan esa pregunta abierta.",
           "paragraphs": [
             {
-              "text": "El archivo del portal del 8 de agosto enumeró 320 destinatarios externos, entre ellos el Northern California Regional Intelligence Center (NCRIC), El Cajon Police Department, Stanford University CA PD, University of San Francisco CA PD, University of the Pacific (UOP) y “Decommissioned Org.” Immigration and Customs Enforcement (ICE), Customs and Border Protection (CBP), Department of Homeland Security (DHS) y United States Marshals Service (USMS) no figuraban como destinatarios directos. Figurar como destinatario indica una configuración para compartir datos, no prueba una búsqueda ni una divulgación."
+              "text": "El archivo del portal del 8 de agosto de 2026 enumeraba 320 destinatarios de datos compartidos, incluidos el Northern California Regional Intelligence Center, la policía de El Cajon, policías universitarias y una “Decommissioned Org.” sin identificar. Figurar como destinatario indica una configuración para compartir datos, no prueba que hubiera una búsqueda o divulgación."
             },
             {
-              "text": "La misma auditoría pública de 1,774 filas contenía 40 filas etiquetadas como “caso USMS”, y todos los usuarios públicos ID estaban enmascarados. USMS es una agencia separada del Departamento de Justicia, no ICE. La etiqueta no identifica quién solicitó la búsqueda, quién tenía credenciales, qué información se devolvió o si la búsqueda fue legal."
+              "text": "La auditoría pública incluía 40 búsquedas con la etiqueta “USMS case”, pero ocultaba la identidad de cada usuario. El U.S. Marshals Service es una agencia distinta de Immigration and Customs Enforcement (ICE). Esas etiquetas no establecen quién buscó o recibió los registros, y el archivo no establece una transferencia de Stockton a ICE."
             },
             {
-              "text": "Una respuesta de la ciudad a la solicitud PRA 10325372 dice que un administrador de Flock del Stockton Police Department autorizó a UOP mediante el portal y que no se encontró ningún acuerdo escrito. Esa respuesta plantea una cuestión de auditoría y cumplimiento. No muestra que UOP buscara o recibiera datos de Stockton ni establece una infracción legal."
-            },
-            {
-              "text": "La estructura del NCRIC y su acuerdo genérico para compartir datos crean una posible vía indirecta para los datos. Stockton debe publicar los registros necesarios para auditar esa vía. Los materiales públicos no muestran que Stockton firmara el acuerdo, aportara datos de Flock conforme a él ni diera a una agencia federal o de inmigración acceso a registros de Stockton."
-            }
-          ]
-        },
-        {
-          "title": "Lo que aún no se ha verificado",
-          "summary": "Por ahora, no afirmamos nada de lo siguiente:",
-          "points": [
-            {
-              "text": "Stockton compartió datos con ICE o con cualquier otra agencia federal de inmigración."
-            },
-            {
-              "text": "USMS accedió directamente a datos de Stockton o NCRIC dio acceso a ICE."
-            },
-            {
-              "text": "UOP buscó o recibió datos de Stockton."
-            },
-            {
-              "text": "Stockton infringió la ley estatal o usó indebidamente el sistema."
-            },
-            {
-              "text": "Todos los lectores, drones, radares, herramientas de búsqueda o integraciones de video contratados están implementados."
-            },
-            {
-              "text": "Los materiales revisados ofrecen un mapa completo de cámaras, una lista de alertas activas, el historial de datos compartidos, un registro de búsquedas o un registro del acceso de agencias externas."
-            },
-            {
-              "text": "La excepción al proceso competitivo de licitación fue ilegal."
-            }
-          ]
-        },
-        {
-          "title": "Registros que Stockton debe publicar",
-          "summary": "Stockton debe responder las preguntas pendientes mediante la publicación de:",
-          "points": [
-            {
-              "text": "La Enmienda No. 3 ejecutada y sus registros de adquisiciones, facturas, órdenes de compra y autorizaciones."
-            },
-            {
-              "text": "Un inventario actual y el estado de implementación de cámaras, drones, muelles, radar, remolque, Flock911, FreeForm y transmisiones de video."
-            },
-            {
-              "text": "Los propietarios, ubicaciones, feeds, reglas de retención y permisos para las diez transmisiones de video compatibles."
-            },
-            {
-              "text": "Configuraciones de uso compartido actuales e históricas, identificadores de destinatarios estables, aprobaciones de administrador, registros de acceso y búsqueda nativos, solicitudes externas, registros para volver a compartir y la identidad de la \"Organización fuera de servicio\"."
-            },
-            {
-              "text": "Registros originales para cada fila de “caso USMS”, incluido el usuario local, el solicitante, el número de caso, el alcance de la consulta, las redes buscadas, los resultados devueltos, la autorización y la revisión de supervisión."
-            },
-            {
-              "text": "Acuerdos ejecutados, registros de autorización, revisiones legales y registros de acceso reales para UOP, NCRIC, El Cajon, entidades asociadas a la universidad y cualquier otro destinatario saliente."
-            },
-            {
-              "text": "Campos del sistema de despacho asistido por computadora, flujos de datos, políticas, integraciones, registros de financiamiento y procedimientos de terminación o eliminación."
-            }
-          ],
-          "closingParagraphs": [
-            {
-              "text": "Pedimos a Stockton que publique estos registros para que los trabajadores y los residentes puedan juzgar cómo se usan el dinero público y el poder policial, organizarse a partir de lo que aprendan y decidir juntos qué sistemas de seguridad debe financiar la ciudad. La divulgación es una demanda inmediata. Un control público duradero exige que la clase trabajadora siga investigando, tomando decisiones y actuando en conjunto después de recibir los registros."
+              "text": "Una respuesta municipal a una solicitud de registros dice que un administrador de la policía de Stockton autorizó a la University of the Pacific a través del portal de Flock, sin que se encontrara un acuerdo escrito. Los residentes necesitan saber quién aprobó el acceso y qué límites se aplican; esta respuesta no demuestra que la universidad lo utilizara."
             }
           ]
         },
@@ -1197,22 +808,24 @@
         },
         {
           "reviewed": "12 de agosto de 2026"
+        },
+        {
+          "published": "31 de marzo de 2026"
         }
       ]
     },
     "whySafeguardsPage": {
       "eyebrow": "POR QUÉ RETIRARLO",
-      "title": "Por qué las salvaguardias no son suficientes",
-      "description": "Las reglas pueden reducir el daño inmediato. Prohibir el acceso para hacer cumplir las leyes de inmigración protegería a las personas ahora. No pondría fin a la recopilación habitual ni cambiaría quién controla los registros, las búsquedas policiales, la plataforma del proveedor o el dinero público que la financia.",
-      "reviewedThrough": "3 de septiembre de 2026",
-      "qualification": "Apoyamos protecciones provisionales firmes. Nos organizamos para lograr otro resultado: retirar el sistema y poner el gasto en seguridad bajo control público. La clase trabajadora no debe tener que aceptar el seguimiento habitual como precio de calles seguras, servicios públicos útiles, atención, prevención o una respuesta de emergencia que rinda cuentas.",
+      "title": "Retiro, no reforma",
+      "description": "Stockton debe poner fin a la recopilación cotidiana de los movimientos de las personas y retirar el sistema que permite buscar esos registros. El poder policial de búsqueda, la plataforma de un proveedor privado y el dinero público que la financia deben estar en el centro de este debate.",
+      "qualification": "Las personas necesitan calles seguras, protección contra la violencia y ayuda cuando ocurre una emergencia. Esas necesidades merecen una respuesta seria. La clase trabajadora debe tener control duradero sobre las instituciones y los presupuestos destinados a mantener nuestra seguridad.",
       "sections": [
         {
           "title": "Prohibir el acceso de ICE atendería un peligro, no el sistema que lo crea",
           "summary": "Una prohibición clara del acceso de U.S. Immigration and Customs Enforcement protegería a las personas ahora. Apoyamos esa prohibición y otras protecciones provisionales firmes.",
           "paragraphs": [
             {
-              "text": "La prohibición mantendría la recopilación habitual, el poder policial de búsqueda, los drones, las herramientas conectadas, la dependencia del proveedor y el gasto público. La policía conservaría la capacidad de buscar registros mediante una plataforma administrada en parte por una empresa privada."
+              "text": "La prohibición dejaría intactos la recopilación cotidiana, el poder policial de búsqueda, los drones, las herramientas conectadas, la dependencia del proveedor y el gasto público. La policía conservaría la capacidad de buscar registros mediante una plataforma administrada en parte por una empresa privada."
             },
             {
               "text": "La pregunta más amplia sigue siendo: ¿debe la ciudad usar dinero público para crear registros que permitan buscar los viajes cotidianos cuando no se sospecha ninguna infracción de los residentes?"
@@ -1256,46 +869,6 @@
           ]
         },
         {
-          "title": "Stockton aprobó una plataforma de vigilancia en expansión",
-          "summary": "Los registros de la ciudad describen cámaras conectadas, registros con capacidad de búsqueda, herramientas de respuesta a emergencias, drones, videos, integraciones de proveedores y años de gasto público.",
-          "points": [
-            {
-              "text": "Cámaras de matrículas y datos de ubicación de vehículos con capacidad de búsqueda."
-            },
-            {
-              "text": "Software vinculado a llamadas de emergencia y despacho."
-            },
-            {
-              "text": "Seis drones y muelles contratados, radar y transmisiones de vídeo."
-            },
-            {
-              "text": "Software, permisos, análisis, soporte y suscripciones administrados por proveedores."
-            },
-            {
-              "text": "Un contrato máximo establecido por encima de $5.4 millones hasta el 14 de abril de 2031."
-            }
-          ],
-          "paragraphs": [
-            {
-              "text": "Los registros de marzo de 2026 sitúan el nuevo paquete Drone as First Responder en $3.15 millones."
-            },
-            {
-              "text": "Los materiales locales disponibles respaldan una revisión independiente, pero no establecen que ICE haya tenido acceso. Una copia archivada el 8 de agosto del portal de Flock para Stockton enumeró 320 destinatarios externos e incluía una auditoría de 1,774 búsquedas en la que todas las identificaciones públicas de usuarios estaban ocultas. Cuarenta filas indicaban como motivo “USMS case”."
-            },
-            {
-              "text": "Una respuesta distinta de la ciudad informó que un administrador de Flock del SPD autorizó a UOP mediante el portal y que no se encontró ningún acuerdo escrito. Esos materiales justifican una auditoría independiente de los registros históricos originales sobre el acceso, la autorización y el intercambio posterior de datos. Que una agencia figure como destinataria y que haya una etiqueta con el motivo de una búsqueda no prueban que ICE ni ninguna otra agencia externa haya accedido a un registro de Stockton."
-            },
-            {
-              "text": "Los registros municipales describen un paquete contratado que incluye:"
-            }
-          ],
-          "closingParagraphs": [
-            {
-              "text": "El dinero público sostiene esta plataforma. La policía obtiene nuevas herramientas y poder de búsqueda, y Flock administra partes de la tecnología, los permisos, el análisis, la asistencia y las suscripciones. Los residentes cuyos movimientos producen los registros no gobiernan esa relación."
-            }
-          ]
-        },
-        {
           "title": "Las promesas de uso limitado no justifican grabar a todos",
           "summary": "Una política de búsqueda limitada no puede convertir una recopilación amplia en una investigación específica.",
           "paragraphs": [
@@ -1310,21 +883,18 @@
             },
             {
               "text": "Los registros de auditoría pueden revelar menos de lo que esperan los lectores. 404 Media informó que se recomendó a las agencias que fueran “tan vagas como sea posible” al registrar los motivos de las búsquedas de Flock."
-            },
-            {
-              "text": "Los límites inmediatos siguen siendo importantes. Una política firme de búsquedas, la prohibición del uso para hacer cumplir las leyes de inmigración, reglas de eliminación y auditorías públicas pueden reducir el daño mientras se retira el sistema. No justifican la recopilación habitual ni transfieren el control a la clase trabajadora cuyos movimientos se convierten en registros y cuyo dinero público financia el sistema."
             }
           ]
         },
         {
-          "title": "La eliminación es la salvaguardia duradera",
-          "summary": "Las normas provisionales deberían reducir los daños durante el proceso de eliminación. No deberían convertirse en el acuerdo final.",
+          "title": "Retirar el sistema es la única respuesta",
+          "summary": "Organicémonos para desmantelar el sistema e impedir que regrese con otro nombre.",
           "paragraphs": [
             {
-              "text": "La petición pide poner fin a todos los contratos con Flock, detener la expansión, eliminar los datos cuando la ley lo permita, publicar un registro del cierre y prohibir que se vuelva a crear la misma función de seguimiento con otro nombre."
+              "text": "Nuestra petición exige poner fin a todos los contratos con Flock, detener la expansión, eliminar los datos conforme a la ley, publicar un registro del cierre y prohibir que se vuelva a crear la misma función de seguimiento con otro nombre."
             },
             {
-              "text": "Al firmar, insto al Concejo Municipal de Stockton a aprobar una Resolución de Eliminación de Flock que ponga fin a este sistema de vigilancia, impida que regrese con otro nombre y restablezca un control público significativo sobre cómo se financia y utiliza la tecnología de vigilancia."
+              "text": "Al firmar, instas al Concejo Municipal de Stockton a aprobar una Resolución de Eliminación de Flock que ponga fin a este sistema de vigilancia, impida que regrese con otro nombre y restablezca un control público significativo sobre cómo se financia y utiliza la tecnología de vigilancia."
             }
           ],
           "points": [
@@ -1346,7 +916,7 @@
           ],
           "closingParagraphs": [
             {
-              "text": "Retirar el sistema no significa rechazar la seguridad pública. Es exigir que Stockton destine dinero público a viviendas estables, trabajo seguro, atención, prevención, servicios públicos útiles y una respuesta de emergencia que rinda cuentas, en vez de al seguimiento habitual. Los residentes y trabajadores pueden firmar, hablar con sus compañeros de trabajo y vecinos, presionar al Concejo Municipal, vigilar el cumplimiento y seguir organizados para gobernar las instituciones y los presupuestos destinados a mantener nuestra seguridad."
+              "text": "Los residentes y trabajadores pueden firmar, hablar con sus compañeros de trabajo y vecinos, presionar al Concejo Municipal y vigilar el retiro. Mantenernos organizados después de retirar las cámaras puede construir un control duradero de la clase trabajadora sobre los presupuestos públicos y las instituciones de seguridad, con dinero destinado a viviendas estables, trabajo seguro, atención, prevención, servicios públicos útiles y una respuesta de emergencia que rinda cuentas."
             }
           ]
         },

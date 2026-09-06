@@ -80,6 +80,7 @@ export type CampaignTimelineEntry = Readonly<{
   action: string
   description: string
   sourceIds: readonly string[]
+  vote?: string
   status?: 'verified' | 'reported-with-gap'
 }>
 

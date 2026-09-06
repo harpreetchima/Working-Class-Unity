@@ -30,18 +30,10 @@ function citationIdPrefix(groupId: string, itemId: string, kind: 'answer' | 'poi
   <article class="campaign-faq" aria-labelledby="stockton-flock-faq-title">
     <header class="campaign-faq-opening">
       <div class="campaign-faq-opening-inner">
-        <div class="campaign-faq-context">
-          <p v-if="campaignFaqPage.eyebrow">{{ campaignFaqPage.eyebrow }}</p>
-          <p>{{ t('removeFlock.reviewedThrough', { date: campaignFaqPage.reviewedThrough }) }}</p>
-        </div>
-
         <div class="campaign-faq-claim">
           <h1 id="stockton-flock-faq-title">{{ campaignFaqPage.title }}</h1>
           <div class="campaign-faq-introduction">
             <p class="campaign-faq-description">{{ campaignFaqPage.description }}</p>
-            <p v-if="campaignFaqPage.qualification" class="campaign-faq-qualification">
-              {{ campaignFaqPage.qualification }}
-            </p>
             <AppActionLink :to="petitionUrl" variant="campaign">
               {{ t('removeFlock.petitionAction') }}
             </AppActionLink>
@@ -51,7 +43,7 @@ function citationIdPrefix(groupId: string, itemId: string, kind: 'answer' | 'poi
     </header>
 
     <div class="campaign-faq-layout">
-      <CampaignPageOutline :items="outlineItems" :label="t('removeFlock.faq.groupsLabel')" />
+      <CampaignPageOutline :items="outlineItems" :label="t('removeFlock.faq.groupsLabel')" :show-markers="false" />
 
       <div class="campaign-faq-groups">
         <section
@@ -147,31 +139,6 @@ function citationIdPrefix(groupId: string, itemId: string, kind: 'answer' | 'poi
     padding-block: clamp(4rem, 9vw, 7.5rem);
   }
 
-  .campaign-faq-context {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: var(--space-3) var(--space-6);
-    padding-block-end: var(--space-4);
-    border-block-end: var(--border-width) solid rgb(255 255 255 / 35%);
-  }
-
-  .campaign-faq-context p,
-  .campaign-faq-description,
-  .campaign-faq-qualification {
-    margin: 0;
-  }
-
-  .campaign-faq-context p {
-    color: var(--color-surface);
-    font-family: var(--font-family-mono);
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-bold);
-    letter-spacing: 0.1em;
-    line-height: 1.4;
-    text-transform: uppercase;
-  }
-
   .campaign-faq-claim {
     display: grid;
     grid-template-columns: minmax(0, 7fr) minmax(18rem, 5fr);
@@ -203,20 +170,11 @@ function citationIdPrefix(groupId: string, itemId: string, kind: 'answer' | 'poi
   }
 
   .campaign-faq-description {
+    margin: 0;
     max-inline-size: 42ch;
     color: var(--color-surface);
     font-size: var(--font-size-lede);
     line-height: 1.55;
-    text-wrap: pretty;
-  }
-
-  .campaign-faq-qualification {
-    max-inline-size: 46ch;
-    border-inline-start: var(--border-width-accent) solid var(--color-brand-highlight);
-    padding-inline-start: var(--space-4);
-    color: rgb(255 255 255 / 82%);
-    font-size: 1rem;
-    line-height: 1.65;
     text-wrap: pretty;
   }
 

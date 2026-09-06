@@ -45,7 +45,8 @@ const translatableContentKeys = new Set([
   'text',
   'title',
   'unavailableLabel',
-  'value'
+  'value',
+  'vote'
 ])
 const structuralContentKeys = new Set([
   'href',
