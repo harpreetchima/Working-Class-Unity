@@ -9,11 +9,11 @@ const citationLocators: Readonly<Record<string, Readonly<Record<string, string>>
     'stockton-mar-2026-staff-report': 'Financial Summary, PDF p. 3',
     'stockton-mar-2026-amendment': 'Standard Agreement Amendment No. 4, §§ 1–2.1, PDF p. 1'
   },
-  'contract-fact-4': {
+  'contract-fact-3': {
     'stockton-mar-2026-staff-report': 'Discussion — Present Situation, PDF p. 2',
     'stockton-mar-2026-amendment': 'Attachment A, Order Form, PDF p. 4'
   },
-  'timeline-7': {
+  'timeline-6': {
     'stockton-mar-2026-staff-report': 'Financial Summary, PDF p. 3',
     'stockton-mar-2026-amendment': 'Standard Agreement Amendment No. 4, §§ 1–2.1, PDF p. 1'
   },
@@ -87,9 +87,12 @@ useHead(() => ({
     >
       <template #after-header="{ citationOccurrences, citationSources, sourceNoteIdPrefix }">
         <dl class="record-facts">
-          <div v-for="fact in contractFacts" :key="fact.label">
+          <div v-for="(fact, index) in contractFacts" :key="fact.label">
             <dt>{{ fact.label }}</dt>
-            <dd>{{ fact.value }}</dd>
+            <dd v-if="index > 0" class="record-equipment-image" aria-hidden="true">
+              <!-- Reserved for Harpreet’s transparent equipment illustration. -->
+            </dd>
+            <dd class="record-fact-value">{{ fact.value }}</dd>
             <dd>
               <CampaignCitedText
                 :citation-id-prefix="`${sourceNoteIdPrefix}-${fact.citation.id}`"
@@ -104,7 +107,7 @@ useHead(() => ({
       </template>
 
       <template #section-timeline="{ citationOccurrences, citationSources, sourceNoteIdPrefix }">
-        <ol class="record-timeline">
+        <ol class="record-timeline" role="list">
           <li v-for="entry in timeline" :key="`${entry.date}-${entry.action}`">
             <p>{{ entry.date }}</p>
             <div>
@@ -118,9 +121,7 @@ useHead(() => ({
                   :sources="citationSources"
                 />
               </p>
-              <p v-if="entry.status === 'reported-with-gap'" class="record-gap">
-                {{ t('removeFlock.record.missingAmendment') }}
-              </p>
+              <p v-if="entry.vote" class="record-vote">{{ entry.vote }}</p>
             </div>
           </li>
         </ol>
@@ -170,13 +171,14 @@ useHead(() => ({
 @layer components {
   .stockton-record-page {
     min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .stockton-record :deep(.campaign-editorial-header) {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: var(--space-5) var(--space-6);
-    padding-block: clamp(4.5rem, 9vw, 8rem) clamp(5rem, 10vw, 9rem);
+    padding-block: var(--space-8);
   }
 
   .stockton-record :deep(.campaign-editorial-eyebrow) {
@@ -190,11 +192,11 @@ useHead(() => ({
   }
 
   .stockton-record :deep(.campaign-editorial-header h1) {
-    --font-size-heading-1: clamp(4rem, 7vw, 6.75rem);
+    --font-size-heading-1: clamp(3rem, 5vw, 4.5rem);
     --line-height-heading: 0.94;
 
-    grid-column: 1 / span 8;
-    max-inline-size: 10ch;
+    grid-column: 1 / span 6;
+    max-inline-size: 16ch;
     color: var(--color-brand-primary);
     font-family: var(--font-family-heading);
     font-size: var(--font-size-heading-1);
@@ -204,33 +206,11 @@ useHead(() => ({
   }
 
   .stockton-record :deep(.campaign-editorial-description) {
-    grid-column: 9 / -1;
+    grid-column: 7 / -1;
     align-self: center;
-    max-inline-size: 36ch;
+    max-inline-size: 46ch;
     font-size: clamp(1.125rem, 1rem + 0.4vw, 1.25rem);
     line-height: 1.55;
-  }
-
-  .stockton-record :deep(.campaign-editorial-reviewed) {
-    grid-column: 1 / span 4;
-    grid-row: 3;
-    align-self: start;
-    padding-block-start: var(--space-4);
-    border-block-start: var(--border-width) solid var(--article-divider);
-    color: var(--color-brand-primary);
-    font-weight: var(--font-weight-bold);
-  }
-
-  .stockton-record :deep(.campaign-editorial-qualification) {
-    grid-column: 5 / -1;
-    grid-row: 3;
-    max-inline-size: 62ch;
-    padding-block-start: var(--space-4);
-    padding-inline-start: 0;
-    margin: 0;
-    border-block-start: var(--border-width) solid var(--article-divider);
-    border-inline-start: 0;
-    line-height: 1.65;
   }
 
   .record-facts {
@@ -256,7 +236,7 @@ useHead(() => ({
     grid-template-columns: minmax(0, 7fr) minmax(18rem, 5fr);
     column-gap: var(--space-6);
     padding-block: var(--space-5) var(--space-7);
-    border-block-start: var(--border-width-accent) solid var(--color-brand-highlight);
+    border-block-start: var(--border-width) solid var(--article-divider);
   }
 
   .record-facts dt,
@@ -275,7 +255,7 @@ useHead(() => ({
     text-wrap: pretty;
   }
 
-  .record-facts dd:first-of-type,
+  .record-facts .record-fact-value,
   .record-costs dd:first-of-type {
     color: var(--color-brand-primary);
     font-family: var(--font-family-statement);
@@ -286,11 +266,12 @@ useHead(() => ({
   }
 
   .record-facts > div:first-child dt,
-  .record-facts > div:first-child dd:first-of-type {
+  .record-facts > div:first-child .record-fact-value {
     grid-column: 1;
   }
 
-  .record-facts > div:first-child dd:first-of-type {
+  .record-facts > div:first-child .record-fact-value {
+    color: var(--color-accent-action);
     font-size: clamp(4rem, 7.5vw, 7rem);
   }
 
@@ -301,6 +282,24 @@ useHead(() => ({
     max-inline-size: 48ch;
     color: var(--color-text);
     font-size: 1.125rem;
+  }
+
+  .record-equipment-image {
+    inline-size: 100%;
+    block-size: 7rem;
+    background: var(--color-placeholder);
+  }
+
+  .record-facts > div:not(:first-child) .record-fact-value {
+    font-family: var(--font-family-heading);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.15;
+  }
+
+  .stockton-record :deep(#bottom-line .campaign-article-section-heading > p) {
+    color: var(--color-text);
+    font-weight: var(--font-weight-bold);
   }
 
   .record-timeline {
@@ -328,7 +327,7 @@ useHead(() => ({
 
   .record-timeline li > div {
     display: grid;
-    grid-template-columns: minmax(10rem, 4fr) minmax(0, 8fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--space-3) var(--space-6);
     min-width: 0;
   }
@@ -356,10 +355,8 @@ useHead(() => ({
     text-wrap: pretty;
   }
 
-  .record-timeline li > div > .record-gap {
-    grid-column: 2;
-    color: var(--color-status-warning-text);
-    font-weight: var(--font-weight-bold);
+  .record-timeline li > div > .record-vote {
+    color: var(--color-brand-primary);
   }
 
   .record-costs-layout {
@@ -383,7 +380,7 @@ useHead(() => ({
   }
 
   .record-costs > div:first-child {
-    border-block-start: var(--border-width-accent) solid var(--color-brand-highlight);
+    border-block-start: var(--border-width) solid var(--article-divider);
   }
 
   .record-costs dd:first-of-type {
@@ -488,14 +485,6 @@ useHead(() => ({
   }
 
   @media (width <= 68rem) {
-    .stockton-record :deep(.campaign-editorial-header h1) {
-      grid-column: 1 / span 7;
-    }
-
-    .stockton-record :deep(.campaign-editorial-description) {
-      grid-column: 8 / -1;
-    }
-
     .stockton-record :deep(.campaign-article-section-heading) {
       grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
     }
@@ -507,6 +496,11 @@ useHead(() => ({
   }
 
   @media (width <= 56rem) {
+    .stockton-record :deep(.campaign-citation-cluster) {
+      flex-wrap: wrap;
+      max-inline-size: 100%;
+    }
+
     .stockton-record :deep(.campaign-editorial-header) {
       grid-template-columns: minmax(0, 1fr);
       gap: var(--space-5);
@@ -516,15 +510,8 @@ useHead(() => ({
     .stockton-record :deep(.campaign-editorial-eyebrow),
     .stockton-record :deep(.campaign-editorial-header h1),
     .stockton-record :deep(.campaign-editorial-description),
-    .stockton-record :deep(.campaign-editorial-reviewed),
-    .stockton-record :deep(.campaign-editorial-qualification),
     .record-facts {
       grid-column: 1;
-    }
-
-    .stockton-record :deep(.campaign-editorial-reviewed),
-    .stockton-record :deep(.campaign-editorial-qualification) {
-      grid-row: auto;
     }
 
     .stockton-record :deep(.campaign-editorial-header h1) {
@@ -533,10 +520,6 @@ useHead(() => ({
 
     .stockton-record :deep(.campaign-editorial-description) {
       max-inline-size: 42ch;
-    }
-
-    .stockton-record :deep(.campaign-editorial-reviewed) {
-      margin-block-start: var(--space-4);
     }
 
     .record-facts {
@@ -559,7 +542,7 @@ useHead(() => ({
       margin-block-start: var(--space-3);
     }
 
-    .record-facts > div:first-child dd:first-of-type {
+    .record-facts > div:first-child .record-fact-value {
       font-size: clamp(2.75rem, 13vw, 5.5rem);
     }
 
@@ -584,10 +567,6 @@ useHead(() => ({
     .record-timeline li > div {
       grid-template-columns: minmax(0, 1fr);
       gap: var(--space-2);
-    }
-
-    .record-timeline li > div > .record-gap {
-      grid-column: 1;
     }
 
     .record-costs > div {
@@ -626,7 +605,6 @@ useHead(() => ({
     }
 
     .stockton-record :deep(.campaign-editorial-eyebrow),
-    .stockton-record :deep(.campaign-editorial-reviewed),
     .record-facts dt,
     .record-costs dt {
       font-size: 1rem;
@@ -644,6 +622,14 @@ useHead(() => ({
     .record-next {
       padding-block: var(--space-7) var(--space-8);
     }
+  }
+
+  .stockton-record :deep(#timeline .campaign-article-section-heading) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .stockton-record :deep(#timeline .campaign-article-section-heading h2) {
+    max-inline-size: none;
   }
 }
 /* stylelint-enable no-descending-specificity */

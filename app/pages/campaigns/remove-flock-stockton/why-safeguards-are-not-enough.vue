@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { citedTextPlainText } from '~/content/remove-flock-stockton'
+
+const { t } = useI18n()
 const { whySafeguardsPage } = useRemoveFlockContent()
 
 useHead(() => ({
@@ -8,7 +11,40 @@ useHead(() => ({
 </script>
 
 <template>
-  <CampaignArticle class="safeguards-article" :content="whySafeguardsPage" title-id="why-safeguards-title" />
+  <CampaignArticle class="safeguards-article" :content="whySafeguardsPage" title-id="why-safeguards-title">
+    <template #section-removal="{ section }">
+      <div class="campaign-article-prose safeguards-removal-prose">
+        <div
+          v-for="paragraph in section.paragraphs"
+          :key="citedTextPlainText(paragraph)"
+          class="campaign-cited-paragraph"
+        >
+          <p>{{ citedTextPlainText(paragraph) }}</p>
+        </div>
+        <AppActionLink
+          class="safeguards-petition-action"
+          to="https://tech.workingclassunity.com/deflock-stockton"
+          variant="campaign"
+        >
+          {{ t('removeFlock.landing.signDemand') }}
+        </AppActionLink>
+      </div>
+      <ol class="campaign-article-points campaign-article-points--ordered safeguards-demands" role="list">
+        <li v-for="point in section.points" :key="citedTextPlainText(point)">
+          <p>{{ citedTextPlainText(point) }}</p>
+        </li>
+      </ol>
+      <div class="campaign-article-prose safeguards-removal-prose">
+        <div
+          v-for="paragraph in section.closingParagraphs"
+          :key="citedTextPlainText(paragraph)"
+          class="campaign-cited-paragraph"
+        >
+          <p>{{ citedTextPlainText(paragraph) }}</p>
+        </div>
+      </div>
+    </template>
+  </CampaignArticle>
 </template>
 
 <style scoped>
@@ -64,11 +100,37 @@ useHead(() => ({
     margin-block-start: 0;
   }
 
-  .safeguards-article :deep(.campaign-editorial-reviewed) {
-    grid-column: 1 / -1;
-    padding-block-start: var(--space-2);
+  .safeguards-removal-prose {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .safeguards-removal-prose p,
+  .safeguards-demands p {
+    margin: 0;
+  }
+
+  .safeguards-demands {
+    display: grid;
+    gap: var(--space-5);
+    margin: 0;
+    padding-inline-start: 2rem;
+    list-style: decimal;
+  }
+
+  .safeguards-demands li {
     border-block-start: var(--border-width) solid var(--safeguards-rule);
-    font-family: var(--font-family-mono);
+    padding-block-start: var(--space-5);
+    padding-inline-start: var(--space-2);
+  }
+
+  .safeguards-demands li::marker {
+    color: var(--color-accent-action);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .safeguards-petition-action {
+    justify-self: start;
   }
 
   .safeguards-article :deep(.campaign-article-layout) {
@@ -129,7 +191,7 @@ useHead(() => ({
   }
 
   .safeguards-article :deep(.campaign-article-prose),
-  .safeguards-article :deep(.campaign-article-points) {
+  .safeguards-article :deep(.campaign-article-points:not(.campaign-article-points--ordered)) {
     padding-inline-start: 0;
   }
 
@@ -174,8 +236,7 @@ useHead(() => ({
     .safeguards-article :deep(.campaign-editorial-eyebrow),
     .safeguards-article :deep(.campaign-editorial-header h1),
     .safeguards-article :deep(.campaign-editorial-description),
-    .safeguards-article :deep(.campaign-editorial-qualification),
-    .safeguards-article :deep(.campaign-editorial-reviewed) {
+    .safeguards-article :deep(.campaign-editorial-qualification) {
       grid-column: 1;
     }
 
@@ -209,7 +270,7 @@ useHead(() => ({
     }
 
     .safeguards-article :deep(.campaign-article-prose),
-    .safeguards-article :deep(.campaign-article-points) {
+    .safeguards-article :deep(.campaign-article-points:not(.campaign-article-points--ordered)) {
       padding-inline-start: 0;
     }
   }

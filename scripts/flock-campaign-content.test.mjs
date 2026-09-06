@@ -31,37 +31,28 @@ test('petition demand matches the approved copy byte for byte', () => {
   assert.equal(petitionDemand.demands.length, 5)
 })
 
-test('public claims retain the campaign qualifications', async () => {
+test('edited campaign copy preserves material evidence distinctions', async () => {
   const [faq, whatStocktonBought, whySafeguards] = await Promise.all([
     readContentFile('faq.ts'),
     readContentFile('what-stockton-bought.ts'),
     readContentFile('why-safeguards.ts')
   ])
 
-  assert.match(faq, /Right now, we are not claiming that Stockton has shared Flock data with ICE\./)
-  assert.match(faq, /We have not shared any information related to immigration with our federal partners/)
-  assert.match(faq, /A listed recipient is a sharing configuration, not proof of an actual search or disclosure\./)
-  assert.match(faq, /it does not prove UOP accessed data\./)
-  assert.match(faq, /Some grant funds may be restricted\./)
-  assert.match(faq, /We will not promise that every Flock dollar can move directly to another program\./)
+  assert.match(faq, /reviewed local records do not establish a Stockton-to-ICE transfer/)
+  assert.match(faq, /maximum is authorized spending, not a total of money already spent/)
+  assert.match(faq, /Some grant funds are restricted/)
+  assert.match(faq, /warnings from other cities, not proof of the same events in Stockton/)
+  assert.match(faq, /without becoming a member/)
+  assert.match(whatStocktonBought, /records do not establish that every item is operating/)
+  assert.match(whatStocktonBought, /A listed recipient is a sharing configuration, not proof of a search or disclosure/)
+  assert.match(whatStocktonBought, /agreement excludes Customer Data/)
+  assert.match(whatStocktonBought, /City can seek more funding or end the agreement/)
+  assert.match(whySafeguards, /support that ban and other firm interim protections/)
+  assert.match(whySafeguards, /Written policy and actual platform access did not always match/)
 
-  assert.match(whatStocktonBought, /Right now, we are not claiming that every contracted product is deployed/)
-  assert.match(whatStocktonBought, /They do not show that Stockton conducted searches or shared data at that scale\./)
-  assert.match(whatStocktonBought, /Right now, we are not claiming any of the following:/)
-  assert.match(whatStocktonBought, /Stockton shared data with ICE or any other federal immigration agency\./)
-  assert.match(whatStocktonBought, /Flock’s public Stockton portal reported 147 cameras on August 8, 2026/)
-  assert.match(
-    whatStocktonBought,
-    /A listed recipient is a sharing configuration, not proof of a search or disclosure\./
-  )
-  assert.match(
-    whatStocktonBought,
-    /The available records do not establish whether the competitive-bidding exception was lawful or unlawful\./
-  )
-
-  assert.match(whySafeguards, /We support firm interim protections\./)
-  assert.match(whySafeguards, /Written policy and actual platform access did not always match\./)
-  assert.match(whySafeguards, /An agency listed as a recipient and a search-reason label do not prove that ICE/)
+  for (const content of [faq, whatStocktonBought, whySafeguards]) {
+    assert.doesNotMatch(content, /reviewedThrough:/)
+  }
 })
 
 test('campaign source links are clean and unique', async () => {
@@ -97,10 +88,13 @@ test('campaign citation references resolve to unique source records', async () =
   )
   const claimReferenceIds = [...content.matchAll(/\bsourceId:\s*'([^']+)'/g)].map((match) => match[1])
   const claimLocators = [...content.matchAll(/\blocator:\s*'([^']+)'/g)].map((match) => match[1])
-  const knownSourceIds = new Set(sourceIds)
+  const pageSourceIds = [...content.matchAll(/id:\s*'([^']+)',\s*title:\s*'[^']+',\s*publisher:/g)].map(
+    (match) => match[1]
+  )
+  const knownSourceIds = new Set([...sourceIds, ...pageSourceIds])
 
   assert.ok(sourceIds.length > 40, 'expected the complete campaign source inventory')
-  assert.equal(knownSourceIds.size, sourceIds.length, 'campaign source IDs must be unique')
+  assert.equal(knownSourceIds.size, sourceIds.length + pageSourceIds.length, 'campaign source IDs must be unique')
   assert.ok(legacyReferenceIds.length + claimReferenceIds.length > 80, 'expected the campaign citation inventory')
   assert.ok(claimLocators.length > 0, 'expected at least one production claim locator')
 

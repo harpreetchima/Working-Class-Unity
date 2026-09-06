@@ -616,7 +616,7 @@ test('campaign update prompt uses the hosted Deflock form without collecting con
 test('campaign citations preview, navigate, and return at desktop and mobile widths', async ({ page }) => {
   const observations = observePage(page)
   const campaignPath = '/campaigns/remove-flock-stockton/faq'
-  const sourceNoteId = 'stockton-flock-faq-title-note-flock-products'
+  const sourceNoteId = 'stockton-flock-faq-title-note-flock-license-plate-readers'
 
   await page.setViewportSize({ width: 1280, height: 900 })
   await page.goto(campaignPath)
@@ -624,7 +624,9 @@ test('campaign citations preview, navigate, and return at desktop and mobile wid
 
   const firstCitation = page.locator('[role="doc-biblioref"]').first()
   await expect(firstCitation).toBeVisible()
-  await expect(firstCitation).toHaveAccessibleName('Source 1.1: Flock products')
+  await expect(firstCitation).toHaveAccessibleName(
+    'Source 1.1: License plate readers, FAQ: What is an automated license plate reader?'
+  )
   await expect(firstCitation).toHaveAttribute('href', `#${sourceNoteId}`)
   await expect(firstCitation).toHaveAttribute(
     'id',
@@ -635,18 +637,16 @@ test('campaign citations preview, navigate, and return at desktop and mobile wid
   const sourcePreview = page.locator('.campaign-citation-card')
   await expect(sourcePreview).toBeVisible()
   await expect(sourcePreview.locator('.campaign-citation-label')).toHaveText('SOURCE 1.1')
-  await expect(sourcePreview).toContainText('Flock products')
+  await expect(sourcePreview).toContainText('License plate readers')
   await expect(sourcePreview.locator('a, button')).toHaveCount(0)
 
-  const locatedCitation = page.locator('[role="doc-biblioref"]').nth(1)
+  const locatedCitation = firstCitation
   await expect(locatedCitation).toHaveAccessibleName(
-    'Source 2.1: License plate readers, FAQ — “What is an automated license plate reader (ALPR)?”'
+    'Source 1.1: License plate readers, FAQ: What is an automated license plate reader?'
   )
   await locatedCitation.hover()
   const locatedSourcePreview = page.locator('.campaign-citation-card').filter({ hasText: 'License plate readers' })
-  await expect(locatedSourcePreview).toContainText(
-    'Location: FAQ — “What is an automated license plate reader (ALPR)?”'
-  )
+  await expect(locatedSourcePreview).toContainText('Location: FAQ: What is an automated license plate reader?')
 
   await firstCitation.click()
   const sourceNote = page.locator(`#${sourceNoteId}`)
@@ -684,16 +684,16 @@ test('campaign citations preview, navigate, and return at desktop and mobile wid
   await expect(customSourcePreview.locator('.campaign-citation-label')).toHaveText('SOURCE 1.1')
 
   const repeatedCitation = page.locator('#what-stockton-bought-title-timeline-2-citation-1-3')
-  await expect(repeatedCitation).toHaveAccessibleName('Source 9.2: Flock Amendment No. 1')
+  await expect(repeatedCitation).toHaveAccessibleName('Source 7.2: Flock Amendment No. 1')
   await repeatedCitation.hover()
   const repeatedSourcePreview = page.locator('.campaign-citation-card').filter({ hasText: 'Flock Amendment No. 1' })
   await expect(repeatedSourcePreview).toBeVisible()
-  await expect(repeatedSourcePreview.locator('.campaign-citation-label')).toHaveText('SOURCE 9.2')
+  await expect(repeatedSourcePreview.locator('.campaign-citation-label')).toHaveText('SOURCE 7.2')
 
   const repeatedSourceNote = page.locator('#what-stockton-bought-title-note-stockton-jul-2024-amendment')
   const repeatedSourceBacklink = repeatedSourceNote.locator('[role="doc-backlink"]').nth(1)
-  await expect(repeatedSourceBacklink).toHaveAccessibleName('Return to citation 9.2')
-  await expect(repeatedSourceBacklink).toHaveText('↑ 9.2')
+  await expect(repeatedSourceBacklink).toHaveAccessibleName('Return to citation 7.2')
+  await expect(repeatedSourceBacklink).toHaveText('↑ 7.2')
   const backlinkRestingColor = await repeatedSourceBacklink.evaluate((element) => getComputedStyle(element).color)
   await repeatedSourceBacklink.hover()
   const backlinkHoverColor = await repeatedSourceBacklink.evaluate((element) => getComputedStyle(element).color)
@@ -701,10 +701,11 @@ test('campaign citations preview, navigate, and return at desktop and mobile wid
   expect(backlinkHoverColor).toBe('rgb(255, 255, 255)')
 
   const ceqaSourceNote = page.locator('#what-stockton-bought-title-note-stockton-ceqa-2025')
-  await expect(ceqaSourceNote).toHaveCount(1)
-  await expect(ceqaSourceNote.locator('[role="doc-backlink"]')).toHaveAttribute(
+  await expect(ceqaSourceNote).toHaveCount(0)
+  const marchVoteNote = page.locator('#what-stockton-bought-title-note-stockton-mar-2026-minutes')
+  await expect(marchVoteNote.locator('[role="doc-backlink"]')).toHaveAttribute(
     'href',
-    '#what-stockton-bought-title-timeline-5-citation-1-1'
+    '#what-stockton-bought-title-timeline-6-citation-1-1'
   )
 
   await page.setViewportSize({ width: 390, height: 844 })
@@ -721,7 +722,7 @@ test('campaign citations preview, navigate, and return at desktop and mobile wid
   expect(mobileHitTargetSize.height).toBeGreaterThanOrEqual(48)
   expect(mobileHitTargetSize.width).toBeGreaterThanOrEqual(48)
 
-  const multiSourceCluster = page.locator('.campaign-citation-cluster').nth(2)
+  const multiSourceCluster = page.locator('.campaign-citation-cluster').nth(1)
   await multiSourceCluster.scrollIntoViewIfNeeded()
   const clusteredCitations = multiSourceCluster.locator('[role="doc-biblioref"]')
   await expect(clusteredCitations).toHaveCount(2)
@@ -751,7 +752,7 @@ test('campaign citations preview, navigate, and return at desktop and mobile wid
   await page.mouse.click(firstTargetPoint.x, firstTargetPoint.y)
   const citationDrawer = page.locator('.campaign-citation-drawer')
   await expect(citationDrawer).toBeVisible()
-  await expect(citationDrawer).toContainText('Flock products')
+  await expect(citationDrawer).toContainText('File 26-0269 Amendment A—Agreement and Quote')
   await page.keyboard.press('Escape')
   await expect(citationDrawer).toBeHidden()
 
@@ -771,7 +772,7 @@ test('campaign citations preview, navigate, and return at desktop and mobile wid
     .toBe(true)
   await page.mouse.click(secondTargetPoint.x, secondTargetPoint.y)
   await expect(citationDrawer).toBeVisible()
-  await expect(citationDrawer).toContainText('FlockOS')
+  await expect(citationDrawer).toContainText('File 24-0561 legislation text')
   await page.keyboard.press('Escape')
   await expect(citationDrawer).toBeHidden()
 

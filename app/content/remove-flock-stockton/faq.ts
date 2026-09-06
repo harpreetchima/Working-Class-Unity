@@ -1,12 +1,11 @@
-import { petitionDemand } from './petition'
 import { faqSources, safeguardsSources, stocktonSources } from './sources'
 import type { CampaignFaqGroup, CampaignPageContent } from './types'
 
 export const faqGroups = [
   {
     id: 'basics',
-    title: 'The system and the demand',
-    summary: 'What Flock sells, what Stockton authorized, and why we are calling for removal.',
+    title: 'Flock and everyday life',
+    summary: 'What the system records and why it matters.',
     items: [
       {
         id: 'what-is-flock',
@@ -15,466 +14,141 @@ export const faqGroups = [
           {
             parts: [
               {
-                text: 'Flock Safety sells surveillance cameras and software to police departments, businesses, schools, neighborhoods, and homeowners associations.',
-                citations: [{ sourceId: 'flock-products' }]
-              },
-              {
-                text: ' Its automated license-plate readers turn plates, vehicle details, time, and location into searchable records.',
+                text: 'Flock Safety is a private company that sells surveillance equipment and software. Its license-plate readers record plates, vehicle details, time, and location so police can search them later.',
                 citations: [
                   {
                     sourceId: 'flock-license-plate-readers',
-                    locator: 'FAQ — “What is an automated license plate reader (ALPR)?”'
+                    locator: 'FAQ: What is an automated license plate reader?'
                   }
                 ]
+              },
+              {
+                text: ' Stockton’s contracts connect emergency calls and authorize drones, radar, and video search.',
+                citations: [{ sourceId: 'stockton-mar-2026-amendment' }, { sourceId: 'stockton-jul-2024-staff-report' }]
               }
             ]
-          },
-          {
-            text: 'The company sells drones, video cameras, audio detection, mobile trailers, 911 tools, and software that joins information from different systems. Flock is selling an expanding platform, not one stand-alone camera.',
-            sourceIds: ['flock-products', 'flock-os']
-          }
-        ]
-      },
-      {
-        id: 'what-stockton-approved',
-        question: 'What did Stockton approve?',
-        answer: [
-          {
-            text: 'Stockton records describe an original 15-camera contract and a later 105-camera expansion. In March 2026, council approved a Drone as First Responder package with six docked drones, radar, Flock911, a mobile trailer, FreeForm search, and ten compatible video streams.',
-            sourceIds: ['stockton-nov-2024-staff-report', 'stockton-nov-2024-amendment', 'stockton-mar-2026-amendment']
-          },
-          {
-            text: 'The amendment added $3.15 million and extended the agreement through April 14, 2031. City records state a potential total above $5.4 million.',
-            sourceIds: ['stockton-mar-2026-staff-report', 'stockton-mar-2026-amendment']
-          },
-          {
-            text: 'These records show what the city authorized or contracted for. Right now, we are not claiming that every product has been deployed.'
-          }
-        ]
-      },
-      {
-        id: 'why-removal',
-        question: 'Why are we calling for removal?',
-        answer: [
-          {
-            text: 'Flock begins by recording ordinary movement. Police can search those records later. That approach gives police and a corporate vendor more power to observe the public without giving residents greater control over the conditions that make them unsafe.'
-          },
-          {
-            text: 'We are calling for an end to the contracts, a stop to expansion, lawful data deletion, a public closeout record, and a ban on recreating the same mass-tracking function under another company name.'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'safety',
-    title: 'Safety and police claims',
-    summary: 'We take violence and theft seriously without accepting routine movement tracking as the answer.',
-    items: [
-      {
-        id: 'public-safety',
-        question: 'Do we take public safety seriously?',
-        answer: [
-          {
-            text: 'Yes. People deserve to live without car theft, violence, dangerous streets, slow emergency response, or fear in their neighborhoods.'
-          },
-          {
-            text: 'Safety reaches beyond policing. It includes stable housing, safe work, dependable emergency and crisis response, youth programs, parks and libraries, protection from violence, safe streets, care, and the freedom to ask for support without exposing a family to needless police or immigration scrutiny.'
-          },
-          {
-            text: 'Flock’s answer is more cameras, searches, data, and police technology. We start from public investment, public accountability, and working people gaining real power over the institutions responsible for our safety.'
-          }
-        ]
-      },
-      {
-        id: 'stolen-cars',
-        question: 'What about stolen cars and serious crimes?',
-        answer: [
-          {
-            text: 'Stolen cars and serious crimes are real harms. They deserve serious responses. Flock markets plate readers as tools for wanted vehicles, stolen-property recovery, and investigative leads.',
-            sourceIds: ['flock-license-plate-readers']
-          },
-          {
-            text: 'Those harms do not give the city a blank check to collect and search everyone’s movement data. Targeted investigations should be targeted.'
-          }
-        ]
-      },
-      {
-        id: 'solve-crimes',
-        question: 'Does Flock solve crimes?',
-        answer: [
-          {
-            text: 'Flock and police departments say the system has produced vehicle recoveries, leads, missing-person locations, and faster responses.',
-            sourceIds: ['flock-license-plate-readers']
-          },
-          {
-            text: 'Those case stories may describe real outcomes. They do not decide how much data should be collected, who may search it, how the system may expand, or what public capacity loses funding and attention. A technology may contribute to one investigation and still create a form of institutional power Stockton should reject.'
-          }
-        ]
-      },
-      {
-        id: 'performance-metrics',
-        question: 'Why not judge Flock by arrests, recoveries, or response times?',
-        answer: [
-          {
-            text: 'Those figures describe police activity. They do not count how many people enter the database with no connection to a crime, how broadly records may be searched, what new uses may appear, or what long-term dependence the contract creates.'
-          },
-          {
-            text: 'Enforcement measures do not, on their own, prove lasting public safety or justify routine tracking.'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'power-and-risk',
-    title: 'Power, movement, and unequal risk',
-    summary:
-      'Broad collection operates within unequal relations among police, immigration authorities, employers, landlords, and residents.',
-    items: [
-      {
-        id: 'just-a-tool',
-        question: 'Is Flock just a tool?',
-        answer: [
-          {
-            text: 'No. Flock describes a platform that connects plate readers, video, drones, audio detection, 911 calls, dispatch, records systems, public and private cameras, and agency sharing.',
-            sourceIds: ['flock-os']
-          },
-          {
-            text: 'Infrastructure changes what an institution can do as a routine matter. Once a connected system exists, new cameras, agencies, databases, and search functions can be added over time.'
-          }
-        ]
-      },
-      {
-        id: 'equal-effects',
-        question: 'Does Flock affect everyone equally?',
-        answer: [
-          {
-            text: 'Everyone passing a camera may be recorded. Everyone does not face the same consequences.'
-          },
-          {
-            text: 'Movement records carry greater danger for immigrant families, workers organizing on the job, tenants meeting about landlord conditions, people at protests, people seeking sensitive healthcare, survivors protecting their location, people under supervision, and residents already facing concentrated police attention.'
-          },
-          {
-            text: 'Mass collection may be indiscriminate. Its consequences are not.'
           }
         ]
       },
       {
         id: 'nothing-to-hide',
-        question: 'Should only people breaking the law worry?',
+        question: 'Why worry if I have done nothing wrong?',
         answer: [
           {
-            text: 'No. Plate readers record ordinary travel. They do not know whether someone is going to work, school, medical care, a tenant meeting, a union meeting, a protest, an attorney, a family member, or a place of worship.'
+            text: 'The cameras collect vehicle records before anyone decides whether they relate to a crime. Repeated records can reveal where someone lives, works, worships, or gets medical care.',
+            sourceIds: ['flock-license-plate-readers', 'california-ag-el-cajon']
           },
           {
-            text: 'Flock says its plate-reader system does not use facial recognition. A system does not need facial recognition to reveal repeated travel, stops, and nearby vehicles.',
-            sourceIds: ['flock-license-plate-readers']
-          },
-          {
-            text: 'The question is not whether a person has something to hide. The question is whether Stockton should normalize recording movement without individualized suspicion.'
+            text: 'You should not have to justify ordinary travel to police. The stakes are especially high when immigration status, organizing at work, protest, or sensitive healthcare could be used against someone.'
           }
         ]
       },
       {
-        id: 'collected-data',
-        question: 'What data does Flock collect?',
+        id: 'stolen-cars',
+        question: 'What about stolen cars and violent crime?',
         answer: [
           {
-            text: 'Flock says its plate readers can collect plate characters, vehicle images, time, location, make, model, color, and other visible vehicle traits.',
+            text: 'A stolen car can cost someone their job. Violence can change a life. Flock markets its system as a way to find wanted vehicles and generate investigative leads.',
             sourceIds: ['flock-license-plate-readers']
           },
           {
-            text: 'Search tools can use a plate or partial vehicle description. Flock describes FreeForm as a natural-language search across compatible plate images and video evidence.',
-            sourceIds: ['flock-freeform']
-          },
-          {
-            text: 'The system does more than take photographs. It organizes them into records that can be searched, compared, shared, and joined to other information.'
+            text: 'A useful lead does not settle whether the City should collect everyone’s travel records for later searches. We want targeted investigations and dependable emergency response, alongside housing, care, safe streets, and prevention that residents can help shape.'
           }
         ]
       }
     ]
   },
   {
-    id: 'immigration-and-controls',
-    title: 'Immigration enforcement and safeguards',
-    summary: 'Immediate restrictions matter. They do not remove the collection system or its police and vendor power.',
+    id: 'money-and-control',
+    title: 'Public money and control',
+    summary: 'Who pays, who decides, and what the records establish.',
     items: [
       {
-        id: 'ice-sharing',
-        question: 'Does Stockton share Flock data with ICE or federal agencies?',
+        id: 'cost',
+        question: 'How much has Council committed to Flock?',
         answer: [
           {
-            text: 'Right now, we are not claiming that Stockton has shared Flock data with ICE.'
+            text: 'Council approved an additional $3.15 million on March 31, 2026, bringing the combined contract maximum to $5,416,700 and extending the term through April 14, 2031. The maximum is authorized spending, not a total of money already spent.',
+            sourceIds: ['stockton-mar-2026-staff-report', 'stockton-mar-2026-amendment']
+          }
+        ]
+      },
+      {
+        id: 'grants',
+        question: 'What if grants pay for it?',
+        answer: [
+          {
+            text: 'Grants are public money, and future grants are not guaranteed. Stockton’s funding plan says the City would need other appropriations or termination if grant and police funding fall short.',
+            sourceIds: ['stockton-mar-2026-staff-report']
           },
           {
-            text: 'Deputy Chief Kyle Pierce said, “We have not shared any information related to immigration with our federal partners.” That statement concerns immigration-related information; it is not a claim that Stockton has never cooperated with any federal agency for another purpose.',
-            sourceIds: ['stocktonia-apr-2026']
-          },
+            text: 'Keeping the system means continuing to pay for it. Some grant funds are restricted, so removal would not automatically free every contract dollar for another program. It would stop further commitments to this private surveillance system.'
+          }
+        ]
+      },
+      {
+        id: 'ice-access',
+        question: 'Has Stockton shared Flock data with ICE?',
+        answer: [
           {
-            text: 'An archived August 8 portal snapshot listed 320 outbound-sharing recipients, including NCRIC, El Cajon Police Department, Stanford University CA PD, University of San Francisco CA PD, University of the Pacific, and “Decommissioned Org.” ICE, CBP, DHS, and USMS were not listed as direct recipients. A listed recipient is a sharing configuration, not proof of an actual search or disclosure.',
-            sourceIds: ['stockton-portal-2026-08-08']
-          },
-          {
-            text: 'The same 1,774-row public audit contained 40 rows labeled “USMS case,” and every public user ID was masked. USMS is a separate Department of Justice agency, not ICE. The label does not identify who requested the search, whether USMS had credentials, what information was returned, or whether the search was lawful.',
+            text: 'The reviewed local records do not establish a Stockton-to-ICE transfer. The archived portal lists sharing settings and masked search records; neither identifies everyone who requested or received information. “USMS case” labels refer to the U.S. Marshals Service, a different agency from ICE.',
             sourceIds: ['stockton-portal-2026-08-08', 'usms-about']
           },
           {
-            text: 'A city response to PRA 10325372 says an SPD Flock administrator authorized the University of the Pacific (UOP) through the portal and that no written agreement was located. This raises an audit and compliance question, but it does not prove UOP accessed data.',
-            sourceIds: ['stockton-uop-pra']
-          },
-          {
-            text: 'The Northern California Regional Intelligence Center’s (NCRIC) structure creates a possible indirect-sharing pathway worth auditing. The public material does not prove that a federal or immigration agency used that pathway to access Stockton data.',
-            sourceIds: ['ncric-board', 'ncric-mou']
+            text: 'That gap matters. Residents should be able to audit access to records of our travel. Our demand for removal does not depend on claiming a transfer we cannot prove.'
           }
         ]
       },
-      {
-        id: 'ice-ban',
-        question: 'Would an ICE ban help?',
-        answer: [
-          {
-            text: 'Yes. A clear, enforceable prohibition on immigration-enforcement use would address an urgent danger. We would support that protection during the removal process.'
-          },
-          {
-            text: 'An ICE restriction would not stop routine collection, other police searches, drones, vendor dependence, future policy changes, agency intermediaries, or expansion into more surveillance functions.'
-          },
-          {
-            text: 'It is an immediate protection, not a substitute for dismantling the system.'
-          }
-        ]
-      },
-      {
-        id: 'safeguards',
-        question: 'What about Flock’s safeguards?',
-        answer: [
-          {
-            text: 'Flock points to audit logs, access controls, search histories, retention settings, sharing permissions, and public dashboards. Proper configuration and enforcement may reduce some forms of misuse.',
-            sourceIds: ['flock-dfr']
-          },
-          {
-            text: 'A shorter retention period still starts with collection. An audit log records a search after it happens. A dashboard describes a surveillance system that remains in operation.'
-          },
-          {
-            text: 'Settings are not democratic control, and oversight is not removal.'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'private-platform',
-    title: 'A private platform inside public policing',
-    summary:
-      'Public money, police power, vendor revenue, grants, drones, and private cameras form one political relationship.',
-    items: [
-      {
-        id: 'private-company',
-        question: 'Why does it matter that Flock is a private company?',
-        answer: [
-          {
-            text: 'Flock supplies software, cloud services, integrations, maintenance, access controls, updates, and recurring subscriptions that become part of police operations.'
-          },
-          {
-            text: 'The public supplies the money. Residents supply data through ordinary movement. Police gain surveillance capacity. The company receives recurring revenue as the platform expands.'
-          },
-          {
-            text: 'The American Civil Liberties Union warned that changes to Flock’s standard terms appeared to give the company greater control over access to customer data and broader continuing rights to use information.',
-            sourceIds: ['aclu-flock-terms']
-          },
-          {
-            text: 'Public-safety infrastructure should answer to the public, not to a company whose business grows through wider surveillance.'
-          }
-        ]
-      },
-      {
-        id: 'drones-and-readers',
-        question: 'Are drones different from license-plate readers?',
-        answer: [
-          {
-            text: 'They collect different information, but Stockton contracted to place them in the same platform. Flock says docked police drones can respond to calls or alerts, stream live video, and connect with 911, dispatch, plate-reader, and other systems.',
-            sourceIds: ['flock-dfr', 'stockton-mar-2026-amendment']
-          },
-          {
-            text: 'Plate readers create searchable records of vehicle movement. Drones add live aerial observation of people, homes, streets, yards, and gatherings.'
-          }
-        ]
-      },
-      {
-        id: 'all-drones',
-        question: 'Are drones always bad?',
-        answer: [
-          {
-            text: 'Not every drone use presents the same issue. A city may debate narrow fire, disaster, or search-and-rescue uses under separate operators and data rules.'
-          },
-          {
-            text: 'Stockton’s package concerns docked police drones tied to a private platform that connects plate readers, video, 911 information, and search software. We oppose that standing police-surveillance infrastructure.'
-          }
-        ]
-      },
-      {
-        id: 'businesses-neighborhoods',
-        question: 'What about businesses and neighborhoods that want more safety?',
-        answer: [
-          {
-            text: 'People are right to want safer stores, parking lots, apartment buildings, jobs, and neighborhoods.'
-          },
-          {
-            text: 'Flock markets systems to businesses, schools, neighborhoods, homeowners associations, and police. Its platform can connect public and private data sources.',
-            sourceIds: ['flock-os']
-          },
-          {
-            text: 'Renters, workers, visitors, and people passing through may be recorded with no voice in the purchase. Safety should be a public commitment, not a product distributed through property ownership and purchasing power.'
-          }
-        ]
-      },
-      {
-        id: 'grant-funding',
-        question: 'What if a grant pays for it?',
-        answer: [
-          {
-            text: 'Grant money is public money. Stockton records identify grants and police funds for parts of the Flock system. They leave later costs and appropriations open.',
-            sourceIds: [
-              'stockton-jul-2024-staff-report',
-              'stockton-nov-2024-grant-report',
-              'stockton-nov-2024-grant-award',
-              'stockton-mar-2026-staff-report'
-            ]
-          },
-          {
-            text: 'A grant may cover early costs and still create subscriptions, training duties, proprietary dependence, pressure for replacement funds, and resistance to dismantling the system.'
-          },
-          {
-            text: 'Some grant funds may be restricted. We will not promise that every Flock dollar can move directly to another program. Stockton should publish every funding condition and reject grants that require an unacceptable surveillance system.'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'removal-and-action',
-    title: 'Removal, public records, and organized action',
-    summary:
-      'Changing a rule or vendor is not the goal. The system must come down, and residents must be able to verify the result.',
-    items: [
       {
         id: 'stronger-rules',
-        question: 'Why not keep Flock with stronger rules?',
+        question: 'Why not keep Flock with stricter rules?',
         answer: [
           {
-            text: 'Stronger rules can reduce harm. They leave ordinary travel records, police searches, connected cameras and drones, a private platform, and infrastructure that later officials may expand.'
+            text: 'An immigration-enforcement ban and firm access limits can protect people during removal. They leave the underlying collection, police search power, and dependence on Flock in place.'
           },
           {
-            text: 'The American Civil Liberties Union has published a model resolution for full contract cancellation. Rules and removal serve different goals.',
-            sourceIds: ['aclu-cancellation-resolution']
-          },
-          {
-            text: 'We support immediate protections during removal. We do not accept a regulated version of routine mass tracking as the final answer.'
+            text: 'Other California cities found access settings that conflicted with their policies. Those are warnings from other cities, not proof of the same events in Stockton. We are organizing to end the system, not make permanent tracking easier to administer.',
+            sourceIds: ['mountain-view-termination', 'oxnard-suspension', 'los-altos-community-message']
           }
         ]
-      },
-      {
-        id: 'switch-vendors',
-        question: 'Why not switch vendors?',
-        answer: [
-          {
-            text: 'Changing the company name does not change the function. A replacement that records vehicle locations, makes them searchable, and connects them to police systems recreates the same power.'
-          },
-          {
-            text: 'Our demand targets mass tracking, regardless of vendor, brand, or funding source.'
-          }
-        ]
-      },
-      {
-        id: 'public-records',
-        question: 'What records should Stockton release?',
-        answer: [
-          {
-            text: 'Stockton should release the records needed to establish what was bought, who could use it, how it was configured, what access occurred, and whether shutdown and deletion are complete.'
-          },
-          {
-            text: 'Public release should protect individual plate numbers and travel records. Redaction can preserve that privacy and still show search volume, agencies, stated purposes, sharing, and system operation.',
-            sourceIds: ['aclu-alpr-public-data']
-          },
-          {
-            text: 'Public records let residents learn what was built and verify that removal occurred.'
-          }
-        ],
-        points: [
-          { text: 'Every Flock contract, amendment, quote, incorporated term, grant record, and permitted use.' },
-          {
-            text: 'A complete inventory of cameras, drones, software, sensors, integrations, deployment status, and equipment locations, subject only to narrowly justified legal redactions.'
-          },
-          {
-            text: 'Data-retention and deletion rules, search and audit policies, training materials, operating procedures, and lists of authorized agencies and users.'
-          },
-          {
-            text: 'Active and historical sharing settings, stable recipient identifiers, add and remove dates, administrator approvals, and stated purposes.'
-          },
-          {
-            text: 'Appropriately redacted native search and access logs showing the local user, organization, requester, case number, query scope, records returned, and disclosures made.'
-          },
-          { text: 'Outside-agency requests and records of searches performed on their behalf.' },
-          {
-            text: 'Executed agreements, administrator-authorization records, legal reviews, and actual access records for UOP, NCRIC, El Cajon, university-associated entities, and every other outbound recipient.'
-          },
-          {
-            text: 'The identity and sharing history of “Decommissioned Org,” plus onward-sharing and re-sharing records for external recipients.'
-          },
-          {
-            text: 'Native records underlying every “USMS case” row, including whether USMS requested the search or had direct credentials.'
-          },
-          {
-            text: 'Native fields underlying blank public reasons and masked user IDs, plus the City’s redaction and publication rules.'
-          },
-          {
-            text: 'Private-camera or data agreements and vendor communications about settings, access, compliance, and system changes.'
-          },
-          {
-            text: 'Complaints, misuse investigations, security incidents, corrective actions, public dashboards, and internal audits.'
-          },
-          {
-            text: 'Termination clauses, shutdown costs, removal procedures, and the process through which Flock and third parties will delete Stockton data.'
-          }
-        ]
-      },
+      }
+    ]
+  },
+  {
+    id: 'taking-action',
+    title: 'Winning removal together',
+    summary: 'What signing contributes and how to take part.',
+    items: [
       {
         id: 'meaning-of-removal',
-        question: 'What does removal mean?',
+        question: 'What would the removal resolution do?',
         answer: [
           {
-            text: 'Removal means ending the contracts, stopping expansion, deleting data where law allows, publishing a complete closeout record, and preventing the same system from returning under another name.'
+            text: 'It would end Flock contracts at the earliest lawful date, stop expansion, require lawful data deletion, publish a complete closeout record, and prevent Stockton from recreating the same mass-tracking system under another name. Switching vendors would not meet the demand.'
           }
-        ],
-        points: petitionDemand.demands.map((text) => ({ text }))
+        ]
       },
       {
-        id: 'fund-instead',
-        question: 'What should Stockton fund instead?',
+        id: 'signing',
+        question: 'What happens when I sign?',
         answer: [
           {
-            text: 'Stockton should build safety residents can use, shape, and hold accountable: stable housing, youth jobs and recreation, parks and libraries, violence prevention, crisis care, survivor services, lighting, sidewalks, treatment, neighborhood infrastructure, emergency readiness, and dependable public workers.'
+            text: 'You add your name to the demand that Stockton City Council pass the removal resolution. A signature helps show organized opposition; it does not cancel the contract by itself.'
           },
           {
-            text: 'Funding rules may restrict some dollars. The city can disclose those limits, reject harmful grants, and stop committing future city resources to private surveillance.'
-          },
-          {
-            text: 'Public safety should grow through public investment and democratic control, not permanent dependence on private surveillance contracts.'
+            text: 'Winning requires people to talk with neighbors and coworkers, bring the demand to Council, and stay involved to verify removal. Those relationships and skills give working people more power over future decisions about public money and safety.'
           }
         ]
       },
       {
         id: 'resident-action',
-        question: 'How can residents take part?',
+        question: 'Do I have to join WCU to help?',
         answer: [
           {
-            text: 'Residents can sign and share the removal demand, speak or write to council, review records, talk with neighbors and coworkers, canvass, invite organizations into the campaign, attend meetings, and take responsibility for research, outreach, translation, or follow-up.'
+            text: 'No. You can sign, share the petition, attend public meetings, help with research or translation, and distribute campaign materials without becoming a member.'
           },
           {
-            text: 'A petition signature or council appearance starts the work. It does not end it.'
-          },
-          {
-            text: 'Our goal is an organized public that can investigate what the city built, decide what safety should mean, win removal, and verify that the decision was carried out.'
+            text: 'WCU membership is a separate commitment. Dues-paying members have a vote in the organization’s direction and take responsibility for shared work.'
           }
         ]
       }
@@ -486,15 +160,7 @@ export const campaignFaqPage = {
   path: '/campaigns/remove-flock-stockton/faq',
   eyebrow: '',
   title: 'Stockton Flock FAQ',
-  description:
-    'Direct answers about public safety, data, private police technology, public spending, and what removal requires.',
-  qualification:
-    'Right now, we are not claiming that Stockton shared Flock data with ICE, broke state law, or deployed every contracted product. Throughout, we separate Stockton records from vendor claims and examples from other cities.',
-  reviewedThrough: 'September 3, 2026',
-  sections: faqGroups.map((group) => ({
-    id: group.id,
-    title: group.title,
-    summary: group.summary
-  })),
+  description: 'Questions about safety, surveillance, public money, and how we can win removal together.',
+  sections: faqGroups.map((group) => ({ id: group.id, title: group.title, summary: group.summary })),
   sources: [...stocktonSources, ...safeguardsSources, ...faqSources]
 } as const satisfies CampaignPageContent
